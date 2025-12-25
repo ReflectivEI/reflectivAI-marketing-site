@@ -7,10 +7,10 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: '/platform', label: 'Platform' },
-    { href: '/solutions', label: 'Solutions' },
-    { href: '/resources', label: 'Resources' },
-    { href: '/about', label: 'About' },
+    { href: '/', label: 'Platform' },
+    { href: '/ai-coach', label: 'AI Coach' },
+    { href: '/role-play', label: 'Role Play' },
+    { href: '#', label: 'Resources' },
   ];
 
   return (

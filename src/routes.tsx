@@ -1,6 +1,8 @@
 import { RouteObject } from 'react-router-dom';
 import { lazy } from 'react';
 import HomePage from './pages/index';
+import AICoachPage from './pages/ai-coach';
+import RolePlayPage from './pages/role-play';
 
 // Lazy load components for code splitting (except HomePage for instant loading)
 const isDevelopment = (import.meta.env as any).DEV;
@@ -12,12 +14,20 @@ export const routes: RouteObject[] = [
     element: <HomePage />,
   },
   {
+    path: '/ai-coach',
+    element: <AICoachPage />,
+  },
+  {
+    path: '/role-play',
+    element: <RolePlayPage />,
+  },
+  {
     path: '*',
     element: <NotFoundPage />,
   },
 ];
 
 // Types for type-safe navigation
-export type Path = '/';
+export type Path = '/' | '/ai-coach' | '/role-play';
 
 export type Params = Record<string, string | undefined>;
