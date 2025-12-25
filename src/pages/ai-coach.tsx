@@ -21,7 +21,7 @@ export default function AICoachPage() {
                   <span className="text-primary">AI Sales Coach</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-xl">
-                  Get real-time guidance, personalized feedback, and continuous development support from an AI coach that understands your unique selling style and customer interactions.
+                  Your personal pharma sales coaching assistant. Get real-time guidance on disease states, HCP categories, influence drivers, and DISC behavioral models during customer conversations.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">

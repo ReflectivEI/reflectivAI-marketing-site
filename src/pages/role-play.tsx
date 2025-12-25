@@ -21,7 +21,7 @@ export default function RolePlayPage() {
                   <span className="text-primary">Perfect Sales</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-xl">
-                  Master difficult conversations through AI-powered role play simulations. Practice objection handling, negotiation, and emotional intelligence in a safe, judgment-free environment.
+                  Practice pharma sales scenarios with AI feedback. Master disease state conversations, HCP engagement, and market access challenges across HIV, Oncology, Cardiology, Vaccines, and more.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -150,8 +150,121 @@ export default function RolePlayPage() {
         </div>
       </section>
 
-      {/* Scenario Types */}
+      {/* Therapeutic Area Scenarios */}
       <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl lg:text-5xl font-bold">Disease State Scenarios</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Practice with realistic pharma sales scenarios across major therapeutic areas
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="p-6 rounded-lg border border-border bg-card space-y-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">
+                HIV
+              </div>
+              <h3 className="text-lg font-semibold">Low Descovy Share with Missed PrEP Opportunity</h3>
+              <p className="text-sm text-muted-foreground">
+                IM prescriber underutilizes PrEP despite steady STI testing in young MSM
+              </p>
+              <div className="text-xs text-muted-foreground">Intermediate Level</div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card space-y-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">
+                HIV
+              </div>
+              <h3 className="text-lg font-semibold">Slowing Biktarvy Switches in Stable Patients</h3>
+              <p className="text-sm text-muted-foreground">
+                Top HIV clinic with declining switch velocity; perception that most patients are optimized
+              </p>
+              <div className="text-xs text-muted-foreground">Advanced Level</div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card space-y-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">
+                Oncology
+              </div>
+              <h3 className="text-lg font-semibold">ADC Integration with IO Backbone</h3>
+              <p className="text-sm text-muted-foreground">
+                Solid-tumor center evaluating ADCs; P&T scrutinizes cost/response and chair time
+              </p>
+              <div className="text-xs text-muted-foreground">Advanced Level</div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card space-y-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">
+                Oncology
+              </div>
+              <h3 className="text-lg font-semibold">Pathway-Driven Care with Staffing Constraints</h3>
+              <p className="text-sm text-muted-foreground">
+                Community infusion site with conservative IO use and short-staffed AE clinics
+              </p>
+              <div className="text-xs text-muted-foreground">Intermediate Level</div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card space-y-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-medium">
+                Cardiology
+              </div>
+              <h3 className="text-lg font-semibold">HFrEF Clinic GDMT Optimization</h3>
+              <p className="text-sm text-muted-foreground">
+                Entresto uptake 62% of eligible HFrEF; SGLT2 at 38%; day-30 refill gaps
+              </p>
+              <div className="text-xs text-muted-foreground">Advanced Level</div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card space-y-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-medium">
+                Cardiology
+              </div>
+              <h3 className="text-lg font-semibold">Post-MI and HF Transitions Optimization</h3>
+              <p className="text-sm text-muted-foreground">
+                SGLT2 initiation often deferred to PCP; ARNI starts delayed pending echo
+              </p>
+              <div className="text-xs text-muted-foreground">Intermediate Level</div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card space-y-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted text-muted-foreground rounded-full text-xs font-medium">
+                Vaccines
+              </div>
+              <h3 className="text-lg font-semibold">Adult Flu Program Optimization</h3>
+              <p className="text-sm text-muted-foreground">
+                ID group with LTC/high-risk adults; late clinic launches; weak reminder-recall
+              </p>
+              <div className="text-xs text-muted-foreground">Intermediate Level</div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card space-y-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted text-muted-foreground rounded-full text-xs font-medium">
+                COVID
+              </div>
+              <h3 className="text-lg font-semibold">Outpatient Antiviral Optimization</h3>
+              <p className="text-sm text-muted-foreground">
+                High-risk COPD/ILD population; Paxlovid first line but DDI triage slows prescribing
+              </p>
+              <div className="text-xs text-muted-foreground">Advanced Level</div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card space-y-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted text-muted-foreground rounded-full text-xs font-medium">
+                Rare Disease
+              </div>
+              <h3 className="text-lg font-semibold">Rare Disease Diagnosis Journey</h3>
+              <p className="text-sm text-muted-foreground">
+                Help a physician recognize and diagnose a rare metabolic disorder
+              </p>
+              <div className="text-xs text-muted-foreground">Intermediate Level</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Scenario Types */}
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold">Practice Every Conversation Type</h2>

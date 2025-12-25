@@ -210,6 +210,86 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Coaching Modules */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl lg:text-5xl font-bold">Structured Coaching Modules</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Build sales mastery through comprehensive, skills-based learning paths
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Discovery Questions Mastery</h3>
+              <p className="text-muted-foreground">
+                Learn to ask powerful questions that uncover stakeholder needs, challenges, and priorities
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Active Listening</span>
+                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Empathy Mapping</span>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Stakeholder Mapping</h3>
+              <p className="text-muted-foreground">
+                Identify and understand all decision-makers in the healthcare ecosystem
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">DISC</span>
+                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Empathy Mapping</span>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Clinical Evidence Communication</h3>
+              <p className="text-muted-foreground">
+                Present clinical data effectively to different stakeholder types
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">DISC</span>
+                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">Active Listening</span>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Objection Handling</h3>
+              <p className="text-muted-foreground">
+                Address concerns and objections with empathy and evidence
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Active Listening</span>
+                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Rapport Building</span>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Closing Techniques</h3>
+              <p className="text-muted-foreground">
+                Guide stakeholders toward commitment with confidence and integrity
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Rapport Building</span>
+                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">DISC</span>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">EI Mastery for Pharma</h3>
+              <p className="text-muted-foreground">
+                Integrate all emotional intelligence frameworks for healthcare selling
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">DISC</span>
+                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">Active Listening</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
