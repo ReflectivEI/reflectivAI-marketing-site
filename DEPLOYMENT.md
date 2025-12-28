@@ -1,104 +1,144 @@
-# ReflectivAI Marketing Site - Deployment Guide
+# ReflectivAI Marketing Site - Deployment Complete! 🎉
 
-## Quick Deploy Options
+## ✅ Your Site is Live!
 
-### Option 1: GitHub Pages (Recommended)
+**Live URL:** https://reflectivei.github.io/reflectivAI-marketing-site/
 
-**Step 1: Enable GitHub Pages**
-1. Go to https://github.com/ReflectivEI/reflectivAI-marketing-site/settings/pages
-2. Under "Source", select "GitHub Actions"
-3. The workflow will run automatically
-
-**Step 2: Update Token (Required)**
-The current token doesn't have workflow permissions. Create a new one:
-1. Go to https://github.com/settings/tokens
-2. Click "Generate new token (classic)"
-3. Check these permissions:
-   - ✅ **repo** (all)
-   - ✅ **workflow**
-4. Generate and copy the token
-5. Run: `./push-to-github.sh YOUR_NEW_TOKEN`
-
-**Your site will be live at:**
-```
-https://reflectivei.github.io/reflectivAI-marketing-site/
-```
+**GitHub Repository:** https://github.com/ReflectivEI/reflectivAI-marketing-site
 
 ---
 
-### Option 2: Vercel (Fastest)
+## What's Deployed
 
+✅ **Homepage** - Hero section with new image, comparison table, performance analytics, interactive 8 capabilities  
+✅ **AI Coach Page** - 10 EI dimensions, coaching cards, EI in practice section with visual  
+✅ **Role Play Page** - 9 disease state scenarios across therapeutic areas  
+✅ **Branding** - ReflectivAI logo with wordmark in header/footer  
+✅ **Responsive Design** - Mobile-friendly across all pages  
+✅ **Interactive Elements** - Hover animations, modal dialogs, transitions  
+
+---
+
+## Automatic Deployments
+
+Your site is configured for **automatic deployments**:
+
+- Every push to the `main` branch triggers a new deployment
+- GitHub Actions builds and deploys automatically
+- Changes go live in 2-3 minutes
+
+**View deployment status:**  
+https://github.com/ReflectivEI/reflectivAI-marketing-site/actions
+
+---
+
+## Making Updates
+
+### Option 1: Edit on GitHub (Easiest)
+1. Go to your repository
+2. Navigate to the file you want to edit
+3. Click the pencil icon (Edit)
+4. Make changes and commit
+5. Site updates automatically in 2-3 minutes
+
+### Option 2: Clone and Edit Locally
+```bash
+git clone https://github.com/ReflectivEI/reflectivAI-marketing-site.git
+cd reflectivAI-marketing-site
+
+# Make your changes
+
+git add .
+git commit -m "Your update message"
+git push origin main
+```
+
+### Option 3: Download and Re-upload
+1. Download: https://xox8z610ws.preview.c24.airoapp.ai/reflectivai-site.tar.gz
+2. Extract and make changes
+3. Push to GitHub
+
+---
+
+## Key Files to Edit
+
+### Content Pages
+- `src/pages/index.tsx` - Homepage
+- `src/pages/ai-coach.tsx` - AI Coach page
+- `src/pages/role-play.tsx` - Role Play page
+
+### Layout Components
+- `src/layouts/parts/Header.tsx` - Site header/navigation
+- `src/layouts/parts/Footer.tsx` - Site footer
+
+### Styling
+- `src/styles/globals.css` - Global styles and CSS variables
+- `tailwind.config.js` - Tailwind configuration
+
+### Images
+- `public/assets/` - All images and media files
+
+---
+
+## Custom Domain (Optional)
+
+To use your own domain (e.g., marketing.reflectivai.com):
+
+1. Go to repository Settings → Pages
+2. Enter your custom domain
+3. Add DNS records:
+   - CNAME record: `marketing` → `reflectivei.github.io`
+4. Wait for DNS propagation (5-60 minutes)
+
+---
+
+## Alternative Hosting Options
+
+If you want to move to a different platform:
+
+### Vercel
 1. Go to https://vercel.com/new
-2. Import your GitHub repository: `ReflectivEI/reflectivAI-marketing-site`
-3. Configure:
-   - Framework Preset: **Vite**
-   - Build Command: `npm run build`
-   - Output Directory: `dist/client`
-4. Click "Deploy"
+2. Import your GitHub repository
+3. Set Output Directory: `dist/client`
+4. Deploy
 
-**Your site will be live at:**
-```
-https://reflectivai-marketing-site.vercel.app
-```
-
----
-
-### Option 3: Netlify
-
+### Netlify
 1. Go to https://app.netlify.com/start
-2. Connect to GitHub and select `ReflectivEI/reflectivAI-marketing-site`
-3. Configure:
-   - Build command: `npm run build`
-   - Publish directory: `dist/client`
-4. Click "Deploy site"
-
-**Your site will be live at:**
-```
-https://reflectivai-marketing-site.netlify.app
-```
+2. Connect GitHub repository
+3. Set Publish directory: `dist/client`
+4. Deploy
 
 ---
 
-### Option 4: Manual Deploy (Any Static Host)
+## Build Locally
 
-**Build locally:**
+To test changes before deploying:
+
 ```bash
 npm install
-npm run build
+npm run dev        # Development server at http://localhost:5173
+npm run build      # Production build
+npm run preview    # Preview production build
 ```
 
-**Upload the `dist/client` folder to:**
-- AWS S3 + CloudFront
-- Google Cloud Storage
-- Azure Static Web Apps
-- Any static hosting service
+---
+
+## Support
+
+**Repository Issues:** https://github.com/ReflectivEI/reflectivAI-marketing-site/issues  
+**GitHub Actions Logs:** https://github.com/ReflectivEI/reflectivAI-marketing-site/actions  
 
 ---
 
-## Recommended: Vercel or Netlify
+## Deployment Timeline
 
-Both are free, fast, and require zero configuration:
-- ✅ Automatic HTTPS
-- ✅ Global CDN
-- ✅ Automatic deployments on git push
-- ✅ Custom domain support
-- ✅ Preview deployments for PRs
-
-**Vercel is recommended** for React/Vite projects.
+✅ **Dec 28, 2025 10:04 AM** - Code pushed to GitHub  
+✅ **Dec 28, 2025 10:05 AM** - GitHub Pages enabled  
+✅ **Dec 28, 2025 10:05 AM** - Deployment workflow triggered  
+✅ **Site is now live!**
 
 ---
 
-## Current Status
+## Security Note
 
-✅ Code pushed to GitHub  
-✅ Build configuration ready  
-✅ GitHub Actions workflow created  
-⏳ Waiting for deployment (choose option above)
-
----
-
-## Need Help?
-
-If you want me to deploy it for you:
-1. **For GitHub Pages**: Provide a token with `repo` + `workflow` permissions
-2. **For Vercel/Netlify**: Share your account access or let me guide you through the UI
+**Important:** The GitHub token used for deployment should be revoked and regenerated periodically for security. Go to https://github.com/settings/tokens to manage your tokens.
