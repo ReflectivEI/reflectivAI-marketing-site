@@ -6,7 +6,11 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg">ReflectivAI</h3>
+            <img 
+              src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/83AD436E-122D-4EE6-BF94-AE7A018FBE00.png" 
+              alt="ReflectivAI" 
+              className="h-8 w-auto"
+            />
             <p className="text-sm text-muted-foreground">
               AI Sales Enablement for Life Sciences built on Emotional Intelligence.
             </p>
