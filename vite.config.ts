@@ -25,6 +25,7 @@ if (allowedHosts.length === 0) {
 }
 
 export default defineConfig(({ mode }) => ({
+	base: '/reflectivAI-marketing-site/',
 	plugins: [
 		react({
 			babel: {
