@@ -18,10 +18,10 @@ export default function AICoachPage() {
                 <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
                   AI Coach
                   <br />
-                  <span className="text-primary">Detect Signals. Support Judgment.</span>
+                  <span className="text-primary">Your Personal Pharma Sales Coach</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-xl">
-                  AI Coach helps pharma sales reps detect behavioral signals in real-time and make better judgments about when to pause, probe, reframe, or proceed with confidence.
+                  Get personalized coaching, real-time feedback, and actionable insights to improve your conversations with healthcare providers. Available 24/7 through our chat interface.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -98,8 +98,54 @@ export default function AICoachPage() {
         </div>
       </section>
 
-      {/* Signal Intelligence Capabilities Supported */}
+      {/* Chat Interface Features */}
       <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl lg:text-5xl font-bold">What You Can Do with AI Coach</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Access your personal coaching assistant anytime through our chat interface
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <MessageSquare className="h-8 w-8 text-primary" />
+              <h3 className="text-xl font-semibold">Ask Questions</h3>
+              <p className="text-muted-foreground">
+                Get instant answers about pharma sales techniques, objection handling, stakeholder mapping, and more
+              </p>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <Brain className="h-8 w-8 text-primary" />
+              <h3 className="text-xl font-semibold">Get Personalized Feedback</h3>
+              <p className="text-muted-foreground">
+                Share your conversation scenarios and receive tailored coaching on how to improve
+              </p>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <Target className="h-8 w-8 text-primary" />
+              <h3 className="text-xl font-semibold">Practice Scenarios</h3>
+              <p className="text-muted-foreground">
+                Work through challenging situations with guidance before facing them in real calls
+              </p>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <TrendingUp className="h-8 w-8 text-primary" />
+              <h3 className="text-xl font-semibold">Track Your Progress</h3>
+              <p className="text-muted-foreground">
+                Review coaching insights and see how your skills develop across all 8 competencies
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Signal Intelligence Capabilities Supported */}
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold">Signal Intelligence Capabilities Supported</h2>

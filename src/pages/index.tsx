@@ -280,8 +280,116 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* How It Works - Signal Intelligence Engine */}
+      {/* EI Frameworks */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto bg-muted rounded-xl p-8 md:p-12">
+            <div className="text-center space-y-6">
+              <h2 className="text-2xl md:text-3xl font-bold">Built on Proven EI Frameworks</h2>
+              <p className="text-lg text-muted-foreground">
+                Every module integrates evidence-based emotional intelligence frameworks: <span className="font-semibold text-foreground">Active Listening</span>, <span className="font-semibold text-foreground">DISC</span>, <span className="font-semibold text-foreground">Empathy Mapping</span>, and <span className="font-semibold text-foreground">Rapport Building</span>. These aren't abstract concepts—they're practical tools you'll use in every conversation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 8 Signal Intelligence Capabilities - What Gets Measured */}
       <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl lg:text-5xl font-bold">8 Core Competencies We Measure</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Every coaching module develops these behavioral capabilities. Track your progress across all 8 competencies.
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Signal Awareness</h3>
+              <p className="text-muted-foreground">
+                Ask purposeful, customer-centric questions; sequence questions logically; follow up effectively
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Question Quality</span>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Signal Interpretation</h3>
+              <p className="text-muted-foreground">
+                Accurately hear, reflect, and build on customer statements; acknowledge concerns
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Listening & Responsiveness</span>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Value Connection</h3>
+              <p className="text-muted-foreground">
+                Connect offerings to customer outcomes rather than features; emphasize customer priorities
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">Making It Matter</span>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Customer Engagement Monitoring</h3>
+              <p className="text-muted-foreground">
+                Monitor and interpret customer behavior for engagement; identify forward-looking cues
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Customer Engagement Signals</span>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Objection Navigation</h3>
+              <p className="text-muted-foreground">
+                Respond calmly to resistance; explore underlying concerns; acknowledge objections
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Objection Navigation</span>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Conversation Management</h3>
+              <p className="text-muted-foreground">
+                Guide conversation with purpose; transition smoothly; summarize and clarify next steps
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">Conversation Control & Structure</span>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Commitment Generation</h3>
+              <p className="text-muted-foreground">
+                Secure clear, voluntary next actions; ensure mutual agreement and ownership
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Commitment Gaining</span>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Adaptive Response</h3>
+              <p className="text-muted-foreground">
+                Adjust approach based on customer signals; shift tone, depth, or pacing as needed
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Adaptability</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works - Signal Intelligence Engine */}
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center space-y-4">
@@ -430,6 +538,15 @@ export default function HomePage() {
                   className="w-full h-full object-cover"
                 />
               </div>
+            </div>
+          </div>
+
+          <div className="mt-16 max-w-4xl mx-auto bg-muted rounded-xl p-8">
+            <div className="text-center space-y-4">
+              <h3 className="text-2xl font-bold">Plus: Knowledge Base & Resources</h3>
+              <p className="text-lg text-muted-foreground">
+                Access a comprehensive library of pharma sales resources, best practices, clinical data guides, and therapeutic area insights. Everything you need to stay informed and prepared.
+              </p>
             </div>
           </div>
         </div>

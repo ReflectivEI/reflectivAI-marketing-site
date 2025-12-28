@@ -16,12 +16,12 @@ export default function RolePlayPage() {
               </div>
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
-                  Practice Signal Intelligence
+                  Role Play Simulator
                   <br />
-                  <span className="text-primary">In Safe Scenarios</span>
+                  <span className="text-primary">Practice Makes Perfect</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-xl">
-                  Practice detecting and responding to behavioral signals in realistic pharma sales scenarios. Build Signal Intelligence capabilities across HIV, Oncology, Cardiology, Vaccines, and more.
+                  Master pharma sales conversations through realistic AI-powered role play scenarios. Practice with healthcare providers across HIV, Oncology, Cardiology, Vaccines, and more therapeutic areas.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
