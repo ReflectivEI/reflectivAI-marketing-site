@@ -115,6 +115,7 @@ function getAloraResponse(userMessage: string): string {
   const scores: Record<string, number> = {};
   
   scores.greeting = calculateSimilarity(message, KEYWORD_GROUPS.greeting);
+  scores.about = calculateSimilarity(message, KEYWORD_GROUPS.about);
   scores.features = calculateSimilarity(message, KEYWORD_GROUPS.features);
   scores.aiCoach = calculateSimilarity(message, KEYWORD_GROUPS.aiCoach);
   scores.rolePlay = calculateSimilarity(message, KEYWORD_GROUPS.rolePlay);
@@ -130,7 +131,7 @@ function getAloraResponse(userMessage: string): string {
   scores.security = calculateSimilarity(message, KEYWORD_GROUPS.security);
   scores.training = calculateSimilarity(message, KEYWORD_GROUPS.training);
   scores.pharma = calculateSimilarity(message, KEYWORD_GROUPS.pharma);
-  scores.ei = calculateSimilarity(message, KEYWORD_GROUPS.ei);
+  scores.signal = calculateSimilarity(message, KEYWORD_GROUPS.signal);
   scores.comparison = calculateSimilarity(message, KEYWORD_GROUPS.comparison);
   scores.industries = calculateSimilarity(message, KEYWORD_GROUPS.industries);
   scores.time = calculateSimilarity(message, KEYWORD_GROUPS.time);
@@ -155,6 +156,7 @@ function getAloraResponse(userMessage: string): string {
   // Map category to response
   const categoryMap: Record<string, string> = {
     greeting: 'greeting',
+    about: 'about',
     features: 'features',
     aiCoach: 'ai coach',
     rolePlay: 'role play',
@@ -170,7 +172,7 @@ function getAloraResponse(userMessage: string): string {
     security: 'security',
     training: 'training',
     pharma: 'pharma',
-    ei: 'ei',
+    signal: 'signal',
     comparison: 'comparison',
     industries: 'industries',
     time: 'time',

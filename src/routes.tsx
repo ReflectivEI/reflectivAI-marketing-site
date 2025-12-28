@@ -3,6 +3,7 @@ import { lazy } from 'react';
 import HomePage from './pages/index';
 import AICoachPage from './pages/ai-coach';
 import RolePlayPage from './pages/role-play';
+import ContactPage from './pages/contact';
 
 // Lazy load components for code splitting (except HomePage for instant loading)
 const isDevelopment = (import.meta.env as any).DEV;
@@ -22,12 +23,16 @@ export const routes: RouteObject[] = [
     element: <RolePlayPage />,
   },
   {
+    path: '/contact',
+    element: <ContactPage />,
+  },
+  {
     path: '*',
     element: <NotFoundPage />,
   },
 ];
 
 // Types for type-safe navigation
-export type Path = '/' | '/ai-coach' | '/role-play';
+export type Path = '/' | '/ai-coach' | '/role-play' | '/contact';
 
 export type Params = Record<string, string | undefined>;
