@@ -33,104 +33,139 @@ const ALORA_RESPONSES: Record<string, string> = {
   training: "Getting started is easy! We provide comprehensive onboarding, training sessions for your team, and ongoing resources. Most teams are up and running within a week.",
   pharma: "ReflectivAI is purpose-built for life sciences. We understand the unique challenges of pharma sales—complex products, regulatory requirements, and sophisticated stakeholders. Our scenarios reflect real-world pharma interactions.",
   ei: "Emotional Intelligence (EI) is the foundation of effective stakeholder engagement. We measure 10 EI dimensions including empathy, active listening, adaptability, and self-awareness. These skills are proven to drive better outcomes in pharma sales.",
-  unknown: "That's a great question! I want to make sure I give you the most accurate information. Could you rephrase that, or would you like to speak with our sales team directly? I can help you schedule a call.",
+  comparison: "Compared to traditional training, ReflectivAI offers personalized, on-demand coaching that adapts to each rep's needs. Unlike generic e-learning, our AI provides real-time feedback on actual conversations. We're more affordable than hiring coaches and more effective than classroom training.",
+  industries: "While we specialize in life sciences and pharma, our platform works for any B2B sales team that values relationship-building and emotional intelligence. We've seen success in medical devices, biotech, and healthcare services.",
+  time: "Most reps spend 15-30 minutes per day on ReflectivAI. You can practice scenarios during downtime, review coaching insights between meetings, or use it for pre-call preparation. It fits seamlessly into your existing workflow.",
+  mobile: "Yes! ReflectivAI works on desktop, tablet, and mobile. Practice role-plays on your phone, review coaching insights on your tablet, or access the full dashboard on your computer. Your progress syncs across all devices.",
 };
 
+// Semantic keyword groups for intelligent matching
+const KEYWORD_GROUPS = {
+  greeting: ['hello', 'hi', 'hey', 'greetings', 'good morning', 'good afternoon', 'good evening', 'howdy', 'sup', 'yo'],
+  features: ['feature', 'capability', 'what can', 'what do', 'what does', 'tell me about', 'show me', 'offer', 'provide', 'include', 'have'],
+  aiCoach: ['coach', 'coaching', 'feedback', 'personalized', 'guidance', 'mentor', 'advisor', 'improve', 'better', 'enhance'],
+  rolePlay: ['role play', 'roleplay', 'simulator', 'simulation', 'practice', 'scenario', 'training', 'rehearse', 'mock', 'exercise'],
+  metrics: ['metric', 'track', 'measure', 'analytics', 'performance', 'score', 'accuracy', 'empathy', 'data', 'insight', 'report', 'dashboard'],
+  pricing: ['price', 'pricing', 'cost', 'plan', 'subscription', 'pay', 'afford', 'budget', 'expensive', 'cheap', 'fee', 'charge'],
+  demo: ['demo', 'trial', 'try', 'test', 'see it', 'show', 'preview', 'example', 'sample', 'watch'],
+  compliance: ['compliance', 'compliant', 'regulation', 'regulatory', 'ethical', 'ethics', 'legal', 'rule', 'standard', 'guideline'],
+  howItWorks: ['how', 'work', 'explain', 'understand', 'learn', 'process', 'function', 'operate', 'mechanism'],
+  integration: ['integrat', 'crm', 'salesforce', 'hubspot', 'api', 'connect', 'sync', 'link', 'plug', 'compatible'],
+  results: ['result', 'roi', 'outcome', 'success', 'impact', 'improve', 'benefit', 'advantage', 'gain', 'achieve', 'win'],
+  team: ['team', 'group', 'organization', 'scale', 'size', 'company', 'department', 'staff', 'employee', 'member'],
+  support: ['support', 'help', 'assist', 'question', 'issue', 'problem', 'contact', 'service', 'customer'],
+  security: ['security', 'secure', 'safe', 'privacy', 'private', 'data', 'encrypt', 'protection', 'confidential', 'gdpr', 'hipaa'],
+  training: ['train', 'onboard', 'start', 'begin', 'setup', 'implement', 'launch', 'install', 'deploy', 'activate'],
+  pharma: ['pharma', 'pharmaceutical', 'life science', 'healthcare', 'medical', 'drug', 'hcp', 'doctor', 'physician', 'hospital'],
+  ei: ['emotional intelligence', 'ei', 'eq', 'empathy', 'emotion', 'feeling', 'relationship', 'soft skill', 'interpersonal'],
+  comparison: ['compare', 'comparison', 'versus', 'vs', 'alternative', 'competitor', 'different', 'better than', 'instead of'],
+  industries: ['industry', 'sector', 'vertical', 'market', 'field', 'domain', 'business', 'b2b', 'b2c'],
+  time: ['time', 'long', 'duration', 'minutes', 'hours', 'daily', 'weekly', 'commitment', 'invest'],
+  mobile: ['mobile', 'phone', 'app', 'ios', 'android', 'tablet', 'ipad', 'device', 'portable'],
+};
+
+// Calculate semantic similarity score
+function calculateSimilarity(message: string, keywords: string[]): number {
+  const messageLower = message.toLowerCase();
+  let score = 0;
+  
+  for (const keyword of keywords) {
+    // Exact match
+    if (messageLower.includes(keyword)) {
+      score += 10;
+    }
+    // Partial match (word starts with keyword)
+    else if (messageLower.split(' ').some(word => word.startsWith(keyword.slice(0, 4)))) {
+      score += 5;
+    }
+    // Fuzzy match (similar letters)
+    else if (keyword.length > 4) {
+      const keywordChars = keyword.slice(0, 5);
+      if (messageLower.includes(keywordChars)) {
+        score += 2;
+      }
+    }
+  }
+  
+  return score;
+}
+
+// Intelligent response selection using semantic matching
 function getAloraResponse(userMessage: string): string {
   const message = userMessage.toLowerCase().trim();
   
-  // Greeting patterns
-  if (/\b(hello|hi|hey|greetings|good morning|good afternoon)\b/.test(message)) {
-    return ALORA_RESPONSES.greeting;
+  // Empty or very short messages
+  if (message.length < 2) {
+    return ALORA_RESPONSES.default;
   }
   
-  // Features and capabilities
-  if (/\b(feature|capability|what can|what do|what does|tell me about)\b/.test(message)) {
-    return ALORA_RESPONSES.features;
+  // Calculate scores for each category
+  const scores: Record<string, number> = {};
+  
+  scores.greeting = calculateSimilarity(message, KEYWORD_GROUPS.greeting);
+  scores.features = calculateSimilarity(message, KEYWORD_GROUPS.features);
+  scores.aiCoach = calculateSimilarity(message, KEYWORD_GROUPS.aiCoach);
+  scores.rolePlay = calculateSimilarity(message, KEYWORD_GROUPS.rolePlay);
+  scores.metrics = calculateSimilarity(message, KEYWORD_GROUPS.metrics);
+  scores.pricing = calculateSimilarity(message, KEYWORD_GROUPS.pricing);
+  scores.demo = calculateSimilarity(message, KEYWORD_GROUPS.demo);
+  scores.compliance = calculateSimilarity(message, KEYWORD_GROUPS.compliance);
+  scores.howItWorks = calculateSimilarity(message, KEYWORD_GROUPS.howItWorks);
+  scores.integration = calculateSimilarity(message, KEYWORD_GROUPS.integration);
+  scores.results = calculateSimilarity(message, KEYWORD_GROUPS.results);
+  scores.team = calculateSimilarity(message, KEYWORD_GROUPS.team);
+  scores.support = calculateSimilarity(message, KEYWORD_GROUPS.support);
+  scores.security = calculateSimilarity(message, KEYWORD_GROUPS.security);
+  scores.training = calculateSimilarity(message, KEYWORD_GROUPS.training);
+  scores.pharma = calculateSimilarity(message, KEYWORD_GROUPS.pharma);
+  scores.ei = calculateSimilarity(message, KEYWORD_GROUPS.ei);
+  scores.comparison = calculateSimilarity(message, KEYWORD_GROUPS.comparison);
+  scores.industries = calculateSimilarity(message, KEYWORD_GROUPS.industries);
+  scores.time = calculateSimilarity(message, KEYWORD_GROUPS.time);
+  scores.mobile = calculateSimilarity(message, KEYWORD_GROUPS.mobile);
+  
+  // Find highest scoring category
+  let maxScore = 0;
+  let bestCategory = 'default';
+  
+  for (const [category, score] of Object.entries(scores)) {
+    if (score > maxScore) {
+      maxScore = score;
+      bestCategory = category;
+    }
   }
   
-  // AI Coach
-  if (/\b(ai coach|coaching|coach|feedback|personalized)\b/.test(message)) {
-    return ALORA_RESPONSES['ai coach'];
+  // If no good match found (score too low), provide helpful fallback
+  if (maxScore < 5) {
+    return "That's an interesting question! I want to make sure I give you the best answer. Could you tell me more about what you're looking for? Are you interested in our features, pricing, how it works, or something else? I'm here to help!";
   }
   
-  // Role Play
-  if (/\b(role.?play|simulator|simulation|practice|scenario|training)\b/.test(message)) {
-    return ALORA_RESPONSES['role play'];
-  }
+  // Map category to response
+  const categoryMap: Record<string, string> = {
+    greeting: 'greeting',
+    features: 'features',
+    aiCoach: 'ai coach',
+    rolePlay: 'role play',
+    metrics: 'metrics',
+    pricing: 'pricing',
+    demo: 'demo',
+    compliance: 'compliance',
+    howItWorks: 'how it works',
+    integration: 'integration',
+    results: 'results',
+    team: 'team',
+    support: 'support',
+    security: 'security',
+    training: 'training',
+    pharma: 'pharma',
+    ei: 'ei',
+    comparison: 'comparison',
+    industries: 'industries',
+    time: 'time',
+    mobile: 'mobile',
+  };
   
-  // Metrics and tracking
-  if (/\b(metric|track|measure|analytics|performance|score|accuracy|empathy)\b/.test(message)) {
-    return ALORA_RESPONSES.metrics;
-  }
-  
-  // Pricing
-  if (/\b(price|pricing|cost|plan|subscription|pay|afford)\b/.test(message)) {
-    return ALORA_RESPONSES.pricing;
-  }
-  
-  // Demo and trial
-  if (/\b(demo|trial|try|test|see it|show me)\b/.test(message)) {
-    return ALORA_RESPONSES.demo;
-  }
-  
-  // Compliance
-  if (/\b(compliance|compliant|regulation|regulatory|ethical|ethics|legal)\b/.test(message)) {
-    return ALORA_RESPONSES.compliance;
-  }
-  
-  // How it works
-  if (/\b(how|work|explain|understand|learn|process)\b/.test(message) && message.length > 10) {
-    return ALORA_RESPONSES['how it works'];
-  }
-  
-  // Integration
-  if (/\b(integrat|crm|salesforce|hubspot|api|connect|sync)\b/.test(message)) {
-    return ALORA_RESPONSES.integration;
-  }
-  
-  // Results and ROI
-  if (/\b(result|roi|outcome|success|impact|improve|benefit)\b/.test(message)) {
-    return ALORA_RESPONSES.results;
-  }
-  
-  // Team and scaling
-  if (/\b(team|group|organization|scale|size|company)\b/.test(message)) {
-    return ALORA_RESPONSES.team;
-  }
-  
-  // Support
-  if (/\b(support|help|assist|question|issue|problem|contact)\b/.test(message)) {
-    return ALORA_RESPONSES.support;
-  }
-  
-  // Security
-  if (/\b(security|secure|safe|privacy|private|data|encrypt|protection)\b/.test(message)) {
-    return ALORA_RESPONSES.security;
-  }
-  
-  // Training and onboarding
-  if (/\b(train|onboard|start|begin|setup|implement|launch)\b/.test(message)) {
-    return ALORA_RESPONSES.training;
-  }
-  
-  // Pharma specific
-  if (/\b(pharma|pharmaceutical|life science|healthcare|medical|drug|hcp)\b/.test(message)) {
-    return ALORA_RESPONSES.pharma;
-  }
-  
-  // Emotional Intelligence
-  if (/\b(emotional intelligence|ei|eq|empathy|emotion|feeling|relationship)\b/.test(message)) {
-    return ALORA_RESPONSES.ei;
-  }
-  
-  // If no match and message is substantial, return unknown response
-  if (message.length > 5) {
-    return ALORA_RESPONSES.unknown;
-  }
-  
-  // Very short messages get default
-  return ALORA_RESPONSES.default;
+  return ALORA_RESPONSES[categoryMap[bestCategory]] || ALORA_RESPONSES.default;
 }
 
 export function AloraAssistant() {
