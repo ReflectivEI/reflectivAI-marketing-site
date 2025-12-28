@@ -14,7 +14,7 @@ export function ROICalculator() {
   // Calculate improvements with ReflectivAI
   const improvedWinRate = Math.min(currentWinRate * 1.15, 45); // 15% improvement, capped at 45%
   const improvedDealSize = avgDealSize * 1.08; // 8% larger deals
-  const timeS aved = teamSize * 10; // 10 hours per rep per month
+  const timeSaved = teamSize * 10; // 10 hours per rep per month
 
   // Calculate ROI
   const dealsPerRep = 12; // per year

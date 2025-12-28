@@ -9,6 +9,9 @@ import { AnimatedStats } from '@/components/AnimatedStats';
 import { Testimonials } from '@/components/Testimonials';
 import { FAQ } from '@/components/FAQ';
 import { CTASection } from '@/components/CTASection';
+import { LiveMetricsDashboard } from '@/components/LiveMetricsDashboard';
+import { LiveActivityFeed } from '@/components/LiveActivityFeed';
+import { ROICalculator } from '@/components/ROICalculator';
 
 type CapabilityDetail = {
   name: string;
@@ -948,6 +951,15 @@ export default function HomePage() {
 
       {/* Testimonials */}
       <Testimonials />
+
+      {/* Live Metrics Dashboard */}
+      <LiveMetricsDashboard />
+
+      {/* Live Activity Feed */}
+      <LiveActivityFeed />
+
+      {/* ROI Calculator */}
+      <ROICalculator />
 
       {/* FAQ */}
       <FAQ />
