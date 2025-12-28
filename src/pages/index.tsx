@@ -4,6 +4,11 @@ import { ArrowRight, CheckCircle2, Brain, Target, Users, TrendingUp } from 'luci
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { useState } from 'react';
+import { PlatformShowcase } from '@/components/PlatformShowcase';
+import { AnimatedStats } from '@/components/AnimatedStats';
+import { Testimonials } from '@/components/Testimonials';
+import { FAQ } from '@/components/FAQ';
+import { CTASection } from '@/components/CTASection';
 
 type CapabilityDetail = {
   name: string;
@@ -935,35 +940,20 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Platform Showcase */}
+      <PlatformShowcase />
+
+      {/* Animated Stats */}
+      <AnimatedStats />
+
+      {/* Testimonials */}
+      <Testimonials />
+
+      {/* FAQ */}
+      <FAQ />
+
       {/* CTA */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <h2 className="text-4xl lg:text-5xl font-bold">
-                  Ready to Master Pharma Sales?
-                </h2>
-                <p className="text-xl text-muted-foreground">
-                  See how ReflectivAI helps Life Sciences teams build trust with healthcare providers through AI-powered coaching and proven frameworks.
-                </p>
-              </div>
-              <div className="space-y-4">
-                <Button size="lg" className="w-full text-base">
-                  Schedule a Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button size="lg" variant="outline" className="w-full text-base">
-                  Download Case Study
-                </Button>
-                <p className="text-sm text-muted-foreground text-center">
-                  Join 500+ Life Sciences sales teams using ReflectivAI
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTASection />
 
       {/* Capability Detail Dialog */}
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
