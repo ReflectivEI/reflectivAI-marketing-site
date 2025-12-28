@@ -42,7 +42,7 @@ const ALORA_RESPONSES: Record<string, string> = {
 // Semantic keyword groups for intelligent matching
 const KEYWORD_GROUPS = {
   greeting: ['hello', 'hi', 'hey', 'greetings', 'good morning', 'good afternoon', 'good evening', 'howdy', 'sup', 'yo'],
-  features: ['feature', 'capability', 'what can', 'what do', 'what does', 'tell me about', 'show me', 'offer', 'provide', 'include', 'have'],
+  features: ['features', 'capabilities', 'what can you do', 'what does reflectivai', 'tell me about reflectivai', 'what is reflectivai', 'show me', 'offerings', 'provides', 'includes'],
   aiCoach: ['coach', 'coaching', 'feedback', 'personalized', 'guidance', 'mentor', 'advisor', 'improve', 'better', 'enhance'],
   rolePlay: ['role play', 'roleplay', 'simulator', 'simulation', 'practice', 'scenario', 'training', 'rehearse', 'mock', 'exercise'],
   metrics: ['metric', 'track', 'measure', 'analytics', 'performance', 'score', 'accuracy', 'empathy', 'data', 'insight', 'report', 'dashboard'],
@@ -64,24 +64,34 @@ const KEYWORD_GROUPS = {
   mobile: ['mobile', 'phone', 'app', 'ios', 'android', 'tablet', 'ipad', 'device', 'portable'],
 };
 
-// Calculate semantic similarity score
+// Calculate semantic similarity score with improved word-boundary matching
 function calculateSimilarity(message: string, keywords: string[]): number {
-  const messageLower = message.toLowerCase();
+  const messageLower = message.toLowerCase().trim();
+  const words = messageLower.split(/\s+/);
   let score = 0;
   
   for (const keyword of keywords) {
-    // Exact match
-    if (messageLower.includes(keyword)) {
+    const keywordLower = keyword.toLowerCase();
+    
+    // Exact phrase match with word boundaries (highest priority)
+    const escapedKeyword = keywordLower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`\\b${escapedKeyword}\\b`);
+    
+    if (regex.test(messageLower)) {
+      score += 20; // Exact phrase match
+    }
+    // Substring match (lower priority)
+    else if (messageLower.includes(keywordLower)) {
       score += 10;
     }
-    // Partial match (word starts with keyword)
-    else if (messageLower.split(' ').some(word => word.startsWith(keyword.slice(0, 4)))) {
+    // Individual word match
+    else if (words.some(word => word === keywordLower || word.startsWith(keywordLower))) {
       score += 5;
     }
-    // Fuzzy match (similar letters)
-    else if (keyword.length > 4) {
-      const keywordChars = keyword.slice(0, 5);
-      if (messageLower.includes(keywordChars)) {
+    // Partial word match (only for longer keywords)
+    else if (keywordLower.length > 5) {
+      const keywordStart = keywordLower.slice(0, 5);
+      if (words.some(word => word.includes(keywordStart))) {
         score += 2;
       }
     }
@@ -136,7 +146,7 @@ function getAloraResponse(userMessage: string): string {
   }
   
   // If no good match found (score too low), provide helpful fallback
-  if (maxScore < 5) {
+  if (maxScore < 8) {
     return "That's an interesting question! I want to make sure I give you the best answer. Could you tell me more about what you're looking for? Are you interested in our features, pricing, how it works, or something else? I'm here to help!";
   }
   
@@ -255,7 +265,7 @@ export function AloraAssistant() {
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(false)}
-              className="text-primary-foreground hover:bg-primary-foreground/20"
+              className="text-primary-foreground hover:bg-primary/90"
             >
               <X className="h-5 w-5" />
             </Button>
@@ -267,16 +277,25 @@ export function AloraAssistant() {
               {messages.map((message) => (
                 <div
                   key={message.id}
-                  className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+                  className={`flex gap-3 ${
+                    message.sender === 'alora' ? 'justify-start' : 'justify-end'
+                  }`}
                 >
+                  {message.sender === 'alora' && (
+                    <Avatar className="h-8 w-8 bg-accent flex-shrink-0">
+                      <AvatarFallback className="bg-accent text-accent-foreground">
+                        <Sparkles className="h-4 w-4" />
+                      </AvatarFallback>
+                    </Avatar>
+                  )}
                   <div
                     className={`max-w-[80%] rounded-lg p-3 ${
-                      message.sender === 'user'
-                        ? 'bg-primary text-primary-foreground'
-                        : 'bg-muted text-foreground'
+                      message.sender === 'alora'
+                        ? 'bg-muted text-foreground'
+                        : 'bg-primary text-primary-foreground'
                     }`}
                   >
-                    <p className="text-sm">{message.text}</p>
+                    <p className="text-sm whitespace-pre-wrap">{message.text}</p>
                     <p className="text-xs opacity-70 mt-1">
                       {message.timestamp.toLocaleTimeString([], {
                         hour: '2-digit',
@@ -284,15 +303,27 @@ export function AloraAssistant() {
                       })}
                     </p>
                   </div>
+                  {message.sender === 'user' && (
+                    <Avatar className="h-8 w-8 bg-primary flex-shrink-0">
+                      <AvatarFallback className="bg-primary text-primary-foreground">
+                        U
+                      </AvatarFallback>
+                    </Avatar>
+                  )}
                 </div>
               ))}
               {isTyping && (
-                <div className="flex justify-start">
-                  <div className="bg-muted rounded-lg p-3">
+                <div className="flex gap-3 justify-start">
+                  <Avatar className="h-8 w-8 bg-accent flex-shrink-0">
+                    <AvatarFallback className="bg-accent text-accent-foreground">
+                      <Sparkles className="h-4 w-4" />
+                    </AvatarFallback>
+                  </Avatar>
+                  <div className="bg-muted text-foreground rounded-lg p-3">
                     <div className="flex gap-1">
-                      <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" />
-                      <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0.1s' }} />
-                      <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
+                      <div className="w-2 h-2 bg-foreground/40 rounded-full animate-bounce" />
+                      <div className="w-2 h-2 bg-foreground/40 rounded-full animate-bounce [animation-delay:0.2s]" />
+                      <div className="w-2 h-2 bg-foreground/40 rounded-full animate-bounce [animation-delay:0.4s]" />
                     </div>
                   </div>
                 </div>
@@ -307,10 +338,15 @@ export function AloraAssistant() {
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyPress={handleKeyPress}
-                placeholder="Ask Alora anything..."
+                placeholder="Ask me anything..."
                 className="flex-1"
               />
-              <Button onClick={handleSend} size="icon" className="bg-accent hover:bg-accent/90">
+              <Button
+                onClick={handleSend}
+                size="icon"
+                disabled={!inputValue.trim()}
+                className="bg-accent hover:bg-accent/90"
+              >
                 <Send className="h-4 w-4" />
               </Button>
             </div>
