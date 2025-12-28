@@ -463,33 +463,14 @@ export default function RolePlayPage() {
         </div>
       </section>
 
-      {/* What This Is NOT */}
-      <section className="py-20">
+      {/* Ethics Statement */}
+      <section className="py-12 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-muted border-2 border-primary rounded-xl p-8 space-y-6">
-              <h2 className="text-2xl font-bold text-center">What Role Play Simulations Are NOT</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="text-center space-y-2">
-                  <div className="text-3xl">🚫</div>
-                  <p className="font-semibold">Not scripted responses</p>
-                  <p className="text-sm text-muted-foreground">We don't teach what to say—we teach how to detect and interpret signals</p>
-                </div>
-                <div className="text-center space-y-2">
-                  <div className="text-3xl">🚫</div>
-                  <p className="font-semibold">Not persuasion training</p>
-                  <p className="text-sm text-muted-foreground">Signal Intelligence is about preserving trust, not manipulating decisions</p>
-                </div>
-                <div className="text-center space-y-2">
-                  <div className="text-3xl">🚫</div>
-                  <p className="font-semibold">Not pass/fail testing</p>
-                  <p className="text-sm text-muted-foreground">This is a safe space for learning through practice and behavioral feedback</p>
-                </div>
-              </div>
-              <div className="pt-4 border-t border-border text-center space-y-2">
-                <p className="text-lg font-semibold text-primary">Always ethical • Always judgment-free • Always focused on capability development</p>
-              </div>
-            </div>
+          <div className="max-w-4xl mx-auto text-center space-y-3">
+            <p className="text-lg font-semibold text-primary">Always ethical • Always human-validated</p>
+            <p className="text-muted-foreground">
+              Signal Intelligence respects autonomy, preserves dignity, and supports professional judgment—never replacing it.
+            </p>
           </div>
         </div>
       </section>

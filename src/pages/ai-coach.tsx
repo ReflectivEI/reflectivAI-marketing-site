@@ -476,33 +476,14 @@ export default function AICoachPage() {
         </div>
       </section>
 
-      {/* What This Is NOT */}
-      <section className="py-20">
+      {/* Ethics Statement */}
+      <section className="py-12 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-muted border-2 border-primary rounded-xl p-8 space-y-6">
-              <h2 className="text-2xl font-bold text-center">What AI Coach Is NOT</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="text-center space-y-2">
-                  <div className="text-3xl">🚫</div>
-                  <p className="font-semibold">Not a script generator</p>
-                  <p className="text-sm text-muted-foreground">AI Coach doesn't tell you what to say—it helps you understand what you're hearing</p>
-                </div>
-                <div className="text-center space-y-2">
-                  <div className="text-3xl">🚫</div>
-                  <p className="font-semibold">Not a decision-maker</p>
-                  <p className="text-sm text-muted-foreground">You always choose how to respond—AI provides information, not instructions</p>
-                </div>
-                <div className="text-center space-y-2">
-                  <div className="text-3xl">🚫</div>
-                  <p className="font-semibold">Not manipulation</p>
-                  <p className="text-sm text-muted-foreground">Signal Intelligence is about preserving trust and credibility, not persuading or influencing</p>
-                </div>
-              </div>
-              <div className="pt-4 border-t border-border text-center space-y-2">
-                <p className="text-lg font-semibold text-primary">Always ethical • Always human-validated • Always supporting judgment</p>
-              </div>
-            </div>
+          <div className="max-w-4xl mx-auto text-center space-y-3">
+            <p className="text-lg font-semibold text-primary">Always ethical • Always human-validated</p>
+            <p className="text-muted-foreground">
+              Signal Intelligence respects autonomy, preserves dignity, and supports professional judgment—never replacing it.
+            </p>
           </div>
         </div>
       </section>
