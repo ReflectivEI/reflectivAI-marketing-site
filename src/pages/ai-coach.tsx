@@ -375,7 +375,6 @@ export default function AICoachPage() {
               The Coach doesn't just score you—it teaches you. With every simulation, reps build muscle memory for emotionally intelligent conversations that drive trust, adherence, and long-term HCP relationships.
             </p>
           </div>
-          </div>
         </div>
       </section>
 
