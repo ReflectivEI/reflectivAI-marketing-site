@@ -32,7 +32,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build:vite
+        run: NODE_ENV=production npm run build:vite
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
