@@ -21,9 +21,9 @@ export default function Header() {
             <img 
               src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/83AD436E-122D-4EE6-BF94-AE7A018FBE00.png" 
               alt="ReflectivAI Logo" 
-              className="h-10 w-auto"
+              className="h-14 w-auto"
             />
-            <span className="text-xl font-bold">ReflectivAI</span>
+            <span className="text-2xl font-bold">ReflectivAI</span>
           </Link>
 
           <nav className="hidden md:flex gap-8">

@@ -23,22 +23,22 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Platform</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link to="/platform" className="hover:text-foreground transition-colors">
+                <Link to="/" className="hover:text-foreground transition-colors">
                   Overview
                 </Link>
               </li>
               <li>
-                <Link to="/features" className="hover:text-foreground transition-colors">
-                  Features
+                <Link to="/ai-coach" className="hover:text-foreground transition-colors">
+                  AI Coach
                 </Link>
               </li>
               <li>
-                <Link to="/integrations" className="hover:text-foreground transition-colors">
-                  Integrations
+                <Link to="/role-play" className="hover:text-foreground transition-colors">
+                  Role Play
                 </Link>
               </li>
               <li>
-                <Link to="/pricing" className="hover:text-foreground transition-colors">
+                <Link to="/contact" className="hover:text-foreground transition-colors">
                   Pricing
                 </Link>
               </li>
@@ -49,22 +49,22 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Resources</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link to="/resources" className="hover:text-foreground transition-colors">
-                  Resource Center
+                <Link to="/ai-coach" className="hover:text-foreground transition-colors">
+                  AI Coach Guide
                 </Link>
               </li>
               <li>
-                <Link to="/case-studies" className="hover:text-foreground transition-colors">
-                  Case Studies
+                <Link to="/role-play" className="hover:text-foreground transition-colors">
+                  Role Play Scenarios
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="hover:text-foreground transition-colors">
-                  Blog
+                <Link to="/" className="hover:text-foreground transition-colors">
+                  Signal Intelligence
                 </Link>
               </li>
               <li>
-                <Link to="/support" className="hover:text-foreground transition-colors">
+                <Link to="/contact" className="hover:text-foreground transition-colors">
                   Support
                 </Link>
               </li>
@@ -75,12 +75,12 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link to="/about" className="hover:text-foreground transition-colors">
+                <Link to="/" className="hover:text-foreground transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/careers" className="hover:text-foreground transition-colors">
+                <Link to="/contact" className="hover:text-foreground transition-colors">
                   Careers
                 </Link>
               </li>
@@ -90,7 +90,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/privacy" className="hover:text-foreground transition-colors">
+                <Link to="/" className="hover:text-foreground transition-colors">
                   Privacy Policy
                 </Link>
               </li>
