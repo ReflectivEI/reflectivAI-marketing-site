@@ -12,6 +12,7 @@ import { CTASection } from '@/components/CTASection';
 import { LiveMetricsDashboard } from '@/components/LiveMetricsDashboard';
 import { LiveActivityFeed } from '@/components/LiveActivityFeed';
 import { ROICalculator } from '@/components/ROICalculator';
+import { SocialProofTicker } from '@/components/SocialProofTicker';
 
 type CapabilityDetail = {
   name: string;
@@ -167,8 +168,16 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          
-          <div className="mt-20 pt-12 border-t border-border">
+        </div>
+      </section>
+
+      {/* Social Proof Ticker */}
+      <SocialProofTicker />
+
+      {/* Trusted By */}
+      <section className="w-full py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div>
             <p className="text-center text-sm text-muted-foreground mb-8">Trusted by leading Life Sciences organizations</p>
             <div className="flex flex-wrap justify-center items-center gap-12 opacity-60">
               <div className="text-2xl font-semibold">Pfizer</div>
@@ -951,6 +960,9 @@ export default function HomePage() {
 
       {/* Testimonials */}
       <Testimonials />
+
+      {/* Social Proof Ticker */}
+      <SocialProofTicker />
 
       {/* Live Metrics Dashboard */}
       <LiveMetricsDashboard />

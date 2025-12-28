@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, MessageSquare, TrendingUp, Zap, CheckCircle2, Target, Activity } from 'lucide-react';
+import { ArrowRight, Brain, MessageSquare, TrendingUp, CheckCircle2, Target, Activity } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
