@@ -2,6 +2,7 @@
 
 import { ArrowRight, CheckCircle2, Brain, Target, Users, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { useState } from 'react';
 import { PlatformShowcase } from '@/components/PlatformShowcase';
@@ -145,16 +146,20 @@ export default function HomePage() {
                   <span className="text-primary">for Life Sciences</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-xl">
-                  Connect and Convert with Intelligence. ReflectivAI blends clinical accuracy, emotional intelligence, and adaptive AI coaching so every HCP conversation feels authentic, confident, and compliant.
+                  Connect and Convert with Intelligence. ReflectivAI blends clinical accuracy, Signal Intelligence, and adaptive AI coaching so every HCP conversation feels authentic, confident, and compliant.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-base">
-                  Request a Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                <Button size="lg" className="text-base" asChild>
+                  <Link to="/contact">
+                    Request a Demo
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="text-base">
-                  Watch Platform Tour
+                <Button size="lg" variant="outline" className="text-base" asChild>
+                  <Link to="/ai-coach">
+                    Watch Platform Tour
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -218,7 +223,7 @@ export default function HomePage() {
                     <p className="text-muted-foreground">Delayed feedback from managers</p>
                   </div>
                   <div className="p-4 rounded-lg bg-muted border border-border">
-                    <p className="text-muted-foreground">Minimal focus on emotional intelligence</p>
+                    <p className="text-muted-foreground">Minimal focus on conversational intelligence</p>
                   </div>
                   <div className="p-4 rounded-lg bg-muted border border-border">
                     <p className="text-muted-foreground">Difficult to scale across field force</p>
@@ -241,7 +246,7 @@ export default function HomePage() {
                     <p className="text-sm text-muted-foreground mt-1">with suggested phrasing and improvements</p>
                   </div>
                   <div className="p-4 rounded-lg bg-primary/5 border border-primary/20 hover:bg-primary/10 transition-colors">
-                    <p className="font-semibold text-foreground">EI metrics</p>
+                    <p className="font-semibold text-foreground">Signal Intelligence metrics</p>
                     <p className="text-sm text-muted-foreground mt-1">that translate scores into coaching steps</p>
                   </div>
                   <div className="p-4 rounded-lg bg-primary/5 border border-primary/20 hover:bg-primary/10 transition-colors">
@@ -479,9 +484,9 @@ export default function HomePage() {
             </div>
 
             <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">EI Mastery for Pharma</h3>
+              <h3 className="text-xl font-semibold">Signal Intelligence Mastery for Pharma</h3>
               <p className="text-muted-foreground">
-                Integrate all emotional intelligence frameworks for healthcare selling
+                Integrate all conversational intelligence frameworks for healthcare selling
               </p>
               <div className="flex gap-2 flex-wrap">
                 <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">DISC</span>
@@ -497,9 +502,9 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto bg-muted rounded-xl p-8 md:p-12">
             <div className="text-center space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold">Built on Proven EI Frameworks</h2>
+              <h2 className="text-2xl md:text-3xl font-bold">Built on Proven Signal Intelligence Frameworks</h2>
               <p className="text-lg text-muted-foreground">
-                Every module integrates evidence-based emotional intelligence frameworks: <span className="font-semibold text-foreground">Active Listening</span>, <span className="font-semibold text-foreground">DISC</span>, <span className="font-semibold text-foreground">Empathy Mapping</span>, and <span className="font-semibold text-foreground">Rapport Building</span>. These aren't abstract concepts—they're practical tools you'll use in every conversation.
+                Every module integrates evidence-based conversational intelligence frameworks: <span className="font-semibold text-foreground">Active Listening</span>, <span className="font-semibold text-foreground">DISC</span>, <span className="font-semibold text-foreground">Empathy Mapping</span>, and <span className="font-semibold text-foreground">Rapport Building</span>. These aren't abstract concepts—they're practical tools you'll use in every conversation.
               </p>
             </div>
           </div>
@@ -674,7 +679,7 @@ export default function HomePage() {
             <div className="bg-background border border-border rounded-lg p-8 space-y-4 mt-8">
               <h4 className="text-xl font-semibold">Built on Behavioral Science</h4>
               <p className="text-muted-foreground">
-                Signal Intelligence combines emotional intelligence research, behavioral psychology, and social dynamics theory. The result: practical skills that help you read situations accurately and respond in ways that preserve trust and credibility.
+                Signal Intelligence combines conversational intelligence research, behavioral psychology, and social dynamics theory. The result: practical skills that help you read situations accurately and respond in ways that preserve trust and credibility.
               </p>
             </div>
           </div>
