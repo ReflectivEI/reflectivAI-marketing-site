@@ -446,7 +446,7 @@ export default function RolePlayPage() {
               </div>
               <h3 className="text-lg font-semibold">Get Feedback</h3>
               <p className="text-sm text-muted-foreground">
-                Receive detailed analysis on your performance, emotional intelligence, and areas for improvement
+                Receive detailed analysis on your performance, Signal Intelligence capabilities, and areas for improvement
               </p>
             </div>
 

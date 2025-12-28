@@ -227,7 +227,7 @@ export default function AICoachPage() {
           <div className="max-w-6xl mx-auto space-y-12">
             {/* 10 EI Dimensions */}
             <div className="bg-muted rounded-xl p-8">
-              <h3 className="text-2xl font-bold mb-6 text-center">10 Emotional Intelligence Dimensions</h3>
+              <h3 className="text-2xl font-bold mb-6 text-center">10 Signal Intelligence Dimensions</h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
                 <div className="p-4 rounded-lg bg-background border border-border text-center">
                   <div className="text-3xl font-bold text-primary mb-2">1</div>
@@ -329,9 +329,9 @@ export default function AICoachPage() {
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl lg:text-5xl font-bold">EI in Practice</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold">Signal Intelligence in Practice</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              This isn't generic feedback. Every coaching moment ties back to emotional intelligence principles.
+              This isn't generic feedback. Every coaching moment ties back to Signal Intelligence principles.
             </p>
           </div>
 
@@ -363,7 +363,7 @@ export default function AICoachPage() {
               <div className="aspect-[3/4] rounded-lg overflow-hidden border border-border shadow-2xl">
                 <img
                   src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/9F4B84D2-1ED2-4E75-B3C5-EB732344F88D.png"
-                  alt="AI Coach providing real-time emotional intelligence feedback"
+                  alt="AI Coach providing real-time Signal Intelligence feedback"
                   className="w-full h-full object-cover"
                 />
               </div>
