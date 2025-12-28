@@ -1,7 +1,127 @@
+'use client';
+
 import { ArrowRight, CheckCircle2, Brain, Target, Users, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { useState } from 'react';
+
+type CapabilityDetail = {
+  name: string;
+  definition: string;
+  calculation: string;
+  goodExample: string;
+  improvementTips: string[];
+};
+
+const capabilityDetails: Record<string, CapabilityDetail> = {
+  'signal-awareness': {
+    name: 'Signal Awareness',
+    definition: 'The ability to detect and recognize behavioral cues, verbal patterns, and non-verbal signals during HCP conversations that indicate engagement, concern, interest, or resistance.',
+    calculation: 'Measured by tracking question quality, follow-up opportunities identified, and recognition of customer verbal/non-verbal cues during conversations.',
+    goodExample: 'A rep notices an HCP\'s hesitation when discussing side effects and immediately asks, "I sense you have concerns about tolerability. What specific patient scenarios are you thinking about?"',
+    improvementTips: [
+      'Practice active observation during every call',
+      'Note changes in tone, pace, or energy',
+      'Track question patterns and engagement signals',
+      'Review recorded calls to identify missed signals'
+    ]
+  },
+  'signal-interpretation': {
+    name: 'Signal Interpretation',
+    definition: 'The capacity to accurately understand what detected signals mean in context—distinguishing between uncertainty, skepticism, interest, or information overload.',
+    calculation: 'Evaluated through listening quality, paraphrasing accuracy, and appropriate acknowledgment of customer concerns in conversation analysis.',
+    goodExample: 'When an HCP says "I\'ve heard mixed results," the rep interprets this as uncertainty rather than rejection and responds with clinical evidence rather than defensiveness.',
+    improvementTips: [
+      'Paraphrase to confirm understanding',
+      'Ask clarifying questions before responding',
+      'Consider multiple interpretations of signals',
+      'Practice empathy mapping exercises'
+    ]
+  },
+  'value-connection': {
+    name: 'Value Connection',
+    definition: 'The skill of linking product features to specific HCP priorities and patient outcomes, moving beyond feature lists to meaningful clinical value.',
+    calculation: 'Tracked by analyzing outcome-based language usage versus feature-focused messaging in conversations.',
+    goodExample: '"Based on your patient population with high cardiovascular risk, this once-daily dosing could improve adherence by 40%, leading to better long-term outcomes."',
+    improvementTips: [
+      'Lead with outcomes, not features',
+      'Connect to HCP\'s specific patient population',
+      'Use clinical evidence to support value claims',
+      'Practice translating features into benefits'
+    ]
+  },
+  'customer-engagement': {
+    name: 'Customer Engagement Monitoring',
+    definition: 'Continuous assessment of HCP participation, interest level, and conversational investment through talk time, question quality, and forward-looking statements.',
+    calculation: 'Measured by customer talk time percentage, quality of questions asked by HCP, and presence of future-oriented statements.',
+    goodExample: 'Rep tracks that HCP is asking detailed questions about dosing protocols and mentions "I\'d like to try this with my next appropriate patient"—high engagement signals.',
+    improvementTips: [
+      'Aim for 60/40 HCP-to-rep talk ratio',
+      'Encourage HCP questions throughout',
+      'Listen for future commitment language',
+      'Track engagement trends across calls'
+    ]
+  },
+  'objection-navigation': {
+    name: 'Objection Navigation',
+    definition: 'The ability to handle concerns, pushback, and skepticism with calm curiosity rather than defensiveness, exploring objections to understand root causes.',
+    calculation: 'Assessed by detecting defensive responses and evaluating use of exploratory, non-defensive approaches to objections.',
+    goodExample: 'HCP: "This is too expensive." Rep: "I appreciate that concern. Help me understand—are you thinking about formulary coverage, patient out-of-pocket costs, or overall treatment value?"',
+    improvementTips: [
+      'Stay curious, not defensive',
+      'Acknowledge concerns before responding',
+      'Ask questions to understand root issues',
+      'Practice objection handling scenarios'
+    ]
+  },
+  'conversation-management': {
+    name: 'Conversation Management',
+    definition: 'Structuring conversations with clear purpose, smooth transitions, effective summarization, and explicit next steps to maintain focus and drive outcomes.',
+    calculation: 'Evaluated by tracking purpose-setting, transition quality, summarization frequency, and next-step clarity.',
+    goodExample: '"Today I\'d like to discuss the new efficacy data [purpose]. Let me share three key findings [transition]. To summarize [recap]. What would be a good next step? [commitment]"',
+    improvementTips: [
+      'Set clear objectives at the start',
+      'Use verbal signposts for transitions',
+      'Summarize key points regularly',
+      'Always secure clear next steps'
+    ]
+  },
+  'commitment-generation': {
+    name: 'Commitment Generation',
+    definition: 'Identifying and securing clear, voluntary next actions from HCPs that advance the relationship and move toward prescribing or advocacy.',
+    calculation: 'Measured by identifying opportunities for securing specific, voluntary next actions during conversations.',
+    goodExample: '"Based on our discussion, would you be open to starting with one appropriate patient this month and reviewing outcomes together?" [Specific, voluntary, time-bound]',
+    improvementTips: [
+      'Ask for specific commitments, not vague interest',
+      'Make commitments voluntary and low-pressure',
+      'Tie commitments to HCP\'s stated priorities',
+      'Follow up on previous commitments'
+    ]
+  },
+  'adaptive-response': {
+    name: 'Adaptive Response',
+    definition: 'Flexibly adjusting communication style, depth, pacing, and approach based on real-time HCP cues and conversational dynamics.',
+    calculation: 'Assessed by analyzing when and how reps shift tone, depth, or pacing in response to customer behavioral cues.',
+    goodExample: 'Rep notices HCP is rushed and immediately shifts from detailed clinical discussion to: "I know you\'re pressed for time. Here\'s the one key takeaway, and I\'ll email the full data."',
+    improvementTips: [
+      'Monitor HCP energy and time constraints',
+      'Adjust depth based on HCP expertise',
+      'Match HCP communication style',
+      'Practice flexible conversation pivots'
+    ]
+  }
+};
 
 export default function HomePage() {
+  const [selectedCapability, setSelectedCapability] = useState<string | null>(null);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  const openCapabilityDetail = (capabilityKey: string) => {
+    setSelectedCapability(capabilityKey);
+    setIsDialogOpen(true);
+  };
+
+  const currentCapability = selectedCapability ? capabilityDetails[selectedCapability] : null;
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -11,12 +131,12 @@ export default function HomePage() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
-                  AI Sales Coaching
+                  AI Sales Enablement
                   <br />
-                  <span className="text-primary">Built for Life Sciences</span>
+                  <span className="text-primary">for Life Sciences</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-xl">
-                  Master pharma sales conversations with AI-powered coaching, realistic role play scenarios, and proven frameworks for building trust with healthcare providers.
+                  Connect and Convert with Intelligence. ReflectivAI blends clinical accuracy, emotional intelligence, and adaptive AI coaching so every HCP conversation feels authentic, confident, and compliant.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -48,6 +168,81 @@ export default function HomePage() {
               <div className="text-2xl font-semibold">Roche</div>
               <div className="text-2xl font-semibold">AstraZeneca</div>
               <div className="text-2xl font-semibold">Merck</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Traditional Training vs ReflectivAI Impact */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl lg:text-5xl font-bold">Traditional Training vs ReflectivAI Impact</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              See how ReflectivAI transforms pharmaceutical sales training from static workshops to dynamic, emotionally intelligent practice
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Traditional Training */}
+              <div className="space-y-6">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-muted-foreground">Traditional Training</h3>
+                </div>
+                <div className="space-y-4">
+                  <div className="p-4 rounded-lg bg-muted border border-border">
+                    <p className="text-muted-foreground">One-time workshops with limited follow-up</p>
+                  </div>
+                  <div className="p-4 rounded-lg bg-muted border border-border">
+                    <p className="text-muted-foreground">Static role-plays with limited scenarios</p>
+                  </div>
+                  <div className="p-4 rounded-lg bg-muted border border-border">
+                    <p className="text-muted-foreground">Delayed feedback from managers</p>
+                  </div>
+                  <div className="p-4 rounded-lg bg-muted border border-border">
+                    <p className="text-muted-foreground">Minimal focus on emotional intelligence</p>
+                  </div>
+                  <div className="p-4 rounded-lg bg-muted border border-border">
+                    <p className="text-muted-foreground">Difficult to scale across field force</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* ReflectivAI Impact */}
+              <div className="space-y-6">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-primary">ReflectivAI Impact</h3>
+                </div>
+                <div className="space-y-4">
+                  <div className="p-4 rounded-lg bg-primary/5 border border-primary/20 hover:bg-primary/10 transition-colors">
+                    <p className="font-semibold text-foreground">AI HCP role-play</p>
+                    <p className="text-sm text-muted-foreground mt-1">with realistic personas and objections</p>
+                  </div>
+                  <div className="p-4 rounded-lg bg-primary/5 border border-primary/20 hover:bg-primary/10 transition-colors">
+                    <p className="font-semibold text-foreground">Instant coach feedback</p>
+                    <p className="text-sm text-muted-foreground mt-1">with suggested phrasing and improvements</p>
+                  </div>
+                  <div className="p-4 rounded-lg bg-primary/5 border border-primary/20 hover:bg-primary/10 transition-colors">
+                    <p className="font-semibold text-foreground">EI metrics</p>
+                    <p className="text-sm text-muted-foreground mt-1">that translate scores into coaching steps</p>
+                  </div>
+                  <div className="p-4 rounded-lg bg-primary/5 border border-primary/20 hover:bg-primary/10 transition-colors">
+                    <p className="font-semibold text-foreground">Compliance protection</p>
+                    <p className="text-sm text-muted-foreground mt-1">with label-only guardrails built in</p>
+                  </div>
+                  <div className="p-4 rounded-lg bg-primary/5 border border-primary/20 hover:bg-primary/10 transition-colors">
+                    <p className="font-semibold text-foreground">Scalable practice</p>
+                    <p className="text-sm text-muted-foreground mt-1">anytime, anywhere across your team</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-12 text-center">
+              <p className="text-lg text-muted-foreground italic">
+                Transforming training from static to adaptive, from delayed to instant, from generic to emotionally intelligent.
+              </p>
             </div>
           </div>
         </div>
@@ -305,85 +500,117 @@ export default function HomePage() {
           </div>
 
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+            <button
+              onClick={() => openCapabilityDetail('signal-awareness')}
+              className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
+            >
               <h3 className="text-xl font-semibold">Signal Awareness</h3>
               <p className="text-muted-foreground">
                 Ask purposeful, customer-centric questions; sequence questions logically; follow up effectively
               </p>
-              <div className="flex gap-2 flex-wrap">
+              <div className="flex gap-2 flex-wrap items-center">
                 <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Question Quality</span>
+                <span className="text-xs text-primary font-medium">Click to learn more →</span>
               </div>
-            </div>
+            </button>
 
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+            <button
+              onClick={() => openCapabilityDetail('signal-interpretation')}
+              className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
+            >
               <h3 className="text-xl font-semibold">Signal Interpretation</h3>
               <p className="text-muted-foreground">
                 Accurately hear, reflect, and build on customer statements; acknowledge concerns
               </p>
-              <div className="flex gap-2 flex-wrap">
+              <div className="flex gap-2 flex-wrap items-center">
                 <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Listening & Responsiveness</span>
+                <span className="text-xs text-primary font-medium">Click to learn more →</span>
               </div>
-            </div>
+            </button>
 
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+            <button
+              onClick={() => openCapabilityDetail('value-connection')}
+              className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
+            >
               <h3 className="text-xl font-semibold">Value Connection</h3>
               <p className="text-muted-foreground">
                 Connect offerings to customer outcomes rather than features; emphasize customer priorities
               </p>
-              <div className="flex gap-2 flex-wrap">
+              <div className="flex gap-2 flex-wrap items-center">
                 <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">Making It Matter</span>
+                <span className="text-xs text-primary font-medium">Click to learn more →</span>
               </div>
-            </div>
+            </button>
 
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+            <button
+              onClick={() => openCapabilityDetail('customer-engagement')}
+              className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
+            >
               <h3 className="text-xl font-semibold">Customer Engagement Monitoring</h3>
               <p className="text-muted-foreground">
                 Monitor and interpret customer behavior for engagement; identify forward-looking cues
               </p>
-              <div className="flex gap-2 flex-wrap">
+              <div className="flex gap-2 flex-wrap items-center">
                 <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Customer Engagement Signals</span>
+                <span className="text-xs text-primary font-medium">Click to learn more →</span>
               </div>
-            </div>
+            </button>
 
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+            <button
+              onClick={() => openCapabilityDetail('objection-navigation')}
+              className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
+            >
               <h3 className="text-xl font-semibold">Objection Navigation</h3>
               <p className="text-muted-foreground">
                 Respond calmly to resistance; explore underlying concerns; acknowledge objections
               </p>
-              <div className="flex gap-2 flex-wrap">
+              <div className="flex gap-2 flex-wrap items-center">
                 <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Objection Navigation</span>
+                <span className="text-xs text-primary font-medium">Click to learn more →</span>
               </div>
-            </div>
+            </button>
 
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+            <button
+              onClick={() => openCapabilityDetail('conversation-management')}
+              className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
+            >
               <h3 className="text-xl font-semibold">Conversation Management</h3>
               <p className="text-muted-foreground">
                 Guide conversation with purpose; transition smoothly; summarize and clarify next steps
               </p>
-              <div className="flex gap-2 flex-wrap">
+              <div className="flex gap-2 flex-wrap items-center">
                 <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">Conversation Control & Structure</span>
+                <span className="text-xs text-primary font-medium">Click to learn more →</span>
               </div>
-            </div>
+            </button>
 
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+            <button
+              onClick={() => openCapabilityDetail('commitment-generation')}
+              className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
+            >
               <h3 className="text-xl font-semibold">Commitment Generation</h3>
               <p className="text-muted-foreground">
                 Secure clear, voluntary next actions; ensure mutual agreement and ownership
               </p>
-              <div className="flex gap-2 flex-wrap">
+              <div className="flex gap-2 flex-wrap items-center">
                 <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Commitment Gaining</span>
+                <span className="text-xs text-primary font-medium">Click to learn more →</span>
               </div>
-            </div>
+            </button>
 
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+            <button
+              onClick={() => openCapabilityDetail('adaptive-response')}
+              className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
+            >
               <h3 className="text-xl font-semibold">Adaptive Response</h3>
               <p className="text-muted-foreground">
                 Adjust approach based on customer signals; shift tone, depth, or pacing as needed
               </p>
-              <div className="flex gap-2 flex-wrap">
+              <div className="flex gap-2 flex-wrap items-center">
                 <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Adaptability</span>
+                <span className="text-xs text-primary font-medium">Click to learn more →</span>
               </div>
-            </div>
+            </button>
           </div>
         </div>
       </section>
@@ -552,6 +779,70 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Performance Analytics */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl lg:text-5xl font-bold">Performance Analytics & Coaching Intelligence</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Turn training data into measurable business outcomes with EI-driven metrics
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="p-6 rounded-lg border border-border bg-card text-center space-y-2 hover:shadow-lg transition-shadow">
+              <div className="text-4xl font-bold text-primary">94%</div>
+              <div className="text-sm font-medium text-foreground">Accuracy Index</div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card text-center space-y-2 hover:shadow-lg transition-shadow">
+              <div className="text-4xl font-bold text-primary">1.4x</div>
+              <div className="text-sm font-medium text-foreground">Readiness Velocity</div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card text-center space-y-2 hover:shadow-lg transition-shadow">
+              <div className="text-4xl font-bold text-primary">88%</div>
+              <div className="text-sm font-medium text-foreground">Empathy Index</div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card text-center space-y-2 hover:shadow-lg transition-shadow">
+              <div className="text-4xl font-bold text-primary">100%</div>
+              <div className="text-sm font-medium text-foreground">Compliance Score</div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card text-center space-y-2 hover:shadow-lg transition-shadow">
+              <div className="text-4xl font-bold text-primary">8.5/10</div>
+              <div className="text-sm font-medium text-foreground">Confidence Level</div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card text-center space-y-2 hover:shadow-lg transition-shadow">
+              <div className="text-4xl font-bold text-primary">92%</div>
+              <div className="text-sm font-medium text-foreground">Clarity Index</div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card text-center space-y-2 hover:shadow-lg transition-shadow">
+              <div className="text-4xl font-bold text-primary">85%</div>
+              <div className="text-sm font-medium text-foreground">Objection Handling</div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card text-center space-y-2 hover:shadow-lg transition-shadow">
+              <div className="text-4xl font-bold text-primary">78%</div>
+              <div className="text-sm font-medium text-foreground">Discovery Index</div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card text-center space-y-2 hover:shadow-lg transition-shadow">
+              <div className="text-4xl font-bold text-primary">90%</div>
+              <div className="text-sm font-medium text-foreground">Active Listening</div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card text-center space-y-2 hover:shadow-lg transition-shadow">
+              <div className="text-4xl font-bold text-primary">83%</div>
+              <div className="text-sm font-medium text-foreground">Emotional Adaptability</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What This Is NOT */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
@@ -609,6 +900,60 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Ethics & Governance */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl lg:text-5xl font-bold">Ethics, Privacy & Governance</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Compliance and responsible AI built for the rigors of life-sciences training
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="p-6 rounded-lg border border-border bg-card space-y-4">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                <CheckCircle2 className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold">Data Privacy & Security</h3>
+              <p className="text-muted-foreground">
+                PHI is off by default; when enabled, BAA, encryption, and RBAC apply.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card space-y-4">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                <CheckCircle2 className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold">Algorithmic Bias & Fairness</h3>
+              <p className="text-muted-foreground">
+                Pre-deployment bias testing with monitoring and remediation steps.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card space-y-4">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                <CheckCircle2 className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold">Transparency & Explainability</h3>
+              <p className="text-muted-foreground">
+                Reason codes in-product; model cards document limits and cadence.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card space-y-4">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                <CheckCircle2 className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold">Human Oversight & Accountability</h3>
+              <p className="text-muted-foreground">
+                Curated scenarios; MLR versioning for full traceability.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
@@ -638,6 +983,46 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Capability Detail Dialog */}
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
+          {currentCapability && (
+            <>
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-bold">{currentCapability.name}</DialogTitle>
+                <DialogDescription className="text-base">
+                  {currentCapability.definition}
+                </DialogDescription>
+              </DialogHeader>
+              
+              <div className="space-y-6 mt-6">
+                <div>
+                  <h4 className="text-lg font-semibold mb-2">How It's Calculated</h4>
+                  <p className="text-muted-foreground">{currentCapability.calculation}</p>
+                </div>
+
+                <div className="bg-muted rounded-lg p-4">
+                  <h4 className="text-lg font-semibold mb-2">Example of Excellence</h4>
+                  <p className="text-foreground italic">"{currentCapability.goodExample}"</p>
+                </div>
+
+                <div>
+                  <h4 className="text-lg font-semibold mb-3">How to Improve</h4>
+                  <ul className="space-y-2">
+                    {currentCapability.improvementTips.map((tip, index) => (
+                      <li key={index} className="flex items-start gap-2">
+                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground">{tip}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

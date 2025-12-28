@@ -214,73 +214,167 @@ export default function AICoachPage() {
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* How the Coach Works */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl lg:text-5xl font-bold">How AI Coach Works</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold">How the Coach Works</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Real-time signal detection powered by behavioral science and machine learning
+              Every conversation flows through a real-time EI engine that scores performance across ten critical dimensions
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-12">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="space-y-4">
-                <div className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-primary text-primary-foreground font-bold">
-                  1
+          <div className="max-w-6xl mx-auto space-y-12">
+            {/* 10 EI Dimensions */}
+            <div className="bg-muted rounded-xl p-8">
+              <h3 className="text-2xl font-bold mb-6 text-center">10 Emotional Intelligence Dimensions</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+                <div className="p-4 rounded-lg bg-background border border-border text-center">
+                  <div className="text-3xl font-bold text-primary mb-2">1</div>
+                  <div className="text-sm font-semibold">Accuracy</div>
                 </div>
-                <h3 className="text-2xl font-bold">Analyze Conversation Data</h3>
-                <p className="text-lg text-muted-foreground">
-                  AI Coach listens to calls and meetings, analyzing tone shifts, pacing changes, question types, interruptions, and silence patterns in real-time.
-                </p>
-              </div>
-              <div className="aspect-video rounded-lg overflow-hidden border border-border shadow-lg">
-                <img
-                  src="https://media.gettyimages.com/id/1557248585/photo/asian-businesswoman-and-caucasian-businessman-having-a-discussion.jpg?b=1&s=2048x2048&w=0&k=20&c=6B1bg2Kmhzo1LNGgG2xbTH5aSme4H32dfNOgO4dWFXo="
-                  alt="Conversation analysis"
-                  className="w-full h-full object-cover"
-                />
+                <div className="p-4 rounded-lg bg-background border border-border text-center">
+                  <div className="text-3xl font-bold text-primary mb-2">2</div>
+                  <div className="text-sm font-semibold">Empathy</div>
+                </div>
+                <div className="p-4 rounded-lg bg-background border border-border text-center">
+                  <div className="text-3xl font-bold text-primary mb-2">3</div>
+                  <div className="text-sm font-semibold">Clarity</div>
+                </div>
+                <div className="p-4 rounded-lg bg-background border border-border text-center">
+                  <div className="text-3xl font-bold text-primary mb-2">4</div>
+                  <div className="text-sm font-semibold">Compliance</div>
+                </div>
+                <div className="p-4 rounded-lg bg-background border border-border text-center">
+                  <div className="text-3xl font-bold text-primary mb-2">5</div>
+                  <div className="text-sm font-semibold">Discovery</div>
+                </div>
+                <div className="p-4 rounded-lg bg-background border border-border text-center">
+                  <div className="text-3xl font-bold text-primary mb-2">6</div>
+                  <div className="text-sm font-semibold">Objection Handling</div>
+                </div>
+                <div className="p-4 rounded-lg bg-background border border-border text-center">
+                  <div className="text-3xl font-bold text-primary mb-2">7</div>
+                  <div className="text-sm font-semibold">Active Listening</div>
+                </div>
+                <div className="p-4 rounded-lg bg-background border border-border text-center">
+                  <div className="text-3xl font-bold text-primary mb-2">8</div>
+                  <div className="text-sm font-semibold">Emotional Adaptability</div>
+                </div>
+                <div className="p-4 rounded-lg bg-background border border-border text-center">
+                  <div className="text-3xl font-bold text-primary mb-2">9</div>
+                  <div className="text-sm font-semibold">Confidence</div>
+                </div>
+                <div className="p-4 rounded-lg bg-background border border-border text-center">
+                  <div className="text-3xl font-bold text-primary mb-2">10</div>
+                  <div className="text-sm font-semibold">Rapport</div>
+                </div>
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="aspect-video rounded-lg overflow-hidden border border-border shadow-lg order-first md:order-last">
-                <img
-                  src="https://media.gettyimages.com/id/2156419197/photo/two-young-professionals-in-a-co-working-space-in-houston-texas.jpg?b=1&s=2048x2048&w=0&k=20&c=LW9IxJcQtdXu8SaXMc7-aywqMSDA3K0PfpZ0VtZi-ho="
-                  alt="Signal interpretation"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="space-y-4 order-last md:order-first">
-                <div className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-primary text-primary-foreground font-bold">
-                  2
+            {/* Real-Time Coaching Cards */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-center">Real-Time Coaching Cards</h3>
+              <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto">
+                The moment you hit "Send," the system evaluates clinical precision, emotional resonance, regulatory alignment, and conversational strategy—assigning each dimension a score out of 10 and mapping it to a color-coded coaching signal.
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div className="p-6 rounded-lg border-2 border-green-500/30 bg-green-500/5">
+                  <div className="flex items-center justify-between mb-3">
+                    <h4 className="font-semibold">Empathy</h4>
+                    <div className="text-2xl font-bold text-green-600">8.5/10</div>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Excellent acknowledgment of HCP concerns. You validated their perspective before presenting your solution.
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold">Surface Signals & Interpretations</h3>
-                <p className="text-lg text-muted-foreground">
-                  Receive real-time alerts when signals appear: hesitation (uncertainty), challenge (status threat), disengagement (misalignment). AI suggests what the signal might mean.
-                </p>
+
+                <div className="p-6 rounded-lg border-2 border-yellow-500/30 bg-yellow-500/5">
+                  <div className="flex items-center justify-between mb-3">
+                    <h4 className="font-semibold">Clarity</h4>
+                    <div className="text-2xl font-bold text-yellow-600">6.8/10</div>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Consider simplifying: "This reduces cardiovascular events" is clearer than "This demonstrates cardioprotective efficacy."
+                  </p>
+                </div>
+
+                <div className="p-6 rounded-lg border-2 border-red-500/30 bg-red-500/5">
+                  <div className="flex items-center justify-between mb-3">
+                    <h4 className="font-semibold">Compliance</h4>
+                    <div className="text-2xl font-bold text-red-600">4.2/10</div>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Warning: You mentioned off-label use. Stick to approved indications: "FDA-approved for Type 2 diabetes in adults."
+                  </p>
+                </div>
+
+                <div className="p-6 rounded-lg border-2 border-green-500/30 bg-green-500/5">
+                  <div className="flex items-center justify-between mb-3">
+                    <h4 className="font-semibold">Active Listening</h4>
+                    <div className="text-2xl font-bold text-green-600">9.2/10</div>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Great paraphrasing: "So you're concerned about patient adherence with twice-daily dosing?" This shows you're truly listening.
+                  </p>
+                </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* EI in Practice */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl lg:text-5xl font-bold">EI in Practice</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              This isn't generic feedback. Every coaching moment ties back to emotional intelligence principles.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Regulate Tone Under Pressure</h3>
+              <p className="text-muted-foreground">
+                Learn to stay calm and confident when HCPs push back or challenge your message.
+              </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="space-y-4">
-                <div className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-primary text-primary-foreground font-bold">
-                  3
-                </div>
-                <h3 className="text-2xl font-bold">Support Your Judgment</h3>
-                <p className="text-lg text-muted-foreground">
-                  AI Coach offers response options—pause, probe, reframe, clarify, de-escalate, or proceed—but you decide. Track your Signal Intelligence development with behavioral metrics over time.
-                </p>
-              </div>
-              <div className="aspect-video rounded-lg overflow-hidden border border-border shadow-lg">
-                <img
-                  src="https://media.gettyimages.com/id/1897107863/photo/part-of-office-workspace-with-laptop.jpg?b=1&s=2048x2048&w=0&k=20&c=rUJpo_-7QWmsEBDhiGqV69IgJDVPvD1ar9XSUyJ0__Y="
-                  alt="Performance tracking"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Listen for Emotional Cues</h3>
+              <p className="text-muted-foreground">
+                Detect hesitation, skepticism, or interest in HCP responses and adjust your approach.
+              </p>
             </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Respond with Label-Aligned Empathy</h3>
+              <p className="text-muted-foreground">
+                Show you understand HCP concerns while guiding back to approved, compliant messaging.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground">
+              The Coach doesn't just score you—it teaches you. With every simulation, reps build muscle memory for emotionally intelligent conversations that drive trust, adherence, and long-term HCP relationships.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Real-Time, Actionable Coaching */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2 className="text-3xl lg:text-5xl font-bold">Real-Time, Actionable Coaching</h2>
+            <p className="text-xl text-muted-foreground">
+              The Coach doesn't just score you—it teaches you. With every simulation, reps build muscle memory for emotionally intelligent conversations that drive trust, adherence, and long-term HCP relationships.
+            </p>
+          </div>
           </div>
         </div>
       </section>
