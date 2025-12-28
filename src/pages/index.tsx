@@ -843,8 +843,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* What This Is NOT */}
-
+      {/* Ethics Statement */}
+      <section className="py-12 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center space-y-3">
+            <p className="text-lg font-semibold text-primary">Always ethical • Always human-validated</p>
+            <p className="text-muted-foreground">
+              Signal Intelligence respects autonomy, preserves dignity, and supports professional judgment—never replacing it.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Testimonial */}
       <section className="py-20">
