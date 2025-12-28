@@ -141,12 +141,12 @@ export default function HomePage() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
-                  AI Sales Enablement
+                  Signal Intelligence™
                   <br />
-                  <span className="text-primary">for Life Sciences</span>
+                  <span className="text-primary">for Life Sciences Sales</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-xl">
-                  Connect and Convert with Intelligence. ReflectivAI blends clinical accuracy, Signal Intelligence, and adaptive AI coaching so every HCP conversation feels authentic, confident, and compliant.
+                  Transform conversations into measurable signals. ReflectivAI's Signal Intelligence™ platform detects, scores, and learns from every interaction—then applies emotional intelligence to help your team understand, adapt, and perform better.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -170,6 +170,101 @@ export default function HomePage() {
                   alt="ReflectivAI Platform Interface"
                   className="w-full h-full object-contain"
                 />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Signal Intelligence Explainer */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12 space-y-4">
+              <h2 className="text-3xl lg:text-5xl font-bold">What is Signal Intelligence™?</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                The operating system that transforms human conversations into measurable, improvable performance
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              {/* Signal Intelligence - Primary */}
+              <div className="bg-primary/5 border-2 border-primary rounded-xl p-8 space-y-4">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="h-12 w-12 rounded-lg bg-primary flex items-center justify-center">
+                    <Brain className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  <h3 className="text-2xl font-bold">Signal Intelligence™</h3>
+                </div>
+                <p className="text-lg font-semibold text-primary">The Core Operating System</p>
+                <p className="text-muted-foreground">
+                  Detects, scores, and learns from observable behaviors in real-time conversations.
+                </p>
+                <div className="space-y-2 pt-4">
+                  <div className="flex items-start gap-2">
+                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Converts conversations into measurable data</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Produces objective, auditable scores</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Enables repeatable, scalable training</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Works in simulations and real conversations</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Emotional Intelligence - Secondary */}
+              <div className="bg-background border border-border rounded-xl p-8 space-y-4">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="h-12 w-12 rounded-lg bg-muted flex items-center justify-center">
+                    <Target className="h-6 w-6 text-foreground" />
+                  </div>
+                  <h3 className="text-2xl font-bold">Emotional Intelligence</h3>
+                </div>
+                <p className="text-lg font-semibold">The Interpretive Lens</p>
+                <p className="text-muted-foreground">
+                  Applied on top of Signal Intelligence to explain why behaviors worked or failed.
+                </p>
+                <div className="space-y-2 pt-4">
+                  <div className="flex items-start gap-2">
+                    <CheckCircle2 className="h-5 w-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Interprets signals through human context</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle2 className="h-5 w-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Explains empathy gaps and trust erosion</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle2 className="h-5 w-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Guides adaptive improvement strategies</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle2 className="h-5 w-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Humanizes coaching feedback</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Key Distinction */}
+            <div className="bg-background border-2 border-primary/20 rounded-xl p-8 text-center">
+              <p className="text-xl font-semibold mb-4">The Key Distinction</p>
+              <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                <div>
+                  <p className="text-lg font-bold text-primary mb-2">Signal Intelligence =</p>
+                  <p className="text-muted-foreground">What happened</p>
+                </div>
+                <div>
+                  <p className="text-lg font-bold mb-2">Emotional Intelligence =</p>
+                  <p className="text-muted-foreground">Why it mattered</p>
+                </div>
               </div>
             </div>
           </div>
@@ -497,15 +592,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* EI Frameworks */}
+      {/* EI Frameworks - Positioned as Interpretive Layer */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto bg-muted rounded-xl p-8 md:p-12">
             <div className="text-center space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold">Built on Proven Signal Intelligence Frameworks</h2>
+              <h2 className="text-2xl md:text-3xl font-bold">Signal Intelligence™ + EI Frameworks</h2>
               <p className="text-lg text-muted-foreground">
-                Every module integrates evidence-based conversational intelligence frameworks: <span className="font-semibold text-foreground">Active Listening</span>, <span className="font-semibold text-foreground">DISC</span>, <span className="font-semibold text-foreground">Empathy Mapping</span>, and <span className="font-semibold text-foreground">Rapport Building</span>. These aren't abstract concepts—they're practical tools you'll use in every conversation.
+                Our Signal Intelligence platform detects and scores behaviors. Then we apply proven emotional intelligence frameworks—<span className="font-semibold text-foreground">Active Listening</span>, <span className="font-semibold text-foreground">DISC</span>, <span className="font-semibold text-foreground">Empathy Mapping</span>, and <span className="font-semibold text-foreground">Rapport Building</span>—to help you understand why those behaviors worked or failed, and how to adapt.
               </p>
+              <div className="pt-4 border-t border-border mt-6">
+                <p className="text-sm text-muted-foreground italic">
+                  Signal Intelligence captures what happened. Emotional intelligence explains why it mattered.
+                </p>
+              </div>
             </div>
           </div>
         </div>

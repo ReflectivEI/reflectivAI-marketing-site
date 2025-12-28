@@ -21,7 +21,7 @@ export default function AICoachPage() {
                   <span className="text-primary">Your Personal Pharma Sales Coach</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-xl">
-                  Get personalized coaching, real-time feedback, and actionable insights to improve your conversations with healthcare providers. Available 24/7 through our chat interface.
+                  Our AI Coach detects and scores your conversation signals in real-time, then applies emotional intelligence frameworks to explain why behaviors worked or failed—and how to adapt. Available 24/7.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -329,9 +329,9 @@ export default function AICoachPage() {
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl lg:text-5xl font-bold">Signal Intelligence in Practice</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold">How It Works: Detect, Score, Interpret</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              This isn't generic feedback. Every coaching moment ties back to Signal Intelligence principles.
+              Signal Intelligence™ captures what happened in your conversation. Emotional intelligence explains why it mattered. Together, they create actionable coaching.
             </p>
           </div>
 

@@ -21,7 +21,7 @@ export default function RolePlayPage() {
                   <span className="text-primary">Practice Makes Perfect</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-xl">
-                  Master pharma sales conversations through realistic AI-powered role play scenarios. Practice with healthcare providers across HIV, Oncology, Cardiology, Vaccines, and more therapeutic areas.
+                  The proving ground for Signal Intelligence™. Practice realistic pharma conversations where every response generates measurable signals—then get coaching on what worked, what didn't, and why.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
