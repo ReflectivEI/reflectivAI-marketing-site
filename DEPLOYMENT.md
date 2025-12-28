@@ -1,144 +1,140 @@
-# ReflectivAI Marketing Site - Deployment Complete! 🎉
+# Deployment Status
 
-## ✅ Your Site is Live!
+## Latest Fix: Router Basename Configuration
 
-**Live URL:** https://reflectivei.github.io/reflectivAI-marketing-site/
+**Issue**: Site was showing 404 error when accessed via GitHub Pages
 
-**GitHub Repository:** https://github.com/ReflectivEI/reflectivAI-marketing-site
+**Root Cause**: React Router wasn't configured with the correct base path for GitHub Pages subdirectory deployment
 
----
+**Solution Applied**: 
+- Updated `src/App.tsx` to include `basename` configuration
+- Router now uses `import.meta.env.BASE_URL` which automatically uses `/reflectivAI-marketing-site/` in production
 
-## What's Deployed
-
-✅ **Homepage** - Hero section with new image, comparison table, performance analytics, interactive 8 capabilities  
-✅ **AI Coach Page** - 10 EI dimensions, coaching cards, EI in practice section with visual  
-✅ **Role Play Page** - 9 disease state scenarios across therapeutic areas  
-✅ **Branding** - ReflectivAI logo with wordmark in header/footer  
-✅ **Responsive Design** - Mobile-friendly across all pages  
-✅ **Interactive Elements** - Hover animations, modal dialogs, transitions  
-
----
-
-## Automatic Deployments
-
-Your site is configured for **automatic deployments**:
-
-- Every push to the `main` branch triggers a new deployment
-- GitHub Actions builds and deploys automatically
-- Changes go live in 2-3 minutes
-
-**View deployment status:**  
-https://github.com/ReflectivEI/reflectivAI-marketing-site/actions
-
----
-
-## Making Updates
-
-### Option 1: Edit on GitHub (Easiest)
-1. Go to your repository
-2. Navigate to the file you want to edit
-3. Click the pencil icon (Edit)
-4. Make changes and commit
-5. Site updates automatically in 2-3 minutes
-
-### Option 2: Clone and Edit Locally
-```bash
-git clone https://github.com/ReflectivEI/reflectivAI-marketing-site.git
-cd reflectivAI-marketing-site
-
-# Make your changes
-
-git add .
-git commit -m "Your update message"
-git push origin main
+**Code Change**:
+```typescript
+const router = createBrowserRouter([
+  // routes...
+], {
+  basename: import.meta.env.BASE_URL, // Uses /reflectivAI-marketing-site/ in production
+});
 ```
-
-### Option 3: Download and Re-upload
-1. Download: https://xox8z610ws.preview.c24.airoapp.ai/reflectivai-site.tar.gz
-2. Extract and make changes
-3. Push to GitHub
-
----
-
-## Key Files to Edit
-
-### Content Pages
-- `src/pages/index.tsx` - Homepage
-- `src/pages/ai-coach.tsx` - AI Coach page
-- `src/pages/role-play.tsx` - Role Play page
-
-### Layout Components
-- `src/layouts/parts/Header.tsx` - Site header/navigation
-- `src/layouts/parts/Footer.tsx` - Site footer
-
-### Styling
-- `src/styles/globals.css` - Global styles and CSS variables
-- `tailwind.config.js` - Tailwind configuration
-
-### Images
-- `public/assets/` - All images and media files
-
----
-
-## Custom Domain (Optional)
-
-To use your own domain (e.g., marketing.reflectivai.com):
-
-1. Go to repository Settings → Pages
-2. Enter your custom domain
-3. Add DNS records:
-   - CNAME record: `marketing` → `reflectivei.github.io`
-4. Wait for DNS propagation (5-60 minutes)
-
----
-
-## Alternative Hosting Options
-
-If you want to move to a different platform:
-
-### Vercel
-1. Go to https://vercel.com/new
-2. Import your GitHub repository
-3. Set Output Directory: `dist/client`
-4. Deploy
-
-### Netlify
-1. Go to https://app.netlify.com/start
-2. Connect GitHub repository
-3. Set Publish directory: `dist/client`
-4. Deploy
-
----
-
-## Build Locally
-
-To test changes before deploying:
-
-```bash
-npm install
-npm run dev        # Development server at http://localhost:5173
-npm run build      # Production build
-npm run preview    # Preview production build
-```
-
----
-
-## Support
-
-**Repository Issues:** https://github.com/ReflectivEI/reflectivAI-marketing-site/issues  
-**GitHub Actions Logs:** https://github.com/ReflectivEI/reflectivAI-marketing-site/actions  
-
----
 
 ## Deployment Timeline
 
-✅ **Dec 28, 2025 10:04 AM** - Code pushed to GitHub  
-✅ **Dec 28, 2025 10:05 AM** - GitHub Pages enabled  
-✅ **Dec 28, 2025 10:05 AM** - Deployment workflow triggered  
-✅ **Site is now live!**
+1. **Push to main**: Triggers GitHub Actions workflow
+2. **Build phase**: ~1 minute (npm ci + build)
+3. **Deploy phase**: ~1-2 minutes (upload + publish)
+4. **CDN propagation**: ~30 seconds
+
+**Total time**: 2-3 minutes from push to live
+
+## Current Status
+
+✅ **Code pushed**: Router fix committed and pushed
+🔄 **Workflow running**: GitHub Actions is building and deploying
+⏳ **Waiting for**: Deployment to complete (check in 2-3 minutes)
+
+## How to Verify
+
+### Method 1: Check Workflow Status
+```
+https://github.com/ReflectivEI/reflectivAI-marketing-site/actions
+```
+Look for green checkmark ✅ on latest workflow run
+
+### Method 2: Test the Site
+1. Open: https://reflectivei.github.io/reflectivAI-marketing-site/
+2. Hard refresh: Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac)
+3. Should see homepage with:
+   - Navy/teal color scheme
+   - Alora chat button (bottom-right)
+   - Platform showcase
+   - All new components
+
+### Method 3: Run Deployment Checker
+```bash
+bash check-deployment.sh
+```
+
+## What Was Fixed
+
+### Before (Broken)
+- Router had no basename configuration
+- React Router tried to match routes from root `/`
+- GitHub Pages serves from `/reflectivAI-marketing-site/`
+- Mismatch caused 404 errors
+
+### After (Fixed)
+- Router configured with `basename: import.meta.env.BASE_URL`
+- In production: `BASE_URL = '/reflectivAI-marketing-site/'`
+- In development: `BASE_URL = '/'`
+- Router correctly matches routes with GitHub Pages path
+
+## Technical Details
+
+### Vite Configuration
+```typescript
+// vite.config.ts
+base: process.env.NODE_ENV === 'production' 
+  ? '/reflectivAI-marketing-site/' 
+  : '/'
+```
+
+### Router Configuration
+```typescript
+// src/App.tsx
+const router = createBrowserRouter([...], {
+  basename: import.meta.env.BASE_URL, // Reads from vite.config.ts
+});
+```
+
+### How It Works
+1. Vite sets `BASE_URL` based on `base` config
+2. React Router uses `BASE_URL` as basename
+3. All routes are prefixed with `/reflectivAI-marketing-site/`
+4. GitHub Pages serves correctly from subdirectory
+
+## Next Steps
+
+1. **Wait 2-3 minutes** for deployment to complete
+2. **Check workflow status** at Actions page
+3. **Test the site** with hard refresh
+4. **Verify features**:
+   - Homepage loads without 404
+   - Navigation works
+   - Alora chat button appears
+   - All components render
+
+## If Still Seeing 404
+
+### Clear Browser Cache
+1. Open DevTools (F12)
+2. Right-click refresh button
+3. Select "Empty Cache and Hard Reload"
+
+### Try Incognito Mode
+- Opens fresh session without cache
+- Ctrl+Shift+N (Windows) or Cmd+Shift+N (Mac)
+
+### Check Workflow Logs
+1. Go to Actions tab
+2. Click latest workflow run
+3. Check for errors in build/deploy steps
+
+### Verify Assets Load
+1. Open DevTools (F12)
+2. Go to Network tab
+3. Refresh page
+4. Check all assets return 200 OK
+
+## Monitoring
+
+**Workflow URL**: https://github.com/ReflectivEI/reflectivAI-marketing-site/actions
+
+**Live Site**: https://reflectivei.github.io/reflectivAI-marketing-site/
+
+**Last Updated**: 2025-12-28 10:40 UTC
 
 ---
 
-## Security Note
-
-**Important:** The GitHub token used for deployment should be revoked and regenerated periodically for security. Go to https://github.com/settings/tokens to manage your tokens.
+**Status**: 🔄 Deployment in progress - check back in 2-3 minutes
