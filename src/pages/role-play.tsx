@@ -16,12 +16,12 @@ export default function RolePlayPage() {
               </div>
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
-                  Practice Makes
+                  Practice Signal Intelligence
                   <br />
-                  <span className="text-primary">Perfect Sales</span>
+                  <span className="text-primary">In Safe Scenarios</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-xl">
-                  Practice pharma sales scenarios with AI feedback. Master disease state conversations, HCP engagement, and market access challenges across HIV, Oncology, Cardiology, Vaccines, and more.
+                  Practice detecting and responding to behavioral signals in realistic pharma sales scenarios. Build Signal Intelligence capabilities across HIV, Oncology, Cardiology, Vaccines, and more.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -52,10 +52,10 @@ export default function RolePlayPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-6 mb-16">
             <h2 className="text-3xl lg:text-5xl font-bold">
-              Why Role Play Training Works
+              Why Signal Intelligence Practice Works
             </h2>
             <p className="text-xl text-muted-foreground">
-              Research shows that experiential learning through role play increases skill retention by 75% compared to traditional training methods. Practice builds confidence, muscle memory, and emotional resilience.
+              Research shows that experiential learning through role play increases skill retention by 75% compared to traditional training methods. Practice builds the judgment needed to detect signals, interpret behavior, and respond effectively under pressure.
             </p>
           </div>
 
@@ -111,9 +111,9 @@ export default function RolePlayPage() {
               <div className="h-12 w-12 rounded-lg bg-accent/10 flex items-center justify-center">
                 <BarChart3 className="h-6 w-6 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold">Instant Feedback</h3>
+              <h3 className="text-xl font-semibold">Behavioral Metrics Feedback</h3>
               <p className="text-muted-foreground">
-                Receive detailed performance analysis after each simulation, including emotional intelligence scores, objection handling effectiveness, and improvement recommendations.
+                Receive detailed performance analysis after each simulation, including Signal Intelligence capability scores, behavioral metrics (Question Quality, Listening, Objection Navigation), and improvement recommendations.
               </p>
             </div>
 
@@ -267,9 +267,9 @@ export default function RolePlayPage() {
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl lg:text-5xl font-bold">Practice Every Conversation Type</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold">Practice Signal Intelligence Across All Scenarios</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              From discovery to close, master every stage of the sales process
+              Build capabilities for detecting signals, interpreting behavior, and responding effectively in every conversation type
             </p>
           </div>
 
@@ -281,20 +281,20 @@ export default function RolePlayPage() {
                 </div>
                 <h3 className="text-2xl font-bold">Initial Discovery Calls</h3>
                 <p className="text-lg text-muted-foreground">
-                  Practice asking the right questions, building rapport quickly, and uncovering customer pain points through active listening and emotional intelligence.
+                  Practice Signal Awareness and Signal Interpretation: asking purposeful questions, listening actively, and detecting customer engagement signals.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Open-ended questioning techniques</span>
+                    <span>Question Quality: open vs. closed ratio, sequencing</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Building trust with healthcare providers</span>
+                    <span>Listening & Responsiveness: paraphrasing, acknowledgment</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Identifying decision-making criteria</span>
+                    <span>Customer Engagement Monitoring: talk time, forward-looking cues</span>
                   </li>
                 </ul>
               </div>
@@ -319,22 +319,22 @@ export default function RolePlayPage() {
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
                   Objection Handling
                 </div>
-                <h3 className="text-2xl font-bold">Overcoming Objections</h3>
+                <h3 className="text-2xl font-bold">Objection Navigation</h3>
                 <p className="text-lg text-muted-foreground">
-                  Master the art of addressing concerns with empathy and confidence. Practice responding to price objections, competitive comparisons, and implementation concerns.
+                  Practice Objection Navigation capability: respond calmly to resistance, explore underlying concerns, and avoid defensive reactions that erode trust.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Price and budget objections</span>
+                    <span>Acknowledgment before response (not defensiveness)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Competitive positioning responses</span>
+                    <span>Exploration of underlying concerns</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Timing and urgency concerns</span>
+                    <span>Calm pacing and tone regulation</span>
                   </li>
                 </ul>
               </div>
@@ -385,22 +385,22 @@ export default function RolePlayPage() {
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
                   Closing
                 </div>
-                <h3 className="text-2xl font-bold">Closing Techniques</h3>
+                <h3 className="text-2xl font-bold">Commitment Generation</h3>
                 <p className="text-lg text-muted-foreground">
-                  Practice asking for the business with confidence. Learn to recognize buying signals, handle last-minute concerns, and guide prospects to commitment.
+                  Practice Commitment Generation capability: secure clear, voluntary next actions with mutual agreement and ownership—never pressure or manipulation.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Recognizing buying signals</span>
+                    <span>Specific next steps with mutual agreement</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Trial closes and commitment questions</span>
+                    <span>Ownership clarity (not coercion)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Handling last-minute hesitation</span>
+                    <span>Detecting hesitation signals vs. genuine commitment</span>
                   </li>
                 </ul>
               </div>
@@ -463,16 +463,47 @@ export default function RolePlayPage() {
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* What This Is NOT */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-primary to-accent text-primary-foreground rounded-2xl p-12 space-y-8">
+            <div className="bg-muted border-2 border-primary rounded-xl p-8 space-y-6">
+              <h2 className="text-2xl font-bold text-center">What Role Play Simulations Are NOT</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center space-y-2">
+                  <div className="text-3xl">🚫</div>
+                  <p className="font-semibold">Not scripted responses</p>
+                  <p className="text-sm text-muted-foreground">We don't teach what to say—we teach how to detect and interpret signals</p>
+                </div>
+                <div className="text-center space-y-2">
+                  <div className="text-3xl">🚫</div>
+                  <p className="font-semibold">Not persuasion training</p>
+                  <p className="text-sm text-muted-foreground">Signal Intelligence is about preserving trust, not manipulating decisions</p>
+                </div>
+                <div className="text-center space-y-2">
+                  <div className="text-3xl">🚫</div>
+                  <p className="font-semibold">Not pass/fail testing</p>
+                  <p className="text-sm text-muted-foreground">This is a safe space for learning through practice and behavioral feedback</p>
+                </div>
+              </div>
+              <div className="pt-4 border-t border-border text-center space-y-2">
+                <p className="text-lg font-semibold text-primary">Always ethical • Always judgment-free • Always focused on capability development</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-background border border-border rounded-2xl p-12 space-y-8">
               <h2 className="text-3xl lg:text-4xl font-bold">
-                Safe Environment, Real Results
+                Safe Environment, Real Signal Intelligence Development
               </h2>
-              <p className="text-lg text-primary-foreground/90">
-                Role play simulations provide a judgment-free space to experiment, make mistakes, and learn without the pressure of real customer interactions. Build confidence before you need it most.
+              <p className="text-lg text-muted-foreground">
+                Role play simulations provide a judgment-free space to practice detecting signals, interpreting behavior, and making better judgments—without the pressure of real customer interactions.
               </p>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
@@ -484,9 +515,9 @@ export default function RolePlayPage() {
                 </div>
                 <div className="space-y-2">
                   <CheckCircle2 className="h-6 w-6" />
-                  <h3 className="font-semibold">Build Muscle Memory</h3>
-                  <p className="text-sm text-primary-foreground/80">
-                    Repetition creates automatic responses that serve you well in high-pressure situations
+                  <h3 className="font-semibold">Build Judgment Patterns</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Repetition creates pattern recognition that helps you detect signals faster in high-pressure situations
                   </p>
                 </div>
                 <div className="space-y-2">
@@ -510,14 +541,14 @@ export default function RolePlayPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-muted">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h2 className="text-4xl lg:text-5xl font-bold">
-              Start Practicing Today
+              Start Building Signal Intelligence Today
             </h2>
             <p className="text-xl text-muted-foreground">
-              Transform your sales skills through unlimited practice with AI-powered role play simulations.
+              Develop the human capability that preserves credibility under pressure through unlimited practice with AI-powered role play simulations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-base">
@@ -542,7 +573,7 @@ export default function RolePlayPage() {
             <Link to="/ai-coach" className="p-6 rounded-lg border border-border bg-card hover:shadow-lg transition-shadow space-y-3">
               <h3 className="text-xl font-semibold">AI Coach</h3>
               <p className="text-muted-foreground">
-                Get real-time coaching guidance during live calls and personalized development plans.
+                Get real-time signal detection and interpretation support during live calls with behavioral metrics feedback.
               </p>
               <div className="flex items-center text-primary font-medium">
                 Learn more <ArrowRight className="ml-2 h-4 w-4" />
@@ -551,7 +582,7 @@ export default function RolePlayPage() {
             <Link to="/" className="p-6 rounded-lg border border-border bg-card hover:shadow-lg transition-shadow space-y-3">
               <h3 className="text-xl font-semibold">Platform Overview</h3>
               <p className="text-muted-foreground">
-                Discover all the capabilities of ReflectivAI's sales enablement platform.
+                Discover how ReflectivAI supports all 8 Signal Intelligence capabilities across your sales team.
               </p>
               <div className="flex items-center text-primary font-medium">
                 View platform <ArrowRight className="ml-2 h-4 w-4" />

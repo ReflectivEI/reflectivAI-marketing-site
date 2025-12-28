@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, MessageSquare, TrendingUp, Zap, CheckCircle2, Target } from 'lucide-react';
+import { ArrowRight, Brain, MessageSquare, TrendingUp, Zap, CheckCircle2, Target, Activity } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -12,16 +12,16 @@ export default function AICoachPage() {
             <div className="space-y-8">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
                 <Brain className="h-4 w-4" />
-                AI-Powered Coaching
+                Signal Intelligence Support
               </div>
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
-                  Your Personal
+                  AI Coach
                   <br />
-                  <span className="text-primary">AI Sales Coach</span>
+                  <span className="text-primary">Detect Signals. Support Judgment.</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-xl">
-                  Your personal pharma sales coaching assistant. Get real-time guidance on disease states, HCP categories, influence drivers, and DISC behavioral models during customer conversations.
+                  AI Coach helps pharma sales reps detect behavioral signals in real-time and make better judgments about when to pause, probe, reframe, or proceed with confidence.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -47,74 +47,121 @@ export default function AICoachPage() {
         </div>
       </section>
 
-      {/* Key Benefits */}
+      {/* What AI Coach Does */}
       <section className="py-20">
         <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-12">
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl lg:text-5xl font-bold">AI Detects Patterns. You Exercise Judgment.</h2>
+              <p className="text-xl text-muted-foreground">
+                AI Coach analyzes conversation data to surface signals—but you decide how to respond
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="space-y-4 text-center">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+                  <Activity className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold">Detects Signals</h3>
+                <p className="text-muted-foreground">
+                  Shifts in tone, pace, questions, interruptions, silence—AI identifies patterns you might miss
+                </p>
+              </div>
+              <div className="space-y-4 text-center">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+                  <Brain className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold">Interprets Behavior</h3>
+                <p className="text-muted-foreground">
+                  Uncertainty, overload, threat, misalignment—AI suggests what the signal might mean
+                </p>
+              </div>
+              <div className="space-y-4 text-center">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+                  <Target className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold">Supports Your Decision</h3>
+                <p className="text-muted-foreground">
+                  You choose: pause, probe, reframe, clarify, de-escalate, or proceed—AI never decides for you
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-muted rounded-xl p-8 space-y-4">
+              <h3 className="text-xl font-semibold">Human Judgment Drives Action</h3>
+              <p className="text-muted-foreground">
+                AI Coach provides information and suggestions, but the rep always maintains control. This ensures accountability, authenticity, and ethical engagement. Signal Intelligence is about supporting professional judgment—not replacing it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Signal Intelligence Capabilities Supported */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl lg:text-5xl font-bold">How AI Coach Transforms Your Sales Team</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold">Signal Intelligence Capabilities Supported</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Continuous, personalized coaching that scales across your entire organization
+              AI Coach helps reps develop and apply all 8 Signal Intelligence capabilities
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="space-y-4 p-6 rounded-lg border border-border bg-card">
-              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Zap className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold">Real-Time Guidance</h3>
-              <p className="text-muted-foreground">
-                Get instant coaching prompts during live calls based on conversation context, customer sentiment, and behavioral cues.
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="space-y-3 p-6 rounded-lg border border-border bg-background">
+              <h3 className="text-lg font-semibold">Signal Awareness</h3>
+              <p className="text-sm text-muted-foreground">
+                Highlights question quality, sequencing, and follow-up opportunities
               </p>
             </div>
 
-            <div className="space-y-4 p-6 rounded-lg border border-border bg-card">
-              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Target className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold">Personalized Learning Paths</h3>
-              <p className="text-muted-foreground">
-                AI analyzes your performance data to create customized development plans that address your specific strengths and gaps.
+            <div className="space-y-3 p-6 rounded-lg border border-border bg-background">
+              <h3 className="text-lg font-semibold">Signal Interpretation</h3>
+              <p className="text-sm text-muted-foreground">
+                Tracks listening, paraphrasing, and acknowledgment of customer concerns
               </p>
             </div>
 
-            <div className="space-y-4 p-6 rounded-lg border border-border bg-card">
-              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <MessageSquare className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold">Conversational Feedback</h3>
-              <p className="text-muted-foreground">
-                Ask questions, get explanations, and receive actionable advice through natural conversation with your AI coach.
+            <div className="space-y-3 p-6 rounded-lg border border-border bg-background">
+              <h3 className="text-lg font-semibold">Value Connection</h3>
+              <p className="text-sm text-muted-foreground">
+                Identifies outcome-based language vs. feature dumping
               </p>
             </div>
 
-            <div className="space-y-4 p-6 rounded-lg border border-border bg-card">
-              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <TrendingUp className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold">Performance Analytics</h3>
-              <p className="text-muted-foreground">
-                Track your progress over time with detailed metrics on emotional intelligence, objection handling, and closing techniques.
+            <div className="space-y-3 p-6 rounded-lg border border-border bg-background">
+              <h3 className="text-lg font-semibold">Customer Engagement Monitoring</h3>
+              <p className="text-sm text-muted-foreground">
+                Detects customer talk time, question quality, forward-looking statements
               </p>
             </div>
 
-            <div className="space-y-4 p-6 rounded-lg border border-border bg-card">
-              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Brain className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold">Emotional Intelligence Training</h3>
-              <p className="text-muted-foreground">
-                Develop empathy, active listening, and rapport-building skills through AI-guided exercises and real-world scenarios.
+            <div className="space-y-3 p-6 rounded-lg border border-border bg-background">
+              <h3 className="text-lg font-semibold">Objection Navigation</h3>
+              <p className="text-sm text-muted-foreground">
+                Flags defensive responses; suggests calm, exploratory approaches
               </p>
             </div>
 
-            <div className="space-y-4 p-6 rounded-lg border border-border bg-card">
-              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <CheckCircle2 className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold">24/7 Availability</h3>
-              <p className="text-muted-foreground">
-                Access coaching support anytime, anywhere—before calls, during prep, or when reviewing past conversations.
+            <div className="space-y-3 p-6 rounded-lg border border-border bg-background">
+              <h3 className="text-lg font-semibold">Conversation Management</h3>
+              <p className="text-sm text-muted-foreground">
+                Tracks purpose-setting, transitions, summarizing, next-step clarity
+              </p>
+            </div>
+
+            <div className="space-y-3 p-6 rounded-lg border border-border bg-background">
+              <h3 className="text-lg font-semibold">Commitment Generation</h3>
+              <p className="text-sm text-muted-foreground">
+                Identifies opportunities for securing clear, voluntary next actions
+              </p>
+            </div>
+
+            <div className="space-y-3 p-6 rounded-lg border border-border bg-background">
+              <h3 className="text-lg font-semibold">Adaptive Response</h3>
+              <p className="text-sm text-muted-foreground">
+                Suggests when to shift tone, depth, or pacing based on customer cues
               </p>
             </div>
           </div>
@@ -122,12 +169,12 @@ export default function AICoachPage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 bg-muted">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold">How AI Coach Works</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Intelligent coaching powered by behavioral science and machine learning
+              Real-time signal detection powered by behavioral science and machine learning
             </p>
           </div>
 
@@ -137,9 +184,9 @@ export default function AICoachPage() {
                 <div className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-primary text-primary-foreground font-bold">
                   1
                 </div>
-                <h3 className="text-2xl font-bold">Analyze Your Conversations</h3>
+                <h3 className="text-2xl font-bold">Analyze Conversation Data</h3>
                 <p className="text-lg text-muted-foreground">
-                  AI Coach listens to your calls and meetings, analyzing tone, language patterns, customer responses, and emotional dynamics in real-time.
+                  AI Coach listens to calls and meetings, analyzing tone shifts, pacing changes, question types, interruptions, and silence patterns in real-time.
                 </p>
               </div>
               <div className="aspect-video rounded-lg overflow-hidden border border-border shadow-lg">
@@ -155,7 +202,7 @@ export default function AICoachPage() {
               <div className="aspect-video rounded-lg overflow-hidden border border-border shadow-lg order-first md:order-last">
                 <img
                   src="https://media.gettyimages.com/id/2156419197/photo/two-young-professionals-in-a-co-working-space-in-houston-texas.jpg?b=1&s=2048x2048&w=0&k=20&c=LW9IxJcQtdXu8SaXMc7-aywqMSDA3K0PfpZ0VtZi-ho="
-                  alt="Personalized insights"
+                  alt="Signal interpretation"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -163,9 +210,9 @@ export default function AICoachPage() {
                 <div className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-primary text-primary-foreground font-bold">
                   2
                 </div>
-                <h3 className="text-2xl font-bold">Provide Contextual Guidance</h3>
+                <h3 className="text-2xl font-bold">Surface Signals & Interpretations</h3>
                 <p className="text-lg text-muted-foreground">
-                  Receive instant coaching prompts tailored to the specific moment—whether it's handling an objection, building rapport, or closing the deal.
+                  Receive real-time alerts when signals appear: hesitation (uncertainty), challenge (status threat), disengagement (misalignment). AI suggests what the signal might mean.
                 </p>
               </div>
             </div>
@@ -175,9 +222,9 @@ export default function AICoachPage() {
                 <div className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-primary text-primary-foreground font-bold">
                   3
                 </div>
-                <h3 className="text-2xl font-bold">Track Your Growth</h3>
+                <h3 className="text-2xl font-bold">Support Your Judgment</h3>
                 <p className="text-lg text-muted-foreground">
-                  Monitor your development with detailed analytics, skill assessments, and personalized recommendations for continuous improvement.
+                  AI Coach offers response options—pause, probe, reframe, clarify, de-escalate, or proceed—but you decide. Track your Signal Intelligence development with behavioral metrics over time.
                 </p>
               </div>
               <div className="aspect-video rounded-lg overflow-hidden border border-border shadow-lg">
@@ -193,98 +240,129 @@ export default function AICoachPage() {
       </section>
 
       {/* Use Cases */}
-      <section className="py-20">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold">AI Coach in Action</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Real scenarios where AI Coach makes the difference
+              Real scenarios where Signal Intelligence makes the difference
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="p-8 rounded-lg border border-border bg-card space-y-4">
+            <div className="p-8 rounded-lg border border-border bg-background space-y-4">
               <h3 className="text-xl font-bold">Pre-Call Preparation</h3>
               <p className="text-muted-foreground">
-                Before important meetings, AI Coach provides customer insights, suggests talking points based on past interactions, and recommends strategies tailored to the prospect's behavioral profile.
+                Before important meetings, AI Coach provides customer history, past signal patterns, and suggests conversation strategies based on previous interactions and behavioral profiles.
               </p>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Customer history and sentiment analysis</span>
+                  <span>Customer engagement history and signal patterns</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Personalized conversation starters</span>
+                  <span>Suggested question sequences for Signal Awareness</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Objection handling preparation</span>
+                  <span>Objection Navigation preparation based on past concerns</span>
                 </li>
               </ul>
             </div>
 
-            <div className="p-8 rounded-lg border border-border bg-card space-y-4">
+            <div className="p-8 rounded-lg border border-border bg-background space-y-4">
               <h3 className="text-xl font-bold">During Live Calls</h3>
               <p className="text-muted-foreground">
-                Get real-time coaching prompts that help you navigate difficult conversations, respond to objections with empathy, and identify buying signals you might have missed.
+                Get real-time signal detection: tone shifts, pacing changes, engagement drops. AI Coach suggests interpretations and response options—you decide how to proceed.
               </p>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Live sentiment detection and alerts</span>
+                  <span>Live signal detection and interpretation suggestions</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Suggested responses and talking points</span>
+                  <span>Response options: pause, probe, reframe, or proceed</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Buying signal identification</span>
+                  <span>Customer Engagement Monitoring alerts</span>
                 </li>
               </ul>
             </div>
 
-            <div className="p-8 rounded-lg border border-border bg-card space-y-4">
+            <div className="p-8 rounded-lg border border-border bg-background space-y-4">
               <h3 className="text-xl font-bold">Post-Call Review</h3>
               <p className="text-muted-foreground">
-                After each interaction, receive detailed feedback on what went well, areas for improvement, and specific coaching recommendations to enhance your skills.
+                After each interaction, receive detailed feedback on Signal Intelligence capabilities: which signals you detected, how you interpreted them, and how effectively you responded.
               </p>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Conversation highlights and lowlights</span>
+                  <span>Signal detection accuracy and missed opportunities</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Emotional intelligence scoring</span>
+                  <span>Behavioral metrics: Question Quality, Listening, Objection Navigation</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Actionable improvement suggestions</span>
+                  <span>Specific coaching on Signal Intelligence capabilities</span>
                 </li>
               </ul>
             </div>
 
-            <div className="p-8 rounded-lg border border-border bg-card space-y-4">
+            <div className="p-8 rounded-lg border border-border bg-background space-y-4">
               <h3 className="text-xl font-bold">Ongoing Development</h3>
               <p className="text-muted-foreground">
-                Access personalized training modules, practice scenarios, and skill-building exercises designed to address your unique development needs and career goals.
+                Access personalized training on Signal Intelligence capabilities, practice scenarios with AI feedback, and track your development across all 8 capabilities over time.
               </p>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Customized learning paths</span>
+                  <span>Customized learning paths for each capability</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Skill gap analysis and recommendations</span>
+                  <span>Capability gap analysis and recommendations</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Progress tracking and milestones</span>
+                  <span>Progress tracking with behavioral metrics</span>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What This Is NOT */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-muted border-2 border-primary rounded-xl p-8 space-y-6">
+              <h2 className="text-2xl font-bold text-center">What AI Coach Is NOT</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center space-y-2">
+                  <div className="text-3xl">🚫</div>
+                  <p className="font-semibold">Not a script generator</p>
+                  <p className="text-sm text-muted-foreground">AI Coach doesn't tell you what to say—it helps you understand what you're hearing</p>
+                </div>
+                <div className="text-center space-y-2">
+                  <div className="text-3xl">🚫</div>
+                  <p className="font-semibold">Not a decision-maker</p>
+                  <p className="text-sm text-muted-foreground">You always choose how to respond—AI provides information, not instructions</p>
+                </div>
+                <div className="text-center space-y-2">
+                  <div className="text-3xl">🚫</div>
+                  <p className="font-semibold">Not manipulation</p>
+                  <p className="text-sm text-muted-foreground">Signal Intelligence is about preserving trust and credibility, not persuading or influencing</p>
+                </div>
+              </div>
+              <div className="pt-4 border-t border-border text-center space-y-2">
+                <p className="text-lg font-semibold text-primary">Always ethical • Always human-validated • Always supporting judgment</p>
+              </div>
             </div>
           </div>
         </div>
@@ -295,10 +373,10 @@ export default function AICoachPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h2 className="text-4xl lg:text-5xl font-bold">
-              Ready to Experience AI-Powered Coaching?
+              Ready to Build Signal Intelligence?
             </h2>
             <p className="text-xl text-primary-foreground/90">
-              Join hundreds of Life Sciences sales professionals who are transforming their performance with AI Coach.
+              Join hundreds of Life Sciences sales professionals developing the human capability that preserves credibility under pressure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" className="text-base">
@@ -323,7 +401,7 @@ export default function AICoachPage() {
             <Link to="/role-play" className="p-6 rounded-lg border border-border bg-background hover:shadow-lg transition-shadow space-y-3">
               <h3 className="text-xl font-semibold">Role Play Simulation</h3>
               <p className="text-muted-foreground">
-                Practice difficult conversations in a safe environment with AI-powered scenarios and feedback.
+                Practice detecting and responding to signals in safe, AI-powered scenarios with instant behavioral feedback.
               </p>
               <div className="flex items-center text-primary font-medium">
                 Learn more <ArrowRight className="ml-2 h-4 w-4" />
@@ -332,7 +410,7 @@ export default function AICoachPage() {
             <Link to="/" className="p-6 rounded-lg border border-border bg-background hover:shadow-lg transition-shadow space-y-3">
               <h3 className="text-xl font-semibold">Platform Overview</h3>
               <p className="text-muted-foreground">
-                Discover all the capabilities of ReflectivAI's sales enablement platform.
+                Discover how ReflectivAI supports all 8 Signal Intelligence capabilities across your sales team.
               </p>
               <div className="flex items-center text-primary font-medium">
                 View platform <ArrowRight className="ml-2 h-4 w-4" />

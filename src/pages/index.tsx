@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Brain, Target, Users, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function HomePage() {
@@ -11,12 +11,12 @@ export default function HomePage() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
-                  Sales Enablement
+                  Signal Intelligence
                   <br />
-                  <span className="text-primary">Built on Emotional Intelligence</span>
+                  <span className="text-primary">The Human Capability That Preserves Credibility Under Pressure</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-xl">
-                  ReflectivAI combines advanced AI with proven coaching methodologies to transform how Life Sciences teams sell. Move beyond scripts to authentic, emotionally intelligent conversations.
+                  ReflectivAI helps Life Sciences sales teams detect changes in human behavior and respond in ways that preserve credibility, trust, and access.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -53,61 +53,334 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* What is Signal Intelligence */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl lg:text-5xl font-bold">
-              Life Sciences Sales is Changing
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Healthcare providers demand more than product knowledge. They need partners who understand their challenges, communicate with empathy, and build genuine trust. Traditional sales training cannot keep up.
-            </p>
-          </div>
-          
-          <div className="mt-16 grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="space-y-3">
-              <div className="text-4xl font-bold text-primary">73%</div>
-              <p className="text-muted-foreground">of HCPs say sales reps lack understanding of their practice needs</p>
+          <div className="max-w-4xl mx-auto space-y-12">
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl lg:text-5xl font-bold">
+                What is Signal Intelligence?
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                The ability to detect changes in human behavior and respond in ways that preserve credibility, trust, and access.
+              </p>
             </div>
-            <div className="space-y-3">
-              <div className="text-4xl font-bold text-primary">2.3x</div>
-              <p className="text-muted-foreground">longer sales cycles when emotional intelligence is missing</p>
-            </div>
-            <div className="space-y-3">
-              <div className="text-4xl font-bold text-primary">$2.4M</div>
-              <p className="text-muted-foreground">average cost of rep turnover and ramp time</p>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Brain className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold">Not Emotion</h3>
+                <p className="text-muted-foreground">
+                  Signal Intelligence is about judgment, not emotional manipulation. It's the discipline of observing, interpreting, and responding to interactional cues.
+                </p>
+              </div>
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Target className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold">Not Persuasion</h3>
+                <p className="text-muted-foreground">
+                  This isn't about convincing or influencing. It's about detecting signals and making informed decisions that protect professional relationships.
+                </p>
+              </div>
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Users className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold">Human Judgment</h3>
+                <p className="text-muted-foreground">
+                  AI detects patterns. Humans exercise judgment. Reps choose whether to probe, pause, reframe, or move forward.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Why it Matters in Pharma */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center space-y-6 mb-16">
+            <h2 className="text-3xl lg:text-5xl font-bold">
+              Why Signal Intelligence Matters in Pharma
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              In high-expertise, regulated conversations, deals are rarely lost on data. They are lost when signals are missed.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="space-y-3 text-center">
+              <div className="text-lg font-semibold text-primary">Hesitation mistaken for resistance</div>
+              <p className="text-muted-foreground">When uncertainty is misread as pushback, reps over-explain and lose credibility</p>
+            </div>
+            <div className="space-y-3 text-center">
+              <div className="text-lg font-semibold text-primary">Challenge triggering defensiveness</div>
+              <p className="text-muted-foreground">When questions are met with justification instead of curiosity, trust erodes</p>
+            </div>
+            <div className="space-y-3 text-center">
+              <div className="text-lg font-semibold text-primary">Expertise triggering status threat</div>
+              <p className="text-muted-foreground">When reps position themselves above HCPs, access is quietly withdrawn</p>
+            </div>
+          </div>
+
+          <div className="mt-16 max-w-3xl mx-auto">
+            <div className="bg-primary text-primary-foreground rounded-xl p-8 text-center space-y-4">
+              <p className="text-2xl font-bold">
+                Signal Intelligence prevents silent disengagement.
+              </p>
+              <p className="text-lg opacity-90">
+                It turns emotional and social cues into information—so professionals know when to advance, when to pause, and when to protect trust.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How it Works */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-12">
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl lg:text-5xl font-bold">
+                How Signal Intelligence Works
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                A simple, powerful framework for professional judgment
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold">
+                  1
+                </div>
+                <h3 className="text-2xl font-semibold">Signals</h3>
+                <p className="text-muted-foreground">
+                  Shifts in tone, pace, questions, interruptions, silence
+                </p>
+              </div>
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold">
+                  2
+                </div>
+                <h3 className="text-2xl font-semibold">Interpretation</h3>
+                <p className="text-muted-foreground">
+                  Uncertainty, overload, threat, misalignment
+                </p>
+              </div>
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold">
+                  3
+                </div>
+                <h3 className="text-2xl font-semibold">Response</h3>
+                <p className="text-muted-foreground">
+                  Pause, reframe, clarify, de-escalate, or proceed
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-background border border-border rounded-lg p-8 space-y-4">
+              <h4 className="text-xl font-semibold">The Role of AI</h4>
+              <p className="text-muted-foreground">
+                AI detects patterns in conversation data—tone shifts, pacing changes, question types. But humans exercise judgment. The rep decides whether to probe deeper, pause for clarity, reframe the conversation, or move forward with confidence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 8 Signal Intelligence Capabilities */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl lg:text-5xl font-bold">Platform Capabilities</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold">8 Signal Intelligence Capabilities</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              AI-powered coaching that adapts to each conversation, rep, and customer context
+              The core capabilities that enable professionals to detect, interpret, and respond to human signals
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Signal Awareness</h3>
+              <p className="text-muted-foreground">
+                Ask purposeful, customer-centric questions; sequence questions logically; follow up effectively
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Question Quality</span>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Signal Interpretation</h3>
+              <p className="text-muted-foreground">
+                Accurately hear, reflect, and build on customer statements; acknowledge concerns
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Listening & Responsiveness</span>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Value Connection</h3>
+              <p className="text-muted-foreground">
+                Connect offerings to customer outcomes rather than features; emphasize customer priorities
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">Making It Matter</span>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Customer Engagement Monitoring</h3>
+              <p className="text-muted-foreground">
+                Monitor and interpret customer behavior for engagement; identify forward-looking cues
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Customer Engagement Signals</span>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Objection Navigation</h3>
+              <p className="text-muted-foreground">
+                Respond calmly to resistance; explore underlying concerns; acknowledge objections
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Objection Navigation</span>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Conversation Management</h3>
+              <p className="text-muted-foreground">
+                Guide conversation with purpose; transition smoothly; summarize and clarify next steps
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">Conversation Control & Structure</span>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Commitment Generation</h3>
+              <p className="text-muted-foreground">
+                Secure clear, voluntary next actions; ensure mutual agreement and ownership
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Commitment Gaining</span>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <h3 className="text-xl font-semibold">Adaptive Response</h3>
+              <p className="text-muted-foreground">
+                Adjust approach based on customer signals; shift tone, depth, or pacing as needed
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Adaptability</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Spine - Functional Elements */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-12">
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl lg:text-5xl font-bold">
+                The Spine: Functional Elements
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                The rigorous combination of emotional intelligence, behavioral models, and social psychology that forms the basis of Signal Intelligence
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="p-6 rounded-lg border border-border bg-background space-y-3">
+                <h3 className="text-lg font-semibold">Cognitive Empathy / Perspective Taking</h3>
+                <p className="text-sm text-muted-foreground">
+                  Understanding how others think and see the world, enabling accurate interpretation of their needs and concerns
+                </p>
+              </div>
+
+              <div className="p-6 rounded-lg border border-border bg-background space-y-3">
+                <h3 className="text-lg font-semibold">Metacognition & Confidence Calibration</h3>
+                <p className="text-sm text-muted-foreground">
+                  Awareness of one's own thinking processes and accurate assessment of knowledge and certainty
+                </p>
+              </div>
+
+              <div className="p-6 rounded-lg border border-border bg-background space-y-3">
+                <h3 className="text-lg font-semibold">Emotion Regulation</h3>
+                <p className="text-sm text-muted-foreground">
+                  Managing emotional responses to maintain composure and effectiveness under pressure
+                </p>
+              </div>
+
+              <div className="p-6 rounded-lg border border-border bg-background space-y-3">
+                <h3 className="text-lg font-semibold">Motivation, Autonomy & Commitment</h3>
+                <p className="text-sm text-muted-foreground">
+                  Understanding what drives action and how to foster genuine, voluntary commitment
+                </p>
+              </div>
+
+              <div className="p-6 rounded-lg border border-border bg-background space-y-3">
+                <h3 className="text-lg font-semibold">Social Threat, Status & Identity</h3>
+                <p className="text-sm text-muted-foreground">
+                  Recognizing how status dynamics and identity concerns influence behavior and decision-making
+                </p>
+              </div>
+
+              <div className="p-6 rounded-lg border border-border bg-background space-y-3">
+                <h3 className="text-lg font-semibold">Abilities-Based Emotional Intelligence</h3>
+                <p className="text-sm text-muted-foreground">
+                  Embedded across all functional elements, providing the psychological foundation for effective Signal Intelligence
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-background border border-border rounded-lg p-8 space-y-4">
+              <h4 className="text-xl font-semibold">Research-Backed Foundation</h4>
+              <p className="text-muted-foreground">
+                These functional elements are grounded in decades of research in psychology, neuroscience, and behavioral economics. They represent the internal components that make Signal Intelligence capabilities work in practice.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Platform Capabilities */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl lg:text-5xl font-bold">How ReflectivAI Supports Signal Intelligence</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              AI-powered tools that help reps detect signals, interpret behavior, and make better judgments
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-24">
             <div className="space-y-6">
-              <h3 className="text-3xl font-bold">Real-Time Conversation Intelligence</h3>
+              <h3 className="text-3xl font-bold">Real-Time Signal Detection</h3>
               <p className="text-lg text-muted-foreground">
-                Our AI analyzes tone, sentiment, and behavioral cues during live calls and meetings. Get instant coaching prompts that help reps respond with empathy and precision.
+                Our AI analyzes tone, pace, questions, and silence during live calls. Get instant insights into customer engagement, uncertainty, or resistance—so you can respond with precision.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Emotional tone detection and sentiment analysis</span>
+                  <span>Detects shifts in tone, pace, and energy</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Contextual coaching prompts based on conversation flow</span>
+                  <span>Identifies forward-looking cues vs. disengagement</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Behavioral model integration (DISC, Myers-Briggs, etc.)</span>
+                  <span>Highlights moments requiring judgment: pause, probe, or proceed</span>
                 </li>
               </ul>
             </div>
@@ -115,7 +388,7 @@ export default function HomePage() {
               <div className="aspect-[4/3] rounded-lg overflow-hidden border border-border shadow-xl">
                 <img
                   src="https://media.gettyimages.com/id/1369254937/photo/horizontal-medium-shot-of-unrecognizable-young-black-man-sitting-at-desk-in-office-working.jpg?b=1&s=2048x2048&w=0&k=20&c=O5PRzIT3KLC8_HMOhp_1kNX4e1NvGKYHgvoKy3CrCUo="
-                  alt="Real-time conversation intelligence dashboard"
+                  alt="Real-time signal detection dashboard"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -131,22 +404,22 @@ export default function HomePage() {
               />
             </div>
             <div className="space-y-6">
-              <h3 className="text-3xl font-bold">Personalized Coaching Journeys</h3>
+              <h3 className="text-3xl font-bold">Behavioral Coaching & Development</h3>
               <p className="text-lg text-muted-foreground">
-                Every rep has unique strengths and development areas. Our platform creates individualized coaching paths that build emotional intelligence alongside product knowledge.
+                Build Signal Intelligence capabilities through personalized coaching paths. Practice detecting signals, interpreting behavior, and responding effectively in safe role-play scenarios.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Adaptive learning paths based on performance data</span>
+                  <span>Adaptive learning paths based on behavioral metrics</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Role-play scenarios with AI-powered feedback</span>
+                  <span>Role-play scenarios with AI-powered feedback on observable behaviors</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Competency tracking across technical and soft skills</span>
+                  <span>Competency tracking across all 8 Signal Intelligence capabilities</span>
                 </li>
               </ul>
             </div>
@@ -154,18 +427,18 @@ export default function HomePage() {
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-6">
-              <h3 className="text-3xl font-bold">Leadership Analytics & Insights</h3>
+              <h3 className="text-3xl font-bold">Leadership Analytics & Behavioral Metrics</h3>
               <p className="text-lg text-muted-foreground">
-                Give sales leaders visibility into team performance, coaching effectiveness, and skill development trends. Make data-driven decisions about training investments.
+                Give sales leaders visibility into team Signal Intelligence capabilities. Track behavioral metrics like Question Quality, Listening & Responsiveness, and Objection Navigation across the team.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Team-wide emotional intelligence benchmarking</span>
+                  <span>Team-wide Signal Intelligence capability benchmarking</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Coaching ROI measurement and impact tracking</span>
+                  <span>Observable behavior tracking and measurement indicators</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
@@ -186,110 +459,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-32 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto space-y-12">
-            <h2 className="text-5xl lg:text-7xl font-bold leading-tight">
-              The best sales reps do not just know their product. They understand people.
-            </h2>
-            <div className="grid md:grid-cols-2 gap-12 pt-8">
-              <div className="space-y-4">
-                <h3 className="text-2xl font-semibold">Why Emotional Intelligence Matters</h3>
-                <p className="text-lg text-primary-foreground/90">
-                  Research shows that emotional intelligence accounts for 58% of job performance in sales roles. Yet most enablement platforms ignore it entirely, focusing only on product knowledge and process.
-                </p>
-              </div>
-              <div className="space-y-4">
-                <h3 className="text-2xl font-semibold">Our Unique Approach</h3>
-                <p className="text-lg text-primary-foreground/90">
-                  ReflectivAI is the only platform built on the foundation of behavioral science, coaching methodologies, and emotional intelligence frameworks. We do not just train reps—we transform them into trusted advisors.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Coaching Modules */}
+      {/* What This Is NOT */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl lg:text-5xl font-bold">Structured Coaching Modules</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Build sales mastery through comprehensive, skills-based learning paths
-            </p>
-          </div>
-
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Discovery Questions Mastery</h3>
-              <p className="text-muted-foreground">
-                Learn to ask powerful questions that uncover stakeholder needs, challenges, and priorities
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Active Listening</span>
-                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Empathy Mapping</span>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-background border-2 border-primary rounded-xl p-8 space-y-6">
+              <h2 className="text-2xl font-bold text-center">What Signal Intelligence Is NOT</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center space-y-2">
+                  <div className="text-3xl">🚫</div>
+                  <p className="font-semibold">Not emotional manipulation</p>
+                </div>
+                <div className="text-center space-y-2">
+                  <div className="text-3xl">🚫</div>
+                  <p className="font-semibold">Not personality scoring</p>
+                </div>
+                <div className="text-center space-y-2">
+                  <div className="text-3xl">🚫</div>
+                  <p className="font-semibold">Not "soft skills"</p>
+                </div>
               </div>
-            </div>
-
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Stakeholder Mapping</h3>
-              <p className="text-muted-foreground">
-                Identify and understand all decision-makers in the healthcare ecosystem
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">DISC</span>
-                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Empathy Mapping</span>
-              </div>
-            </div>
-
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Clinical Evidence Communication</h3>
-              <p className="text-muted-foreground">
-                Present clinical data effectively to different stakeholder types
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">DISC</span>
-                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">Active Listening</span>
-              </div>
-            </div>
-
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Objection Handling</h3>
-              <p className="text-muted-foreground">
-                Address concerns and objections with empathy and evidence
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Active Listening</span>
-                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Rapport Building</span>
-              </div>
-            </div>
-
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Closing Techniques</h3>
-              <p className="text-muted-foreground">
-                Guide stakeholders toward commitment with confidence and integrity
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Rapport Building</span>
-                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">DISC</span>
-              </div>
-            </div>
-
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">EI Mastery for Pharma</h3>
-              <p className="text-muted-foreground">
-                Integrate all emotional intelligence frameworks for healthcare selling
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">DISC</span>
-                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">Active Listening</span>
+              <div className="pt-4 border-t border-border text-center space-y-2">
+                <p className="text-lg font-semibold text-primary">Always ethical • Always human-validated</p>
+                <p className="text-muted-foreground">
+                  Signal Intelligence respects autonomy, preserves dignity, and supports professional judgment—never replacing it.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Testimonial */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -302,7 +503,7 @@ export default function HomePage() {
                 </div>
                 <div className="space-y-4">
                   <p className="text-xl lg:text-2xl font-medium leading-relaxed">
-                    ReflectivAI transformed our team's approach to customer conversations. Our reps now connect on a deeper level, and we've seen a 34% increase in close rates within six months. The emotional intelligence training is game-changing.
+                    ReflectivAI transformed how our team reads customer signals. Our reps now know when to pause, when to probe, and when to proceed with confidence. We've seen a 34% increase in close rates within six months.
                   </p>
                   <div>
                     <div className="font-semibold">Jennifer Martinez</div>
@@ -315,16 +516,17 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* CTA */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <h2 className="text-4xl lg:text-5xl font-bold">
-                  Ready to Transform Your Sales Team?
+                  Ready to Build Signal Intelligence?
                 </h2>
                 <p className="text-xl text-muted-foreground">
-                  See how ReflectivAI can help your Life Sciences organization build emotionally intelligent, high-performing sales teams.
+                  See how ReflectivAI can help your Life Sciences organization develop the human capability that preserves credibility under pressure.
                 </p>
               </div>
               <div className="space-y-4">
