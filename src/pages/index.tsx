@@ -901,65 +901,69 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Performance Analytics */}
+      {/* Signal Intelligence Metrics */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl lg:text-5xl font-bold">Performance Analytics & Coaching Intelligence</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold">Signal Intelligence Metrics</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Turn training data into measurable business outcomes with EI-driven metrics
+              Observable, behavioral outcomes that drive measurable performance improvement
             </p>
           </div>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-            <div className="p-6 rounded-lg border border-border bg-card text-center space-y-2 hover:shadow-lg transition-shadow">
-              <div className="text-4xl font-bold text-primary">94%</div>
-              <div className="text-sm font-medium text-foreground">Accuracy Index</div>
-            </div>
-
-            <div className="p-6 rounded-lg border border-border bg-card text-center space-y-2 hover:shadow-lg transition-shadow">
-              <div className="text-4xl font-bold text-primary">1.4x</div>
-              <div className="text-sm font-medium text-foreground">Readiness Velocity</div>
-            </div>
-
-            <div className="p-6 rounded-lg border border-border bg-card text-center space-y-2 hover:shadow-lg transition-shadow">
-              <div className="text-4xl font-bold text-primary">88%</div>
-              <div className="text-sm font-medium text-foreground">Empathy Index</div>
-            </div>
-
-            <div className="p-6 rounded-lg border border-border bg-card text-center space-y-2 hover:shadow-lg transition-shadow">
-              <div className="text-4xl font-bold text-primary">100%</div>
-              <div className="text-sm font-medium text-foreground">Compliance Score</div>
-            </div>
-
-            <div className="p-6 rounded-lg border border-border bg-card text-center space-y-2 hover:shadow-lg transition-shadow">
-              <div className="text-4xl font-bold text-primary">8.5/10</div>
-              <div className="text-sm font-medium text-foreground">Confidence Level</div>
-            </div>
-
-            <div className="p-6 rounded-lg border border-border bg-card text-center space-y-2 hover:shadow-lg transition-shadow">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="p-6 rounded-lg border border-border bg-card space-y-3 hover:shadow-lg transition-shadow">
               <div className="text-4xl font-bold text-primary">92%</div>
-              <div className="text-sm font-medium text-foreground">Clarity Index</div>
+              <div className="text-sm font-semibold text-foreground">Question Quality</div>
+              <p className="text-xs text-muted-foreground">Open-ended, diagnostic questions that uncover needs</p>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-card text-center space-y-2 hover:shadow-lg transition-shadow">
+            <div className="p-6 rounded-lg border border-border bg-card space-y-3 hover:shadow-lg transition-shadow">
+              <div className="text-4xl font-bold text-primary">88%</div>
+              <div className="text-sm font-semibold text-foreground">Listening & Responsiveness</div>
+              <p className="text-xs text-muted-foreground">Paraphrasing, acknowledging, building on customer input</p>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card space-y-3 hover:shadow-lg transition-shadow">
               <div className="text-4xl font-bold text-primary">85%</div>
-              <div className="text-sm font-medium text-foreground">Objection Handling</div>
+              <div className="text-sm font-semibold text-foreground">Conversation Control</div>
+              <p className="text-xs text-muted-foreground">Guiding dialogue without dominating or losing direction</p>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-card text-center space-y-2 hover:shadow-lg transition-shadow">
-              <div className="text-4xl font-bold text-primary">78%</div>
-              <div className="text-sm font-medium text-foreground">Discovery Index</div>
-            </div>
-
-            <div className="p-6 rounded-lg border border-border bg-card text-center space-y-2 hover:shadow-lg transition-shadow">
+            <div className="p-6 rounded-lg border border-border bg-card space-y-3 hover:shadow-lg transition-shadow">
               <div className="text-4xl font-bold text-primary">90%</div>
-              <div className="text-sm font-medium text-foreground">Active Listening</div>
+              <div className="text-sm font-semibold text-foreground">Adaptability</div>
+              <p className="text-xs text-muted-foreground">Adjusting tone, pace, and approach based on signals</p>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-card text-center space-y-2 hover:shadow-lg transition-shadow">
+            <div className="p-6 rounded-lg border border-border bg-card space-y-3 hover:shadow-lg transition-shadow">
               <div className="text-4xl font-bold text-primary">83%</div>
-              <div className="text-sm font-medium text-foreground">Emotional Adaptability</div>
+              <div className="text-sm font-semibold text-foreground">Commitment Gaining</div>
+              <p className="text-xs text-muted-foreground">Securing clear, voluntary next actions with mutual agreement</p>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card space-y-3 hover:shadow-lg transition-shadow">
+              <div className="text-4xl font-bold text-primary">87%</div>
+              <div className="text-sm font-semibold text-foreground">Objection Navigation</div>
+              <p className="text-xs text-muted-foreground">Addressing concerns without defensiveness or avoidance</p>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card space-y-3 hover:shadow-lg transition-shadow">
+              <div className="text-4xl font-bold text-primary">94%</div>
+              <div className="text-sm font-semibold text-foreground">Clinical Accuracy</div>
+              <p className="text-xs text-muted-foreground">Precise, compliant communication of product information</p>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card space-y-3 hover:shadow-lg transition-shadow">
+              <div className="text-4xl font-bold text-primary">91%</div>
+              <div className="text-sm font-semibold text-foreground">Engagement Signals</div>
+              <p className="text-xs text-muted-foreground">Detecting and responding to customer interest and resistance</p>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-card space-y-3 hover:shadow-lg transition-shadow">
+              <div className="text-4xl font-bold text-primary">100%</div>
+              <div className="text-sm font-semibold text-foreground">Compliance</div>
+              <p className="text-xs text-muted-foreground">Adherence to regulatory and company guidelines</p>
             </div>
           </div>
         </div>

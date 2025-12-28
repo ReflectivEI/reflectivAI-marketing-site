@@ -225,49 +225,41 @@ export default function AICoachPage() {
           </div>
 
           <div className="max-w-6xl mx-auto space-y-12">
-            {/* 10 EI Dimensions */}
+            {/* Signal Intelligence Dimensions */}
             <div className="bg-muted rounded-xl p-8">
-              <h3 className="text-2xl font-bold mb-6 text-center">10 Signal Intelligence Dimensions</h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+              <h3 className="text-2xl font-bold mb-6 text-center">8 Signal Intelligence Dimensions</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="p-4 rounded-lg bg-background border border-border text-center">
                   <div className="text-3xl font-bold text-primary mb-2">1</div>
-                  <div className="text-sm font-semibold">Accuracy</div>
+                  <div className="text-sm font-semibold">Question Quality</div>
                 </div>
                 <div className="p-4 rounded-lg bg-background border border-border text-center">
                   <div className="text-3xl font-bold text-primary mb-2">2</div>
-                  <div className="text-sm font-semibold">Empathy</div>
+                  <div className="text-sm font-semibold">Listening & Responsiveness</div>
                 </div>
                 <div className="p-4 rounded-lg bg-background border border-border text-center">
                   <div className="text-3xl font-bold text-primary mb-2">3</div>
-                  <div className="text-sm font-semibold">Clarity</div>
+                  <div className="text-sm font-semibold">Conversation Control</div>
                 </div>
                 <div className="p-4 rounded-lg bg-background border border-border text-center">
                   <div className="text-3xl font-bold text-primary mb-2">4</div>
-                  <div className="text-sm font-semibold">Compliance</div>
+                  <div className="text-sm font-semibold">Adaptability</div>
                 </div>
                 <div className="p-4 rounded-lg bg-background border border-border text-center">
                   <div className="text-3xl font-bold text-primary mb-2">5</div>
-                  <div className="text-sm font-semibold">Discovery</div>
+                  <div className="text-sm font-semibold">Commitment Gaining</div>
                 </div>
                 <div className="p-4 rounded-lg bg-background border border-border text-center">
                   <div className="text-3xl font-bold text-primary mb-2">6</div>
-                  <div className="text-sm font-semibold">Objection Handling</div>
+                  <div className="text-sm font-semibold">Objection Navigation</div>
                 </div>
                 <div className="p-4 rounded-lg bg-background border border-border text-center">
                   <div className="text-3xl font-bold text-primary mb-2">7</div>
-                  <div className="text-sm font-semibold">Active Listening</div>
+                  <div className="text-sm font-semibold">Clinical Accuracy</div>
                 </div>
                 <div className="p-4 rounded-lg bg-background border border-border text-center">
                   <div className="text-3xl font-bold text-primary mb-2">8</div>
-                  <div className="text-sm font-semibold">Emotional Adaptability</div>
-                </div>
-                <div className="p-4 rounded-lg bg-background border border-border text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">9</div>
-                  <div className="text-sm font-semibold">Confidence</div>
-                </div>
-                <div className="p-4 rounded-lg bg-background border border-border text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">10</div>
-                  <div className="text-sm font-semibold">Rapport</div>
+                  <div className="text-sm font-semibold">Compliance</div>
                 </div>
               </div>
             </div>
@@ -276,27 +268,27 @@ export default function AICoachPage() {
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-center">Real-Time Coaching Cards</h3>
               <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto">
-                The moment you hit "Send," the system evaluates clinical precision, emotional resonance, regulatory alignment, and conversational strategy—assigning each dimension a score out of 10 and mapping it to a color-coded coaching signal.
+                The moment you hit "Send," the system evaluates clinical precision, behavioral signals, regulatory alignment, and conversational strategy—assigning each dimension a score out of 10 and mapping it to a color-coded coaching signal.
               </p>
               
               <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                 <div className="p-6 rounded-lg border-2 border-green-500/30 bg-green-500/5">
                   <div className="flex items-center justify-between mb-3">
-                    <h4 className="font-semibold">Empathy</h4>
-                    <div className="text-2xl font-bold text-green-600">8.5/10</div>
+                    <h4 className="font-semibold">Listening & Responsiveness</h4>
+                    <div className="text-2xl font-bold text-green-600">9.2/10</div>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Excellent acknowledgment of HCP concerns. You validated their perspective before presenting your solution.
+                    Great paraphrasing: "So you're concerned about patient adherence with twice-daily dosing?" This shows you're building on their input.
                   </p>
                 </div>
 
-                <div className="p-6 rounded-lg border-2 border-yellow-500/30 bg-yellow-500/5">
+                <div className="p-6 rounded-lg border-2 border-green-500/30 bg-green-500/5">
                   <div className="flex items-center justify-between mb-3">
-                    <h4 className="font-semibold">Clarity</h4>
-                    <div className="text-2xl font-bold text-yellow-600">6.8/10</div>
+                    <h4 className="font-semibold">Question Quality</h4>
+                    <div className="text-2xl font-bold text-green-600">8.5/10</div>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Consider simplifying: "This reduces cardiovascular events" is clearer than "This demonstrates cardioprotective efficacy."
+                    Excellent open-ended question. You uncovered the HCP's real concern about dosing frequency before presenting your solution.
                   </p>
                 </div>
 
@@ -310,13 +302,13 @@ export default function AICoachPage() {
                   </p>
                 </div>
 
-                <div className="p-6 rounded-lg border-2 border-green-500/30 bg-green-500/5">
+                <div className="p-6 rounded-lg border-2 border-yellow-500/30 bg-yellow-500/5">
                   <div className="flex items-center justify-between mb-3">
-                    <h4 className="font-semibold">Active Listening</h4>
-                    <div className="text-2xl font-bold text-green-600">9.2/10</div>
+                    <h4 className="font-semibold">Conversation Control</h4>
+                    <div className="text-2xl font-bold text-yellow-600">6.8/10</div>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Great paraphrasing: "So you're concerned about patient adherence with twice-daily dosing?" This shows you're truly listening.
+                    You guided the conversation well, but consider using a transition: "Before we discuss dosing, may I ask about your current treatment protocols?"
                   </p>
                 </div>
               </div>
@@ -345,16 +337,16 @@ export default function AICoachPage() {
               </div>
 
               <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-                <h3 className="text-xl font-semibold">Listen for Emotional Cues</h3>
+                <h3 className="text-xl font-semibold">Detect Engagement Signals</h3>
                 <p className="text-muted-foreground">
-                  Detect hesitation, skepticism, or interest in HCP responses and adjust your approach.
+                  Recognize hesitation, skepticism, or interest in HCP responses and adjust your approach accordingly.
                 </p>
               </div>
 
               <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-                <h3 className="text-xl font-semibold">Respond with Label-Aligned Empathy</h3>
+                <h3 className="text-xl font-semibold">Respond with Understanding</h3>
                 <p className="text-muted-foreground">
-                  Show you understand HCP concerns while guiding back to approved, compliant messaging.
+                  Acknowledge HCP concerns while guiding back to approved, compliant messaging.
                 </p>
               </div>
             </div>
@@ -376,7 +368,7 @@ export default function AICoachPage() {
 
           <div className="mt-12 text-center max-w-3xl mx-auto">
             <p className="text-lg text-muted-foreground">
-              The Coach doesn't just score you—it teaches you. With every simulation, reps build muscle memory for emotionally intelligent conversations that drive trust, adherence, and long-term HCP relationships.
+              The Coach doesn't just score you—it teaches you. With every simulation, reps build muscle memory for signal-aware conversations that drive trust, adherence, and long-term HCP relationships.
             </p>
           </div>
         </div>
@@ -388,7 +380,7 @@ export default function AICoachPage() {
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h2 className="text-3xl lg:text-5xl font-bold">Real-Time, Actionable Coaching</h2>
             <p className="text-xl text-muted-foreground">
-              The Coach doesn't just score you—it teaches you. With every simulation, reps build muscle memory for emotionally intelligent conversations that drive trust, adherence, and long-term HCP relationships.
+              The Coach doesn't just score you—it teaches you. With every simulation, reps build muscle memory for signal-aware conversations that drive trust, adherence, and long-term HCP relationships.
             </p>
           </div>
         </div>
