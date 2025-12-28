@@ -11,12 +11,12 @@ export default function HomePage() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
-                  Signal Intelligence
+                  AI Sales Coaching
                   <br />
-                  <span className="text-primary">The Human Capability That Preserves Credibility Under Pressure</span>
+                  <span className="text-primary">Built for Life Sciences</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-xl">
-                  ReflectivAI helps Life Sciences sales teams detect changes in human behavior and respond in ways that preserve credibility, trust, and access.
+                  Master pharma sales conversations with AI-powered coaching, realistic role play scenarios, and proven frameworks for building trust with healthcare providers.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -53,47 +53,55 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* What is Signal Intelligence */}
+      {/* Platform Features */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="text-3xl lg:text-5xl font-bold">
-                What is Signal Intelligence?
-              </h2>
-              <p className="text-xl text-muted-foreground">
-                The ability to detect changes in human behavior and respond in ways that preserve credibility, trust, and access.
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl lg:text-5xl font-bold">Everything You Need to Excel</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              From daily coaching to realistic practice scenarios, ReflectivAI gives you the tools to master pharma sales conversations
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Brain className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold">AI Coach</h3>
+              <p className="text-muted-foreground">
+                Get personalized coaching and real-time feedback on your conversations
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="space-y-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Brain className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold">Not Emotion</h3>
-                <p className="text-muted-foreground">
-                  Signal Intelligence is about judgment, not emotional manipulation. It's the discipline of observing, interpreting, and responding to interactional cues.
-                </p>
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Target className="h-6 w-6 text-primary" />
               </div>
-              <div className="space-y-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Target className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold">Not Persuasion</h3>
-                <p className="text-muted-foreground">
-                  This isn't about convincing or influencing. It's about detecting signals and making informed decisions that protect professional relationships.
-                </p>
+              <h3 className="text-xl font-semibold">Role Play Simulator</h3>
+              <p className="text-muted-foreground">
+                Practice with realistic pharma scenarios across HIV, Oncology, Cardiology, and more
+              </p>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Users className="h-6 w-6 text-primary" />
               </div>
-              <div className="space-y-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Users className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold">Human Judgment</h3>
-                <p className="text-muted-foreground">
-                  AI detects patterns. Humans exercise judgment. Reps choose whether to probe, pause, reframe, or move forward.
-                </p>
+              <h3 className="text-xl font-semibold">Coaching Modules</h3>
+              <p className="text-muted-foreground">
+                Structured learning paths for Discovery, Stakeholder Mapping, Clinical Evidence, and more
+              </p>
+            </div>
+
+            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                <TrendingUp className="h-6 w-6 text-primary" />
               </div>
+              <h3 className="text-xl font-semibold">Performance Analytics</h3>
+              <p className="text-muted-foreground">
+                Track progress with behavioral metrics and skill development insights
+              </p>
             </div>
           </div>
         </div>
@@ -192,161 +200,129 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8 Signal Intelligence Capabilities */}
+      {/* Coaching Modules */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl lg:text-5xl font-bold">8 Signal Intelligence Capabilities</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold">Structured Coaching Modules</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              The core capabilities that enable professionals to detect, interpret, and respond to human signals
+              Master the essential skills for pharma sales success with proven frameworks and hands-on practice
             </p>
           </div>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Signal Awareness</h3>
+              <h3 className="text-xl font-semibold">Discovery Questions Mastery</h3>
               <p className="text-muted-foreground">
-                Ask purposeful, customer-centric questions; sequence questions logically; follow up effectively
+                Learn to ask powerful questions that uncover stakeholder needs, challenges, and priorities
               </p>
               <div className="flex gap-2 flex-wrap">
-                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Question Quality</span>
+                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Active Listening</span>
+                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Empathy Mapping</span>
               </div>
             </div>
 
             <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Signal Interpretation</h3>
+              <h3 className="text-xl font-semibold">Stakeholder Mapping</h3>
               <p className="text-muted-foreground">
-                Accurately hear, reflect, and build on customer statements; acknowledge concerns
+                Identify and understand all decision-makers in the healthcare ecosystem
               </p>
               <div className="flex gap-2 flex-wrap">
-                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Listening & Responsiveness</span>
+                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">DISC</span>
+                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Empathy Mapping</span>
               </div>
             </div>
 
             <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Value Connection</h3>
+              <h3 className="text-xl font-semibold">Clinical Evidence Communication</h3>
               <p className="text-muted-foreground">
-                Connect offerings to customer outcomes rather than features; emphasize customer priorities
+                Present clinical data effectively to different stakeholder types
               </p>
               <div className="flex gap-2 flex-wrap">
-                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">Making It Matter</span>
+                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">DISC</span>
+                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Active Listening</span>
               </div>
             </div>
 
             <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Customer Engagement Monitoring</h3>
+              <h3 className="text-xl font-semibold">Objection Handling</h3>
               <p className="text-muted-foreground">
-                Monitor and interpret customer behavior for engagement; identify forward-looking cues
+                Address concerns and objections with empathy and evidence
               </p>
               <div className="flex gap-2 flex-wrap">
-                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Customer Engagement Signals</span>
+                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Active Listening</span>
+                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Rapport Building</span>
               </div>
             </div>
 
             <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Objection Navigation</h3>
+              <h3 className="text-xl font-semibold">Closing Techniques</h3>
               <p className="text-muted-foreground">
-                Respond calmly to resistance; explore underlying concerns; acknowledge objections
+                Guide stakeholders toward commitment with confidence and integrity
               </p>
               <div className="flex gap-2 flex-wrap">
-                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Objection Navigation</span>
+                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Rapport Building</span>
+                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">DISC</span>
               </div>
             </div>
 
             <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Conversation Management</h3>
+              <h3 className="text-xl font-semibold">EI Mastery for Pharma</h3>
               <p className="text-muted-foreground">
-                Guide conversation with purpose; transition smoothly; summarize and clarify next steps
+                Integrate all emotional intelligence frameworks for healthcare selling
               </p>
               <div className="flex gap-2 flex-wrap">
-                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">Conversation Control & Structure</span>
-              </div>
-            </div>
-
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Commitment Generation</h3>
-              <p className="text-muted-foreground">
-                Secure clear, voluntary next actions; ensure mutual agreement and ownership
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Commitment Gaining</span>
-              </div>
-            </div>
-
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Adaptive Response</h3>
-              <p className="text-muted-foreground">
-                Adjust approach based on customer signals; shift tone, depth, or pacing as needed
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Adaptability</span>
+                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">DISC</span>
+                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Active Listening</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* The Spine - Functional Elements */}
+      {/* How It Works - Signal Intelligence Engine */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center space-y-4">
               <h2 className="text-3xl lg:text-5xl font-bold">
-                The Spine: Functional Elements
+                Powered by Signal Intelligence
               </h2>
               <p className="text-xl text-muted-foreground">
-                The rigorous combination of emotional intelligence, behavioral models, and social psychology that forms the basis of Signal Intelligence
+                Behind every coaching module and role play scenario is a science-backed framework for detecting behavioral signals and responding effectively
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="p-6 rounded-lg border border-border bg-background space-y-3">
-                <h3 className="text-lg font-semibold">Cognitive Empathy / Perspective Taking</h3>
-                <p className="text-sm text-muted-foreground">
-                  Understanding how others think and see the world, enabling accurate interpretation of their needs and concerns
+            <div className="grid md:grid-cols-3 gap-8 text-center">
+              <div className="space-y-3">
+                <div className="text-5xl font-bold text-primary">1</div>
+                <h3 className="text-xl font-semibold">Detect Signals</h3>
+                <p className="text-muted-foreground">
+                  AI identifies behavioral patterns—tone shifts, hesitation, engagement cues
                 </p>
               </div>
 
-              <div className="p-6 rounded-lg border border-border bg-background space-y-3">
-                <h3 className="text-lg font-semibold">Metacognition & Confidence Calibration</h3>
-                <p className="text-sm text-muted-foreground">
-                  Awareness of one's own thinking processes and accurate assessment of knowledge and certainty
+              <div className="space-y-3">
+                <div className="text-5xl font-bold text-primary">2</div>
+                <h3 className="text-xl font-semibold">Interpret Meaning</h3>
+                <p className="text-muted-foreground">
+                  Frameworks help you understand what signals mean in context
                 </p>
               </div>
 
-              <div className="p-6 rounded-lg border border-border bg-background space-y-3">
-                <h3 className="text-lg font-semibold">Emotion Regulation</h3>
-                <p className="text-sm text-muted-foreground">
-                  Managing emotional responses to maintain composure and effectiveness under pressure
-                </p>
-              </div>
-
-              <div className="p-6 rounded-lg border border-border bg-background space-y-3">
-                <h3 className="text-lg font-semibold">Motivation, Autonomy & Commitment</h3>
-                <p className="text-sm text-muted-foreground">
-                  Understanding what drives action and how to foster genuine, voluntary commitment
-                </p>
-              </div>
-
-              <div className="p-6 rounded-lg border border-border bg-background space-y-3">
-                <h3 className="text-lg font-semibold">Social Threat, Status & Identity</h3>
-                <p className="text-sm text-muted-foreground">
-                  Recognizing how status dynamics and identity concerns influence behavior and decision-making
-                </p>
-              </div>
-
-              <div className="p-6 rounded-lg border border-border bg-background space-y-3">
-                <h3 className="text-lg font-semibold">Abilities-Based Emotional Intelligence</h3>
-                <p className="text-sm text-muted-foreground">
-                  Embedded across all functional elements, providing the psychological foundation for effective Signal Intelligence
+              <div className="space-y-3">
+                <div className="text-5xl font-bold text-primary">3</div>
+                <h3 className="text-xl font-semibold">Respond Effectively</h3>
+                <p className="text-muted-foreground">
+                  You choose how to respond—probe, pause, reframe, or move forward
                 </p>
               </div>
             </div>
 
-            <div className="bg-background border border-border rounded-lg p-8 space-y-4">
-              <h4 className="text-xl font-semibold">Research-Backed Foundation</h4>
+            <div className="bg-background border border-border rounded-lg p-8 space-y-4 mt-8">
+              <h4 className="text-xl font-semibold">Built on Behavioral Science</h4>
               <p className="text-muted-foreground">
-                These functional elements are grounded in decades of research in psychology, neuroscience, and behavioral economics. They represent the internal components that make Signal Intelligence capabilities work in practice.
+                Signal Intelligence combines emotional intelligence research, behavioral psychology, and social dynamics theory. The result: practical skills that help you read situations accurately and respond in ways that preserve trust and credibility.
               </p>
             </div>
           </div>
@@ -419,7 +395,7 @@ export default function HomePage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Competency tracking across all 8 Signal Intelligence capabilities</span>
+                  <span>Progress tracking across all coaching modules and frameworks</span>
                 </li>
               </ul>
             </div>
@@ -523,10 +499,10 @@ export default function HomePage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <h2 className="text-4xl lg:text-5xl font-bold">
-                  Ready to Build Signal Intelligence?
+                  Ready to Master Pharma Sales?
                 </h2>
                 <p className="text-xl text-muted-foreground">
-                  See how ReflectivAI can help your Life Sciences organization develop the human capability that preserves credibility under pressure.
+                  See how ReflectivAI helps Life Sciences teams build trust with healthcare providers through AI-powered coaching and proven frameworks.
                 </p>
               </div>
               <div className="space-y-4">
