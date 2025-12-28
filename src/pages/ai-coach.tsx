@@ -335,27 +335,43 @@ export default function AICoachPage() {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Regulate Tone Under Pressure</h3>
-              <p className="text-muted-foreground">
-                Learn to stay calm and confident when HCPs push back or challenge your message.
-              </p>
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center mb-12">
+            <div className="space-y-8">
+              <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+                <h3 className="text-xl font-semibold">Regulate Tone Under Pressure</h3>
+                <p className="text-muted-foreground">
+                  Learn to stay calm and confident when HCPs push back or challenge your message.
+                </p>
+              </div>
+
+              <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+                <h3 className="text-xl font-semibold">Listen for Emotional Cues</h3>
+                <p className="text-muted-foreground">
+                  Detect hesitation, skepticism, or interest in HCP responses and adjust your approach.
+                </p>
+              </div>
+
+              <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+                <h3 className="text-xl font-semibold">Respond with Label-Aligned Empathy</h3>
+                <p className="text-muted-foreground">
+                  Show you understand HCP concerns while guiding back to approved, compliant messaging.
+                </p>
+              </div>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Listen for Emotional Cues</h3>
-              <p className="text-muted-foreground">
-                Detect hesitation, skepticism, or interest in HCP responses and adjust your approach.
-              </p>
+            <div className="relative">
+              <div className="aspect-[3/4] rounded-lg overflow-hidden border border-border shadow-2xl">
+                <img
+                  src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/9F4B84D2-1ED2-4E75-B3C5-EB732344F88D.png"
+                  alt="AI Coach providing real-time emotional intelligence feedback"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
+          </div>
 
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Respond with Label-Aligned Empathy</h3>
-              <p className="text-muted-foreground">
-                Show you understand HCP concerns while guiding back to approved, compliant messaging.
-              </p>
-            </div>
+          <div className="max-w-4xl mx-auto hidden">
+
           </div>
 
           <div className="mt-12 text-center max-w-3xl mx-auto">
