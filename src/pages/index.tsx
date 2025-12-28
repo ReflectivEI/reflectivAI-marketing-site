@@ -152,7 +152,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="aspect-[4/3] rounded-lg overflow-hidden border border-border shadow-2xl">
                 <img
-                  src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/9F4B84D2-1ED2-4E75-B3C5-EB732344F88D.png"
+                  src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/197460A4-BECD-471D-91B5-E9CA924F9D72.png"
                   alt="ReflectivAI Platform Interface"
                   className="w-full h-full object-cover"
                 />
