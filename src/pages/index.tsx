@@ -154,7 +154,7 @@ export default function HomePage() {
                 <img
                   src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/FA56163C-096B-4B40-BB2B-D87D00080C11.png"
                   alt="ReflectivAI Platform Interface"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>
