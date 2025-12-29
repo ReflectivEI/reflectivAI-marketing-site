@@ -21,7 +21,7 @@ export default function RolePlayPage() {
                   <span className="text-primary">Practice Makes Perfect</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-xl">
-                  The proving ground for Signal Intelligence™. Practice realistic pharma conversations where every response generates measurable signals—then get coaching on what worked, what didn't, and why.
+                  A safe practice environment for sales professionals. Engage in realistic conversations where AI highlights patterns in pacing, clarity, and engagement—helping you refine judgment before high-stakes interactions.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -55,7 +55,7 @@ export default function RolePlayPage() {
               Why Signal Intelligence Practice Works
             </h2>
             <p className="text-xl text-muted-foreground">
-              Research shows that experiential learning through role play increases skill retention by 75% compared to traditional training methods. Practice builds the judgment needed to detect signals, interpret behavior, and respond effectively under pressure.
+              Research shows that experiential learning through role play increases skill retention by 75% compared to traditional training methods. Practice builds the judgment needed to detect patterns, interpret signals, and respond effectively under pressure—in a safe environment where mistakes are learning opportunities.
             </p>
           </div>
 
@@ -72,6 +72,12 @@ export default function RolePlayPage() {
               <div className="text-5xl font-bold text-primary">89%</div>
               <p className="text-muted-foreground">Of reps report increased confidence after practice</p>
             </div>
+          </div>
+
+          <div className="mt-12 max-w-3xl mx-auto text-center">
+            <p className="text-sm text-muted-foreground italic">
+              If a response would feel inappropriate if the roles were reversed, it is outside the Signal Intelligence boundary.
+            </p>
           </div>
         </div>
       </section>
@@ -93,7 +99,7 @@ export default function RolePlayPage() {
               </div>
               <h3 className="text-xl font-semibold">Realistic AI Personas</h3>
               <p className="text-muted-foreground">
-                Interact with AI-powered customer personas that exhibit authentic behaviors, objections, and emotional responses based on real Life Sciences buyer profiles.
+                Interact with AI-powered customer personas that exhibit authentic behaviors, objections, and conversational patterns based on real Life Sciences buyer profiles.
               </p>
             </div>
 
