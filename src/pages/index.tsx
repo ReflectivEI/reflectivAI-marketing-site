@@ -16,16 +16,33 @@ import { ROICalculator } from '@/components/ROICalculator';
 import { SocialProofTicker } from '@/components/SocialProofTicker';
 
 type CompetencyDetail = {
+  id: string;
+  index: number;
   name: string;
+  score: number;
+  status: string;
   whatItMeasures: string;
   howEvaluated: string;
   howRated: string;
   whatGoodLooksLike: string[];
+  calculationExplanation: string;
 };
+
+// Helper function to get status label from score
+function getStatusLabel(score: number): string {
+  if (score >= 9.0) return 'Consistently strong';
+  if (score >= 7.5) return 'Generally strong';
+  if (score >= 6.0) return 'Inconsistent';
+  return 'Needs attention';
+}
 
 const competencyDetails: Record<string, CompetencyDetail> = {
   'communication-clarity': {
+    id: 'communication-clarity',
+    index: 1,
     name: 'Communication Clarity',
+    score: 8.5,
+    status: getStatusLabel(8.5),
     whatItMeasures: 'How clearly and coherently ideas are expressed throughout a conversation.',
     howEvaluated: 'Patterns in how information is structured, sequenced, and explained during role-play.',
     howRated: 'Based on consistency of clarity across the interaction, not a single moment.',
@@ -34,10 +51,15 @@ const competencyDetails: Record<string, CompetencyDetail> = {
       'Key points are stated directly',
       'Explanations are concise and relevant',
       'Transitions between topics are clear'
-    ]
+    ],
+    calculationExplanation: 'This score is based on how consistently your explanations remained clear and easy to follow across all turns in the conversation.'
   },
   'intent-alignment': {
+    id: 'intent-alignment',
+    index: 2,
     name: 'Intent Alignment',
+    score: 6.8,
+    status: getStatusLabel(6.8),
     whatItMeasures: 'How well communication stays aligned with the purpose of the interaction.',
     howEvaluated: 'Language is compared against the stated goal of the role-play scenario.',
     howRated: 'Based on how consistently communication supports the intended outcome.',
@@ -46,10 +68,15 @@ const competencyDetails: Record<string, CompetencyDetail> = {
       'Messaging reinforces the goal',
       'Minimal drift or distraction',
       'Clear awareness of why the conversation is happening'
-    ]
+    ],
+    calculationExplanation: 'This score reflects how often your responses supported the stated goal versus drifting into side topics.'
   },
   'responsiveness': {
+    id: 'responsiveness',
+    index: 3,
     name: 'Responsiveness',
+    score: 9.2,
+    status: getStatusLabel(9.2),
     whatItMeasures: 'How effectively input from the other party is acknowledged and addressed.',
     howEvaluated: 'Response timing, relevance, and acknowledgment of prior points.',
     howRated: 'Based on timely and context-aware engagement.',
@@ -58,10 +85,15 @@ const competencyDetails: Record<string, CompetencyDetail> = {
       'Clear acknowledgment of concerns',
       'Relevant follow-ups',
       'Minimal repetition or avoidance'
-    ]
+    ],
+    calculationExplanation: 'This score is based on how quickly and directly you answered questions and addressed concerns as they appeared.'
   },
   'conversational-balance': {
+    id: 'conversational-balance',
+    index: 4,
     name: 'Conversational Balance',
+    score: 7.9,
+    status: getStatusLabel(7.9),
     whatItMeasures: 'How well participation and pacing are managed.',
     howEvaluated: 'Turn-taking, pacing, and space created for dialogue.',
     howRated: 'Based on overall balance across the interaction.',
@@ -70,10 +102,15 @@ const competencyDetails: Record<string, CompetencyDetail> = {
       'Few interruptions',
       'Space for the other party to engage',
       'Adjustments to conversational flow'
-    ]
+    ],
+    calculationExplanation: 'This score reflects how much space you created for the other party to speak and how smoothly the conversation flowed.'
   },
   'behavioral-adaptability': {
+    id: 'behavioral-adaptability',
+    index: 5,
     name: 'Behavioral Adaptability',
+    score: 8.1,
+    status: getStatusLabel(8.1),
     whatItMeasures: 'How well communication adjusts to what\'s happening in the moment.',
     howEvaluated: 'Shifts in language, depth, or approach following new cues.',
     howRated: 'Based on timeliness and relevance of adjustments.',
@@ -82,10 +119,15 @@ const competencyDetails: Record<string, CompetencyDetail> = {
       'Adjusts pacing or depth as needed',
       'Avoids rigid or scripted responses',
       'Responds calmly and constructively under pressure'
-    ]
+    ],
+    calculationExplanation: 'This score is based on how often you adjusted your approach after new information, questions, or signals from the other party.'
   },
   'outcome-orientation': {
+    id: 'outcome-orientation',
+    index: 6,
     name: 'Outcome Orientation',
+    score: 8.8,
+    status: getStatusLabel(8.8),
     whatItMeasures: 'How effectively communication moves toward a clear next step.',
     howEvaluated: 'Presence of summaries, confirmations, and next-step language.',
     howRated: 'Based on clarity and closure by the end of the interaction.',
@@ -94,7 +136,8 @@ const competencyDetails: Record<string, CompetencyDetail> = {
       'Explicit next steps',
       'Mutual understanding',
       'Reduced ambiguity at close'
-    ]
+    ],
+    calculationExplanation: 'This score reflects how clearly you summarized the conversation and proposed concrete, agreed next steps.'
   }
 };
 
@@ -609,84 +652,32 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
-            <button
-              onClick={() => openCapabilityDetail('communication-clarity')}
-              className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
-            >
-              <h3 className="text-xl font-semibold">Communication Clarity</h3>
-              <p className="text-muted-foreground">
-                How clearly and coherently ideas are expressed throughout a conversation.
-              </p>
-              <div className="flex gap-2 flex-wrap items-center">
-                <span className="text-xs text-primary font-medium">Click to learn more →</span>
-              </div>
-            </button>
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {Object.values(competencyDetails).map((competency) => (
+              <button
+                key={competency.id}
+                onClick={() => openCapabilityDetail(competency.id)}
+                className="group relative p-8 rounded-lg border border-border bg-white hover:bg-white text-left transition-all duration-200 cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                aria-label={`View details for ${competency.name}`}
+              >
+                {/* Index number badge */}
+                <div className="absolute top-4 left-4 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                  <span className="text-sm font-bold text-primary">{competency.index}</span>
+                </div>
 
-            <button
-              onClick={() => openCapabilityDetail('intent-alignment')}
-              className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
-            >
-              <h3 className="text-xl font-semibold">Intent Alignment</h3>
-              <p className="text-muted-foreground">
-                How well communication stays aligned with the purpose of the interaction.
-              </p>
-              <div className="flex gap-2 flex-wrap items-center">
-                <span className="text-xs text-primary font-medium">Click to learn more →</span>
-              </div>
-            </button>
+                {/* Competency name */}
+                <div className="mt-8 mb-4">
+                  <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                    {competency.name}
+                  </h3>
+                </div>
 
-            <button
-              onClick={() => openCapabilityDetail('responsiveness')}
-              className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
-            >
-              <h3 className="text-xl font-semibold">Responsiveness</h3>
-              <p className="text-muted-foreground">
-                How effectively input from the other party is acknowledged and addressed.
-              </p>
-              <div className="flex gap-2 flex-wrap items-center">
-                <span className="text-xs text-primary font-medium">Click to learn more →</span>
-              </div>
-            </button>
-
-            <button
-              onClick={() => openCapabilityDetail('conversational-balance')}
-              className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
-            >
-              <h3 className="text-xl font-semibold">Conversational Balance</h3>
-              <p className="text-muted-foreground">
-                How well participation and pacing are managed.
-              </p>
-              <div className="flex gap-2 flex-wrap items-center">
-                <span className="text-xs text-primary font-medium">Click to learn more →</span>
-              </div>
-            </button>
-
-            <button
-              onClick={() => openCapabilityDetail('behavioral-adaptability')}
-              className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
-            >
-              <h3 className="text-xl font-semibold">Behavioral Adaptability</h3>
-              <p className="text-muted-foreground">
-                How well communication adjusts to what's happening in the moment.
-              </p>
-              <div className="flex gap-2 flex-wrap items-center">
-                <span className="text-xs text-primary font-medium">Click to learn more →</span>
-              </div>
-            </button>
-
-            <button
-              onClick={() => openCapabilityDetail('outcome-orientation')}
-              className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
-            >
-              <h3 className="text-xl font-semibold">Outcome Orientation</h3>
-              <p className="text-muted-foreground">
-                How effectively communication moves toward a clear next step.
-              </p>
-              <div className="flex gap-2 flex-wrap items-center">
-                <span className="text-xs text-primary font-medium">Click to learn more →</span>
-              </div>
-            </button>
+                {/* Tap to view affordance */}
+                <div className="text-xs text-muted-foreground">
+                  Tap to view what this measures
+                </div>
+              </button>
+            ))}
           </div>
         </div>
       </section>
@@ -1097,29 +1088,44 @@ export default function HomePage() {
 
       {/* Competency Detail Dialog */}
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
+        <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto bg-white">
           {currentCompetency && (
             <>
-              <DialogHeader>
+              {/* Navy header bar */}
+              <DialogHeader className="bg-primary text-primary-foreground -m-6 mb-0 p-6 rounded-t-lg">
                 <DialogTitle className="text-2xl font-bold">{currentCompetency.name}</DialogTitle>
-                <DialogDescription className="text-base">
-                  {currentCompetency.whatItMeasures}
-                </DialogDescription>
               </DialogHeader>
               
-              <div className="space-y-6 mt-6">
+              <div className="space-y-6 mt-6 px-6 pb-6">
+                {/* Score and Status */}
+                <div className="flex items-center gap-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                  <div>
+                    <div className="text-4xl font-bold text-foreground">{currentCompetency.score.toFixed(1)} / 10</div>
+                    <div className="text-sm text-muted-foreground mt-1">{currentCompetency.status}</div>
+                  </div>
+                </div>
+
+                {/* What it measures */}
                 <div>
-                  <h4 className="text-lg font-semibold mb-2">How It's Evaluated</h4>
+                  <h4 className="text-lg font-semibold mb-2 text-foreground">What it measures</h4>
+                  <p className="text-muted-foreground">{currentCompetency.whatItMeasures}</p>
+                </div>
+
+                {/* How it's evaluated */}
+                <div>
+                  <h4 className="text-lg font-semibold mb-2 text-foreground">How it’s evaluated</h4>
                   <p className="text-muted-foreground">{currentCompetency.howEvaluated}</p>
                 </div>
 
+                {/* How it's rated */}
                 <div>
-                  <h4 className="text-lg font-semibold mb-2">How It's Rated</h4>
+                  <h4 className="text-lg font-semibold mb-2 text-foreground">How it’s rated</h4>
                   <p className="text-muted-foreground">{currentCompetency.howRated}</p>
                 </div>
 
+                {/* What good looks like */}
                 <div className="bg-muted rounded-lg p-4">
-                  <h4 className="text-lg font-semibold mb-3">What Good Looks Like</h4>
+                  <h4 className="text-lg font-semibold mb-3 text-foreground">What good looks like</h4>
                   <ul className="space-y-2">
                     {currentCompetency.whatGoodLooksLike.map((item, index) => (
                       <li key={index} className="flex items-start gap-2">
@@ -1130,6 +1136,16 @@ export default function HomePage() {
                   </ul>
                 </div>
 
+                {/* How this score was calculated */}
+                <div className="border-t border-border pt-4">
+                  <h4 className="text-lg font-semibold mb-2 text-foreground">How this score was calculated</h4>
+                  <p className="text-muted-foreground">{currentCompetency.calculationExplanation}</p>
+                  <p className="text-sm text-muted-foreground italic mt-3">
+                    Scores are based on patterns across the entire conversation, not a single moment. Each turn contributes to this 0–10 rating for {currentCompetency.name}.
+                  </p>
+                </div>
+
+                {/* Ethical boundary */}
                 <div className="border-t border-border pt-4">
                   <p className="text-sm text-muted-foreground italic">
                     If a response would feel inappropriate if the roles were reversed, it is outside the Signal Intelligence boundary.
