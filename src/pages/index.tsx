@@ -3,7 +3,7 @@
 import { ArrowRight, CheckCircle2, Brain, Target, Users, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { useState } from 'react';
 import { PlatformShowcase } from '@/components/PlatformShowcase';
 import { AnimatedStats } from '@/components/AnimatedStats';
@@ -678,6 +678,160 @@ export default function HomePage() {
                 </div>
               </button>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Real-Time Coaching Cards */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto space-y-12">
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl lg:text-5xl font-bold">How You Did in This Conversation</h2>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Real-time feedback on your performance across all 6 Signal Intelligence™ competencies
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {Object.values(competencyDetails).map((competency) => {
+                const isStrong = competency.score >= 8.5;
+                const borderColor = isStrong ? 'border-primary' : 'border-border';
+                
+                return (
+                  <div
+                    key={competency.id}
+                    className={`bg-white rounded-lg border ${borderColor} p-6 space-y-4 hover:shadow-md transition-shadow`}
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex-1">
+                        <h3 className="text-xl font-semibold text-foreground mb-2">
+                          {competency.name}
+                        </h3>
+                        <p className="text-sm text-muted-foreground">
+                          {competency.whatItMeasures}
+                        </p>
+                      </div>
+                      <div className="flex-shrink-0">
+                        <div className="px-4 py-2 bg-yellow-100 border border-yellow-300 rounded-full">
+                          <span className="text-lg font-bold text-foreground">{competency.score.toFixed(1)}/10</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="pt-3 border-t border-border">
+                      <p className="text-sm text-muted-foreground">
+                        <span className="font-semibold text-foreground">Coaching insight:</span> {competency.calculationExplanation}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="text-center mt-8">
+              <p className="text-sm text-muted-foreground italic">
+                Click any competency card above to see the full breakdown and learn what good looks like.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Real-Time Coaching Cards */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl lg:text-5xl font-bold">Real-Time Coaching in Action</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              See how ReflectivAI provides instant, actionable feedback during role-play conversations.
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+            {/* Coaching Card 1 - Strong Performance */}
+            <div className="bg-white rounded-lg border-2 border-primary p-6 space-y-4">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground">Responsiveness</h3>
+                  <p className="text-sm text-muted-foreground mt-1">Turn 4 of conversation</p>
+                </div>
+                <div className="flex-shrink-0 px-3 py-1 bg-yellow-100 border border-yellow-300 rounded-full">
+                  <span className="text-sm font-bold text-foreground">9.2 / 10</span>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <p className="text-sm text-muted-foreground">
+                  <span className="font-semibold text-foreground">What you did well:</span> You directly addressed the physician's concern about patient compliance by acknowledging their experience and offering a specific solution.
+                </p>
+                <p className="text-sm text-primary font-medium">
+                  This is a strong example of Responsiveness—you stayed on topic and provided relevant information without deflecting.
+                </p>
+              </div>
+            </div>
+
+            {/* Coaching Card 2 - Needs Improvement */}
+            <div className="bg-white rounded-lg border border-border p-6 space-y-4">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground">Intent Alignment</h3>
+                  <p className="text-sm text-muted-foreground mt-1">Turn 7 of conversation</p>
+                </div>
+                <div className="flex-shrink-0 px-3 py-1 bg-yellow-100 border border-yellow-300 rounded-full">
+                  <span className="text-sm font-bold text-foreground">6.8 / 10</span>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <p className="text-sm text-muted-foreground">
+                  <span className="font-semibold text-foreground">Opportunity to improve:</span> Your response drifted into product features when the physician was asking about clinical outcomes. This shifted focus away from their core concern.
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  <span className="font-semibold text-foreground">Try this instead:</span> "Let me address the outcomes data you're asking about. In the Phase 3 trial, we saw a 23% improvement in..."
+                </p>
+              </div>
+            </div>
+
+            {/* Coaching Card 3 - Strong Performance */}
+            <div className="bg-white rounded-lg border-2 border-primary p-6 space-y-4">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground">Behavioral Adaptability</h3>
+                  <p className="text-sm text-muted-foreground mt-1">Turn 9 of conversation</p>
+                </div>
+                <div className="flex-shrink-0 px-3 py-1 bg-yellow-100 border border-yellow-300 rounded-full">
+                  <span className="text-sm font-bold text-foreground">8.1 / 10</span>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <p className="text-sm text-muted-foreground">
+                  <span className="font-semibold text-foreground">What you did well:</span> When the physician expressed skepticism, you adjusted your approach by offering to share peer-reviewed data rather than continuing with your prepared talking points.
+                </p>
+                <p className="text-sm text-primary font-medium">
+                  This shows strong Behavioral Adaptability—you read the signal and changed course appropriately.
+                </p>
+              </div>
+            </div>
+
+            {/* Coaching Card 4 - Needs Improvement */}
+            <div className="bg-white rounded-lg border border-border p-6 space-y-4">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground">Conversational Balance</h3>
+                  <p className="text-sm text-muted-foreground mt-1">Turn 11 of conversation</p>
+                </div>
+                <div className="flex-shrink-0 px-3 py-1 bg-yellow-100 border border-yellow-300 rounded-full">
+                  <span className="text-sm font-bold text-foreground">7.9 / 10</span>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <p className="text-sm text-muted-foreground">
+                  <span className="font-semibold text-foreground">Opportunity to improve:</span> Your last three responses were longer than necessary. The physician tried to interject twice but you continued speaking.
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  <span className="font-semibold text-foreground">Try this instead:</span> After making your key point, pause and ask: "Does that address your question, or would you like me to elaborate on any part?"
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
