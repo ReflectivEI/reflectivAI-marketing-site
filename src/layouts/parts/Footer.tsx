@@ -15,7 +15,7 @@ export default function Footer() {
               <span className="text-xl font-bold">ReflectivAI</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              AI Sales Enablement for Life Sciences built on Emotional Intelligence.
+              Signal Intelligence™ for sales professionals in high-stakes conversations. Built on clarity and restraint, designed for teams where judgment matters.
             </p>
           </div>
 

@@ -1036,6 +1036,59 @@ export default function HomePage() {
       {/* ROI Calculator */}
       <ROICalculator />
 
+      {/* Trust & Transparency */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-12">
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl lg:text-5xl font-bold">Trust & Transparency</h2>
+              <p className="text-xl text-muted-foreground">
+                Signal Intelligence™ is built on observable behavior, ethical boundaries, and human-led interpretation
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="space-y-4 text-center">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+                  <CheckCircle2 className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold">Observable Behavior Only</h3>
+                <p className="text-muted-foreground">
+                  We measure what can be seen and heard—not what someone might be thinking or feeling. No psychological profiling, no emotional scoring.
+                </p>
+              </div>
+
+              <div className="space-y-4 text-center">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+                  <CheckCircle2 className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold">Ethical Boundary</h3>
+                <p className="text-muted-foreground">
+                  If a response would feel inappropriate if the roles were reversed, it is outside the Signal Intelligence boundary.
+                </p>
+              </div>
+
+              <div className="space-y-4 text-center">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+                  <CheckCircle2 className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold">Human-Led Interpretation</h3>
+                <p className="text-muted-foreground">
+                  AI highlights patterns. Professionals interpret meaning and decide how to respond. Judgment always stays with the human.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-background border border-border rounded-lg p-8 space-y-4">
+              <h4 className="text-xl font-semibold">Our Commitment</h4>
+              <p className="text-muted-foreground">
+                ReflectivAI is designed to support professional judgment, not replace it. We provide information and suggestions, but you always maintain control. This ensures accountability, authenticity, and ethical engagement in every interaction.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <FAQ />
 
