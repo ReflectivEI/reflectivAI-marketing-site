@@ -93,7 +93,7 @@ export default function RolePlayPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="space-y-4 p-6 rounded-lg border border-border bg-background">
+            <div className="space-y-4 p-6 rounded-xl border-2 border-primary bg-blue-50 shadow-md hover:shadow-xl transition-shadow">
               <div className="h-12 w-12 rounded-lg bg-accent/10 flex items-center justify-center">
                 <Users className="h-6 w-6 text-accent" />
               </div>
@@ -103,7 +103,7 @@ export default function RolePlayPage() {
               </p>
             </div>
 
-            <div className="space-y-4 p-6 rounded-lg border border-border bg-background">
+            <div className="space-y-4 p-6 rounded-xl border-2 border-primary bg-white shadow-md hover:shadow-xl transition-shadow">
               <div className="h-12 w-12 rounded-lg bg-accent/10 flex items-center justify-center">
                 <Lightbulb className="h-6 w-6 text-accent" />
               </div>
@@ -113,7 +113,7 @@ export default function RolePlayPage() {
               </p>
             </div>
 
-            <div className="space-y-4 p-6 rounded-lg border border-border bg-background">
+            <div className="space-y-4 p-6 rounded-xl border-2 border-primary bg-purple-50 shadow-md hover:shadow-xl transition-shadow">
               <div className="h-12 w-12 rounded-lg bg-accent/10 flex items-center justify-center">
                 <BarChart3 className="h-6 w-6 text-accent" />
               </div>
@@ -123,7 +123,7 @@ export default function RolePlayPage() {
               </p>
             </div>
 
-            <div className="space-y-4 p-6 rounded-lg border border-border bg-background">
+            <div className="space-y-4 p-6 rounded-xl border-2 border-primary bg-white shadow-md hover:shadow-xl transition-shadow">
               <div className="h-12 w-12 rounded-lg bg-accent/10 flex items-center justify-center">
                 <Award className="h-6 w-6 text-accent" />
               </div>
@@ -133,7 +133,7 @@ export default function RolePlayPage() {
               </p>
             </div>
 
-            <div className="space-y-4 p-6 rounded-lg border border-border bg-background">
+            <div className="space-y-4 p-6 rounded-xl border-2 border-primary bg-blue-50 shadow-md hover:shadow-xl transition-shadow">
               <div className="h-12 w-12 rounded-lg bg-accent/10 flex items-center justify-center">
                 <Play className="h-6 w-6 text-accent" />
               </div>
@@ -143,7 +143,7 @@ export default function RolePlayPage() {
               </p>
             </div>
 
-            <div className="space-y-4 p-6 rounded-lg border border-border bg-background">
+            <div className="space-y-4 p-6 rounded-xl border-2 border-primary bg-white shadow-md hover:shadow-xl transition-shadow">
               <div className="h-12 w-12 rounded-lg bg-accent/10 flex items-center justify-center">
                 <CheckCircle2 className="h-6 w-6 text-accent" />
               </div>
@@ -167,7 +167,7 @@ export default function RolePlayPage() {
           </div>
 
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="p-6 rounded-lg border border-border bg-card space-y-3">
+            <div className="p-6 rounded-xl border-2 border-primary bg-blue-50 space-y-3 shadow-md hover:shadow-xl transition-shadow">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">
                 HIV
               </div>
@@ -178,7 +178,7 @@ export default function RolePlayPage() {
               <div className="text-xs text-muted-foreground">Intermediate Level</div>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-card space-y-3">
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 shadow-md hover:shadow-xl transition-shadow">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">
                 HIV
               </div>
@@ -189,7 +189,7 @@ export default function RolePlayPage() {
               <div className="text-xs text-muted-foreground">Advanced Level</div>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-card space-y-3">
+            <div className="p-6 rounded-xl border-2 border-primary bg-purple-50 space-y-3 shadow-md hover:shadow-xl transition-shadow">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">
                 Oncology
               </div>
@@ -200,7 +200,7 @@ export default function RolePlayPage() {
               <div className="text-xs text-muted-foreground">Advanced Level</div>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-card space-y-3">
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 shadow-md hover:shadow-xl transition-shadow">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">
                 Oncology
               </div>
@@ -211,7 +211,7 @@ export default function RolePlayPage() {
               <div className="text-xs text-muted-foreground">Intermediate Level</div>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-card space-y-3">
+            <div className="p-6 rounded-xl border-2 border-primary bg-blue-50 space-y-3 shadow-md hover:shadow-xl transition-shadow">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-medium">
                 Cardiology
               </div>
@@ -222,7 +222,7 @@ export default function RolePlayPage() {
               <div className="text-xs text-muted-foreground">Advanced Level</div>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-card space-y-3">
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 shadow-md hover:shadow-xl transition-shadow">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-medium">
                 Cardiology
               </div>
@@ -233,7 +233,7 @@ export default function RolePlayPage() {
               <div className="text-xs text-muted-foreground">Intermediate Level</div>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-card space-y-3">
+            <div className="p-6 rounded-xl border-2 border-primary bg-purple-50 space-y-3 shadow-md hover:shadow-xl transition-shadow">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted text-muted-foreground rounded-full text-xs font-medium">
                 Vaccines
               </div>
@@ -244,7 +244,7 @@ export default function RolePlayPage() {
               <div className="text-xs text-muted-foreground">Intermediate Level</div>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-card space-y-3">
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 shadow-md hover:shadow-xl transition-shadow">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted text-muted-foreground rounded-full text-xs font-medium">
                 COVID
               </div>
@@ -255,7 +255,7 @@ export default function RolePlayPage() {
               <div className="text-xs text-muted-foreground">Advanced Level</div>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-card space-y-3">
+            <div className="p-6 rounded-xl border-2 border-primary bg-blue-50 space-y-3 shadow-md hover:shadow-xl transition-shadow">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted text-muted-foreground rounded-full text-xs font-medium">
                 Rare Disease
               </div>

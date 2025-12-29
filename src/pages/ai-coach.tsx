@@ -109,7 +109,7 @@ export default function AICoachPage() {
           </div>
 
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+            <div className="p-6 rounded-xl border-2 border-primary bg-blue-50 space-y-4 shadow-md hover:shadow-xl transition-shadow">
               <MessageSquare className="h-8 w-8 text-primary" />
               <h3 className="text-xl font-semibold">Ask Questions</h3>
               <p className="text-muted-foreground">
@@ -117,7 +117,7 @@ export default function AICoachPage() {
               </p>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-4 shadow-md hover:shadow-xl transition-shadow">
               <Brain className="h-8 w-8 text-primary" />
               <h3 className="text-xl font-semibold">Get Personalized Feedback</h3>
               <p className="text-muted-foreground">
@@ -125,7 +125,7 @@ export default function AICoachPage() {
               </p>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+            <div className="p-6 rounded-xl border-2 border-primary bg-purple-50 space-y-4 shadow-md hover:shadow-xl transition-shadow">
               <Target className="h-8 w-8 text-primary" />
               <h3 className="text-xl font-semibold">Practice Scenarios</h3>
               <p className="text-muted-foreground">
@@ -133,7 +133,7 @@ export default function AICoachPage() {
               </p>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-4 shadow-md hover:shadow-xl transition-shadow">
               <TrendingUp className="h-8 w-8 text-primary" />
               <h3 className="text-xl font-semibold">Track Your Progress</h3>
               <p className="text-muted-foreground">
@@ -155,42 +155,42 @@ export default function AICoachPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <div className="space-y-3 p-6 rounded-lg border border-border bg-background">
+            <div className="space-y-3 p-6 rounded-xl border-2 border-primary bg-blue-50 shadow-md hover:shadow-xl transition-shadow">
               <h3 className="text-lg font-semibold">Communication Clarity</h3>
               <p className="text-sm text-muted-foreground">
                 How clearly and coherently ideas are expressed throughout a conversation
               </p>
             </div>
 
-            <div className="space-y-3 p-6 rounded-lg border border-border bg-background">
+            <div className="space-y-3 p-6 rounded-xl border-2 border-primary bg-white shadow-md hover:shadow-xl transition-shadow">
               <h3 className="text-lg font-semibold">Intent Alignment</h3>
               <p className="text-sm text-muted-foreground">
                 How well communication stays aligned with the purpose of the interaction
               </p>
             </div>
 
-            <div className="space-y-3 p-6 rounded-lg border border-border bg-background">
+            <div className="space-y-3 p-6 rounded-xl border-2 border-primary bg-purple-50 shadow-md hover:shadow-xl transition-shadow">
               <h3 className="text-lg font-semibold">Responsiveness</h3>
               <p className="text-sm text-muted-foreground">
                 How effectively input from the other party is acknowledged and addressed
               </p>
             </div>
 
-            <div className="space-y-3 p-6 rounded-lg border border-border bg-background">
+            <div className="space-y-3 p-6 rounded-xl border-2 border-primary bg-white shadow-md hover:shadow-xl transition-shadow">
               <h3 className="text-lg font-semibold">Conversational Balance</h3>
               <p className="text-sm text-muted-foreground">
                 How well participation and pacing are managed
               </p>
             </div>
 
-            <div className="space-y-3 p-6 rounded-lg border border-border bg-background">
+            <div className="space-y-3 p-6 rounded-xl border-2 border-primary bg-blue-50 shadow-md hover:shadow-xl transition-shadow">
               <h3 className="text-lg font-semibold">Behavioral Adaptability</h3>
               <p className="text-sm text-muted-foreground">
                 How well communication adjusts to what's happening in the moment
               </p>
             </div>
 
-            <div className="space-y-3 p-6 rounded-lg border border-border bg-background">
+            <div className="space-y-3 p-6 rounded-xl border-2 border-primary bg-white shadow-md hover:shadow-xl transition-shadow">
               <h3 className="text-lg font-semibold">Outcome Orientation</h3>
               <p className="text-sm text-muted-foreground">
                 How effectively communication moves toward a clear next step

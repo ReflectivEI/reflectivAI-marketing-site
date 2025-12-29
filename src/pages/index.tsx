@@ -657,7 +657,7 @@ export default function HomePage() {
               <button
                 key={competency.id}
                 onClick={() => openCapabilityDetail(competency.id)}
-                className="group relative p-8 rounded-lg border border-border bg-white hover:bg-white text-left transition-all duration-200 cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                className="group relative p-8 rounded-xl border-2 border-primary bg-white hover:bg-white text-left transition-all duration-200 cursor-pointer hover:scale-[1.02] hover:shadow-xl hover:border-accent focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 shadow-md"
                 aria-label={`View details for ${competency.name}`}
               >
                 {/* Index number badge */}
@@ -702,7 +702,7 @@ export default function HomePage() {
                   <button
                     key={competency.id}
                     onClick={() => openCapabilityDetail(competency.id)}
-                    className={`bg-white rounded-lg ${borderColor} p-6 space-y-4 hover:shadow-lg transition-all duration-200 cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2`}
+                    className={`bg-white rounded-xl ${borderColor} p-6 space-y-4 hover:shadow-xl transition-all duration-200 cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 shadow-md`}
                     aria-label={`View details for ${competency.name}`}
                   >
                     <div className="flex items-start justify-between gap-4">
@@ -752,7 +752,7 @@ export default function HomePage() {
 
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
             {/* Coaching Card 1 - Strong Performance */}
-            <div className="bg-white rounded-lg border-2 border-primary p-6 space-y-4 shadow-md">
+            <div className="bg-white rounded-xl border-2 border-primary p-6 space-y-4 shadow-md hover:shadow-xl transition-shadow">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <h3 className="text-lg font-semibold text-foreground">Responsiveness</h3>
@@ -773,7 +773,7 @@ export default function HomePage() {
             </div>
 
             {/* Coaching Card 2 - Needs Improvement */}
-            <div className="bg-white rounded-lg border-2 border-border p-6 space-y-4 shadow-md">
+            <div className="bg-white rounded-xl border-2 border-border p-6 space-y-4 shadow-md hover:shadow-xl transition-shadow">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <h3 className="text-lg font-semibold text-foreground">Intent Alignment</h3>
@@ -794,7 +794,7 @@ export default function HomePage() {
             </div>
 
             {/* Coaching Card 3 - Strong Performance */}
-            <div className="bg-white rounded-lg border-2 border-primary p-6 space-y-4 shadow-md">
+            <div className="bg-white rounded-xl border-2 border-primary p-6 space-y-4 shadow-md hover:shadow-xl transition-shadow">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <h3 className="text-lg font-semibold text-foreground">Behavioral Adaptability</h3>
@@ -815,7 +815,7 @@ export default function HomePage() {
             </div>
 
             {/* Coaching Card 4 - Needs Improvement */}
-            <div className="bg-white rounded-lg border-2 border-border p-6 space-y-4 shadow-md">
+            <div className="bg-white rounded-xl border-2 border-border p-6 space-y-4 shadow-md hover:shadow-xl transition-shadow">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <h3 className="text-lg font-semibold text-foreground">Conversational Balance</h3>
@@ -877,8 +877,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="bg-background border border-border rounded-lg p-8 space-y-4 mt-8">
-              <h4 className="text-xl font-semibold">Built on Behavioral Science</h4>
+            <div className="bg-blue-50 border-2 border-primary rounded-xl p-8 space-y-4 mt-8 shadow-md hover:shadow-xl transition-shadow">
+              <h4 className="text-xl font-semibold text-foreground">Built on Behavioral Science</h4>
               <p className="text-muted-foreground">
                 Signal Intelligence combines conversational intelligence research, behavioral psychology, and social dynamics theory. The result: practical skills that help you read situations accurately and respond in ways that preserve trust and credibility.
               </p>
@@ -1013,55 +1013,55 @@ export default function HomePage() {
           </div>
 
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="p-6 rounded-lg border border-border bg-card space-y-3 hover:shadow-lg transition-shadow">
+            <div className="p-6 rounded-xl border-2 border-primary bg-blue-50 space-y-3 hover:shadow-xl transition-shadow shadow-md">
               <div className="text-4xl font-bold text-primary">92%</div>
               <div className="text-sm font-semibold text-foreground">Question Quality</div>
               <p className="text-xs text-muted-foreground">Open-ended, diagnostic questions that uncover needs</p>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-card space-y-3 hover:shadow-lg transition-shadow">
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
               <div className="text-4xl font-bold text-primary">88%</div>
               <div className="text-sm font-semibold text-foreground">Listening & Responsiveness</div>
               <p className="text-xs text-muted-foreground">Paraphrasing, acknowledging, building on customer input</p>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-card space-y-3 hover:shadow-lg transition-shadow">
+            <div className="p-6 rounded-xl border-2 border-primary bg-purple-50 space-y-3 hover:shadow-xl transition-shadow shadow-md">
               <div className="text-4xl font-bold text-primary">85%</div>
               <div className="text-sm font-semibold text-foreground">Conversation Control</div>
               <p className="text-xs text-muted-foreground">Guiding dialogue without dominating or losing direction</p>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-card space-y-3 hover:shadow-lg transition-shadow">
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
               <div className="text-4xl font-bold text-primary">90%</div>
               <div className="text-sm font-semibold text-foreground">Adaptability</div>
               <p className="text-xs text-muted-foreground">Adjusting tone, pace, and approach based on signals</p>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-card space-y-3 hover:shadow-lg transition-shadow">
+            <div className="p-6 rounded-xl border-2 border-primary bg-blue-50 space-y-3 hover:shadow-xl transition-shadow shadow-md">
               <div className="text-4xl font-bold text-primary">83%</div>
               <div className="text-sm font-semibold text-foreground">Commitment Gaining</div>
               <p className="text-xs text-muted-foreground">Securing clear, voluntary next actions with mutual agreement</p>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-card space-y-3 hover:shadow-lg transition-shadow">
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
               <div className="text-4xl font-bold text-primary">87%</div>
               <div className="text-sm font-semibold text-foreground">Objection Navigation</div>
               <p className="text-xs text-muted-foreground">Addressing concerns without defensiveness or avoidance</p>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-card space-y-3 hover:shadow-lg transition-shadow">
+            <div className="p-6 rounded-xl border-2 border-primary bg-purple-50 space-y-3 hover:shadow-xl transition-shadow shadow-md">
               <div className="text-4xl font-bold text-primary">94%</div>
               <div className="text-sm font-semibold text-foreground">Clinical Accuracy</div>
               <p className="text-xs text-muted-foreground">Precise, compliant communication of product information</p>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-card space-y-3 hover:shadow-lg transition-shadow">
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
               <div className="text-4xl font-bold text-primary">91%</div>
               <div className="text-sm font-semibold text-foreground">Engagement Signals</div>
               <p className="text-xs text-muted-foreground">Detecting and responding to customer interest and resistance</p>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-card space-y-3 hover:shadow-lg transition-shadow">
+            <div className="p-6 rounded-xl border-2 border-primary bg-blue-50 space-y-3 hover:shadow-xl transition-shadow shadow-md">
               <div className="text-4xl font-bold text-primary">100%</div>
               <div className="text-sm font-semibold text-foreground">Compliance</div>
               <p className="text-xs text-muted-foreground">Adherence to regulatory and company guidelines</p>
