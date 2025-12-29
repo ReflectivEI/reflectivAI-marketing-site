@@ -20,14 +20,19 @@ export default function AICoachPage() {
                   <br />
                   <span className="text-primary">Your Personal Pharma Sales Coach</span>
                 </h1>
+                <p className="text-lg text-muted-foreground italic max-w-xl">
+                  For managers and enablement leaders coaching life sciences field teams.
+                </p>
                 <p className="text-xl text-muted-foreground max-w-xl">
                   AI Coach highlights patterns in how conversations unfold—such as pacing, clarity, and engagement—using the Signal Intelligence™ framework. These insights support reflection and improvement, while judgment and decisions remain with the professional. Available 24/7.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-base">
-                  Start Free Trial
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                <Button size="lg" className="text-base" asChild>
+                  <Link to="/contact">
+                    Schedule a Signal Intelligence™ walkthrough
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
                 </Button>
                 <Button size="lg" variant="outline" className="text-base">
                   Watch Demo
@@ -491,9 +496,11 @@ export default function AICoachPage() {
               Join hundreds of Life Sciences sales professionals developing the human capability that preserves credibility under pressure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="text-base">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button size="lg" variant="secondary" className="text-base" asChild>
+                <Link to="/contact">
+                  Schedule a Signal Intelligence™ walkthrough
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
               <Button size="lg" variant="outline" className="text-base border-primary-foreground/20 hover:bg-primary-foreground/10">
                 Schedule Demo

@@ -20,14 +20,19 @@ export default function RolePlayPage() {
                   <br />
                   <span className="text-primary">Practice Makes Perfect</span>
                 </h1>
+                <p className="text-lg text-muted-foreground italic max-w-xl">
+                  For life sciences reps and MSLs practicing high-stakes clinical and access conversations.
+                </p>
                 <p className="text-xl text-muted-foreground max-w-xl">
                   A safe practice environment for sales professionals. Engage in realistic conversations where AI highlights patterns in pacing, clarity, and engagement—helping you refine judgment before high-stakes interactions.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-base">
-                  Try a Simulation
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                <Button size="lg" className="text-base" asChild>
+                  <Link to="/contact">
+                    Schedule a Signal Intelligence™ walkthrough
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
                 </Button>
                 <Button size="lg" variant="outline" className="text-base">
                   Watch Demo
@@ -538,9 +543,11 @@ export default function RolePlayPage() {
               Develop the human capability that preserves credibility under pressure through unlimited practice with AI-powered role play simulations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-base">
-                Try Free Simulation
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button size="lg" className="text-base" asChild>
+                <Link to="/contact">
+                  Schedule a Signal Intelligence™ walkthrough
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
               <Button size="lg" variant="outline" className="text-base">
                 Schedule Demo

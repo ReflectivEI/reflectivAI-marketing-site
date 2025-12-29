@@ -177,7 +177,7 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="text-base" asChild>
                   <Link to="/contact">
-                    Request a Demo
+                    Schedule a Signal Intelligence™ walkthrough
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
@@ -209,6 +209,9 @@ export default function HomePage() {
               <h2 className="text-3xl lg:text-5xl font-bold">How It Works</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 During role-play practice, ReflectivAI highlights patterns in how conversations unfold—such as pacing, clarity, and engagement—using the Signal Intelligence framework. These insights support reflection and improvement, while judgment and decisions remain with the professional.
+              </p>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4">
+                Reps practice in simulated conversations. After each session, the AI coach scores six Signal Intelligence™ competencies and generates coaching cards that managers can use in 1:1s and training programs. Signal Intelligence™ is used in structured practice sessions, not on live customer calls.
               </p>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4">
                 For sales professionals, these insights reveal where conversations stay aligned with purpose—and where hesitation, overload, or disengagement may be emerging before deals are at risk.
@@ -887,6 +890,104 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Why It Matters - Business Outcomes */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl lg:text-5xl font-bold">
+                Why It Matters for Life Sciences Sales Teams
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Signal Intelligence™ helps life sciences reps protect credibility and access in high-stakes conversations.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 shadow-md hover:shadow-xl transition-shadow">
+                <CheckCircle2 className="h-8 w-8 text-primary" />
+                <h3 className="text-xl font-semibold">Fewer Stalled Conversations</h3>
+                <p className="text-muted-foreground">
+                  Fewer calls that stall or end early when the conversation goes off-track.
+                </p>
+              </div>
+
+              <div className="p-6 rounded-xl border-2 border-primary bg-blue-50 space-y-3 shadow-md hover:shadow-xl transition-shadow">
+                <CheckCircle2 className="h-8 w-8 text-primary" />
+                <h3 className="text-xl font-semibold">Stronger Follow-Ups</h3>
+                <p className="text-muted-foreground">
+                  Stronger continuation commitments and follow-ups after clinical discussions.
+                </p>
+              </div>
+
+              <div className="p-6 rounded-xl border-2 border-primary bg-purple-50 space-y-3 shadow-md hover:shadow-xl transition-shadow">
+                <CheckCircle2 className="h-8 w-8 text-primary" />
+                <h3 className="text-xl font-semibold">Compliant Next Steps</h3>
+                <p className="text-muted-foreground">
+                  Clearer, more compliant next-step language with HCPs and access stakeholders.
+                </p>
+              </div>
+
+              <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 shadow-md hover:shadow-xl transition-shadow">
+                <CheckCircle2 className="h-8 w-8 text-primary" />
+                <h3 className="text-xl font-semibold">Early Skill Visibility</h3>
+                <p className="text-muted-foreground">
+                  Managers see which conversational skills need support before performance dips.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Where This Fits in Sales Enablement */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl lg:text-5xl font-bold">
+                Where This Fits in Sales Enablement
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Signal Intelligence™ plugs into existing life sciences training and coaching workflows.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="p-6 rounded-xl border-2 border-primary bg-blue-50 space-y-3 shadow-md hover:shadow-xl transition-shadow">
+                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <CheckCircle2 className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold">Onboarding & Certification</h3>
+                <p className="text-muted-foreground">
+                  Reps demonstrate competency across six Signal Intelligence™ behaviors before full territory deployment.
+                </p>
+              </div>
+
+              <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 shadow-md hover:shadow-xl transition-shadow">
+                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <CheckCircle2 className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold">Ongoing Coaching</h3>
+                <p className="text-muted-foreground">
+                  Managers use coaching cards and scores to focus 1:1s on real conversational decisions.
+                </p>
+              </div>
+
+              <div className="p-6 rounded-xl border-2 border-primary bg-purple-50 space-y-3 shadow-md hover:shadow-xl transition-shadow">
+                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <CheckCircle2 className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold">Program Insight</h3>
+                <p className="text-muted-foreground">
+                  Enablement leaders see which competencies are strong or weak across teams to target support.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Platform Capabilities */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -1238,6 +1339,17 @@ export default function HomePage() {
 
       {/* FAQ */}
       <FAQ />
+
+      {/* Credibility Statement */}
+      <section className="py-12 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-lg text-muted-foreground">
+              Developed with former life sciences field leaders and compliance partners. Informed by thousands of simulated conversations in regulated, expert-to-expert environments.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* CTA */}
       <CTASection />

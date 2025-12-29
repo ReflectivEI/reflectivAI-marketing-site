@@ -14,14 +14,14 @@ export function CTASection() {
             Ready to Transform Your Sales Team?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Join leading life sciences companies using ReflectivAI to elevate their sales enablement
+            See how this works for your life sciences field team in a 30-minute session.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
               <Link to="/contact">
                 <Calendar className="mr-2 h-5 w-5" />
-                Schedule a Demo
+                Schedule a Signal Intelligence™ walkthrough
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
