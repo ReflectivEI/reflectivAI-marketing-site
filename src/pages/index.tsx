@@ -15,109 +15,85 @@ import { LiveActivityFeed } from '@/components/LiveActivityFeed';
 import { ROICalculator } from '@/components/ROICalculator';
 import { SocialProofTicker } from '@/components/SocialProofTicker';
 
-type CapabilityDetail = {
+type CompetencyDetail = {
   name: string;
-  definition: string;
-  calculation: string;
-  goodExample: string;
-  improvementTips: string[];
+  whatItMeasures: string;
+  howEvaluated: string;
+  howRated: string;
+  whatGoodLooksLike: string[];
 };
 
-const capabilityDetails: Record<string, CapabilityDetail> = {
-  'signal-awareness': {
-    name: 'Signal Awareness',
-    definition: 'The ability to detect and recognize behavioral cues, verbal patterns, and non-verbal signals during HCP conversations that indicate engagement, concern, interest, or resistance.',
-    calculation: 'Measured by tracking question quality, follow-up opportunities identified, and recognition of customer verbal/non-verbal cues during conversations.',
-    goodExample: 'A rep notices an HCP\'s hesitation when discussing side effects and immediately asks, "I sense you have concerns about tolerability. What specific patient scenarios are you thinking about?"',
-    improvementTips: [
-      'Practice active observation during every call',
-      'Note changes in tone, pace, or energy',
-      'Track question patterns and engagement signals',
-      'Review recorded calls to identify missed signals'
+const competencyDetails: Record<string, CompetencyDetail> = {
+  'communication-clarity': {
+    name: 'Communication Clarity',
+    whatItMeasures: 'How clearly and coherently ideas are expressed throughout a conversation.',
+    howEvaluated: 'Patterns in how information is structured, sequenced, and explained during role-play.',
+    howRated: 'Based on consistency of clarity across the interaction, not a single moment.',
+    whatGoodLooksLike: [
+      'Ideas are easy to follow',
+      'Key points are stated directly',
+      'Explanations are concise and relevant',
+      'Transitions between topics are clear'
     ]
   },
-  'signal-interpretation': {
-    name: 'Signal Interpretation',
-    definition: 'The capacity to accurately understand what detected signals mean in context—distinguishing between uncertainty, skepticism, interest, or information overload.',
-    calculation: 'Evaluated through listening quality, paraphrasing accuracy, and appropriate acknowledgment of customer concerns in conversation analysis.',
-    goodExample: 'When an HCP says "I\'ve heard mixed results," the rep interprets this as uncertainty rather than rejection and responds with clinical evidence rather than defensiveness.',
-    improvementTips: [
-      'Paraphrase to confirm understanding',
-      'Ask clarifying questions before responding',
-      'Consider multiple interpretations of signals',
-      'Practice empathy mapping exercises'
+  'intent-alignment': {
+    name: 'Intent Alignment',
+    whatItMeasures: 'How well communication stays aligned with the purpose of the interaction.',
+    howEvaluated: 'Language is compared against the stated goal of the role-play scenario.',
+    howRated: 'Based on how consistently communication supports the intended outcome.',
+    whatGoodLooksLike: [
+      'Responses stay focused on purpose',
+      'Messaging reinforces the goal',
+      'Minimal drift or distraction',
+      'Clear awareness of why the conversation is happening'
     ]
   },
-  'value-connection': {
-    name: 'Value Connection',
-    definition: 'The skill of linking product features to specific HCP priorities and patient outcomes, moving beyond feature lists to meaningful clinical value.',
-    calculation: 'Tracked by analyzing outcome-based language usage versus feature-focused messaging in conversations.',
-    goodExample: '"Based on your patient population with high cardiovascular risk, this once-daily dosing could improve adherence by 40%, leading to better long-term outcomes."',
-    improvementTips: [
-      'Lead with outcomes, not features',
-      'Connect to HCP\'s specific patient population',
-      'Use clinical evidence to support value claims',
-      'Practice translating features into benefits'
+  'responsiveness': {
+    name: 'Responsiveness',
+    whatItMeasures: 'How effectively input from the other party is acknowledged and addressed.',
+    howEvaluated: 'Response timing, relevance, and acknowledgment of prior points.',
+    howRated: 'Based on timely and context-aware engagement.',
+    whatGoodLooksLike: [
+      'Direct answers to questions',
+      'Clear acknowledgment of concerns',
+      'Relevant follow-ups',
+      'Minimal repetition or avoidance'
     ]
   },
-  'customer-engagement': {
-    name: 'Customer Engagement Monitoring',
-    definition: 'Continuous assessment of HCP participation, interest level, and conversational investment through talk time, question quality, and forward-looking statements.',
-    calculation: 'Measured by customer talk time percentage, quality of questions asked by HCP, and presence of future-oriented statements.',
-    goodExample: 'Rep tracks that HCP is asking detailed questions about dosing protocols and mentions "I\'d like to try this with my next appropriate patient"—high engagement signals.',
-    improvementTips: [
-      'Aim for 60/40 HCP-to-rep talk ratio',
-      'Encourage HCP questions throughout',
-      'Listen for future commitment language',
-      'Track engagement trends across calls'
+  'conversational-balance': {
+    name: 'Conversational Balance',
+    whatItMeasures: 'How well participation and pacing are managed.',
+    howEvaluated: 'Turn-taking, pacing, and space created for dialogue.',
+    howRated: 'Based on overall balance across the interaction.',
+    whatGoodLooksLike: [
+      'Natural back-and-forth',
+      'Few interruptions',
+      'Space for the other party to engage',
+      'Adjustments to conversational flow'
     ]
   },
-  'objection-navigation': {
-    name: 'Objection Navigation',
-    definition: 'The ability to handle concerns, pushback, and skepticism with calm curiosity rather than defensiveness, exploring objections to understand root causes.',
-    calculation: 'Assessed by detecting defensive responses and evaluating use of exploratory, non-defensive approaches to objections.',
-    goodExample: 'HCP: "This is too expensive." Rep: "I appreciate that concern. Help me understand—are you thinking about formulary coverage, patient out-of-pocket costs, or overall treatment value?"',
-    improvementTips: [
-      'Stay curious, not defensive',
-      'Acknowledge concerns before responding',
-      'Ask questions to understand root issues',
-      'Practice objection handling scenarios'
+  'behavioral-adaptability': {
+    name: 'Behavioral Adaptability',
+    whatItMeasures: 'How well communication adjusts to what\'s happening in the moment.',
+    howEvaluated: 'Shifts in language, depth, or approach following new cues.',
+    howRated: 'Based on timeliness and relevance of adjustments.',
+    whatGoodLooksLike: [
+      'Clarifies when confusion appears',
+      'Adjusts pacing or depth as needed',
+      'Avoids rigid or scripted responses',
+      'Responds calmly and constructively under pressure'
     ]
   },
-  'conversation-management': {
-    name: 'Conversation Management',
-    definition: 'Structuring conversations with clear purpose, smooth transitions, effective summarization, and explicit next steps to maintain focus and drive outcomes.',
-    calculation: 'Evaluated by tracking purpose-setting, transition quality, summarization frequency, and next-step clarity.',
-    goodExample: '"Today I\'d like to discuss the new efficacy data [purpose]. Let me share three key findings [transition]. To summarize [recap]. What would be a good next step? [commitment]"',
-    improvementTips: [
-      'Set clear objectives at the start',
-      'Use verbal signposts for transitions',
-      'Summarize key points regularly',
-      'Always secure clear next steps'
-    ]
-  },
-  'commitment-generation': {
-    name: 'Commitment Generation',
-    definition: 'Identifying and securing clear, voluntary next actions from HCPs that advance the relationship and move toward prescribing or advocacy.',
-    calculation: 'Measured by identifying opportunities for securing specific, voluntary next actions during conversations.',
-    goodExample: '"Based on our discussion, would you be open to starting with one appropriate patient this month and reviewing outcomes together?" [Specific, voluntary, time-bound]',
-    improvementTips: [
-      'Ask for specific commitments, not vague interest',
-      'Make commitments voluntary and low-pressure',
-      'Tie commitments to HCP\'s stated priorities',
-      'Follow up on previous commitments'
-    ]
-  },
-  'adaptive-response': {
-    name: 'Adaptive Response',
-    definition: 'Flexibly adjusting communication style, depth, pacing, and approach based on real-time HCP cues and conversational dynamics.',
-    calculation: 'Assessed by analyzing when and how reps shift tone, depth, or pacing in response to customer behavioral cues.',
-    goodExample: 'Rep notices HCP is rushed and immediately shifts from detailed clinical discussion to: "I know you\'re pressed for time. Here\'s the one key takeaway, and I\'ll email the full data."',
-    improvementTips: [
-      'Monitor HCP energy and time constraints',
-      'Adjust depth based on HCP expertise',
-      'Match HCP communication style',
-      'Practice flexible conversation pivots'
+  'outcome-orientation': {
+    name: 'Outcome Orientation',
+    whatItMeasures: 'How effectively communication moves toward a clear next step.',
+    howEvaluated: 'Presence of summaries, confirmations, and next-step language.',
+    howRated: 'Based on clarity and closure by the end of the interaction.',
+    whatGoodLooksLike: [
+      'Clear summaries',
+      'Explicit next steps',
+      'Mutual understanding',
+      'Reduced ambiguity at close'
     ]
   }
 };
@@ -131,7 +107,7 @@ export default function HomePage() {
     setIsDialogOpen(true);
   };
 
-  const currentCapability = selectedCapability ? capabilityDetails[selectedCapability] : null;
+  const currentCompetency = selectedCapability ? competencyDetails[selectedCapability] : null;
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -146,7 +122,13 @@ export default function HomePage() {
                   <span className="text-primary">for Life Sciences Sales</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-xl">
-                  Transform conversations into measurable signals. ReflectivAI's Signal Intelligence™ platform detects, scores, and learns from every interaction—then applies emotional intelligence to help your team understand, adapt, and perform better.
+                  ReflectivAI is powered by Signal Intelligence™—the human capacity to detect, interpret, and respond to meaningful changes in conversation and context in ways that preserve credibility, trust, and access.
+                </p>
+                <p className="text-lg text-muted-foreground max-w-xl">
+                  Signal Intelligence™ improves how professionals interpret and respond to human signals—without claiming authority over meaning, emotion, or choice.
+                </p>
+                <p className="text-base text-muted-foreground max-w-xl">
+                  Built for sales and customer-facing teams navigating high-stakes conversations where credibility and access are on the line.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -181,9 +163,12 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12 space-y-4">
-              <h2 className="text-3xl lg:text-5xl font-bold">What is Signal Intelligence™?</h2>
+              <h2 className="text-3xl lg:text-5xl font-bold">How It Works</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                The operating system that transforms human conversations into measurable, improvable performance
+                During role-play practice, ReflectivAI highlights patterns in how conversations unfold—such as pacing, clarity, and engagement—using the Signal Intelligence framework. These insights support reflection and improvement, while judgment and decisions remain with the professional.
+              </p>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4">
+                For sales professionals, these insights reveal where conversations stay aligned with purpose—and where hesitation, overload, or disengagement may be emerging before deals are at risk.
               </p>
             </div>
 
@@ -611,125 +596,94 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8 Signal Intelligence Capabilities - What Gets Measured */}
+      {/* 6 Signal Intelligence™ Competencies */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl lg:text-5xl font-bold">8 Core Competencies We Measure</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold">6 Signal Intelligence™ Competencies</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Every coaching module develops these behavioral capabilities. Track your progress across all 8 competencies.
+              ReflectivAI evaluates communication using six Signal Intelligence competencies. Each competency focuses on observable behaviors that reflect decision quality under pressure.
+            </p>
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto italic">
+              All Signal Intelligence competencies focus on observable behaviors that reflect decision quality under pressure.
             </p>
           </div>
 
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
             <button
-              onClick={() => openCapabilityDetail('signal-awareness')}
+              onClick={() => openCapabilityDetail('communication-clarity')}
               className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
             >
-              <h3 className="text-xl font-semibold">Signal Awareness</h3>
+              <h3 className="text-xl font-semibold">Communication Clarity</h3>
               <p className="text-muted-foreground">
-                Ask purposeful, customer-centric questions; sequence questions logically; follow up effectively
+                How clearly and coherently ideas are expressed throughout a conversation.
               </p>
               <div className="flex gap-2 flex-wrap items-center">
-                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Question Quality</span>
                 <span className="text-xs text-primary font-medium">Click to learn more →</span>
               </div>
             </button>
 
             <button
-              onClick={() => openCapabilityDetail('signal-interpretation')}
+              onClick={() => openCapabilityDetail('intent-alignment')}
               className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
             >
-              <h3 className="text-xl font-semibold">Signal Interpretation</h3>
+              <h3 className="text-xl font-semibold">Intent Alignment</h3>
               <p className="text-muted-foreground">
-                Accurately hear, reflect, and build on customer statements; acknowledge concerns
+                How well communication stays aligned with the purpose of the interaction.
               </p>
               <div className="flex gap-2 flex-wrap items-center">
-                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Listening & Responsiveness</span>
                 <span className="text-xs text-primary font-medium">Click to learn more →</span>
               </div>
             </button>
 
             <button
-              onClick={() => openCapabilityDetail('value-connection')}
+              onClick={() => openCapabilityDetail('responsiveness')}
               className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
             >
-              <h3 className="text-xl font-semibold">Value Connection</h3>
+              <h3 className="text-xl font-semibold">Responsiveness</h3>
               <p className="text-muted-foreground">
-                Connect offerings to customer outcomes rather than features; emphasize customer priorities
+                How effectively input from the other party is acknowledged and addressed.
               </p>
               <div className="flex gap-2 flex-wrap items-center">
-                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">Making It Matter</span>
                 <span className="text-xs text-primary font-medium">Click to learn more →</span>
               </div>
             </button>
 
             <button
-              onClick={() => openCapabilityDetail('customer-engagement')}
+              onClick={() => openCapabilityDetail('conversational-balance')}
               className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
             >
-              <h3 className="text-xl font-semibold">Customer Engagement Monitoring</h3>
+              <h3 className="text-xl font-semibold">Conversational Balance</h3>
               <p className="text-muted-foreground">
-                Monitor and interpret customer behavior for engagement; identify forward-looking cues
+                How well participation and pacing are managed.
               </p>
               <div className="flex gap-2 flex-wrap items-center">
-                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Customer Engagement Signals</span>
                 <span className="text-xs text-primary font-medium">Click to learn more →</span>
               </div>
             </button>
 
             <button
-              onClick={() => openCapabilityDetail('objection-navigation')}
+              onClick={() => openCapabilityDetail('behavioral-adaptability')}
               className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
             >
-              <h3 className="text-xl font-semibold">Objection Navigation</h3>
+              <h3 className="text-xl font-semibold">Behavioral Adaptability</h3>
               <p className="text-muted-foreground">
-                Respond calmly to resistance; explore underlying concerns; acknowledge objections
+                How well communication adjusts to what's happening in the moment.
               </p>
               <div className="flex gap-2 flex-wrap items-center">
-                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Objection Navigation</span>
                 <span className="text-xs text-primary font-medium">Click to learn more →</span>
               </div>
             </button>
 
             <button
-              onClick={() => openCapabilityDetail('conversation-management')}
+              onClick={() => openCapabilityDetail('outcome-orientation')}
               className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
             >
-              <h3 className="text-xl font-semibold">Conversation Management</h3>
+              <h3 className="text-xl font-semibold">Outcome Orientation</h3>
               <p className="text-muted-foreground">
-                Guide conversation with purpose; transition smoothly; summarize and clarify next steps
+                How effectively communication moves toward a clear next step.
               </p>
               <div className="flex gap-2 flex-wrap items-center">
-                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">Conversation Control & Structure</span>
-                <span className="text-xs text-primary font-medium">Click to learn more →</span>
-              </div>
-            </button>
-
-            <button
-              onClick={() => openCapabilityDetail('commitment-generation')}
-              className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
-            >
-              <h3 className="text-xl font-semibold">Commitment Generation</h3>
-              <p className="text-muted-foreground">
-                Secure clear, voluntary next actions; ensure mutual agreement and ownership
-              </p>
-              <div className="flex gap-2 flex-wrap items-center">
-                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Commitment Gaining</span>
-                <span className="text-xs text-primary font-medium">Click to learn more →</span>
-              </div>
-            </button>
-
-            <button
-              onClick={() => openCapabilityDetail('adaptive-response')}
-              className="p-6 rounded-lg border border-border bg-background space-y-4 text-left hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
-            >
-              <h3 className="text-xl font-semibold">Adaptive Response</h3>
-              <p className="text-muted-foreground">
-                Adjust approach based on customer signals; shift tone, depth, or pacing as needed
-              </p>
-              <div className="flex gap-2 flex-wrap items-center">
-                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Adaptability</span>
                 <span className="text-xs text-primary font-medium">Click to learn more →</span>
               </div>
             </button>
@@ -1088,39 +1042,45 @@ export default function HomePage() {
       {/* CTA */}
       <CTASection />
 
-      {/* Capability Detail Dialog */}
+      {/* Competency Detail Dialog */}
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
-          {currentCapability && (
+          {currentCompetency && (
             <>
               <DialogHeader>
-                <DialogTitle className="text-2xl font-bold">{currentCapability.name}</DialogTitle>
+                <DialogTitle className="text-2xl font-bold">{currentCompetency.name}</DialogTitle>
                 <DialogDescription className="text-base">
-                  {currentCapability.definition}
+                  {currentCompetency.whatItMeasures}
                 </DialogDescription>
               </DialogHeader>
               
               <div className="space-y-6 mt-6">
                 <div>
-                  <h4 className="text-lg font-semibold mb-2">How It's Calculated</h4>
-                  <p className="text-muted-foreground">{currentCapability.calculation}</p>
-                </div>
-
-                <div className="bg-muted rounded-lg p-4">
-                  <h4 className="text-lg font-semibold mb-2">Example of Excellence</h4>
-                  <p className="text-foreground italic">"{currentCapability.goodExample}"</p>
+                  <h4 className="text-lg font-semibold mb-2">How It's Evaluated</h4>
+                  <p className="text-muted-foreground">{currentCompetency.howEvaluated}</p>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-semibold mb-3">How to Improve</h4>
+                  <h4 className="text-lg font-semibold mb-2">How It's Rated</h4>
+                  <p className="text-muted-foreground">{currentCompetency.howRated}</p>
+                </div>
+
+                <div className="bg-muted rounded-lg p-4">
+                  <h4 className="text-lg font-semibold mb-3">What Good Looks Like</h4>
                   <ul className="space-y-2">
-                    {currentCapability.improvementTips.map((tip, index) => (
+                    {currentCompetency.whatGoodLooksLike.map((item, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-muted-foreground">{tip}</span>
+                        <span className="text-foreground">{item}</span>
                       </li>
                     ))}
                   </ul>
+                </div>
+
+                <div className="border-t border-border pt-4">
+                  <p className="text-sm text-muted-foreground italic">
+                    If a response would feel inappropriate if the roles were reversed, it is outside the Signal Intelligence boundary.
+                  </p>
                 </div>
               </div>
             </>
