@@ -5,7 +5,7 @@
 @layer base {
   :root {
     /* Core Colors - Navy/Teal/Gray/Yellow */
-    --background: 0 0% 98%;
+    --background: 0 0% 100%;
     --foreground: 215 30% 20%;
     --card: 0 0% 100%;
     --card-foreground: 215 30% 20%;
@@ -15,14 +15,14 @@
     --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 95%;
     --secondary-foreground: 215 30% 20%;
-    --muted: 0 0% 96%;
+    --muted: 0 0% 97%;
     --muted-foreground: 215 10% 45%;
     --accent: 180 60% 45%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
     --ring: 215 70% 30%;
 
     /* Extended Colors */

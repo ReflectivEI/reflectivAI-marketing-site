@@ -551,8 +551,8 @@ export default function HomePage() {
           </div>
 
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Discovery Questions Mastery</h3>
+            <div className="p-6 rounded-lg border-2 border-primary bg-white shadow-md hover:shadow-lg transition-shadow space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">Discovery Questions Mastery</h3>
               <p className="text-muted-foreground">
                 Learn to ask powerful questions that uncover stakeholder needs, challenges, and priorities
               </p>
@@ -562,8 +562,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Stakeholder Mapping</h3>
+            <div className="p-6 rounded-lg border-2 border-primary bg-white shadow-md hover:shadow-lg transition-shadow space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">Stakeholder Mapping</h3>
               <p className="text-muted-foreground">
                 Identify and understand all decision-makers in the healthcare ecosystem
               </p>
@@ -573,8 +573,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Clinical Evidence Communication</h3>
+            <div className="p-6 rounded-lg border-2 border-primary bg-white shadow-md hover:shadow-lg transition-shadow space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">Clinical Evidence Communication</h3>
               <p className="text-muted-foreground">
                 Present clinical data effectively to different stakeholder types
               </p>
@@ -584,8 +584,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Objection Handling</h3>
+            <div className="p-6 rounded-lg border-2 border-primary bg-white shadow-md hover:shadow-lg transition-shadow space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">Objection Handling</h3>
               <p className="text-muted-foreground">
                 Address concerns and objections with empathy and evidence
               </p>
@@ -595,8 +595,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Closing Techniques</h3>
+            <div className="p-6 rounded-lg border-2 border-primary bg-white shadow-md hover:shadow-lg transition-shadow space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">Closing Techniques</h3>
               <p className="text-muted-foreground">
                 Guide stakeholders toward commitment with confidence and integrity
               </p>
@@ -606,8 +606,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="p-6 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-semibold">Signal Intelligence Mastery for Pharma</h3>
+            <div className="p-6 rounded-lg border-2 border-primary bg-white shadow-md hover:shadow-lg transition-shadow space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">Signal Intelligence Mastery for Pharma</h3>
               <p className="text-muted-foreground">
                 Integrate all conversational intelligence frameworks for healthcare selling
               </p>
@@ -696,12 +696,14 @@ export default function HomePage() {
             <div className="grid md:grid-cols-2 gap-6">
               {Object.values(competencyDetails).map((competency) => {
                 const isStrong = competency.score >= 8.5;
-                const borderColor = isStrong ? 'border-primary' : 'border-border';
+                const borderColor = isStrong ? 'border-primary border-2' : 'border-border border-2';
                 
                 return (
-                  <div
+                  <button
                     key={competency.id}
-                    className={`bg-white rounded-lg border ${borderColor} p-6 space-y-4 hover:shadow-md transition-shadow`}
+                    onClick={() => openCapabilityDetail(competency.id)}
+                    className={`bg-white rounded-lg ${borderColor} p-6 space-y-4 hover:shadow-lg transition-all duration-200 cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2`}
+                    aria-label={`View details for ${competency.name}`}
                   >
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex-1">
@@ -713,8 +715,8 @@ export default function HomePage() {
                         </p>
                       </div>
                       <div className="flex-shrink-0">
-                        <div className="px-4 py-2 bg-yellow-100 border border-yellow-300 rounded-full">
-                          <span className="text-lg font-bold text-foreground">{competency.score.toFixed(1)}/10</span>
+                        <div className="px-4 py-2 bg-yellow-50 border border-yellow-200 rounded-full">
+                          <span className="text-lg font-bold text-primary">{competency.score.toFixed(1)}/10</span>
                         </div>
                       </div>
                     </div>
@@ -724,7 +726,7 @@ export default function HomePage() {
                         <span className="font-semibold text-foreground">Coaching insight:</span> {competency.calculationExplanation}
                       </p>
                     </div>
-                  </div>
+                  </button>
                 );
               })}
             </div>
@@ -750,14 +752,14 @@ export default function HomePage() {
 
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
             {/* Coaching Card 1 - Strong Performance */}
-            <div className="bg-white rounded-lg border-2 border-primary p-6 space-y-4">
+            <div className="bg-white rounded-lg border-2 border-primary p-6 space-y-4 shadow-md">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <h3 className="text-lg font-semibold text-foreground">Responsiveness</h3>
                   <p className="text-sm text-muted-foreground mt-1">Turn 4 of conversation</p>
                 </div>
-                <div className="flex-shrink-0 px-3 py-1 bg-yellow-100 border border-yellow-300 rounded-full">
-                  <span className="text-sm font-bold text-foreground">9.2 / 10</span>
+                <div className="flex-shrink-0 px-3 py-1 bg-yellow-50 border border-yellow-200 rounded-full">
+                  <span className="text-sm font-bold text-primary">9.2 / 10</span>
                 </div>
               </div>
               <div className="space-y-2">
@@ -771,14 +773,14 @@ export default function HomePage() {
             </div>
 
             {/* Coaching Card 2 - Needs Improvement */}
-            <div className="bg-white rounded-lg border border-border p-6 space-y-4">
+            <div className="bg-white rounded-lg border-2 border-border p-6 space-y-4 shadow-md">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <h3 className="text-lg font-semibold text-foreground">Intent Alignment</h3>
                   <p className="text-sm text-muted-foreground mt-1">Turn 7 of conversation</p>
                 </div>
-                <div className="flex-shrink-0 px-3 py-1 bg-yellow-100 border border-yellow-300 rounded-full">
-                  <span className="text-sm font-bold text-foreground">6.8 / 10</span>
+                <div className="flex-shrink-0 px-3 py-1 bg-yellow-50 border border-yellow-200 rounded-full">
+                  <span className="text-sm font-bold text-primary">6.8 / 10</span>
                 </div>
               </div>
               <div className="space-y-2">
@@ -792,14 +794,14 @@ export default function HomePage() {
             </div>
 
             {/* Coaching Card 3 - Strong Performance */}
-            <div className="bg-white rounded-lg border-2 border-primary p-6 space-y-4">
+            <div className="bg-white rounded-lg border-2 border-primary p-6 space-y-4 shadow-md">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <h3 className="text-lg font-semibold text-foreground">Behavioral Adaptability</h3>
                   <p className="text-sm text-muted-foreground mt-1">Turn 9 of conversation</p>
                 </div>
-                <div className="flex-shrink-0 px-3 py-1 bg-yellow-100 border border-yellow-300 rounded-full">
-                  <span className="text-sm font-bold text-foreground">8.1 / 10</span>
+                <div className="flex-shrink-0 px-3 py-1 bg-yellow-50 border border-yellow-200 rounded-full">
+                  <span className="text-sm font-bold text-primary">8.1 / 10</span>
                 </div>
               </div>
               <div className="space-y-2">
@@ -813,14 +815,14 @@ export default function HomePage() {
             </div>
 
             {/* Coaching Card 4 - Needs Improvement */}
-            <div className="bg-white rounded-lg border border-border p-6 space-y-4">
+            <div className="bg-white rounded-lg border-2 border-border p-6 space-y-4 shadow-md">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <h3 className="text-lg font-semibold text-foreground">Conversational Balance</h3>
                   <p className="text-sm text-muted-foreground mt-1">Turn 11 of conversation</p>
                 </div>
-                <div className="flex-shrink-0 px-3 py-1 bg-yellow-100 border border-yellow-300 rounded-full">
-                  <span className="text-sm font-bold text-foreground">7.9 / 10</span>
+                <div className="flex-shrink-0 px-3 py-1 bg-yellow-50 border border-yellow-200 rounded-full">
+                  <span className="text-sm font-bold text-primary">7.9 / 10</span>
                 </div>
               </div>
               <div className="space-y-2">
