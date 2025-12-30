@@ -244,72 +244,12 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative">
-              {/* Signal Intelligence™ Metrics Grid */}
-              <div className="bg-white rounded-lg border border-border shadow-2xl p-8">
-                <div className="space-y-6">
-                  <div className="text-center space-y-2">
-                    <h3 className="text-2xl font-bold text-slate-800">Signal Intelligence™ Metrics</h3>
-                    <p className="text-sm text-slate-600">Observable, behavioral outcomes that drive measurable performance improvement</p>
-                  </div>
-                  
-                  <div className="grid grid-cols-2 gap-4">
-                    {/* Metric 1: Question Quality */}
-                    <div className="bg-slate-50 rounded-lg border border-slate-200 p-4 space-y-2">
-                      <div className="text-3xl font-bold text-primary">92%</div>
-                      <div className="text-sm font-semibold text-slate-800">Question Quality</div>
-                      <div className="text-xs text-slate-600">Open-ended, diagnostic questions that uncover needs</div>
-                    </div>
-
-                    {/* Metric 2: Listening & Responsiveness */}
-                    <div className="bg-slate-50 rounded-lg border border-slate-200 p-4 space-y-2">
-                      <div className="text-3xl font-bold text-primary">88%</div>
-                      <div className="text-sm font-semibold text-slate-800">Listening & Responsiveness</div>
-                      <div className="text-xs text-slate-600">Paraphrasing, acknowledging, building on customer input</div>
-                    </div>
-
-                    {/* Metric 3: Customer Engagement Cues */}
-                    <div className="bg-slate-50 rounded-lg border border-slate-200 p-4 space-y-2">
-                      <div className="text-3xl font-bold text-primary">91%</div>
-                      <div className="text-sm font-semibold text-slate-800">Customer Engagement Cues</div>
-                      <div className="text-xs text-slate-600">Detecting and responding to customer interest and resistance</div>
-                    </div>
-
-                    {/* Metric 4: Conversation Control & Structure */}
-                    <div className="bg-slate-50 rounded-lg border border-slate-200 p-4 space-y-2">
-                      <div className="text-3xl font-bold text-primary">85%</div>
-                      <div className="text-sm font-semibold text-slate-800">Conversation Control & Structure</div>
-                      <div className="text-xs text-slate-600">Guiding dialogue without dominating or losing direction</div>
-                    </div>
-
-                    {/* Metric 5: Objection Handling */}
-                    <div className="bg-slate-50 rounded-lg border border-slate-200 p-4 space-y-2">
-                      <div className="text-3xl font-bold text-primary">87%</div>
-                      <div className="text-sm font-semibold text-slate-800">Objection Handling</div>
-                      <div className="text-xs text-slate-600">Addressing concerns without defensiveness or avoidance</div>
-                    </div>
-
-                    {/* Metric 6: Adaptability */}
-                    <div className="bg-slate-50 rounded-lg border border-slate-200 p-4 space-y-2">
-                      <div className="text-3xl font-bold text-primary">90%</div>
-                      <div className="text-sm font-semibold text-slate-800">Adaptability</div>
-                      <div className="text-xs text-slate-600">Adjusting tone, pace, and approach based on signals</div>
-                    </div>
-
-                    {/* Metric 7: Value Framing (Making It Matter) */}
-                    <div className="bg-slate-50 rounded-lg border border-slate-200 p-4 space-y-2">
-                      <div className="text-3xl font-bold text-primary">86%</div>
-                      <div className="text-sm font-semibold text-slate-800">Value Framing (Making It Matter)</div>
-                      <div className="text-xs text-slate-600">Connecting information to outcomes that matter to customers</div>
-                    </div>
-
-                    {/* Metric 8: Commitment Gaining */}
-                    <div className="bg-slate-50 rounded-lg border border-slate-200 p-4 space-y-2">
-                      <div className="text-3xl font-bold text-primary">83%</div>
-                      <div className="text-sm font-semibold text-slate-800">Commitment Gaining</div>
-                      <div className="text-xs text-slate-600">Securing clear, voluntary next actions with mutual agreement</div>
-                    </div>
-                  </div>
-                </div>
+              <div className="aspect-[4/3] rounded-lg overflow-hidden border border-border shadow-2xl">
+                <img
+                  src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/IMG_9247.jpeg"
+                  alt="ReflectivAI Platform Interface"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
@@ -1405,59 +1345,61 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="p-6 rounded-xl border-2 border-primary bg-blue-50 space-y-3 hover:shadow-xl transition-shadow shadow-md">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Metric 1: Question Quality */}
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
               <div className="text-4xl font-bold text-primary">92%</div>
               <div className="text-sm font-semibold text-foreground">Question Quality</div>
               <p className="text-xs text-muted-foreground">Open-ended, diagnostic questions that uncover needs</p>
             </div>
 
+            {/* Metric 2: Listening & Responsiveness */}
             <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
               <div className="text-4xl font-bold text-primary">88%</div>
               <div className="text-sm font-semibold text-foreground">Listening & Responsiveness</div>
               <p className="text-xs text-muted-foreground">Paraphrasing, acknowledging, building on customer input</p>
             </div>
 
-            <div className="p-6 rounded-xl border-2 border-primary bg-purple-50 space-y-3 hover:shadow-xl transition-shadow shadow-md">
+            {/* Metric 3: Customer Engagement Cues */}
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
+              <div className="text-4xl font-bold text-primary">91%</div>
+              <div className="text-sm font-semibold text-foreground">Customer Engagement Cues</div>
+              <p className="text-xs text-muted-foreground">Detecting and responding to customer interest and resistance</p>
+            </div>
+
+            {/* Metric 4: Conversation Control & Structure */}
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
               <div className="text-4xl font-bold text-primary">85%</div>
-              <div className="text-sm font-semibold text-foreground">Conversation Control</div>
+              <div className="text-sm font-semibold text-foreground">Conversation Control & Structure</div>
               <p className="text-xs text-muted-foreground">Guiding dialogue without dominating or losing direction</p>
             </div>
 
+            {/* Metric 5: Objection Handling */}
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
+              <div className="text-4xl font-bold text-primary">87%</div>
+              <div className="text-sm font-semibold text-foreground">Objection Handling</div>
+              <p className="text-xs text-muted-foreground">Addressing concerns without defensiveness or avoidance</p>
+            </div>
+
+            {/* Metric 6: Adaptability */}
             <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
               <div className="text-4xl font-bold text-primary">90%</div>
               <div className="text-sm font-semibold text-foreground">Adaptability</div>
               <p className="text-xs text-muted-foreground">Adjusting tone, pace, and approach based on signals</p>
             </div>
 
-            <div className="p-6 rounded-xl border-2 border-primary bg-blue-50 space-y-3 hover:shadow-xl transition-shadow shadow-md">
+            {/* Metric 7: Value Framing (Making It Matter) */}
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
+              <div className="text-4xl font-bold text-primary">86%</div>
+              <div className="text-sm font-semibold text-foreground">Value Framing (Making It Matter)</div>
+              <p className="text-xs text-muted-foreground">Connecting information to outcomes that matter to customers</p>
+            </div>
+
+            {/* Metric 8: Commitment Gaining */}
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
               <div className="text-4xl font-bold text-primary">83%</div>
               <div className="text-sm font-semibold text-foreground">Commitment Gaining</div>
               <p className="text-xs text-muted-foreground">Securing clear, voluntary next actions with mutual agreement</p>
-            </div>
-
-            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
-              <div className="text-4xl font-bold text-primary">87%</div>
-              <div className="text-sm font-semibold text-foreground">Objection Navigation</div>
-              <p className="text-xs text-muted-foreground">Addressing concerns without defensiveness or avoidance</p>
-            </div>
-
-            <div className="p-6 rounded-xl border-2 border-primary bg-purple-50 space-y-3 hover:shadow-xl transition-shadow shadow-md">
-              <div className="text-4xl font-bold text-primary">94%</div>
-              <div className="text-sm font-semibold text-foreground">Clinical Accuracy</div>
-              <p className="text-xs text-muted-foreground">Precise, compliant communication of product information</p>
-            </div>
-
-            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
-              <div className="text-4xl font-bold text-primary">91%</div>
-              <div className="text-sm font-semibold text-foreground">Engagement Signals</div>
-              <p className="text-xs text-muted-foreground">Detecting and responding to customer interest and resistance</p>
-            </div>
-
-            <div className="p-6 rounded-xl border-2 border-primary bg-blue-50 space-y-3 hover:shadow-xl transition-shadow shadow-md">
-              <div className="text-4xl font-bold text-primary">100%</div>
-              <div className="text-sm font-semibold text-foreground">Compliance</div>
-              <p className="text-xs text-muted-foreground">Adherence to regulatory and company guidelines</p>
             </div>
           </div>
         </div>
