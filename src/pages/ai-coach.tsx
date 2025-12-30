@@ -149,7 +149,7 @@ export default function AICoachPage() {
         </div>
       </section>
 
-      {/* Signal Intelligence™ Competencies Supported */}
+      {/* Signal Intelligence™ Capabilities Supported */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
@@ -469,7 +469,7 @@ export default function AICoachPage() {
             <div className="p-8 rounded-lg border border-border bg-background space-y-4">
               <h3 className="text-xl font-bold">Post-Call Review</h3>
               <p className="text-muted-foreground">
-                After each interaction, receive detailed feedback on Signal Intelligence™ competencies: which signals you detected, how you interpreted them, and how effectively you responded.
+                After each interaction, receive detailed feedback on Signal Intelligence™ Capabilities: which signals you detected, how you interpreted them, and how effectively you responded.
               </p>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
@@ -482,7 +482,7 @@ export default function AICoachPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Specific coaching on Signal Intelligence™ competencies</span>
+                  <span>Specific coaching on Signal Intelligence™ Capabilities</span>
                 </li>
               </ul>
             </div>
@@ -490,16 +490,16 @@ export default function AICoachPage() {
             <div className="p-8 rounded-lg border border-border bg-background space-y-4">
               <h3 className="text-xl font-bold">Ongoing Development</h3>
               <p className="text-muted-foreground">
-                Access personalized training on Signal Intelligence™ competencies, practice scenarios with AI feedback, and track your development across all 6 competencies over time.
+                Access personalized training on Signal Intelligence™ Capabilities, practice scenarios with AI feedback, and track your development across all 8 capabilities over time.
               </p>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Customized learning paths for each competency</span>
+                  <span>Customized learning paths for each capability</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Competency gap analysis and recommendations</span>
+                  <span>Capability gap analysis and recommendations</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />

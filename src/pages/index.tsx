@@ -306,50 +306,35 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Emotional Intelligence - Secondary */}
+              {/* Human Decision Drivers - Explanatory Only */}
               <div className="bg-background border border-border rounded-xl p-8 space-y-4">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="h-12 w-12 rounded-lg bg-muted flex items-center justify-center">
                     <Target className="h-6 w-6 text-foreground" />
                   </div>
-                  <h3 className="text-2xl font-bold">Emotional Intelligence</h3>
+                  <h3 className="text-2xl font-bold">Human Decision Drivers</h3>
                 </div>
-                <p className="text-lg font-semibold">The Interpretive Lens</p>
+                <p className="text-lg font-semibold">Explanatory Context (Not Scored)</p>
                 <p className="text-muted-foreground">
-                  Applied on top of Signal Intelligence™ to explain why behaviors worked or failed.
+                  Human Decision Drivers provide explanatory context for why certain behaviors may have worked or failed. These are never scored, measured, or used as standalone metrics—they exist only to help professionals understand the human context behind observable patterns.
                 </p>
                 <div className="space-y-2 pt-4">
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Interprets signals through human context</span>
+                    <span className="text-sm">Provides explanatory context for behavioral patterns</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Explains empathy gaps and trust erosion</span>
+                    <span className="text-sm">Never scored or measured independently</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Guides adaptive improvement strategies</span>
+                    <span className="text-sm">Supports professional reflection and learning</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-muted-foreground flex-shrink-0 mt-0.5" />
                     <span className="text-sm">Humanizes coaching feedback</span>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Key Distinction */}
-            <div className="bg-background border-2 border-primary/20 rounded-xl p-8 text-center">
-              <p className="text-xl font-semibold mb-4">The Key Distinction</p>
-              <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-                <div>
-                  <p className="text-lg font-bold text-primary mb-2">Signal Intelligence™ =</p>
-                  <p className="text-muted-foreground">What happened</p>
-                </div>
-                <div>
-                  <p className="text-lg font-bold mb-2">Emotional Intelligence =</p>
-                  <p className="text-muted-foreground">Why it mattered</p>
                 </div>
               </div>
             </div>
@@ -615,8 +600,8 @@ export default function HomePage() {
                 Learn to ask powerful questions that uncover stakeholder needs, challenges, and priorities
               </p>
               <div className="flex gap-2 flex-wrap">
-                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Active Listening</span>
-                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Empathy Mapping</span>
+                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Question Quality</span>
+                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Signal Awareness</span>
               </div>
             </div>
 
@@ -626,8 +611,8 @@ export default function HomePage() {
                 Identify and understand all decision-makers in the healthcare ecosystem
               </p>
               <div className="flex gap-2 flex-wrap">
-                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">DISC</span>
-                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Empathy Mapping</span>
+                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">Value Connection</span>
+                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Customer Engagement</span>
               </div>
             </div>
 
@@ -637,19 +622,19 @@ export default function HomePage() {
                 Present clinical data effectively to different stakeholder types
               </p>
               <div className="flex gap-2 flex-wrap">
-                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">DISC</span>
-                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Active Listening</span>
+                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">Signal Interpretation</span>
+                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Conversation Management</span>
               </div>
             </div>
 
             <div className="p-6 rounded-lg border-2 border-primary bg-white shadow-md hover:shadow-lg transition-shadow space-y-4">
               <h3 className="text-xl font-semibold text-foreground">Objection Handling</h3>
               <p className="text-muted-foreground">
-                Address concerns and objections with empathy and evidence
+                Address concerns and objections with evidence and responsiveness
               </p>
               <div className="flex gap-2 flex-wrap">
-                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Active Listening</span>
-                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Rapport Building</span>
+                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Signal Interpretation</span>
+                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Objection Navigation</span>
               </div>
             </div>
 
@@ -659,8 +644,8 @@ export default function HomePage() {
                 Guide stakeholders toward commitment with confidence and integrity
               </p>
               <div className="flex gap-2 flex-wrap">
-                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Rapport Building</span>
-                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">DISC</span>
+                <span className="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium">Commitment Generation</span>
+                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">Adaptive Response</span>
               </div>
             </div>
 
@@ -670,32 +655,15 @@ export default function HomePage() {
                 Integrate all conversational intelligence frameworks for healthcare selling
               </p>
               <div className="flex gap-2 flex-wrap">
-                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">DISC</span>
-                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Active Listening</span>
+                <span className="px-2 py-1 bg-secondary/10 text-secondary rounded text-xs font-medium">Value Connection</span>
+                <span className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium">Signal Awareness</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* EI Frameworks - Positioned as Interpretive Layer */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto bg-muted rounded-xl p-8 md:p-12">
-            <div className="text-center space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold">Signal Intelligence™ + EI Frameworks</h2>
-              <p className="text-lg text-muted-foreground">
-                ReflectivAI detects patterns in observable behaviors. Then we apply proven emotional intelligence frameworks—<span className="font-semibold text-foreground">Active Listening</span>, <span className="font-semibold text-foreground">DISC</span>, <span className="font-semibold text-foreground">Empathy Mapping</span>, and <span className="font-semibold text-foreground">Rapport Building</span>—to help you understand why those behaviors worked or failed, and how to adapt.
-              </p>
-              <div className="pt-4 border-t border-border mt-6">
-                <p className="text-sm text-muted-foreground italic">
-                  Signals capture what happened. Signal Intelligence™ describes the capability to notice, interpret, and respond to those signals under pressure.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* 8 Signal Intelligence™ Capabilities */}
       <section className="py-20 bg-muted">
@@ -899,6 +867,43 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Compliance Disclosures */}
+      <section className="py-16 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl lg:text-3xl font-bold">Important Disclosures</h2>
+            </div>
+
+            <div className="space-y-6">
+              {/* Disclosure 1: Scoring Transparency */}
+              <div className="bg-white rounded-lg p-6 border border-border">
+                <h3 className="text-lg font-semibold mb-3 text-foreground">Scoring Transparency</h3>
+                <p className="text-sm text-muted-foreground">
+                  Signal Intelligence™ scores reflect observable communication behaviors during structured practice. They are not assessments of personality, intent, emotional state, or professional competence, and are not used for automated decision-making.
+                </p>
+              </div>
+
+              {/* Disclosure 2: Illustrative Example Disclaimer */}
+              <div className="bg-white rounded-lg p-6 border border-border">
+                <h3 className="text-lg font-semibold mb-3 text-foreground">Illustrative Examples</h3>
+                <p className="text-sm text-muted-foreground">
+                  All scores, calculations, and examples shown on this site are illustrative demonstrations for educational purposes. Actual scores vary based on individual performance during practice sessions.
+                </p>
+              </div>
+
+              {/* Disclosure 3: AI Role Boundary */}
+              <div className="bg-white rounded-lg p-6 border border-border">
+                <h3 className="text-lg font-semibold mb-3 text-foreground">AI Role Boundary</h3>
+                <p className="text-sm text-muted-foreground">
+                  AI identifies behavioral patterns; interpretation and judgment remain with the professional. Signal Intelligence™ supports reflection and skill development—it does not replace human decision-making or professional expertise.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* How It Works - Signal Intelligence™ Engine */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -1018,7 +1023,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-semibold">Onboarding & Certification</h3>
                 <p className="text-muted-foreground">
-                  Reps demonstrate competency across six Signal Intelligence™ behaviors before full territory deployment.
+                  Reps demonstrate capability across eight Signal Intelligence™ behaviors before full territory deployment.
                 </p>
               </div>
 
@@ -1038,7 +1043,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-semibold">Program Insight</h3>
                 <p className="text-muted-foreground">
-                  Enablement leaders see which competencies are strong or weak across teams to target support.
+                  Enablement leaders see which capabilities are strong or weak across teams to target support.
                 </p>
               </div>
             </div>
@@ -1099,7 +1104,7 @@ export default function HomePage() {
             <div className="space-y-6">
               <h3 className="text-3xl font-bold">Behavioral Coaching & Development</h3>
               <p className="text-lg text-muted-foreground">
-                Build Signal Intelligence™ competencies through personalized coaching paths. Practice detecting signals, interpreting behavior, and responding effectively in safe role-play scenarios.
+                Build Signal Intelligence™ Capabilities through personalized coaching paths. Practice detecting signals, interpreting behavior, and responding effectively in safe role-play scenarios.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -1122,12 +1127,12 @@ export default function HomePage() {
             <div className="space-y-6">
               <h3 className="text-3xl font-bold">Leadership Analytics & Behavioral Metrics</h3>
               <p className="text-lg text-muted-foreground">
-                Give sales leaders visibility into team Signal Intelligence™ competencies. Track behavioral metrics like Question Quality, Listening & Responsiveness, and Objection Navigation across the team.
+                Give sales leaders visibility into team Signal Intelligence™ Capabilities. Track behavioral metrics like Question Quality, Listening & Responsiveness, and Objection Navigation across the team.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Team-wide Signal Intelligence™ competency benchmarking</span>
+                  <span>Team-wide Signal Intelligence™ Capability benchmarking</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
@@ -1412,7 +1417,7 @@ export default function HomePage() {
       {/* CTA */}
       <CTASection />
 
-      {/* Competency Detail Dialog */}
+      {/* Capability Detail Dialog */}
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto bg-white">
           {currentCapability && (

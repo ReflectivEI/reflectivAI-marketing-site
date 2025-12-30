@@ -22,9 +22,9 @@ const stats: Stat[] = [
   },
   {
     icon: <TrendingUp className="h-8 w-8" />,
-    value: 88,
-    suffix: '%',
-    label: 'Empathy Score',
+    value: 4.4,
+    suffix: '/5',
+    label: 'Signal Interpretation',
     color: 'text-primary'
   },
   {

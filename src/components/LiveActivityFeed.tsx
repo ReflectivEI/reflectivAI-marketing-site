@@ -16,7 +16,7 @@ interface Activity {
 
 const ACTIVITY_TEMPLATES = [
   { action: 'completed a role-play scenario', icon: <CheckCircle className="h-4 w-4" />, color: 'text-green-500' },
-  { action: 'achieved 95% empathy score', icon: <Star className="h-4 w-4" />, color: 'text-yellow-500' },
+  { action: 'achieved 4.8/5 Signal Interpretation score', icon: <Star className="h-4 w-4" />, color: 'text-yellow-500' },
   { action: 'improved accuracy by 12%', icon: <TrendingUp className="h-4 w-4" />, color: 'text-blue-500' },
   { action: 'earned Compliance Master badge', icon: <Trophy className="h-4 w-4" />, color: 'text-purple-500' },
   { action: 'completed 10 coaching sessions', icon: <Zap className="h-4 w-4" />, color: 'text-orange-500' },

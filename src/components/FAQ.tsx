@@ -15,11 +15,11 @@ const faqs = [
   },
   {
     question: "What makes ReflectivAI different from traditional sales training?",
-    answer: "Unlike one-time workshops, ReflectivAI provides 24/7 AI-powered coaching, real-time feedback, and personalized learning paths. You practice with realistic scenarios and receive instant, actionable insights to improve your emotional intelligence and sales effectiveness."
+    answer: "Unlike one-time workshops, ReflectivAI provides 24/7 AI-powered coaching, real-time feedback, and personalized learning paths. You practice with realistic scenarios and receive instant, actionable insights to improve your Signal Intelligence™ capabilities and sales effectiveness."
   },
   {
     question: "How long does it take to see results?",
-    answer: "Most users report improved confidence and stakeholder engagement within 2 weeks. Our data shows measurable improvements in EI metrics (Accuracy, Empathy, Clarity) after just 10 practice sessions."
+    answer: "Most users report improved confidence and stakeholder engagement within 2 weeks. Our data shows measurable improvements in Signal Intelligence™ Capabilities (Signal Awareness, Signal Interpretation, Value Connection) after just 10 practice sessions."
   },
   {
     question: "Can ReflectivAI integrate with our existing CRM?",

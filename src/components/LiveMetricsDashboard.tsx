@@ -28,8 +28,8 @@ export function LiveMetricsDashboard() {
       color: 'text-green-500',
     },
     {
-      id: 'empathy',
-      label: 'Empathy Rating',
+      id: 'engagement',
+      label: 'Customer Engagement',
       value: 88,
       unit: '%',
       trend: 'up',
