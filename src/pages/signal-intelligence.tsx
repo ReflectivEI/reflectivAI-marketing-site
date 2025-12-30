@@ -1,3 +1,4 @@
+// Updated: 2025-12-30 - SI derived from HDD Framework clarification
 export default function SignalIntelligencePage() {
   return (
     <div className="min-h-screen bg-background">
