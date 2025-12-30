@@ -7,7 +7,7 @@ export default function SignalIntelligencePage() {
           <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2.5">
             Learn More
           </p>
-          <h1 className="text-[34px] leading-tight mb-2">Signal Intelligence<sup className="text-lg">™</sup></h1>
+          <h1 className="text-[34px] leading-tight mb-2 text-red-600 font-bold">Signal Intelligence<sup className="text-lg">™</sup></h1>
           <p className="text-muted-foreground mb-0">
             Capabilities, Behavioral Metrics & Methodology (ReflectivAI)
           </p>
