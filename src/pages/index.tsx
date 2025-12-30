@@ -201,14 +201,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Signal Intelligence Explainer */}
+      {/* Signal Intelligence™ Explainer */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12 space-y-4">
               <h2 className="text-3xl lg:text-5xl font-bold">How It Works</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                During role-play practice, ReflectivAI highlights patterns in how conversations unfold—such as pacing, clarity, and engagement—using the Signal Intelligence framework. These insights support reflection and improvement, while judgment and decisions remain with the professional.
+                During role-play practice, ReflectivAI highlights patterns in how conversations unfold—such as pacing, clarity, and engagement—using the Signal Intelligence™ framework. These insights support reflection and improvement, while judgment and decisions remain with the professional.
               </p>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4">
                 Reps practice in simulated conversations. After each session, ReflectivAI organizes observable behaviors into Signal Intelligence™ domains to support reflection and coaching. Managers use coaching cards in 1:1s and training programs. Signal Intelligence™ is used in structured practice sessions, not on live customer calls.
@@ -219,7 +219,7 @@ export default function HomePage() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              {/* Signal Intelligence - Primary */}
+              {/* Signal Intelligence™ - Primary */}
               <div className="bg-primary/5 border-2 border-primary rounded-xl p-8 space-y-4">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="h-12 w-12 rounded-lg bg-primary flex items-center justify-center">
@@ -261,7 +261,7 @@ export default function HomePage() {
                 </div>
                 <p className="text-lg font-semibold">The Interpretive Lens</p>
                 <p className="text-muted-foreground">
-                  Applied on top of Signal Intelligence to explain why behaviors worked or failed.
+                  Applied on top of Signal Intelligence™ to explain why behaviors worked or failed.
                 </p>
                 <div className="space-y-2 pt-4">
                   <div className="flex items-start gap-2">
@@ -289,7 +289,7 @@ export default function HomePage() {
               <p className="text-xl font-semibold mb-4">The Key Distinction</p>
               <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
                 <div>
-                  <p className="text-lg font-bold text-primary mb-2">Signal Intelligence =</p>
+                  <p className="text-lg font-bold text-primary mb-2">Signal Intelligence™ =</p>
                   <p className="text-muted-foreground">What happened</p>
                 </div>
                 <div>
@@ -372,7 +372,7 @@ export default function HomePage() {
                     <p className="text-sm text-muted-foreground mt-1">with suggested phrasing and improvements</p>
                   </div>
                   <div className="p-4 rounded-lg bg-primary/5 border border-primary/20 hover:bg-primary/10 transition-colors">
-                    <p className="font-semibold text-foreground">Signal Intelligence metrics</p>
+                    <p className="font-semibold text-foreground">Signal Intelligence™ insights</p>
                     <p className="text-sm text-muted-foreground mt-1">that translate scores into coaching steps</p>
                   </div>
                   <div className="p-4 rounded-lg bg-primary/5 border border-primary/20 hover:bg-primary/10 transition-colors">
@@ -455,7 +455,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-6 mb-16">
             <h2 className="text-3xl lg:text-5xl font-bold">
-              Why Signal Intelligence Matters in Pharma
+              Why Signal Intelligence™ Matters in Pharma
             </h2>
             <p className="text-xl text-muted-foreground">
               In high-expertise, regulated conversations, deals are rarely lost on data. They are lost when signals are missed.
@@ -480,7 +480,7 @@ export default function HomePage() {
           <div className="mt-16 max-w-3xl mx-auto">
             <div className="bg-primary text-primary-foreground rounded-xl p-8 text-center space-y-4">
               <p className="text-2xl font-bold">
-                Signal Intelligence prevents silent disengagement.
+                Signal Intelligence™ prevents silent disengagement.
               </p>
               <p className="text-lg opacity-90">
                 It turns emotional and social cues into information—so professionals know when to advance, when to pause, and when to protect trust.
@@ -496,7 +496,7 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center space-y-4">
               <h2 className="text-3xl lg:text-5xl font-bold">
-                How Signal Intelligence Works
+                How Signal Intelligence™ Works
               </h2>
               <p className="text-xl text-muted-foreground">
                 A simple, powerful framework for professional judgment
@@ -610,7 +610,7 @@ export default function HomePage() {
             </div>
 
             <div className="p-6 rounded-lg border-2 border-primary bg-white shadow-md hover:shadow-lg transition-shadow space-y-4">
-              <h3 className="text-xl font-semibold text-foreground">Signal Intelligence Mastery for Pharma</h3>
+              <h3 className="text-xl font-semibold text-foreground">Signal Intelligence™ Mastery for Pharma</h3>
               <p className="text-muted-foreground">
                 Integrate all conversational intelligence frameworks for healthcare selling
               </p>
@@ -648,10 +648,10 @@ export default function HomePage() {
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold">6 Signal Intelligence™ Competencies</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              ReflectivAI evaluates communication using six Signal Intelligence competencies. Each competency focuses on observable behaviors that reflect decision quality under pressure.
+                ReflectivAI evaluates communication using six Signal Intelligence™ competencies. Each competency focuses on observable behaviors that reflect decision quality under pressure.
             </p>
             <p className="text-base text-muted-foreground max-w-2xl mx-auto italic">
-              All Signal Intelligence competencies focus on observable behaviors that reflect decision quality under pressure.
+                All Signal Intelligence™ competencies focus on observable behaviors that reflect decision quality under pressure.
             </p>
           </div>
 
@@ -841,13 +841,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* How It Works - Signal Intelligence Engine */}
+      {/* How It Works - Signal Intelligence™ Engine */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center space-y-4">
               <h2 className="text-3xl lg:text-5xl font-bold">
-                Powered by Signal Intelligence
+                Powered by Signal Intelligence™
               </h2>
               <p className="text-xl text-muted-foreground">
                 Behind every coaching module and role play scenario is a science-backed framework for detecting behavioral signals and responding effectively
@@ -883,7 +883,7 @@ export default function HomePage() {
             <div className="bg-blue-50 border-2 border-primary rounded-xl p-8 space-y-4 mt-8 shadow-md hover:shadow-xl transition-shadow">
               <h4 className="text-xl font-semibold text-foreground">Built on Behavioral Science</h4>
               <p className="text-muted-foreground">
-                Signal Intelligence combines conversational intelligence research, behavioral psychology, and social dynamics theory. The result: practical skills that help you read situations accurately and respond in ways that preserve trust and credibility.
+                Signal Intelligence™ combines conversational intelligence research, behavioral psychology, and social dynamics theory. The result: practical skills that help you read situations accurately and respond in ways that preserve trust and credibility.
               </p>
             </div>
           </div>
@@ -992,7 +992,7 @@ export default function HomePage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl lg:text-5xl font-bold">How ReflectivAI Supports Signal Intelligence</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold">How ReflectivAI Supports Signal Intelligence™</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               AI-powered tools that help reps detect signals, interpret behavior, and make better judgments
             </p>
@@ -1041,7 +1041,7 @@ export default function HomePage() {
             <div className="space-y-6">
               <h3 className="text-3xl font-bold">Behavioral Coaching & Development</h3>
               <p className="text-lg text-muted-foreground">
-                Build Signal Intelligence capabilities through personalized coaching paths. Practice detecting signals, interpreting behavior, and responding effectively in safe role-play scenarios.
+                Build Signal Intelligence™ competencies through personalized coaching paths. Practice detecting signals, interpreting behavior, and responding effectively in safe role-play scenarios.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -1064,12 +1064,12 @@ export default function HomePage() {
             <div className="space-y-6">
               <h3 className="text-3xl font-bold">Leadership Analytics & Behavioral Metrics</h3>
               <p className="text-lg text-muted-foreground">
-                Give sales leaders visibility into team Signal Intelligence capabilities. Track behavioral metrics like Question Quality, Listening & Responsiveness, and Objection Navigation across the team.
+                Give sales leaders visibility into team Signal Intelligence™ competencies. Track behavioral metrics like Question Quality, Listening & Responsiveness, and Objection Navigation across the team.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Team-wide Signal Intelligence capability benchmarking</span>
+                  <span>Team-wide Signal Intelligence™ competency benchmarking</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
@@ -1103,11 +1103,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Signal Intelligence Metrics */}
+      {/* Signal Intelligence™ Metrics */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl lg:text-5xl font-bold">Signal Intelligence Metrics</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold">Signal Intelligence™ Metrics</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Observable, behavioral outcomes that drive measurable performance improvement
             </p>
@@ -1177,7 +1177,7 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto text-center space-y-3">
             <p className="text-lg font-semibold text-primary">Always ethical • Always human-validated</p>
             <p className="text-muted-foreground">
-              Signal Intelligence respects autonomy, preserves dignity, and supports professional judgment—never replacing it.
+              Signal Intelligence™ respects autonomy, preserves dignity, and supports professional judgment—never replacing it.
             </p>
           </div>
         </div>
@@ -1312,7 +1312,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-semibold">Ethical Boundary</h3>
                 <p className="text-muted-foreground">
-                  If a response would feel inappropriate if the roles were reversed, it is outside the Signal Intelligence boundary.
+                  If a response would feel inappropriate if the roles were reversed, it is outside the Signal Intelligence™ boundary.
                 </p>
               </div>
 

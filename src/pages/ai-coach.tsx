@@ -12,7 +12,7 @@ export default function AICoachPage() {
             <div className="space-y-8">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
                 <Brain className="h-4 w-4" />
-                Signal Intelligence Support
+                Signal Intelligence™ Support
               </div>
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
@@ -96,7 +96,7 @@ export default function AICoachPage() {
             <div className="bg-muted rounded-xl p-8 space-y-4">
               <h3 className="text-xl font-semibold">Human Judgment Drives Action</h3>
               <p className="text-muted-foreground">
-                AI Coach provides information and suggestions, but the rep always maintains control. This ensures accountability, authenticity, and ethical engagement. Signal Intelligence is about supporting professional judgment—not replacing it.
+                AI Coach provides information and suggestions, but the rep always maintains control. This ensures accountability, authenticity, and ethical engagement. Signal Intelligence™ is about supporting professional judgment—not replacing it.
               </p>
             </div>
           </div>
@@ -149,7 +149,7 @@ export default function AICoachPage() {
         </div>
       </section>
 
-      {/* Signal Intelligence Capabilities Supported */}
+      {/* Signal Intelligence™ Competencies Supported */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
@@ -205,7 +205,7 @@ export default function AICoachPage() {
           
           <div className="mt-8 text-center">
             <p className="text-sm text-muted-foreground italic max-w-2xl mx-auto">
-              If a response would feel inappropriate if the roles were reversed, it is outside the Signal Intelligence boundary.
+              If a response would feel inappropriate if the roles were reversed, it is outside the Signal Intelligence™ boundary.
             </p>
           </div>
         </div>
@@ -222,7 +222,7 @@ export default function AICoachPage() {
           </div>
 
           <div className="max-w-6xl mx-auto space-y-12">
-            {/* Signal Intelligence Dimensions */}
+            {/* Signal Intelligence™ Dimensions */}
             <div className="bg-muted rounded-xl p-8">
               <h3 className="text-2xl font-bold mb-6 text-center">6 Signal Intelligence™ Competencies</h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -344,7 +344,7 @@ export default function AICoachPage() {
               <div className="aspect-[3/4] rounded-lg overflow-hidden border border-border shadow-2xl">
                 <img
                   src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/9F4B84D2-1ED2-4E75-B3C5-EB732344F88D.png"
-                  alt="AI Coach providing real-time Signal Intelligence feedback"
+                  alt="AI Coach providing real-time Signal Intelligence™ feedback"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -381,7 +381,7 @@ export default function AICoachPage() {
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold">AI Coach in Action</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Real scenarios where Signal Intelligence makes the difference
+              Real scenarios where Signal Intelligence™ makes the difference
             </p>
           </div>
 
@@ -431,7 +431,7 @@ export default function AICoachPage() {
             <div className="p-8 rounded-lg border border-border bg-background space-y-4">
               <h3 className="text-xl font-bold">Post-Call Review</h3>
               <p className="text-muted-foreground">
-                After each interaction, receive detailed feedback on Signal Intelligence capabilities: which signals you detected, how you interpreted them, and how effectively you responded.
+                After each interaction, receive detailed feedback on Signal Intelligence™ competencies: which signals you detected, how you interpreted them, and how effectively you responded.
               </p>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
@@ -479,7 +479,7 @@ export default function AICoachPage() {
           <div className="max-w-4xl mx-auto text-center space-y-3">
             <p className="text-lg font-semibold text-primary">Always ethical • Always human-validated</p>
             <p className="text-muted-foreground">
-              Signal Intelligence respects autonomy, preserves dignity, and supports professional judgment—never replacing it.
+              Signal Intelligence™ respects autonomy, preserves dignity, and supports professional judgment—never replacing it.
             </p>
           </div>
         </div>
@@ -490,7 +490,7 @@ export default function AICoachPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h2 className="text-4xl lg:text-5xl font-bold">
-              Ready to Build Signal Intelligence?
+              Ready to Build Signal Intelligence™?
             </h2>
             <p className="text-xl text-primary-foreground/90">
               Join hundreds of Life Sciences sales professionals developing the human capability that preserves credibility under pressure.

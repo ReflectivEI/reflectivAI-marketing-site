@@ -60,7 +60,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/" className="hover:text-foreground transition-colors">
-                  Signal Intelligence
+                  Signal Intelligence™
                 </Link>
               </li>
               <li>

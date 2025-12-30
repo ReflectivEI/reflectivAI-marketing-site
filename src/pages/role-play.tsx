@@ -57,7 +57,7 @@ export default function RolePlayPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-6 mb-16">
             <h2 className="text-3xl lg:text-5xl font-bold">
-              Why Signal Intelligence Practice Works
+              Why Signal Intelligence™ Practice Works
             </h2>
             <p className="text-xl text-muted-foreground">
               Research shows that experiential learning through role play increases skill retention by 75% compared to traditional training methods. Practice builds the judgment needed to detect patterns, interpret signals, and respond effectively under pressure—in a safe environment where mistakes are learning opportunities.
@@ -81,7 +81,7 @@ export default function RolePlayPage() {
 
           <div className="mt-12 max-w-3xl mx-auto text-center">
             <p className="text-sm text-muted-foreground italic">
-              If a response would feel inappropriate if the roles were reversed, it is outside the Signal Intelligence boundary.
+              If a response would feel inappropriate if the roles were reversed, it is outside the Signal Intelligence™ boundary.
             </p>
           </div>
         </div>
@@ -278,7 +278,7 @@ export default function RolePlayPage() {
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl lg:text-5xl font-bold">Practice Signal Intelligence Across All Scenarios</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold">Practice Signal Intelligence™ Across All Scenarios</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Build capabilities for detecting signals, interpreting behavior, and responding effectively in every conversation type
             </p>
@@ -457,7 +457,7 @@ export default function RolePlayPage() {
               </div>
               <h3 className="text-lg font-semibold">Get Feedback</h3>
               <p className="text-sm text-muted-foreground">
-                Receive detailed analysis on your performance, Signal Intelligence capabilities, and areas for improvement
+                Receive detailed analysis on your performance, Signal Intelligence™ competencies, and areas for improvement
               </p>
             </div>
 
@@ -480,7 +480,7 @@ export default function RolePlayPage() {
           <div className="max-w-4xl mx-auto text-center space-y-3">
             <p className="text-lg font-semibold text-primary">Always ethical • Always human-validated</p>
             <p className="text-muted-foreground">
-              Signal Intelligence respects autonomy, preserves dignity, and supports professional judgment—never replacing it.
+              Signal Intelligence™ respects autonomy, preserves dignity, and supports professional judgment—never replacing it.
             </p>
           </div>
         </div>
@@ -492,7 +492,7 @@ export default function RolePlayPage() {
           <div className="max-w-4xl mx-auto">
             <div className="bg-background border border-border rounded-2xl p-12 space-y-8">
               <h2 className="text-3xl lg:text-4xl font-bold">
-                Safe Environment, Real Signal Intelligence Development
+                Safe Environment, Real Signal Intelligence™ Development
               </h2>
               <p className="text-lg text-muted-foreground">
                 Role play simulations provide a judgment-free space to practice detecting signals, interpreting behavior, and making better judgments—without the pressure of real customer interactions.
@@ -537,7 +537,7 @@ export default function RolePlayPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h2 className="text-4xl lg:text-5xl font-bold">
-              Start Building Signal Intelligence Today
+              Start Building Signal Intelligence™ Today
             </h2>
             <p className="text-xl text-muted-foreground">
               Develop the human capability that preserves credibility under pressure through unlimited practice with AI-powered role play simulations.
@@ -576,7 +576,7 @@ export default function RolePlayPage() {
             <Link to="/" className="p-6 rounded-lg border border-border bg-card hover:shadow-lg transition-shadow space-y-3">
               <h3 className="text-xl font-semibold">Platform Overview</h3>
               <p className="text-muted-foreground">
-                Discover how ReflectivAI supports all 8 Signal Intelligence capabilities across your sales team.
+                Discover how ReflectivAI supports all 6 Signal Intelligence™ competencies across your sales team.
               </p>
               <div className="flex items-center text-primary font-medium">
                 View platform <ArrowRight className="ml-2 h-4 w-4" />

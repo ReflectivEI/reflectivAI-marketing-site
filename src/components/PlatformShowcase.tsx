@@ -19,7 +19,7 @@ const features: PlatformFeature[] = [
   {
     id: 'dashboard',
     title: 'AI-Powered Dashboard',
-    description: 'Track your progress across all 8 Signal Intelligence capabilities with real-time analytics and personalized insights.',
+    description: 'Track your progress across all 6 Signal Intelligence™ competencies with real-time analytics and personalized insights.',
     image: 'https://media.gettyimages.com/id/1621583577/photo/4k-hud-futuristic-elements-target-monitor-user-control-interface-screen-panel.jpg?b=1&s=2048x2048&w=0&k=20&c=_l9P7RzaQ3TSlIGy3sajz6hOEEEndho2OvcC2xPFLn8=',
     highlights: [
       'Real-time EI metrics',

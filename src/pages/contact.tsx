@@ -41,7 +41,7 @@ export default function ContactPage() {
               Request a Demo
             </h1>
             <p className="text-xl text-muted-foreground">
-              See how ReflectivAI can transform your life sciences sales team with AI-powered coaching and Signal Intelligence.
+              See how ReflectivAI can transform your life sciences sales team with AI-powered coaching and Signal Intelligence™.
             </p>
           </div>
         </div>
@@ -207,7 +207,7 @@ export default function ContactPage() {
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">8 Signal Intelligence capabilities tracked</span>
+                      <span className="text-sm">6 Signal Intelligence™ competencies tracked</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
