@@ -1,0 +1,44 @@
+=================================================================
+  DEPLOY SIGNAL INTELLIGENCE HTML FILE TO GITHUB
+=================================================================
+
+STATUS:
+✅ Header navigation updated (committed: 958da1c)
+✅ HTML file exists: public/signal-intelligence-learn-more.html
+❌ HTML file NOT YET PUSHED to GitHub
+
+-----------------------------------------------------------------
+
+TO DEPLOY, RUN THESE COMMANDS IN YOUR TERMINAL:
+
+# Step 1: Add the HTML file to git
+git add public/signal-intelligence-learn-more.html
+
+# Step 2: Commit the HTML file
+git commit -m "Add Signal Intelligence standalone HTML documentation"
+
+# Step 3: Push to GitHub
+git push origin main
+
+-----------------------------------------------------------------
+
+AFTER DEPLOYMENT:
+
+Your site will auto-deploy to:
+🌐 https://reflectivei.github.io/reflectivAI-marketing-site/
+
+HTML file will be accessible at:
+📄 https://reflectivei.github.io/reflectivAI-marketing-site/signal-intelligence-learn-more.html
+
+Header "Learn More" dropdown will link to this file.
+
+-----------------------------------------------------------------
+
+VERIFY DEPLOYMENT:
+
+1. Visit the live site
+2. Hover over "Learn More" in the header
+3. Click "Signal Intelligence"
+4. Confirm the HTML documentation page loads
+
+=================================================================
