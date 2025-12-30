@@ -567,7 +567,7 @@ export default function RolePlayPage() {
             <Link to="/ai-coach" className="p-6 rounded-lg border border-border bg-card hover:shadow-lg transition-shadow space-y-3">
               <h3 className="text-xl font-semibold">AI Coach</h3>
               <p className="text-muted-foreground">
-                Get real-time signal detection and interpretation support during live calls with behavioral metrics feedback.
+                Get real-time signal detection and interpretation support during practice sessions with behavioral metrics feedback.
               </p>
               <div className="flex items-center text-primary font-medium">
                 Learn more <ArrowRight className="ml-2 h-4 w-4" />

@@ -429,7 +429,7 @@ export default function HomePage() {
 
             <div className="mt-12 text-center">
               <p className="text-lg text-muted-foreground italic">
-                Transforming training from static to adaptive, from delayed to instant, from generic to emotionally intelligent.
+                Transforming training from static to adaptive, from delayed to immediate, and from unstructured to signal-driven practice.
               </p>
             </div>
           </div>
@@ -1167,7 +1167,7 @@ export default function HomePage() {
             <div className="space-y-6">
               <h3 className="text-3xl font-bold">Real-Time Signal Detection</h3>
               <p className="text-lg text-muted-foreground">
-                Our AI analyzes tone, pace, questions, and silence during live calls. Get instant insights into customer engagement, uncertainty, or resistance—so you can respond with precision.
+                Our AI analyzes tone, pace, questions, and silence during practice sessions. Get instant insights into customer engagement patterns, uncertainty signals, or resistance indicators—so you can refine your approach.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -1242,7 +1242,7 @@ export default function HomePage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Predictive analytics for rep success and retention</span>
+                  <span>Behavioral trend analysis for coaching prioritization</span>
                 </li>
               </ul>
             </div>

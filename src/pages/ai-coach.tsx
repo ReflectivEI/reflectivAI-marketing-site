@@ -446,7 +446,7 @@ export default function AICoachPage() {
             </div>
 
             <div className="p-8 rounded-lg border border-border bg-background space-y-4">
-              <h3 className="text-xl font-bold">During Live Calls</h3>
+              <h3 className="text-xl font-bold">During Practice Sessions</h3>
               <p className="text-muted-foreground">
                 Practice with simulated conversations. AI Coach highlights patterns in tone, pacing, and engagement. You reflect on what these patterns might mean and decide how to respond.
               </p>
