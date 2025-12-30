@@ -207,7 +207,7 @@ export default function ContactPage() {
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">6 Signal Intelligence™ competencies tracked</span>
+                      <span className="text-sm">8 Signal Intelligence™ Capabilities tracked with scores</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />

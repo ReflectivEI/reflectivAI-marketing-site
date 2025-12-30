@@ -124,7 +124,7 @@ export default function RolePlayPage() {
               </div>
               <h3 className="text-xl font-semibold">Behavioral Pattern Feedback</h3>
               <p className="text-muted-foreground">
-                Receive detailed performance analysis after each simulation, including Signal Intelligence™ competency assessments, observable behaviors (Question Quality, Listening, Objection Navigation), and improvement recommendations.
+                Receive detailed performance analysis after each simulation, including Signal Intelligence™ Capability scores, observable behaviors (Question Quality, Listening, Objection Navigation), and improvement recommendations.
               </p>
             </div>
 
@@ -457,7 +457,7 @@ export default function RolePlayPage() {
               </div>
               <h3 className="text-lg font-semibold">Get Feedback</h3>
               <p className="text-sm text-muted-foreground">
-                Receive detailed analysis on your performance, Signal Intelligence™ competencies, and areas for improvement
+                Receive detailed analysis on your performance, Signal Intelligence™ Capabilities, and areas for improvement
               </p>
             </div>
 
@@ -576,7 +576,7 @@ export default function RolePlayPage() {
             <Link to="/" className="p-6 rounded-lg border border-border bg-card hover:shadow-lg transition-shadow space-y-3">
               <h3 className="text-xl font-semibold">Platform Overview</h3>
               <p className="text-muted-foreground">
-                Discover how ReflectivAI supports all 6 Signal Intelligence™ competencies across your sales team.
+                Discover how ReflectivAI supports all 8 Signal Intelligence™ Capabilities across your sales team.
               </p>
               <div className="flex items-center text-primary font-medium">
                 View platform <ArrowRight className="ml-2 h-4 w-4" />

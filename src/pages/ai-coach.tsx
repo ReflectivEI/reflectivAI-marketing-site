@@ -142,7 +142,7 @@ export default function AICoachPage() {
               <TrendingUp className="h-8 w-8 text-primary" />
               <h3 className="text-xl font-semibold">Track Your Progress</h3>
               <p className="text-muted-foreground">
-                Review coaching insights and see how your skills develop across all 6 Signal Intelligence™ competencies
+                Review coaching insights and see how your skills develop across all 8 Signal Intelligence™ Capabilities
               </p>
             </div>
           </div>
@@ -153,52 +153,82 @@ export default function AICoachPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl lg:text-5xl font-bold">6 Signal Intelligence™ Competencies</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold">8 Signal Intelligence™ Capabilities</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              AI Coach helps professionals develop all 6 Signal Intelligence™ competencies
+              AI Coach helps professionals develop all 8 Signal Intelligence™ Capabilities with scored feedback
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <div className="space-y-3 p-6 rounded-xl border-2 border-primary bg-blue-50 shadow-md hover:shadow-xl transition-shadow">
-              <h3 className="text-lg font-semibold">Communication Clarity</h3>
+              <div className="text-2xl font-bold text-primary">1</div>
+              <h3 className="text-lg font-semibold">Signal Awareness</h3>
+              <p className="text-xs text-muted-foreground">Question Quality</p>
               <p className="text-sm text-muted-foreground">
-                How clearly and coherently ideas are expressed throughout a conversation
+                How effectively questions uncover customer needs and priorities
               </p>
             </div>
 
             <div className="space-y-3 p-6 rounded-xl border-2 border-primary bg-white shadow-md hover:shadow-xl transition-shadow">
-              <h3 className="text-lg font-semibold">Intent Alignment</h3>
+              <div className="text-2xl font-bold text-primary">2</div>
+              <h3 className="text-lg font-semibold">Signal Interpretation</h3>
+              <p className="text-xs text-muted-foreground">Listening & Responsiveness</p>
               <p className="text-sm text-muted-foreground">
-                How well communication stays aligned with the purpose of the interaction
+                How well you listen and respond to customer signals
               </p>
             </div>
 
             <div className="space-y-3 p-6 rounded-xl border-2 border-primary bg-purple-50 shadow-md hover:shadow-xl transition-shadow">
-              <h3 className="text-lg font-semibold">Responsiveness</h3>
+              <div className="text-2xl font-bold text-primary">3</div>
+              <h3 className="text-lg font-semibold">Value Connection</h3>
+              <p className="text-xs text-muted-foreground">Value Framing</p>
               <p className="text-sm text-muted-foreground">
-                How effectively input from the other party is acknowledged and addressed
+                How effectively you connect product benefits to customer priorities
               </p>
             </div>
 
             <div className="space-y-3 p-6 rounded-xl border-2 border-primary bg-white shadow-md hover:shadow-xl transition-shadow">
-              <h3 className="text-lg font-semibold">Conversational Balance</h3>
+              <div className="text-2xl font-bold text-primary">4</div>
+              <h3 className="text-lg font-semibold">Customer Engagement Monitoring</h3>
+              <p className="text-xs text-muted-foreground">Customer Engagement Cues</p>
               <p className="text-sm text-muted-foreground">
-                How well participation and pacing are managed
+                How well you detect and respond to customer interest and concern
               </p>
             </div>
 
             <div className="space-y-3 p-6 rounded-xl border-2 border-primary bg-blue-50 shadow-md hover:shadow-xl transition-shadow">
-              <h3 className="text-lg font-semibold">Behavioral Adaptability</h3>
+              <div className="text-2xl font-bold text-primary">5</div>
+              <h3 className="text-lg font-semibold">Objection Navigation</h3>
+              <p className="text-xs text-muted-foreground">Objection Handling</p>
               <p className="text-sm text-muted-foreground">
-                How well communication adjusts to what's happening in the moment
+                How effectively you address customer concerns and objections
               </p>
             </div>
 
             <div className="space-y-3 p-6 rounded-xl border-2 border-primary bg-white shadow-md hover:shadow-xl transition-shadow">
-              <h3 className="text-lg font-semibold">Outcome Orientation</h3>
+              <div className="text-2xl font-bold text-primary">6</div>
+              <h3 className="text-lg font-semibold">Conversation Management</h3>
+              <p className="text-xs text-muted-foreground">Conversation Control & Structure</p>
               <p className="text-sm text-muted-foreground">
-                How effectively communication moves toward a clear next step
+                How well you guide conversation flow and maintain focus
+              </p>
+            </div>
+
+            <div className="space-y-3 p-6 rounded-xl border-2 border-primary bg-purple-50 shadow-md hover:shadow-xl transition-shadow">
+              <div className="text-2xl font-bold text-primary">7</div>
+              <h3 className="text-lg font-semibold">Adaptive Response</h3>
+              <p className="text-xs text-muted-foreground">Adaptability</p>
+              <p className="text-sm text-muted-foreground">
+                How well you adjust approach based on customer reactions
+              </p>
+            </div>
+
+            <div className="space-y-3 p-6 rounded-xl border-2 border-primary bg-white shadow-md hover:shadow-xl transition-shadow">
+              <div className="text-2xl font-bold text-primary">8</div>
+              <h3 className="text-lg font-semibold">Commitment Generation</h3>
+              <p className="text-xs text-muted-foreground">Commitment Gaining</p>
+              <p className="text-sm text-muted-foreground">
+                How effectively you secure clear next steps and commitments
               </p>
             </div>
           </div>
@@ -217,38 +247,46 @@ export default function AICoachPage() {
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold">How the Coach Works</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              AI Coach analyzes conversations using the 6 Signal Intelligence™ competencies to provide actionable feedback
+              AI Coach analyzes conversations using the 8 Signal Intelligence™ Capabilities to provide scored, actionable feedback
             </p>
           </div>
 
           <div className="max-w-6xl mx-auto space-y-12">
             {/* Signal Intelligence™ Dimensions */}
             <div className="bg-muted rounded-xl p-8">
-              <h3 className="text-2xl font-bold mb-6 text-center">6 Signal Intelligence™ Competencies</h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <h3 className="text-2xl font-bold mb-6 text-center">8 Signal Intelligence™ Capabilities</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="p-4 rounded-lg bg-background border border-border text-center">
                   <div className="text-3xl font-bold text-primary mb-2">1</div>
-                  <div className="text-sm font-semibold">Communication Clarity</div>
+                  <div className="text-sm font-semibold">Signal Awareness</div>
                 </div>
                 <div className="p-4 rounded-lg bg-background border border-border text-center">
                   <div className="text-3xl font-bold text-primary mb-2">2</div>
-                  <div className="text-sm font-semibold">Intent Alignment</div>
+                  <div className="text-sm font-semibold">Signal Interpretation</div>
                 </div>
                 <div className="p-4 rounded-lg bg-background border border-border text-center">
                   <div className="text-3xl font-bold text-primary mb-2">3</div>
-                  <div className="text-sm font-semibold">Responsiveness</div>
+                  <div className="text-sm font-semibold">Value Connection</div>
                 </div>
                 <div className="p-4 rounded-lg bg-background border border-border text-center">
                   <div className="text-3xl font-bold text-primary mb-2">4</div>
-                  <div className="text-sm font-semibold">Conversational Balance</div>
+                  <div className="text-sm font-semibold">Customer Engagement Monitoring</div>
                 </div>
                 <div className="p-4 rounded-lg bg-background border border-border text-center">
                   <div className="text-3xl font-bold text-primary mb-2">5</div>
-                  <div className="text-sm font-semibold">Behavioral Adaptability</div>
+                  <div className="text-sm font-semibold">Objection Navigation</div>
                 </div>
                 <div className="p-4 rounded-lg bg-background border border-border text-center">
                   <div className="text-3xl font-bold text-primary mb-2">6</div>
-                  <div className="text-sm font-semibold">Outcome Orientation</div>
+                  <div className="text-sm font-semibold">Conversation Management</div>
+                </div>
+                <div className="p-4 rounded-lg bg-background border border-border text-center">
+                  <div className="text-3xl font-bold text-primary mb-2">7</div>
+                  <div className="text-sm font-semibold">Adaptive Response</div>
+                </div>
+                <div className="p-4 rounded-lg bg-background border border-border text-center">
+                  <div className="text-3xl font-bold text-primary mb-2">8</div>
+                  <div className="text-sm font-semibold">Commitment Generation</div>
                 </div>
               </div>
             </div>
@@ -529,7 +567,7 @@ export default function AICoachPage() {
             <Link to="/" className="p-6 rounded-lg border border-border bg-background hover:shadow-lg transition-shadow space-y-3">
               <h3 className="text-xl font-semibold">Platform Overview</h3>
               <p className="text-muted-foreground">
-                Discover how ReflectivAI supports all 6 Signal Intelligence™ competencies across your sales team.
+                Discover how ReflectivAI supports all 8 Signal Intelligence™ Capabilities across your sales team.
               </p>
               <div className="flex items-center text-primary font-medium">
                 View platform <ArrowRight className="ml-2 h-4 w-4" />
