@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Signal Intelligence | Learn More</title>
+  <meta name="description" content="Signal Intelligence: Capabilities, Behavioral Metrics & Methodology (ReflectivAI)." />
+  <style>
+    :root{
+      /* Inherit site theme if these are defined globally; fall back to safe defaults */
+      --bg: var(--color-bg, #0b0f14);
+      --surface: var(--color-surface, rgba(255,255,255,0.06));
+      --text: var(--color-text, #e8eef6);
+      --muted: var(--color-muted, rgba(232,238,246,0.72));
+      --border: var(--color-border, rgba(232,238,246,0.14));
+      --accent: var(--color-accent, #7cc4ff);
+      --maxw: 980px;
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(0,0,0,0.30);
+      --font: var(--font-sans, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji");
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg: var(--color-bg, #ffffff);
+        --surface: var(--color-surface, #f7f8fa);
+        --text: var(--color-text, #0b0f14);
+        --muted: var(--color-muted, rgba(11,15,20,0.72));
+        --border: var(--color-border, rgba(11,15,20,0.12));
+        --accent: var(--color-accent, #0b66ff);
+        --shadow: 0 10px 30px rgba(0,0,0,0.10);
+      }
+    }
+    html, body { height: 100%; }
+    body{
+      margin:0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.55;
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+    .wrap{ max-width: var(--maxw); margin: 0 auto; padding: 56px 20px; }
+    .hero{
+      background: linear-gradient(180deg, rgba(124,196,255,0.14), transparent 60%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px 26px;
+      margin-bottom: 28px;
+    }
+    .kicker{
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: var(--muted);
+      margin: 0 0 10px 0;
+    }
+    h1{ font-size: 34px; line-height: 1.15; margin: 0 0 8px 0; }
+    .sub{ margin: 0; color: var(--muted); font-size: 16px; }
+    h2{ font-size: 20px; margin: 26px 0 10px; }
+    h3{ font-size: 16px; margin: 18px 0 8px; color: var(--text); }
+    p{ margin: 10px 0; }
+    .card{
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      padding: 18px 18px;
+      margin: 14px 0;
+    }
+    ul{ margin: 10px 0 10px 18px; }
+    .grid{
+      display: grid;
+      gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 900px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+    table{
+      width:100%;
+      border-collapse: collapse;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--surface);
+      margin: 10px 0;
+    }
+    th, td{
+      padding: 12px 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      text-align: left;
+      font-size: 14px;
+    }
+    th{ color: var(--muted); font-weight: 600; }
+    tr:last-child td{ border-bottom: 0; }
+    .note{
+      font-size: 13px;
+      color: var(--muted);
+      border-left: 3px solid var(--accent);
+      padding-left: 12px;
+      margin-top: 12px;
+    }
+    .refs ol{ margin: 10px 0 0 18px; }
+    .refs li{ margin: 8px 0; }
+    .tag{
+      display:inline-block;
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 4px 10px;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <p class="kicker">Learn More</p>
+      <h1>Signal Intelligence</h1>
+      <p class="sub">Capabilities, Behavioral Metrics & Methodology (ReflectivAI)</p>
+      <p class="note">
+        This page is behavior-first, non-clinical, and non-diagnostic. It measures observable conversation behaviors and does not infer protected attributes or mental health status.
+      </p>
+    </header>
+
+    <section class="card" id="purpose">
+      <h2>Purpose</h2>
+      <p>
+        Signal Intelligence (SI) is ReflectivAI’s behavior-based capability framework for interpreting conversational performance.
+        SI links observable behaviors to scientifically grounded <strong>Human Decision Drivers</strong>, enabling defensible assessment,
+        coaching, and AI-assisted feedback.
+      </p>
+      <p>
+        The framework is explainable and auditable, and is suitable for enterprise, education, and professional development contexts.
+      </p>
+    </section>
+
+    <section class="card" id="hdd-framework">
+      <h2>Human Decision Drivers Framework</h2>
+      <p>
+        Signal Intelligence is grounded in the <strong>Human Decision Drivers Framework</strong>, which identifies internal drivers that influence
+        how people think, engage, regulate emotion, and commit during real conversations. The framework explains why behavioral signals appear,
+        rather than measuring activity alone.
+      </p>
+    </section>
+
+    <section class="card" id="drivers">
+      <h2>Core Human Decision Drivers</h2>
+      <div class="grid">
+        <div class="card">
+          <span class="tag">Driver</span>
+          <h3>Cognitive Empathy / Perspective Taking</h3>
+          <p>The capacity to accurately infer another person’s mental and emotional state and adjust behavior accordingly.</p>
+          <p class="note">
+            References: <a href="https://doi.org/10.1037/0022-3514.44.1.113" target="_blank" rel="noreferrer">Davis (1983)</a>,
+            <a href="https://doi.org/10.1177/1534582304267187" target="_blank" rel="noreferrer">Decety & Jackson (2004)</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="tag">Driver</span>
+          <h3>Emotional Intelligence (EI)</h3>
+          <p>The ability to perceive, understand, and regulate emotions in oneself and others.</p>
+          <p class="note">
+            References: <a href="https://doi.org/10.1207/s15327965pli1503_02" target="_blank" rel="noreferrer">Mayer, Salovey & Caruso (2004)</a>,
+            <a href="https://www.danielgoleman.info/working-with-emotional-intelligence/" target="_blank" rel="noreferrer">Goleman (1998)</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="tag">Driver</span>
+          <h3>Metacognition & Confidence Calibration</h3>
+          <p>Awareness of one’s own thinking, limits of knowledge, and accuracy of self-assessment.</p>
+          <p class="note">
+            References: <a href="https://doi.org/10.1037/0003-066X.34.10.906" target="_blank" rel="noreferrer">Flavell (1979)</a>,
+            <a href="https://doi.org/10.1037/0022-3514.77.6.1121" target="_blank" rel="noreferrer">Kruger & Dunning (1999)</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="tag">Driver</span>
+          <h3>Motivation, Autonomy & Commitment</h3>
+          <p>Internal drivers governing engagement, ownership, and follow-through.</p>
+          <p class="note">
+            References: <a href="https://doi.org/10.1207/S15327965PLI1104_01" target="_blank" rel="noreferrer">Deci & Ryan (2000)</a>,
+            <a href="https://www.influenceatwork.com/principles-of-persuasion/" target="_blank" rel="noreferrer">Cialdini (resource)</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="tag">Driver</span>
+          <h3>Social Threat, Status & Identity</h3>
+          <p>How perceived risk to competence, autonomy, or identity affects engagement and resistance.</p>
+          <p class="note">
+            References: <a href="https://doi.org/10.1037/0003-066X.52.6.613" target="_blank" rel="noreferrer">Steele (1997)</a>,
+            <a href="https://doi.org/10.1016/j.tics.2004.01.010" target="_blank" rel="noreferrer">Eisenberger & Lieberman (2004)</a>,
+            <a href="https://neuroleadership.com/your-brain-at-work/scarf-model" target="_blank" rel="noreferrer">Rock/SCARF (overview)</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="capabilities">
+      <h2>Signal Intelligence Capabilities</h2>
+      <p>
+        Signal Intelligence Capabilities represent underlying conversational judgment systems that produce observable behavior.
+        SI detects behavioral signals that reflect changes in Human Decision Drivers.
+      </p>
+
+      <h3>Capability-to-Metric Mapping</h3>
+      <table aria-label="Capability to metric mapping">
+        <thead>
+          <tr>
+            <th>Signal Intelligence Capability</th>
+            <th>Behavioral Metric</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Signal Awareness</td><td>Question Quality</td></tr>
+          <tr><td>Signal Interpretation</td><td>Listening &amp; Responsiveness</td></tr>
+          <tr><td>Value Connection</td><td>Value Framing</td></tr>
+          <tr><td>Customer Engagement Monitoring</td><td>Engagement Cues</td></tr>
+          <tr><td>Objection Navigation</td><td>Objection Handling</td></tr>
+          <tr><td>Conversation Management</td><td>Conversation Control &amp; Structure</td></tr>
+          <tr><td>Adaptive Response</td><td>Adaptability</td></tr>
+          <tr><td>Commitment Generation</td><td>Commitment Gaining</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card" id="measurement">
+      <h2>Behavioral Metrics &amp; Measurement Indicators</h2>
+
+      <div class="card">
+        <h3>Signal Awareness - Question Quality</h3>
+        <p><strong>Defined behaviors</strong></p>
+        <ul>
+          <li>Purposeful, customer-centered questioning</li>
+          <li>Logical sequencing</li>
+          <li>Effective follow-up</li>
+        </ul>
+        <p><strong>Measurement indicators</strong></p>
+        <ul>
+          <li>Open vs. closed ratio</li>
+          <li>Relevance to customer goals</li>
+          <li>Follow-up depth</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Signal Interpretation - Listening &amp; Responsiveness</h3>
+        <p><strong>Defined behaviors</strong></p>
+        <ul>
+          <li>Accurate paraphrasing</li>
+          <li>Explicit acknowledgment of concerns</li>
+          <li>Behavioral adjustment based on new information</li>
+        </ul>
+        <p><strong>Measurement indicators</strong></p>
+        <ul>
+          <li>Paraphrase accuracy</li>
+          <li>Concern acknowledgment</li>
+          <li>Observable response shifts</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Value Connection - Value Framing</h3>
+        <p><strong>Defined behaviors</strong></p>
+        <ul>
+          <li>Outcome-focused language</li>
+          <li>Customer priority alignment</li>
+          <li>Avoids feature dumping</li>
+        </ul>
+        <p><strong>Measurement indicators</strong></p>
+        <ul>
+          <li>Outcome references</li>
+          <li>Explicit linkage to customer priorities</li>
+          <li>Feature-to-value ratio</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Customer Engagement Monitoring - Engagement Cues</h3>
+        <p><strong>Defined behaviors</strong></p>
+        <ul>
+          <li>Monitors energy and participation</li>
+          <li>Identifies forward-looking signals</li>
+          <li>Adjusts engagement strategy</li>
+        </ul>
+        <p><strong>Measurement indicators</strong></p>
+        <ul>
+          <li>Talk-time balance</li>
+          <li>Quality of customer questions</li>
+          <li>Forward-looking statements</li>
+          <li>Energy/pacing shifts</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Objection Navigation - Objection Handling</h3>
+        <p><strong>Defined behaviors</strong></p>
+        <ul>
+          <li>Calm response to resistance</li>
+          <li>Exploration before response</li>
+          <li>Acknowledgment before reframing</li>
+        </ul>
+        <p><strong>Measurement indicators</strong></p>
+        <ul>
+          <li>Acknowledgment-first behavior</li>
+          <li>Depth of concern exploration</li>
+          <li>Tone/pacing stability</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Conversation Management - Conversation Control &amp; Structure</h3>
+        <p><strong>Defined behaviors</strong></p>
+        <ul>
+          <li>Clear purpose setting</li>
+          <li>Smooth transitions</li>
+          <li>Summarizes and clarifies next steps</li>
+        </ul>
+        <p><strong>Measurement indicators</strong></p>
+        <ul>
+          <li>Purpose clarity</li>
+          <li>Transition smoothness</li>
+          <li>Summary accuracy</li>
+          <li>Next-step clarity</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Adaptive Response - Adaptability</h3>
+        <p><strong>Defined behaviors</strong></p>
+        <ul>
+          <li>Adjusts tone, depth, or pacing based on signals</li>
+          <li>Shifts approach in response to new information</li>
+        </ul>
+        <p><strong>Measurement indicators</strong></p>
+        <ul>
+          <li>Signal-aligned behavioral shifts</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Commitment Generation - Commitment Gaining</h3>
+        <p><strong>Defined behaviors</strong></p>
+        <ul>
+          <li>Secures voluntary, explicit next actions</li>
+          <li>Confirms mutual agreement and ownership</li>
+        </ul>
+        <p><strong>Measurement indicators</strong></p>
+        <ul>
+          <li>Explicit commitments</li>
+          <li>Specific next steps</li>
+          <li>Ownership clarity</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="safeguards">
+      <h2>Methodological Safeguards</h2>
+      <p>
+        Signal Intelligence is non-clinical and non-diagnostic. It assesses observable conversation behavior only and does not infer protected attributes
+        or mental health status. Metrics are explainable, coachable, and auditable.
+      </p>
+      <p class="note">
+        Validity foundations: <a href="https://doi.org/10.1037/h0040957" target="_blank" rel="noreferrer">Cronbach &amp; Meehl (1955)</a>,
+        <a href="https://doi.org/10.1037/0003-066X.50.9.741" target="_blank" rel="noreferrer">Messick (1995)</a>
+      </p>
+    </section>
+
+    <section class="card refs" id="references">
+      <h2>References (Links)</h2>
+      <ol>
+        <li>Davis, M. H. (1983). <a href="https://doi.org/10.1037/0022-3514.44.1.113" target="_blank" rel="noreferrer">https://doi.org/10.1037/0022-3514.44.1.113</a></li>
+        <li>Decety, J., &amp; Jackson, P. L. (2004). <a href="https://doi.org/10.1177/1534582304267187" target="_blank" rel="noreferrer">https://doi.org/10.1177/1534582304267187</a></li>
+        <li>Mayer, J. D., Salovey, P., &amp; Caruso, D. R. (2004). <a href="https://doi.org/10.1207/s15327965pli1503_02" target="_blank" rel="noreferrer">https://doi.org/10.1207/s15327965pli1503_02</a></li>
+        <li>Goleman, D. (1998). <a href="https://www.danielgoleman.info/working-with-emotional-intelligence/" target="_blank" rel="noreferrer">https://www.danielgoleman.info/working-with-emotional-intelligence/</a></li>
+        <li>Flavell, J. H. (1979). <a href="https://doi.org/10.1037/0003-066X.34.10.906" target="_blank" rel="noreferrer">https://doi.org/10.1037/0003-066X.34.10.906</a></li>
+        <li>Kruger, J., &amp; Dunning, D. (1999). <a href="https://doi.org/10.1037/0022-3514.77.6.1121" target="_blank" rel="noreferrer">https://doi.org/10.1037/0022-3514.77.6.1121</a></li>
+        <li>Deci, E. L., &amp; Ryan, R. M. (2000). <a href="https://doi.org/10.1207/S15327965PLI1104_01" target="_blank" rel="noreferrer">https://doi.org/10.1207/S15327965PLI1104_01</a></li>
+        <li>Cialdini (resource). <a href="https://www.influenceatwork.com/principles-of-persuasion/" target="_blank" rel="noreferrer">https://www.influenceatwork.com/principles-of-persuasion/</a></li>
+        <li>Steele, C. M. (1997). <a href="https://doi.org/10.1037/0003-066X.52.6.613" target="_blank" rel="noreferrer">https://doi.org/10.1037/0003-066X.52.6.613</a></li>
+        <li>Eisenberger, N. I., &amp; Lieberman, M. D. (2004). <a href="https://doi.org/10.1016/j.tics.2004.01.010" target="_blank" rel="noreferrer">https://doi.org/10.1016/j.tics.2004.01.010</a></li>
+        <li>Rock/SCARF (overview). <a href="https://neuroleadership.com/your-brain-at-work/scarf-model" target="_blank" rel="noreferrer">https://neuroleadership.com/your-brain-at-work/scarf-model</a></li>
+        <li>Cronbach, L. J., &amp; Meehl, P. E. (1955). <a href="https://doi.org/10.1037/h0040957" target="_blank" rel="noreferrer">https://doi.org/10.1037/h0040957</a></li>
+        <li>Messick, S. (1995). <a href="https://doi.org/10.1037/0003-066X.50.9.741" target="_blank" rel="noreferrer">https://doi.org/10.1037/0003-066X.50.9.741</a></li>
+        <li>Doshi-Velez, F., &amp; Kim, B. (2017). <a href="https://arxiv.org/abs/1702.08608" target="_blank" rel="noreferrer">https://arxiv.org/abs/1702.08608</a></li>
+        <li>OECD (2019). <a href="https://oecd.ai/en/ai-principles" target="_blank" rel="noreferrer">https://oecd.ai/en/ai-principles</a></li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>
