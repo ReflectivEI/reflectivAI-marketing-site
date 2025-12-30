@@ -714,6 +714,92 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Signal Intelligence™ Framework Structure */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto space-y-12">
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl lg:text-4xl font-bold">How the Framework is Organized</h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Signal Intelligence™ capabilities are grouped by function to help you understand how different skills work together during conversations.
+              </p>
+            </div>
+
+            {/* Tiered Bands */}
+            <div className="space-y-6">
+              {/* Band 1: Signal Detection */}
+              <div className="bg-white rounded-xl border-2 border-slate-200 p-8 space-y-4">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="h-2 w-2 rounded-full bg-teal-500"></div>
+                  <h3 className="text-xl font-semibold text-slate-700">Signal Detection</h3>
+                </div>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+                    <div className="h-1.5 w-1.5 rounded-full bg-slate-400"></div>
+                    <span className="text-sm font-medium text-slate-700">Question Quality</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+                    <div className="h-1.5 w-1.5 rounded-full bg-slate-400"></div>
+                    <span className="text-sm font-medium text-slate-700">Listening & Responsiveness</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+                    <div className="h-1.5 w-1.5 rounded-full bg-slate-400"></div>
+                    <span className="text-sm font-medium text-slate-700">Customer Engagement Cues</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Band 2: Conversation Control */}
+              <div className="bg-white rounded-xl border-2 border-slate-200 p-8 space-y-4">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="h-2 w-2 rounded-full bg-teal-500"></div>
+                  <h3 className="text-xl font-semibold text-slate-700">Conversation Control</h3>
+                </div>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+                    <div className="h-1.5 w-1.5 rounded-full bg-slate-400"></div>
+                    <span className="text-sm font-medium text-slate-700">Conversation Control</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+                    <div className="h-1.5 w-1.5 rounded-full bg-slate-400"></div>
+                    <span className="text-sm font-medium text-slate-700">Objection Navigation</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+                    <div className="h-1.5 w-1.5 rounded-full bg-slate-400"></div>
+                    <span className="text-sm font-medium text-slate-700">Adaptability</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Band 3: Progression & Outcomes */}
+              <div className="bg-white rounded-xl border-2 border-slate-200 p-8 space-y-4">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="h-2 w-2 rounded-full bg-teal-500"></div>
+                  <h3 className="text-xl font-semibold text-slate-700">Progression & Outcomes</h3>
+                </div>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+                    <div className="h-1.5 w-1.5 rounded-full bg-slate-400"></div>
+                    <span className="text-sm font-medium text-slate-700">Value Framing (Making It Matter)</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
+                    <div className="h-1.5 w-1.5 rounded-full bg-slate-400"></div>
+                    <span className="text-sm font-medium text-slate-700">Commitment Gaining</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Explanatory Note */}
+            <div className="text-center pt-6">
+              <p className="text-sm text-muted-foreground italic">
+                This structure helps you see how capabilities build on each other—from detecting signals to guiding conversations to achieving outcomes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Real-Time Coaching Cards */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
