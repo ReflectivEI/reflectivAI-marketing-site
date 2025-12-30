@@ -2,6 +2,14 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from '@/components/ui/navigation-menu';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -10,7 +18,10 @@ export default function Header() {
     { href: '/', label: 'Platform' },
     { href: '/ai-coach', label: 'AI Coach' },
     { href: '/role-play', label: 'Role Play' },
-    { href: '#', label: 'Resources' },
+  ];
+
+  const learnMoreLinks = [
+    { href: '/signal-intelligence', label: 'Signal Intelligence', description: 'Learn about our core framework' },
   ];
 
   return (
@@ -26,7 +37,7 @@ export default function Header() {
             <span className="text-2xl font-bold">ReflectivAI</span>
           </Link>
 
-          <nav className="hidden md:flex gap-8">
+          <nav className="hidden md:flex gap-8 items-center">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -36,6 +47,35 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
+            
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium bg-transparent hover:bg-transparent data-[state=open]:bg-transparent">
+                    Learn More
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-3 p-4">
+                      {learnMoreLinks.map((link) => (
+                        <li key={link.href}>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              to={link.href}
+                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            >
+                              <div className="text-sm font-medium leading-none">{link.label}</div>
+                              <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                {link.description}
+                              </p>
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
@@ -69,6 +109,19 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
+              <div className="border-t border-border pt-4">
+                <div className="text-xs font-semibold text-muted-foreground mb-2 px-2">Learn More</div>
+                {learnMoreLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    className="block text-sm font-medium hover:text-primary transition-colors px-2 py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
               <div className="flex flex-col gap-2 pt-4 border-t border-border">
                 <Button variant="ghost" size="sm" className="w-full" asChild>
                   <Link to="/contact">Sign In</Link>
