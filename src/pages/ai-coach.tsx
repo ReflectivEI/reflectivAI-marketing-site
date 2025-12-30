@@ -30,7 +30,7 @@ export default function AICoachPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="text-base" asChild>
                   <Link to="/contact">
-                    Schedule a Signal Intelligence™ walkthrough
+                    Request Demo
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>

@@ -15,129 +15,184 @@ import { LiveActivityFeed } from '@/components/LiveActivityFeed';
 import { ROICalculator } from '@/components/ROICalculator';
 import { SocialProofTicker } from '@/components/SocialProofTicker';
 
-type CompetencyDetail = {
+type CapabilityDetail = {
   id: string;
   index: number;
   name: string;
-  score: number;
-  status: string;
-  whatItMeasures: string;
-  howEvaluated: string;
-  howRated: string;
+  behavioralMetric: string;
+  exampleScore: string;
+  definition: string;
+  whatScoreReflects: string;
   whatGoodLooksLike: string[];
-  calculationExplanation: string;
+  howCalculated: string[];
+  scoreCalculation: string;
+  howMeasured: string;
 };
 
-// Helper function to get status label from score
-function getStatusLabel(score: number): string {
-  if (score >= 9.0) return 'Consistently strong';
-  if (score >= 7.5) return 'Generally strong';
-  if (score >= 6.0) return 'Inconsistent';
-  return 'Needs attention';
-}
-
-const competencyDetails: Record<string, CompetencyDetail> = {
-  'communication-clarity': {
-    id: 'communication-clarity',
+const capabilityDetails: Record<string, CapabilityDetail> = {
+  'signal-awareness': {
+    id: 'signal-awareness',
     index: 1,
-    name: 'Communication Clarity',
-    score: 8.5,
-    status: getStatusLabel(8.5),
-    whatItMeasures: 'How clearly and coherently ideas are expressed throughout a conversation.',
-    howEvaluated: 'Patterns in how information is structured, sequenced, and explained during role-play.',
-    howRated: 'Based on consistency of clarity across the interaction, not a single moment.',
+    name: 'Signal Awareness',
+    behavioralMetric: 'Question Quality',
+    exampleScore: '4.3 / 5',
+    definition: 'The ability to notice what matters in the conversation and ask purposeful, customer-centric questions.',
+    whatScoreReflects: 'How consistently questions surface customer priorities rather than gather surface information.',
     whatGoodLooksLike: [
-      'Ideas are easy to follow',
-      'Key points are stated directly',
-      'Explanations are concise and relevant',
-      'Transitions between topics are clear'
+      'Open-ended, diagnostic questions',
+      'Follow-ups that build on prior answers',
+      'Logical sequencing without interrogation'
     ],
-    calculationExplanation: 'This score is based on how consistently your explanations remained clear and easy to follow across all turns in the conversation.'
+    howCalculated: [
+      'Open vs. closed question ratio',
+      'Relevance to stated customer goals',
+      'Depth of follow-up questioning'
+    ],
+    scoreCalculation: '(Open Questions Ratio: 0.92 × 2.0) + (Goal Relevance Score: 0.88 × 2.0) + (Follow-Up Depth Score: 0.85 × 1.0) = 4.30 / 5',
+    howMeasured: 'Question structure classification, topic-goal alignment detection, turn-to-turn continuity'
   },
-  'intent-alignment': {
-    id: 'intent-alignment',
+  'signal-interpretation': {
+    id: 'signal-interpretation',
     index: 2,
-    name: 'Intent Alignment',
-    score: 6.8,
-    status: getStatusLabel(6.8),
-    whatItMeasures: 'How well communication stays aligned with the purpose of the interaction.',
-    howEvaluated: 'Language is compared against the stated goal of the role-play scenario.',
-    howRated: 'Based on how consistently communication supports the intended outcome.',
+    name: 'Signal Interpretation',
+    behavioralMetric: 'Listening & Responsiveness',
+    exampleScore: '4.1 / 5',
+    definition: 'The ability to accurately hear, acknowledge, and respond to customer input.',
+    whatScoreReflects: 'Whether responses demonstrate understanding and adapt to new information.',
     whatGoodLooksLike: [
-      'Responses stay focused on purpose',
-      'Messaging reinforces the goal',
-      'Minimal drift or distraction',
-      'Clear awareness of why the conversation is happening'
+      'Clear acknowledgment before responding',
+      'Accurate paraphrasing',
+      'Adjustments after new input'
     ],
-    calculationExplanation: 'This score reflects how often your responses supported the stated goal versus drifting into side topics.'
+    howCalculated: [
+      'Acknowledgment frequency',
+      'Paraphrase accuracy',
+      'Response alignment'
+    ],
+    scoreCalculation: '(Acknowledgment Presence: 0.90 × 1.5) + (Paraphrase Accuracy: 0.85 × 2.0) + (Response Alignment: 0.80 × 1.5) = 4.10 / 5',
+    howMeasured: 'Turn-level response mapping, linguistic acknowledgment markers, adjustment detection'
   },
-  'responsiveness': {
-    id: 'responsiveness',
+  'value-connection': {
+    id: 'value-connection',
     index: 3,
-    name: 'Responsiveness',
-    score: 9.2,
-    status: getStatusLabel(9.2),
-    whatItMeasures: 'How effectively input from the other party is acknowledged and addressed.',
-    howEvaluated: 'Response timing, relevance, and acknowledgment of prior points.',
-    howRated: 'Based on timely and context-aware engagement.',
+    name: 'Value Connection',
+    behavioralMetric: 'Value Framing (Making It Matter)',
+    exampleScore: '4.0 / 5',
+    definition: 'The ability to connect information to outcomes that matter to the customer.',
+    whatScoreReflects: 'How consistently communication emphasizes customer outcomes over product features.',
     whatGoodLooksLike: [
-      'Direct answers to questions',
-      'Clear acknowledgment of concerns',
-      'Relevant follow-ups',
-      'Minimal repetition or avoidance'
+      'Outcome-based language',
+      'Clear linkage to priorities',
+      'Minimal feature dumping'
     ],
-    calculationExplanation: 'This score is based on how quickly and directly you answered questions and addressed concerns as they appeared.'
+    howCalculated: [
+      'Outcome vs. feature language ratio',
+      'Explicit goal references'
+    ],
+    scoreCalculation: '(Outcome Language Ratio: 0.80 × 2.5) + (Goal Link Frequency: 0.75 × 2.5) = 4.00 / 5',
+    howMeasured: 'Language classification, goal-outcome linkage detection'
   },
-  'conversational-balance': {
-    id: 'conversational-balance',
+  'customer-engagement-monitoring': {
+    id: 'customer-engagement-monitoring',
     index: 4,
-    name: 'Conversational Balance',
-    score: 7.9,
-    status: getStatusLabel(7.9),
-    whatItMeasures: 'How well participation and pacing are managed.',
-    howEvaluated: 'Turn-taking, pacing, and space created for dialogue.',
-    howRated: 'Based on overall balance across the interaction.',
+    name: 'Customer Engagement Monitoring',
+    behavioralMetric: 'Customer Engagement Cues',
+    exampleScore: '4.2 / 5',
+    definition: 'The ability to notice shifts in engagement and conversational momentum.',
+    whatScoreReflects: 'Sensitivity to participation changes and engagement signals.',
     whatGoodLooksLike: [
-      'Natural back-and-forth',
-      'Few interruptions',
-      'Space for the other party to engage',
-      'Adjustments to conversational flow'
+      'Awareness of silence or pacing changes',
+      'Recognition of forward-looking cues',
+      'Adjustment when engagement drops'
     ],
-    calculationExplanation: 'This score reflects how much space you created for the other party to speak and how smoothly the conversation flowed.'
+    howCalculated: [
+      'Talk-time balance',
+      'Question depth',
+      'Forward-looking language'
+    ],
+    scoreCalculation: '(Talk-Time Balance: 0.85 × 1.5) + (Question Depth: 0.90 × 1.5) + (Forward-Looking Cues: 0.88 × 2.0) = 4.20 / 5',
+    howMeasured: 'Participation pattern tracking, cue frequency analysis'
   },
-  'behavioral-adaptability': {
-    id: 'behavioral-adaptability',
+  'objection-navigation': {
+    id: 'objection-navigation',
     index: 5,
-    name: 'Behavioral Adaptability',
-    score: 8.1,
-    status: getStatusLabel(8.1),
-    whatItMeasures: 'How well communication adjusts to what\'s happening in the moment.',
-    howEvaluated: 'Shifts in language, depth, or approach following new cues.',
-    howRated: 'Based on timeliness and relevance of adjustments.',
+    name: 'Objection Navigation',
+    behavioralMetric: 'Objection Handling',
+    exampleScore: '3.9 / 5',
+    definition: 'The ability to respond constructively to resistance without defensiveness.',
+    whatScoreReflects: 'Quality of acknowledgment and composure during objections.',
     whatGoodLooksLike: [
-      'Clarifies when confusion appears',
-      'Adjusts pacing or depth as needed',
-      'Avoids rigid or scripted responses',
-      'Responds calmly and constructively under pressure'
+      'Acknowledgment before rebuttal',
+      'Calm pacing',
+      'Exploratory questioning'
     ],
-    calculationExplanation: 'This score is based on how often you adjusted your approach after new information, questions, or signals from the other party.'
+    howCalculated: [
+      'Acknowledgment presence',
+      'Rebuttal timing',
+      'Defensive language absence'
+    ],
+    scoreCalculation: '(Acknowledgment Score: 0.85 × 2.0) + (Rebuttal Timing Score: 0.75 × 1.5) + (Defensive Language Avoidance: 0.80 × 1.5) = 3.90 / 5',
+    howMeasured: 'Objection-response sequencing, tone marker detection'
   },
-  'outcome-orientation': {
-    id: 'outcome-orientation',
+  'conversation-management': {
+    id: 'conversation-management',
     index: 6,
-    name: 'Outcome Orientation',
-    score: 8.8,
-    status: getStatusLabel(8.8),
-    whatItMeasures: 'How effectively communication moves toward a clear next step.',
-    howEvaluated: 'Presence of summaries, confirmations, and next-step language.',
-    howRated: 'Based on clarity and closure by the end of the interaction.',
+    name: 'Conversation Management',
+    behavioralMetric: 'Conversation Control & Structure',
+    exampleScore: '4.4 / 5',
+    definition: 'The ability to guide the conversation with clarity and purpose.',
+    whatScoreReflects: 'Structural coherence and directional control.',
     whatGoodLooksLike: [
-      'Clear summaries',
-      'Explicit next steps',
-      'Mutual understanding',
-      'Reduced ambiguity at close'
+      'Clear purpose setting',
+      'Smooth transitions',
+      'Effective summarization'
     ],
-    calculationExplanation: 'This score reflects how clearly you summarized the conversation and proposed concrete, agreed next steps.'
+    howCalculated: [
+      'Purpose clarity',
+      'Transition effectiveness',
+      'Summary presence'
+    ],
+    scoreCalculation: '(Purpose Statements: 0.95 × 1.5) + (Transition Clarity: 0.90 × 1.5) + (Summarization Quality: 0.88 × 2.0) = 4.40 / 5',
+    howMeasured: 'Structural markers, topic transition detection, close-out language'
+  },
+  'adaptive-response': {
+    id: 'adaptive-response',
+    index: 7,
+    name: 'Adaptive Response',
+    behavioralMetric: 'Adaptability',
+    exampleScore: '4.1 / 5',
+    definition: 'The ability to adjust approach based on what is happening in the moment.',
+    whatScoreReflects: 'Responsiveness to new conversational signals.',
+    whatGoodLooksLike: [
+      'Adjustments in tone, depth, or pacing',
+      'Abandoning scripts when needed'
+    ],
+    howCalculated: [
+      'Signal-response alignment',
+      'Degree of approach change'
+    ],
+    scoreCalculation: '(Signal Detection Accuracy: 0.85 × 2.0) + (Response Adjustment Strength: 0.80 × 2.0) = 4.10 / 5',
+    howMeasured: 'Cue-response mapping, language shift analysis'
+  },
+  'commitment-generation': {
+    id: 'commitment-generation',
+    index: 8,
+    name: 'Commitment Generation',
+    behavioralMetric: 'Commitment Gaining',
+    exampleScore: '4.5 / 5',
+    definition: 'The ability to secure clear, voluntary next actions.',
+    whatScoreReflects: 'Clarity and mutuality of next steps.',
+    whatGoodLooksLike: [
+      'Specific next steps',
+      'Clear ownership',
+      'Mutual confirmation'
+    ],
+    howCalculated: [
+      'Next-step specificity',
+      'Confirmation language'
+    ],
+    scoreCalculation: '(Next-Step Clarity: 0.95 × 2.5) + (Mutual Confirmation: 0.90 × 2.5) = 4.50 / 5',
+    howMeasured: 'Commitment markers, agreement confirmation'
   }
 };
 
@@ -150,7 +205,7 @@ export default function HomePage() {
     setIsDialogOpen(true);
   };
 
-  const currentCompetency = selectedCapability ? competencyDetails[selectedCapability] : null;
+  const currentCapability = selectedCapability ? capabilityDetails[selectedCapability] : null;
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -177,13 +232,13 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="text-base" asChild>
                   <Link to="/contact">
-                    Schedule a Signal Intelligence™ walkthrough
+                    Request Demo
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
                 <Button size="lg" variant="outline" className="text-base" asChild>
                   <Link to="/ai-coach">
-                    Watch Platform Tour
+                    Explore Platform
                   </Link>
                 </Button>
               </div>
@@ -642,42 +697,48 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6 Signal Intelligence™ Competencies */}
+      {/* 8 Signal Intelligence™ Capabilities */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl lg:text-5xl font-bold">6 Signal Intelligence™ Competencies</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold">8 Signal Intelligence™ Capabilities</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                ReflectivAI evaluates communication using six Signal Intelligence™ competencies. Each competency focuses on observable behaviors that reflect decision quality under pressure.
+                ReflectivAI evaluates communication using eight Signal Intelligence™ capabilities. Each capability focuses on observable behaviors during structured practice.
             </p>
             <p className="text-base text-muted-foreground max-w-2xl mx-auto italic">
-                All Signal Intelligence™ competencies focus on observable behaviors that reflect decision quality under pressure.
+                Scores shown are illustrative examples for demonstration purposes.
             </p>
           </div>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {Object.values(competencyDetails).map((competency) => (
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {Object.values(capabilityDetails).map((capability) => (
               <button
-                key={competency.id}
-                onClick={() => openCapabilityDetail(competency.id)}
-                className="group relative p-8 rounded-xl border-2 border-primary bg-white hover:bg-white text-left transition-all duration-200 cursor-pointer hover:scale-[1.02] hover:shadow-xl hover:border-accent focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 shadow-md"
-                aria-label={`View details for ${competency.name}`}
+                key={capability.id}
+                onClick={() => openCapabilityDetail(capability.id)}
+                className="group relative p-6 rounded-xl border-2 border-primary bg-white hover:bg-white text-left transition-all duration-200 cursor-pointer hover:scale-[1.02] hover:shadow-xl hover:border-accent focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 shadow-md"
+                aria-label={`View details for ${capability.name}`}
               >
                 {/* Index number badge */}
                 <div className="absolute top-4 left-4 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-sm font-bold text-primary">{competency.index}</span>
+                  <span className="text-sm font-bold text-primary">{capability.index}</span>
                 </div>
 
-                {/* Competency name */}
-                <div className="mt-8 mb-4">
-                  <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
-                    {competency.name}
+                {/* Capability name */}
+                <div className="mt-8 mb-3">
+                  <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+                    {capability.name}
                   </h3>
+                  <p className="text-xs text-muted-foreground mt-1">{capability.behavioralMetric}</p>
+                </div>
+
+                {/* Example score */}
+                <div className="mb-3">
+                  <div className="text-2xl font-bold text-primary">{capability.exampleScore}</div>
                 </div>
 
                 {/* Tap to view affordance */}
                 <div className="text-xs text-muted-foreground">
-                  Tap to view what this measures
+                  Tap to view calculation
                 </div>
               </button>
             ))}
@@ -692,41 +753,38 @@ export default function HomePage() {
             <div className="text-center space-y-4">
               <h2 className="text-3xl lg:text-5xl font-bold">How You Did in This Conversation</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Real-time feedback on your performance across all 6 Signal Intelligence™ competencies
+                Real-time feedback on your performance across all 8 Signal Intelligence™ Capabilities
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              {Object.values(competencyDetails).map((competency) => {
-                const isStrong = competency.score >= 8.5;
-                const borderColor = isStrong ? 'border-primary border-2' : 'border-border border-2';
-                
+              {Object.values(capabilityDetails).map((capability) => {
                 return (
                   <button
-                    key={competency.id}
-                    onClick={() => openCapabilityDetail(competency.id)}
-                    className={`bg-white rounded-xl ${borderColor} p-6 space-y-4 hover:shadow-xl transition-all duration-200 cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 shadow-md`}
-                    aria-label={`View details for ${competency.name}`}
+                    key={capability.id}
+                    onClick={() => openCapabilityDetail(capability.id)}
+                    className="bg-white rounded-xl border-2 border-primary p-6 space-y-4 hover:shadow-xl transition-all duration-200 cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 shadow-md"
+                    aria-label={`View details for ${capability.name}`}
                   >
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex-1">
                         <h3 className="text-xl font-semibold text-foreground mb-2">
-                          {competency.name}
+                          {capability.name}
                         </h3>
                         <p className="text-sm text-muted-foreground">
-                          {competency.whatItMeasures}
+                          {capability.behavioralMetric}
                         </p>
                       </div>
                       <div className="flex-shrink-0">
                         <div className="px-4 py-2 bg-yellow-50 border border-yellow-200 rounded-full">
-                          <span className="text-sm font-semibold text-primary">{competency.status}</span>
+                          <span className="text-sm font-semibold text-primary">{capability.exampleScore}</span>
                         </div>
                       </div>
                     </div>
 
                     <div className="pt-3 border-t border-border">
                       <p className="text-sm text-muted-foreground">
-                        <span className="font-semibold text-foreground">Coaching insight:</span> {competency.calculationExplanation}
+                        <span className="font-semibold text-foreground">Definition:</span> {capability.definition}
                       </p>
                     </div>
                   </button>
@@ -736,7 +794,7 @@ export default function HomePage() {
 
             <div className="text-center mt-8">
               <p className="text-sm text-muted-foreground italic">
-                Click any competency card above to see the full breakdown and learn what good looks like.
+                Click any capability card above to see the full calculation and learn what good looks like.
               </p>
             </div>
           </div>
@@ -1357,45 +1415,46 @@ export default function HomePage() {
       {/* Competency Detail Dialog */}
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto bg-white">
-          {currentCompetency && (
+          {currentCapability && (
             <>
               {/* Navy header bar */}
               <DialogHeader className="bg-primary text-primary-foreground -m-6 mb-0 p-6 rounded-t-lg">
-                <DialogTitle className="text-2xl font-bold">{currentCompetency.name}</DialogTitle>
+                <DialogTitle className="text-2xl font-bold">{currentCapability.name}</DialogTitle>
+                <p className="text-sm text-primary-foreground/90 mt-2">Behavioral Metric: {currentCapability.behavioralMetric}</p>
               </DialogHeader>
               
               <div className="space-y-6 mt-6 px-6 pb-6">
-                {/* Status */}
+                {/* Example Score */}
                 <div className="flex items-center gap-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
                   <div>
-                    <div className="text-2xl font-bold text-foreground">{currentCompetency.status}</div>
-                    <div className="text-sm text-muted-foreground mt-1">Observed pattern across conversation</div>
+                    <div className="text-2xl font-bold text-foreground">{currentCapability.exampleScore}</div>
+                    <div className="text-sm text-muted-foreground mt-1">Example score (illustrative)</div>
                   </div>
                 </div>
 
-                {/* What it measures */}
+                {/* Definition */}
                 <div>
-                  <h4 className="text-lg font-semibold mb-2 text-foreground">What it measures</h4>
-                  <p className="text-muted-foreground">{currentCompetency.whatItMeasures}</p>
+                  <h4 className="text-lg font-semibold mb-2 text-foreground">Definition</h4>
+                  <p className="text-muted-foreground">{currentCapability.definition}</p>
                 </div>
 
                 {/* How it's evaluated */}
                 <div>
                   <h4 className="text-lg font-semibold mb-2 text-foreground">How it’s evaluated</h4>
-                  <p className="text-muted-foreground">{currentCompetency.howEvaluated}</p>
+                  <p className="text-muted-foreground">{currentCapability.whatScoreReflects}</p>
                 </div>
 
                 {/* How it's rated */}
                 <div>
                   <h4 className="text-lg font-semibold mb-2 text-foreground">How it’s rated</h4>
-                  <p className="text-muted-foreground">{currentCompetency.howRated}</p>
+                  <p className="text-muted-foreground">{/* Removed - not in new model */}</p>
                 </div>
 
                 {/* What good looks like */}
                 <div className="bg-muted rounded-lg p-4">
-                  <h4 className="text-lg font-semibold mb-3 text-foreground">What good looks like</h4>
+                  <h4 className="text-lg font-semibold mb-3 text-foreground">What Good Looks Like</h4>
                   <ul className="space-y-2">
-                    {currentCompetency.whatGoodLooksLike.map((item, index) => (
+                    {currentCapability.whatGoodLooksLike.map((item, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                         <span className="text-foreground">{item}</span>
@@ -1404,19 +1463,37 @@ export default function HomePage() {
                   </ul>
                 </div>
 
-                {/* How this score was calculated */}
-                <div className="border-t border-border pt-4">
-                  <h4 className="text-lg font-semibold mb-2 text-foreground">How this score was calculated</h4>
-                  <p className="text-muted-foreground">{currentCompetency.calculationExplanation}</p>
-                  <p className="text-sm text-muted-foreground italic mt-3">
-                    This assessment is based on patterns across the entire conversation, not a single moment. Each turn contributes to the overall evaluation of {currentCompetency.name}.
-                  </p>
+                {/* How It's Calculated */}
+                <div>
+                  <h4 className="text-lg font-semibold mb-2 text-foreground">How It's Calculated</h4>
+                  <ul className="space-y-1 list-disc list-inside text-muted-foreground">
+                    {currentCapability.howCalculated.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
                 </div>
 
-                {/* Ethical boundary */}
+                {/* Score Calculation (Example) */}
                 <div className="border-t border-border pt-4">
+                  <h4 className="text-lg font-semibold mb-2 text-foreground">Score Calculation (Example)</h4>
+                  <div className="bg-muted p-4 rounded-lg font-mono text-sm text-foreground">
+                    {currentCapability.scoreCalculation}
+                  </div>
+                </div>
+
+                {/* How It's Measured */}
+                <div>
+                  <h4 className="text-lg font-semibold mb-2 text-foreground">How It's Measured</h4>
+                  <p className="text-muted-foreground">{currentCapability.howMeasured}</p>
+                </div>
+
+                {/* Disclaimers */}
+                <div className="border-t border-border pt-4 space-y-3">
                   <p className="text-sm text-muted-foreground italic">
-                    If a response would feel inappropriate if the roles were reversed, it is outside the Signal Intelligence boundary.
+                    Signal Intelligence™ scores reflect observable communication behaviors during structured practice. They are not assessments of personality, intent, emotional state, or professional competence, and are not used for automated decision-making.
+                  </p>
+                  <p className="text-sm text-muted-foreground italic">
+                    AI identifies behavioral patterns; interpretation and judgment remain with the professional.
                   </p>
                 </div>
               </div>

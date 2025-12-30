@@ -21,7 +21,7 @@ export function CTASection() {
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
               <Link to="/contact">
                 <Calendar className="mr-2 h-5 w-5" />
-                Schedule a Signal Intelligence™ walkthrough
+                Request Demo
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
