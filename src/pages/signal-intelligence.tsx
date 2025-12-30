@@ -7,7 +7,7 @@ export default function SignalIntelligencePage() {
           <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2.5">
             Learn More
           </p>
-          <h1 className="text-[34px] leading-tight mb-2 text-red-600 font-bold">Signal Intelligence<sup className="text-lg">™</sup></h1>
+          <h1 className="text-[34px] leading-tight mb-2">Signal Intelligence<sup className="text-lg">™</sup></h1>
           <p className="text-muted-foreground mb-0">
             Capabilities, Behavioral Metrics & Methodology (ReflectivAI)
           </p>
@@ -21,8 +21,7 @@ export default function SignalIntelligencePage() {
         <section className="border border-border rounded-2xl bg-card p-5 mb-4">
           <h2 className="text-xl mb-2.5">Purpose</h2>
           <p className="my-2.5">
-            Signal Intelligence<sup className="text-xs">™</sup> (SI) is ReflectivAI's behavior-based capability framework for
-            interpreting conversational performance during practice sessions. SI measures observable
+            Signal Intelligence<sup className="text-xs">™</sup> (SI) is ReflectivAI's behavior-based capability framework, derived from the Human Decision Drivers Framework, for understanding and developing conversational skills during structured practice sessions. SI measures observable
             conversation behaviors—what people say, how they respond, and how they adapt—without
             inferring psychological states, personality traits, or protected attributes.
           </p>
@@ -42,7 +41,7 @@ export default function SignalIntelligencePage() {
           <ol className="my-2.5 ml-5 list-decimal space-y-2">
             <li>
               <strong>Human Decision Drivers Framework</strong> — The interpretive lens that explains
-              why behavioral signals appear in conversations (not measured directly)
+              why behavioral signals appear in conversations (not latent variables and not measured directly)
             </li>
             <li>
               <strong>Signal Intelligence Capabilities</strong> — The core building blocks of SI that
@@ -242,10 +241,7 @@ export default function SignalIntelligencePage() {
         <section className="border border-border rounded-2xl bg-card p-5 mb-4">
           <h2 className="text-xl mb-2.5">Signal Intelligence<sup className="text-xs">™</sup> Capabilities</h2>
           <p className="my-2.5">
-            Signal Intelligence<sup className="text-xs">™</sup> Capabilities are the core building blocks of the SI framework. Each
-            capability represents an underlying conversational judgment system that produces observable
-            behavior. Capabilities are not directly measured—instead, they are assessed through
-            specific Behavioral Metrics that reflect their presence or absence in practice sessions.
+            Signal Intelligence<sup className="text-xs">™</sup> Capabilities are the core building blocks of the SI framework. Each capability represents a conversational skill derived from the Human Decision Drivers Framework, defining how those drivers show up in observable behavior.
           </p>
 
           <h3 className="text-base mt-4 mb-2">Capability-to-Metric Mapping</h3>
@@ -303,6 +299,9 @@ export default function SignalIntelligencePage() {
               </tbody>
             </table>
           </div>
+          <p className="my-2.5 mt-4">
+            Capabilities are applied, behavior-level expressions of Human Decision Drivers used for coaching and learning, not independent psychological constructs or diagnostic classifications.
+          </p>
         </section>
 
         {/* Behavioral Metrics & Measurement Indicators */}
