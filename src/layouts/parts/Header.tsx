@@ -21,7 +21,7 @@ export default function Header() {
   ];
 
   const learnMoreLinks = [
-    { href: '/signal-intelligence', label: 'Signal Intelligence', description: 'Learn about our core framework' },
+    { href: '/signal-intelligence-learn-more.html', label: 'Signal Intelligence', description: 'Learn about our core framework' },
   ];
 
   return (
@@ -59,15 +59,15 @@ export default function Header() {
                       {learnMoreLinks.map((link) => (
                         <li key={link.href}>
                           <NavigationMenuLink asChild>
-                            <Link
-                              to={link.href}
+                            <a
+                              href={link.href}
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                             >
                               <div className="text-sm font-medium leading-none">{link.label}</div>
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                                 {link.description}
                               </p>
-                            </Link>
+                            </a>
                           </NavigationMenuLink>
                         </li>
                       ))}
@@ -112,14 +112,14 @@ export default function Header() {
               <div className="border-t border-border pt-4">
                 <div className="text-xs font-semibold text-muted-foreground mb-2 px-2">Learn More</div>
                 {learnMoreLinks.map((link) => (
-                  <Link
+                  <a
                     key={link.href}
-                    to={link.href}
+                    href={link.href}
                     className="block text-sm font-medium hover:text-primary transition-colors px-2 py-2"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.label}
-                  </Link>
+                  </a>
                 ))}
               </div>
               <div className="flex flex-col gap-2 pt-4 border-t border-border">
