@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Target, TrendingUp, CheckCircle2, Lightbulb, Users, BarChart3 } from 'lucide-react';
+import { ArrowRight, Brain, Target, TrendingUp, CheckCircle2, Lightbulb, Users, BarChart3, FileText, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -29,14 +29,15 @@ export default function SignalIntelligencePage() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="text-base" asChild>
-                  <Link to="/contact">
-                    Request Demo
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
+                  <a href="/signal-intelligence-learn-more.html" target="_blank" rel="noopener noreferrer">
+                    <FileText className="mr-2 h-5 w-5" />
+                    View Full Documentation
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
                 </Button>
                 <Button size="lg" variant="outline" className="text-base" asChild>
-                  <Link to="/role-play">
-                    Try Role Play
+                  <Link to="/contact">
+                    Request Demo
                   </Link>
                 </Button>
               </div>
@@ -49,6 +50,33 @@ export default function SignalIntelligencePage() {
                   className="w-full h-full object-cover"
                 />
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Documentation Link Section */}
+      <section className="py-12 bg-primary/5 border-y border-primary/20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6 p-8 rounded-lg bg-white border-2 border-primary/20">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <FileText className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Complete Framework Documentation</h3>
+                  <p className="text-muted-foreground">
+                    Access the full Signal Intelligence™ framework guide with detailed explanations, examples, and implementation guidelines.
+                  </p>
+                </div>
+              </div>
+              <Button size="lg" className="flex-shrink-0" asChild>
+                <a href="/signal-intelligence-learn-more.html" target="_blank" rel="noopener noreferrer">
+                  View Documentation
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
             </div>
           </div>
         </div>
