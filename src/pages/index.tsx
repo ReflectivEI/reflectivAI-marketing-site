@@ -165,10 +165,10 @@ export default function HomePage() {
                   <span className="text-primary">for Life Sciences Sales</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-xl">
-                  ReflectivAI is powered by Signal Intelligence™—the human capacity to detect, interpret, and respond to meaningful changes in conversation and context in ways that preserve credibility, trust, and access.
+                  Signal Intelligence™ is the ability to detect changes in human behavior and respond in ways that preserve credibility, trust, and access.
                 </p>
                 <p className="text-lg text-muted-foreground max-w-xl">
-                  Signal Intelligence™ improves how professionals interpret and respond to human signals—without claiming authority over meaning, emotion, or choice.
+                  ReflectivAI helps professionals develop this capability through structured practice—without claiming authority over meaning, emotion, or choice.
                 </p>
                 <p className="text-base text-muted-foreground max-w-xl">
                   Built for sales and customer-facing teams navigating high-stakes conversations where credibility and access are on the line.
@@ -227,18 +227,18 @@ export default function HomePage() {
                   </div>
                   <h3 className="text-2xl font-bold">Signal Intelligence™</h3>
                 </div>
-                <p className="text-lg font-semibold text-primary">The Core Operating System</p>
+                <p className="text-lg font-semibold text-primary">The Core Framework</p>
                 <p className="text-muted-foreground">
-                  Detects, scores, and learns from observable behaviors in real-time conversations.
+                  Detects patterns in observable behaviors during practice conversations and surfaces reflections for professional judgment.
                 </p>
                 <div className="space-y-2 pt-4">
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Converts conversations into measurable data</span>
+                    <span className="text-sm">Highlights behavioral patterns in practice sessions</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Produces objective, auditable scores</span>
+                    <span className="text-sm">Surfaces insights for reflection and coaching</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
@@ -246,7 +246,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Works in simulations and real conversations</span>
+                    <span className="text-sm">Used in structured practice, not live calls</span>
                   </div>
                 </div>
               </div>
