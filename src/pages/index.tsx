@@ -714,87 +714,68 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Signal Intelligence™ Framework Structure */}
+      {/* How Signal Intelligence™ Works */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto space-y-12">
+          <div className="max-w-6xl mx-auto space-y-12">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl lg:text-4xl font-bold">How the Framework is Organized</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold">How Signal Intelligence™ Works</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Signal Intelligence™ capabilities are grouped by function to help you understand how different skills work together during conversations.
+                Signal Intelligence™ translates observable behavior into structured guidance that helps professionals navigate high-stakes conversations with consistency and credibility.
               </p>
             </div>
 
-            {/* Tiered Bands */}
-            <div className="space-y-6">
-              {/* Band 1: Signal Detection */}
-              <div className="bg-white rounded-xl border-2 border-slate-200 p-8 space-y-4">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="h-2 w-2 rounded-full bg-teal-500"></div>
-                  <h3 className="text-xl font-semibold text-slate-700">Signal Detection</h3>
+            {/* Horizontal Process Flow */}
+            <div className="relative">
+              {/* Connecting Flow Line */}
+              <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-slate-300 via-teal-400 to-slate-300 -translate-y-1/2 hidden lg:block opacity-0 animate-[fadeIn_0.8s_ease-in-out_0.3s_forwards]"></div>
+              
+              {/* Process Stages */}
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+                {/* Stage 1: Observable Signals */}
+                <div className="bg-white rounded-lg border border-slate-200 p-6 space-y-3 opacity-0 animate-[fadeInUp_0.6s_ease-out_0.4s_forwards]">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-slate-100 border-2 border-slate-300 mx-auto">
+                    <div className="w-3 h-3 rounded-full bg-slate-600"></div>
+                  </div>
+                  <h3 className="text-lg font-semibold text-center text-slate-800">Observable Signals</h3>
+                  <p className="text-sm text-slate-600 text-center leading-relaxed">
+                    What customers say, how they respond, and when engagement shifts during a conversation.
+                  </p>
                 </div>
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
-                    <div className="h-1.5 w-1.5 rounded-full bg-slate-400"></div>
-                    <span className="text-sm font-medium text-slate-700">Question Quality</span>
+
+                {/* Stage 2: AI Signal Detection */}
+                <div className="bg-white rounded-lg border border-slate-200 p-6 space-y-3 opacity-0 animate-[fadeInUp_0.6s_ease-out_0.55s_forwards]">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-teal-50 border-2 border-teal-300 mx-auto">
+                    <div className="w-3 h-3 rounded-full bg-teal-500"></div>
                   </div>
-                  <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
-                    <div className="h-1.5 w-1.5 rounded-full bg-slate-400"></div>
-                    <span className="text-sm font-medium text-slate-700">Listening & Responsiveness</span>
+                  <h3 className="text-lg font-semibold text-center text-slate-800">AI Signal Detection</h3>
+                  <p className="text-sm text-slate-600 text-center leading-relaxed">
+                    AI identifies meaningful behavioral changes and separates signal from noise in structured practice.
+                  </p>
+                </div>
+
+                {/* Stage 3: Behavioral Guidance */}
+                <div className="bg-white rounded-lg border border-slate-200 p-6 space-y-3 opacity-0 animate-[fadeInUp_0.6s_ease-out_0.7s_forwards]">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-slate-100 border-2 border-slate-300 mx-auto">
+                    <div className="w-3 h-3 rounded-full bg-slate-600"></div>
                   </div>
-                  <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
-                    <div className="h-1.5 w-1.5 rounded-full bg-slate-400"></div>
-                    <span className="text-sm font-medium text-slate-700">Customer Engagement Cues</span>
+                  <h3 className="text-lg font-semibold text-center text-slate-800">Behavioral Guidance</h3>
+                  <p className="text-sm text-slate-600 text-center leading-relaxed">
+                    Guidance indicates when to advance, when to pause, and how to protect credibility and access.
+                  </p>
+                </div>
+
+                {/* Stage 4: Measured Outcomes */}
+                <div className="bg-white rounded-lg border border-slate-200 p-6 space-y-3 opacity-0 animate-[fadeInUp_0.6s_ease-out_0.85s_forwards]">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-slate-100 border-2 border-slate-300 mx-auto">
+                    <div className="w-3 h-3 rounded-full bg-slate-600"></div>
                   </div>
+                  <h3 className="text-lg font-semibold text-center text-slate-800">Measured Outcomes</h3>
+                  <p className="text-sm text-slate-600 text-center leading-relaxed">
+                    Stronger conversations, clearer next steps, and more consistent performance over time.
+                  </p>
                 </div>
               </div>
-
-              {/* Band 2: Conversation Control */}
-              <div className="bg-white rounded-xl border-2 border-slate-200 p-8 space-y-4">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="h-2 w-2 rounded-full bg-teal-500"></div>
-                  <h3 className="text-xl font-semibold text-slate-700">Conversation Control</h3>
-                </div>
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
-                    <div className="h-1.5 w-1.5 rounded-full bg-slate-400"></div>
-                    <span className="text-sm font-medium text-slate-700">Conversation Control</span>
-                  </div>
-                  <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
-                    <div className="h-1.5 w-1.5 rounded-full bg-slate-400"></div>
-                    <span className="text-sm font-medium text-slate-700">Objection Navigation</span>
-                  </div>
-                  <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
-                    <div className="h-1.5 w-1.5 rounded-full bg-slate-400"></div>
-                    <span className="text-sm font-medium text-slate-700">Adaptability</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Band 3: Progression & Outcomes */}
-              <div className="bg-white rounded-xl border-2 border-slate-200 p-8 space-y-4">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="h-2 w-2 rounded-full bg-teal-500"></div>
-                  <h3 className="text-xl font-semibold text-slate-700">Progression & Outcomes</h3>
-                </div>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
-                    <div className="h-1.5 w-1.5 rounded-full bg-slate-400"></div>
-                    <span className="text-sm font-medium text-slate-700">Value Framing (Making It Matter)</span>
-                  </div>
-                  <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-200">
-                    <div className="h-1.5 w-1.5 rounded-full bg-slate-400"></div>
-                    <span className="text-sm font-medium text-slate-700">Commitment Gaining</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Explanatory Note */}
-            <div className="text-center pt-6">
-              <p className="text-sm text-muted-foreground italic">
-                This structure helps you see how capabilities build on each other—from detecting signals to guiding conversations to achieving outcomes.
-              </p>
             </div>
           </div>
         </div>
