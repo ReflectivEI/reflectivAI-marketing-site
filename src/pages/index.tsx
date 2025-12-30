@@ -282,7 +282,7 @@ export default function HomePage() {
                   </div>
                   <h3 className="text-2xl font-bold">Signal Intelligence™</h3>
                 </div>
-                <p className="text-lg font-semibold text-primary">The Core Framework</p>
+                <p className="text-lg font-semibold text-primary">The Core Capabilities</p>
                 <p className="text-muted-foreground">
                   Detects patterns in observable behaviors during practice conversations and surfaces reflections for professional judgment.
                 </p>
@@ -312,7 +312,7 @@ export default function HomePage() {
                   <div className="h-12 w-12 rounded-lg bg-muted flex items-center justify-center">
                     <Target className="h-6 w-6 text-foreground" />
                   </div>
-                  <h3 className="text-2xl font-bold">Human Decision Drivers</h3>
+                  <h3 className="text-2xl font-bold">Human Decision Drivers Framework</h3>
                 </div>
                 <p className="text-lg font-semibold">Explanatory Context (Not Scored)</p>
                 <p className="text-muted-foreground">
@@ -523,7 +523,7 @@ export default function HomePage() {
                 Signal Intelligence™ prevents silent disengagement.
               </p>
               <p className="text-lg opacity-90">
-                It turns emotional and social cues into information—so professionals know when to advance, when to pause, and when to protect trust.
+                It turns observable behavioral cues into actionable responses so sales reps know when to advance, when to pause, and when to protect credibility and access.
               </p>
             </div>
           </div>
@@ -899,6 +899,108 @@ export default function HomePage() {
                   AI identifies behavioral patterns; interpretation and judgment remain with the professional. Signal Intelligence™ supports reflection and skill development—it does not replace human decision-making or professional expertise.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* From AI-Detected Signals to Informed Action */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto space-y-12">
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl lg:text-5xl font-bold">From AI-Detected Signals to Informed Action</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                ReflectivAI uses AI to detect patterns in observable behavior during structured practice. These signals do not represent intent, emotion, or motivation. They provide context that helps professionals decide how to respond in high-stakes conversations.
+              </p>
+            </div>
+
+            {/* Three-Column Interpretive Grid */}
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Column 1: What AI Detects */}
+              <div className="bg-white rounded-xl p-6 border-2 border-border space-y-4">
+                <h3 className="text-xl font-bold text-foreground">What AI Detects</h3>
+                <ul className="space-y-3 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Question sequencing and structure</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Response timing and turn length</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Topic continuity or drift</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Frequency of customer participation</span>
+                  </li>
+                </ul>
+                <p className="text-xs text-muted-foreground italic pt-2 border-t border-border">
+                  No evaluation. No scoring.
+                </p>
+              </div>
+
+              {/* Column 2: What the Signal Indicates */}
+              <div className="bg-white rounded-xl p-6 border-2 border-border space-y-4">
+                <h3 className="text-xl font-bold text-foreground">What the Signal Indicates</h3>
+                <ul className="space-y-3 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Alignment vs. misalignment</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Engagement vs. overload</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Progression vs. hesitation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Clarity vs. ambiguity</span>
+                  </li>
+                </ul>
+                <p className="text-xs text-muted-foreground italic pt-2 border-t border-border">
+                  Situational context, not internal state.
+                </p>
+              </div>
+
+              {/* Column 3: What It Informs */}
+              <div className="bg-white rounded-xl p-6 border-2 border-border space-y-4">
+                <h3 className="text-xl font-bold text-foreground">What It Informs</h3>
+                <ul className="space-y-3 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Whether to clarify or proceed</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Whether to pause or reframe</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Whether to summarize or ask a follow-up</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Whether to propose next steps</span>
+                  </li>
+                </ul>
+                <p className="text-xs text-muted-foreground italic pt-2 border-t border-border">
+                  Professional options, not recommendations.
+                </p>
+              </div>
+            </div>
+
+            {/* Boundary Statement */}
+            <div className="bg-primary/5 border-2 border-primary rounded-xl p-6 text-center">
+              <p className="text-lg font-semibold text-foreground">
+                ReflectivAI detects behavioral signals and provides context. Professionals interpret those signals and choose how to respond.
+              </p>
             </div>
           </div>
         </div>
