@@ -211,7 +211,7 @@ export default function HomePage() {
                 During role-play practice, ReflectivAI highlights patterns in how conversations unfold—such as pacing, clarity, and engagement—using the Signal Intelligence framework. These insights support reflection and improvement, while judgment and decisions remain with the professional.
               </p>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4">
-                Reps practice in simulated conversations. After each session, the AI coach scores six Signal Intelligence™ competencies and generates coaching cards that managers can use in 1:1s and training programs. Signal Intelligence™ is used in structured practice sessions, not on live customer calls.
+                Reps practice in simulated conversations. After each session, ReflectivAI organizes observable behaviors into Signal Intelligence™ domains to support reflection and coaching. Managers use coaching cards in 1:1s and training programs. Signal Intelligence™ is used in structured practice sessions, not on live customer calls.
               </p>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4">
                 For sales professionals, these insights reveal where conversations stay aligned with purpose—and where hesitation, overload, or disengagement may be emerging before deals are at risk.
@@ -630,11 +630,11 @@ export default function HomePage() {
             <div className="text-center space-y-6">
               <h2 className="text-2xl md:text-3xl font-bold">Signal Intelligence™ + EI Frameworks</h2>
               <p className="text-lg text-muted-foreground">
-                Our Signal Intelligence platform detects and scores behaviors. Then we apply proven emotional intelligence frameworks—<span className="font-semibold text-foreground">Active Listening</span>, <span className="font-semibold text-foreground">DISC</span>, <span className="font-semibold text-foreground">Empathy Mapping</span>, and <span className="font-semibold text-foreground">Rapport Building</span>—to help you understand why those behaviors worked or failed, and how to adapt.
+                ReflectivAI detects patterns in observable behaviors. Then we apply proven emotional intelligence frameworks—<span className="font-semibold text-foreground">Active Listening</span>, <span className="font-semibold text-foreground">DISC</span>, <span className="font-semibold text-foreground">Empathy Mapping</span>, and <span className="font-semibold text-foreground">Rapport Building</span>—to help you understand why those behaviors worked or failed, and how to adapt.
               </p>
               <div className="pt-4 border-t border-border mt-6">
                 <p className="text-sm text-muted-foreground italic">
-                  Signal Intelligence captures what happened. Emotional intelligence explains why it mattered.
+                  Signals capture what happened. Signal Intelligence™ describes the capability to notice, interpret, and respond to those signals under pressure.
                 </p>
               </div>
             </div>
@@ -719,7 +719,7 @@ export default function HomePage() {
                       </div>
                       <div className="flex-shrink-0">
                         <div className="px-4 py-2 bg-yellow-50 border border-yellow-200 rounded-full">
-                          <span className="text-lg font-bold text-primary">{competency.score.toFixed(1)}/10</span>
+                          <span className="text-sm font-semibold text-primary">{competency.status}</span>
                         </div>
                       </div>
                     </div>
@@ -762,7 +762,7 @@ export default function HomePage() {
                   <p className="text-sm text-muted-foreground mt-1">Turn 4 of conversation</p>
                 </div>
                 <div className="flex-shrink-0 px-3 py-1 bg-yellow-50 border border-yellow-200 rounded-full">
-                  <span className="text-sm font-bold text-primary">9.2 / 10</span>
+                  <span className="text-sm font-semibold text-primary">Consistently strong</span>
                 </div>
               </div>
               <div className="space-y-2">
@@ -783,7 +783,7 @@ export default function HomePage() {
                   <p className="text-sm text-muted-foreground mt-1">Turn 7 of conversation</p>
                 </div>
                 <div className="flex-shrink-0 px-3 py-1 bg-yellow-50 border border-yellow-200 rounded-full">
-                  <span className="text-sm font-bold text-primary">6.8 / 10</span>
+                  <span className="text-sm font-semibold text-primary">Inconsistent</span>
                 </div>
               </div>
               <div className="space-y-2">
@@ -804,7 +804,7 @@ export default function HomePage() {
                   <p className="text-sm text-muted-foreground mt-1">Turn 9 of conversation</p>
                 </div>
                 <div className="flex-shrink-0 px-3 py-1 bg-yellow-50 border border-yellow-200 rounded-full">
-                  <span className="text-sm font-bold text-primary">8.1 / 10</span>
+                  <span className="text-sm font-semibold text-primary">Generally strong</span>
                 </div>
               </div>
               <div className="space-y-2">
@@ -825,7 +825,7 @@ export default function HomePage() {
                   <p className="text-sm text-muted-foreground mt-1">Turn 11 of conversation</p>
                 </div>
                 <div className="flex-shrink-0 px-3 py-1 bg-yellow-50 border border-yellow-200 rounded-full">
-                  <span className="text-sm font-bold text-primary">7.9 / 10</span>
+                  <span className="text-sm font-semibold text-primary">Generally strong</span>
                 </div>
               </div>
               <div className="space-y-2">
@@ -865,9 +865,9 @@ export default function HomePage() {
 
               <div className="space-y-3">
                 <div className="text-5xl font-bold text-primary">2</div>
-                <h3 className="text-xl font-semibold">Interpret Meaning</h3>
+                <h3 className="text-xl font-semibold">Support Reflection</h3>
                 <p className="text-muted-foreground">
-                  Frameworks help you understand what signals mean in context
+                  Frameworks help you reflect on what signals might mean in context
                 </p>
               </div>
 
@@ -1365,11 +1365,11 @@ export default function HomePage() {
               </DialogHeader>
               
               <div className="space-y-6 mt-6 px-6 pb-6">
-                {/* Score and Status */}
+                {/* Status */}
                 <div className="flex items-center gap-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
                   <div>
-                    <div className="text-4xl font-bold text-foreground">{currentCompetency.score.toFixed(1)} / 10</div>
-                    <div className="text-sm text-muted-foreground mt-1">{currentCompetency.status}</div>
+                    <div className="text-2xl font-bold text-foreground">{currentCompetency.status}</div>
+                    <div className="text-sm text-muted-foreground mt-1">Observed pattern across conversation</div>
                   </div>
                 </div>
 
@@ -1409,7 +1409,7 @@ export default function HomePage() {
                   <h4 className="text-lg font-semibold mb-2 text-foreground">How this score was calculated</h4>
                   <p className="text-muted-foreground">{currentCompetency.calculationExplanation}</p>
                   <p className="text-sm text-muted-foreground italic mt-3">
-                    Scores are based on patterns across the entire conversation, not a single moment. Each turn contributes to this 0–10 rating for {currentCompetency.name}.
+                    This assessment is based on patterns across the entire conversation, not a single moment. Each turn contributes to the overall evaluation of {currentCompetency.name}.
                   </p>
                 </div>
 

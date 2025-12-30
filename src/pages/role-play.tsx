@@ -122,9 +122,9 @@ export default function RolePlayPage() {
               <div className="h-12 w-12 rounded-lg bg-accent/10 flex items-center justify-center">
                 <BarChart3 className="h-6 w-6 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold">Behavioral Metrics Feedback</h3>
+              <h3 className="text-xl font-semibold">Behavioral Pattern Feedback</h3>
               <p className="text-muted-foreground">
-                Receive detailed performance analysis after each simulation, including Signal Intelligence capability scores, behavioral metrics (Question Quality, Listening, Objection Navigation), and improvement recommendations.
+                Receive detailed performance analysis after each simulation, including Signal Intelligence™ competency assessments, observable behaviors (Question Quality, Listening, Objection Navigation), and improvement recommendations.
               </p>
             </div>
 
@@ -291,9 +291,9 @@ export default function RolePlayPage() {
                   Discovery
                 </div>
                 <h3 className="text-2xl font-bold">Initial Discovery Calls</h3>
-                <p className="text-lg text-muted-foreground">
-                  Practice Signal Awareness and Signal Interpretation: asking purposeful questions, listening actively, and detecting customer engagement signals.
-                </p>
+              <p className="text-lg text-muted-foreground">
+                Practice detecting signals and reflecting on patterns: asking purposeful questions, listening actively, and noticing customer engagement cues.
+              </p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />

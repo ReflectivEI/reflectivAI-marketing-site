@@ -77,9 +77,9 @@ export default function AICoachPage() {
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
                   <Brain className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold">Interprets Behavior</h3>
+                <h3 className="text-xl font-semibold">Surfaces Patterns</h3>
                 <p className="text-muted-foreground">
-                  Uncertainty, overload, threat, misalignment—AI suggests what the signal might mean
+                  Uncertainty, overload, threat, misalignment—AI highlights patterns for your reflection
                 </p>
               </div>
               <div className="space-y-4 text-center">
@@ -257,14 +257,14 @@ export default function AICoachPage() {
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-center">Real-Time Coaching Cards</h3>
               <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto">
-                The moment you hit "Send," the system evaluates clinical precision, behavioral signals, regulatory alignment, and conversational strategy—assigning each dimension a score out of 10 and mapping it to a color-coded coaching signal.
+                The moment you hit "Send," the system evaluates clinical precision, behavioral signals, regulatory alignment, and conversational strategy—organizing observable behaviors into Signal Intelligence™ domains to support reflection and coaching.
               </p>
               
               <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                 <div className="p-6 rounded-lg border-2 border-green-500/30 bg-green-500/5">
                   <div className="flex items-center justify-between mb-3">
                     <h4 className="font-semibold">Responsiveness</h4>
-                    <div className="text-2xl font-bold text-green-600">9.2/10</div>
+                    <div className="text-lg font-semibold text-green-600">Consistently strong</div>
                   </div>
                   <p className="text-sm text-muted-foreground">
                     Strong acknowledgment: "So you're concerned about patient adherence with twice-daily dosing?" This shows you're building on their input.
@@ -274,7 +274,7 @@ export default function AICoachPage() {
                 <div className="p-6 rounded-lg border-2 border-green-500/30 bg-green-500/5">
                   <div className="flex items-center justify-between mb-3">
                     <h4 className="font-semibold">Communication Clarity</h4>
-                    <div className="text-2xl font-bold text-green-600">8.5/10</div>
+                    <div className="text-lg font-semibold text-green-600">Generally strong</div>
                   </div>
                   <p className="text-sm text-muted-foreground">
                     Clear structure. Your explanation was easy to follow and you addressed the key concern directly.
@@ -284,7 +284,7 @@ export default function AICoachPage() {
                 <div className="p-6 rounded-lg border-2 border-yellow-500/30 bg-yellow-500/5">
                   <div className="flex items-center justify-between mb-3">
                     <h4 className="font-semibold">Intent Alignment</h4>
-                    <div className="text-2xl font-bold text-yellow-600">6.8/10</div>
+                    <div className="text-lg font-semibold text-yellow-600">Inconsistent</div>
                   </div>
                   <p className="text-sm text-muted-foreground">
                     You stayed mostly on purpose, but consider tightening the focus: "Let's return to the efficacy data you asked about."
@@ -294,7 +294,7 @@ export default function AICoachPage() {
                 <div className="p-6 rounded-lg border-2 border-green-500/30 bg-green-500/5">
                   <div className="flex items-center justify-between mb-3">
                     <h4 className="font-semibold">Outcome Orientation</h4>
-                    <div className="text-2xl font-bold text-green-600">8.8/10</div>
+                    <div className="text-lg font-semibold text-green-600">Generally strong</div>
                   </div>
                   <p className="text-sm text-muted-foreground">
                     Excellent close: "Would it make sense to schedule a follow-up after you've reviewed the data?" Clear next step.
@@ -410,12 +410,12 @@ export default function AICoachPage() {
             <div className="p-8 rounded-lg border border-border bg-background space-y-4">
               <h3 className="text-xl font-bold">During Live Calls</h3>
               <p className="text-muted-foreground">
-                Get real-time signal detection: tone shifts, pacing changes, engagement drops. AI Coach suggests interpretations and response options—you decide how to proceed.
+                Practice with simulated conversations. AI Coach highlights patterns in tone, pacing, and engagement. You reflect on what these patterns might mean and decide how to respond.
               </p>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Live signal detection and interpretation suggestions</span>
+                  <span>Pattern detection during practice sessions</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
@@ -423,7 +423,7 @@ export default function AICoachPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Customer Engagement Monitoring alerts</span>
+                  <span>Behavioral pattern highlights for reflection</span>
                 </li>
               </ul>
             </div>
@@ -436,15 +436,15 @@ export default function AICoachPage() {
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Signal detection accuracy and missed opportunities</span>
+                  <span>Pattern recognition and opportunities for reflection</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Behavioral metrics: Question Quality, Listening, Objection Navigation</span>
+                  <span>Observable behaviors: Question Quality, Listening, Objection Navigation</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Specific coaching on Signal Intelligence capabilities</span>
+                  <span>Specific coaching on Signal Intelligence™ competencies</span>
                 </li>
               </ul>
             </div>
@@ -452,20 +452,20 @@ export default function AICoachPage() {
             <div className="p-8 rounded-lg border border-border bg-background space-y-4">
               <h3 className="text-xl font-bold">Ongoing Development</h3>
               <p className="text-muted-foreground">
-                Access personalized training on Signal Intelligence capabilities, practice scenarios with AI feedback, and track your development across all 8 capabilities over time.
+                Access personalized training on Signal Intelligence™ competencies, practice scenarios with AI feedback, and track your development across all 6 competencies over time.
               </p>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Customized learning paths for each capability</span>
+                  <span>Customized learning paths for each competency</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Capability gap analysis and recommendations</span>
+                  <span>Competency gap analysis and recommendations</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Progress tracking with behavioral metrics</span>
+                  <span>Progress tracking with observable behaviors</span>
                 </li>
               </ul>
             </div>
@@ -529,7 +529,7 @@ export default function AICoachPage() {
             <Link to="/" className="p-6 rounded-lg border border-border bg-background hover:shadow-lg transition-shadow space-y-3">
               <h3 className="text-xl font-semibold">Platform Overview</h3>
               <p className="text-muted-foreground">
-                Discover how ReflectivAI supports all 8 Signal Intelligence capabilities across your sales team.
+                Discover how ReflectivAI supports all 6 Signal Intelligence™ competencies across your sales team.
               </p>
               <div className="flex items-center text-primary font-medium">
                 View platform <ArrowRight className="ml-2 h-4 w-4" />
