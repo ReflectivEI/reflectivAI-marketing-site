@@ -1,157 +1,80 @@
-# Deploy Signal Intelligence HTML File
+# DEPLOY SIGNAL INTELLIGENCE FIX - December 31, 2025 4:20 PM
 
-## Current Status
+## What Was Fixed
 
-✅ **COMMITTED:**
-- Header navigation changes (commit: 958da1c)
-- Header now links to `/signal-intelligence-learn-more.html`
+✅ **Added build hook to copy 404.html to dist folder**
+- Updated `vite.config.ts` with closeBundle hook
+- Ensures 404.html is included in GitHub Pages deployment
+- Fixes SPA routing for `/signal-intelligence` page
 
-❌ **NOT YET PUSHED TO GITHUB:**
-- `public/signal-intelligence-learn-more.html` file needs to be added and pushed
+## Files Modified (Ready to Push)
 
----
+1. `vite.config.ts` - Added closeBundle hook to copy 404.html
+2. `DEPLOYMENT.md` - Comprehensive deployment guide
 
-## Files Ready for Deployment
+## Your GitHub Token
 
-### 1. Signal Intelligence HTML Documentation
-- **File:** `public/signal-intelligence-learn-more.html`
-- **Size:** 13,350 bytes (13.3 KB)
-- **Lines:** 345 lines
-- **Format:** Standalone HTML with embedded CSS
-
-### 2. Header Navigation Updates
-- **File:** `src/layouts/parts/Header.tsx`
-- **Changes:** Learn More dropdown now links to HTML file
-- **Status:** Already committed (958da1c)
-
----
-
-## Deployment Steps
-
-### Option 1: Using Terminal (Recommended)
-
-```bash
-# 1. Add the HTML file to git
-git add public/signal-intelligence-learn-more.html
-
-# 2. Commit the HTML file
-git commit -m "Add Signal Intelligence standalone HTML documentation
-
-- Complete framework documentation in standalone HTML format
-- Self-contained with embedded CSS styling
-- Includes all 8 core capabilities with metrics
-- Professional responsive design
-- Accessible from header Learn More dropdown"
-
-# 3. Push to GitHub (requires token)
-./push-to-github.sh YOUR_GITHUB_TOKEN
+```
+[YOUR_GITHUB_TOKEN]
 ```
 
-### Option 2: Manual Git Commands
+## Commands to Run in Terminal
 
 ```bash
-# 1. Add the HTML file
-git add public/signal-intelligence-learn-more.html
+cd ~/reflectivAI-marketing-site
 
-# 2. Commit
-git commit -m "Add Signal Intelligence HTML documentation"
+git add -A
 
-# 3. Push
-git push origin main
+git commit -m "Fix GitHub Pages SPA routing - copy 404.html to dist during build"
+
+git push https://[YOUR_GITHUB_TOKEN]@github.com/ReflectivEI/reflectivAI-marketing-site.git main
 ```
 
----
+## After Pushing
 
-## After Deployment
+1. **Check GitHub Actions**: https://github.com/ReflectivEI/reflectivAI-marketing-site/actions
+2. **Wait 2-3 minutes** for build and deployment
+3. **Test the page**: https://reflectivei.github.io/reflectivAI-marketing-site/signal-intelligence
+4. **Hard refresh**: Cmd+Shift+R
 
-Once pushed to GitHub, the site will auto-deploy to:
-- **Live Site:** https://reflectivei.github.io/reflectivAI-marketing-site/
-- **HTML File:** https://reflectivei.github.io/reflectivAI-marketing-site/signal-intelligence-learn-more.html
+## What This Fix Does
 
-### How to Access
+### The Problem
+- 404.html was in `public/` folder
+- Vite build didn't copy it to `dist/` folder
+- GitHub Pages deployment didn't include 404.html
+- Result: 404 errors on direct page access
 
-1. **From Header Navigation:**
-   - Desktop: Hover "Learn More" → Click "Signal Intelligence"
-   - Mobile: Tap menu → Scroll to "Learn More" → Tap "Signal Intelligence"
+### The Solution
+- Added `closeBundle` hook in vite.config.ts
+- Hook runs after build completes
+- Copies `public/404.html` to `dist/404.html`
+- GitHub Pages deployment now includes 404.html
+- SPA routing works correctly
 
-2. **Direct URL:**
-   - `/signal-intelligence-learn-more.html`
+## Verification Steps
 
----
+1. After deployment completes, visit:
+   https://reflectivei.github.io/reflectivAI-marketing-site/signal-intelligence
 
-## Verification Checklist
+2. You should see the Signal Intelligence page (NOT a 404 error)
 
-After deployment, verify:
+3. Test navigation:
+   - Click "Learn More" in header
+   - Click "Signal Intelligence"
+   - Page should load correctly
 
-- [ ] HTML file is accessible at `/signal-intelligence-learn-more.html`
-- [ ] Header "Learn More" dropdown links to HTML file
-- [ ] HTML file displays correctly (styling, content, layout)
-- [ ] All 8 core capabilities are visible with correct metrics
-- [ ] Back link returns to Signal Intelligence overview page
-- [ ] Mobile responsive design works correctly
+4. Test direct URL access:
+   - Copy/paste URL in new tab
+   - Should load without 404
 
----
+## If Still Seeing 404
 
-## File Contents Summary
-
-### signal-intelligence-learn-more.html
-
-**Sections:**
-1. Hero with title and description
-2. Overview of Signal Intelligence™ framework
-3. 8 Core Capabilities with metric cards:
-   - Question Quality (92%)
-   - Listening & Responsiveness (88%)
-   - Customer Engagement Cues (91%)
-   - Conversation Control & Structure (85%)
-   - Objection Handling (87%)
-   - Adaptability (90%)
-   - Value Framing (86%)
-   - Commitment Gaining (83%)
-4. How It Works (4-step process)
-5. What It's NOT (ethical boundaries)
-6. Key Principles
-7. Implementation Guidelines (for reps, managers, leaders)
-8. Compliance & Ethics section
-
-**Design:**
-- Clean, professional styling
-- Responsive grid layout
-- Blue primary color scheme
-- Red warning boxes for boundaries
-- System fonts for fast loading
-- Self-contained (no external dependencies)
+1. **Wait longer**: GitHub Pages CDN can take 5-10 minutes
+2. **Clear cache**: Hard refresh (Cmd+Shift+R)
+3. **Check Actions**: Ensure build succeeded with green checkmark
+4. **Verify 404.html**: Check https://github.com/ReflectivEI/reflectivAI-marketing-site/blob/gh-pages/404.html
 
 ---
 
-## Troubleshooting
-
-### If HTML file doesn't appear after deployment:
-
-1. **Check git tracking:**
-   ```bash
-   git ls-files | grep signal-intelligence-learn-more.html
-   ```
-
-2. **Verify .gitignore doesn't exclude it:**
-   - `.gitignore` excludes `public/assets` but NOT `public/*.html`
-   - HTML file should be tracked
-
-3. **Check GitHub repository:**
-   - Go to: https://github.com/ReflectivEI/reflectivAI-marketing-site
-   - Navigate to `public/` folder
-   - Verify `signal-intelligence-learn-more.html` is present
-
-4. **Wait for GitHub Pages deployment:**
-   - GitHub Pages can take 1-2 minutes to rebuild
-   - Check Actions tab for deployment status
-
----
-
-## Next Steps
-
-1. ✅ Run deployment commands above
-2. ✅ Verify file is pushed to GitHub
-3. ✅ Wait for GitHub Pages auto-deployment
-4. ✅ Test live site and HTML file access
-5. ✅ Verify header navigation works correctly
+**Ready to deploy? Run the commands above in your terminal!**
