@@ -1,44 +1,41 @@
-=================================================================
-  DEPLOY SIGNAL INTELLIGENCE HTML FILE TO GITHUB
-=================================================================
+# DEPLOYMENT INSTRUCTIONS - December 31, 2025 4:15 PM
 
-STATUS:
-✅ Header navigation updated (committed: 958da1c)
-✅ HTML file exists: public/signal-intelligence-learn-more.html
-❌ HTML file NOT YET PUSHED to GitHub
+## Changes Ready to Deploy:
 
------------------------------------------------------------------
+1. **src/layouts/parts/Header.tsx** - Added Signal Intelligence link to Learn More dropdown
+2. **public/404.html** - NEW FILE for GitHub Pages SPA routing
+3. **index.html** - Updated with SPA routing support
 
-TO DEPLOY, RUN THESE COMMANDS IN YOUR TERMINAL:
+## Your GitHub Token:
+[YOUR_GITHUB_TOKEN]
 
-# Step 1: Add the HTML file to git
-git add public/signal-intelligence-learn-more.html
+## Deploy Commands:
 
-# Step 2: Commit the HTML file
-git commit -m "Add Signal Intelligence standalone HTML documentation"
+```bash
+cd /path/to/reflectivAI-marketing-site
 
-# Step 3: Push to GitHub
+# Set remote with token
+git remote set-url origin https://[YOUR_GITHUB_TOKEN]@github.com/ReflectivEI/reflectivAI-marketing-site.git
+
+# Add all changes
+git add -A
+
+# Commit
+git commit -m "Add Signal Intelligence to Learn More dropdown and fix GitHub Pages routing"
+
+# Push to GitHub
 git push origin main
+```
 
------------------------------------------------------------------
+## After Pushing:
 
-AFTER DEPLOYMENT:
+1. Check GitHub Actions: https://github.com/ReflectivEI/reflectivAI-marketing-site/actions
+2. Wait 2-3 minutes for deployment
+3. Visit: https://reflectivei.github.io/reflectivAI-marketing-site/signal-intelligence
+4. Hard refresh (Ctrl+Shift+R or Cmd+Shift+R)
 
-Your site will auto-deploy to:
-🌐 https://reflectivei.github.io/reflectivAI-marketing-site/
+## What This Deploys:
 
-HTML file will be accessible at:
-📄 https://reflectivei.github.io/reflectivAI-marketing-site/signal-intelligence-learn-more.html
-
-Header "Learn More" dropdown will link to this file.
-
------------------------------------------------------------------
-
-VERIFY DEPLOYMENT:
-
-1. Visit the live site
-2. Hover over "Learn More" in the header
-3. Click "Signal Intelligence"
-4. Confirm the HTML documentation page loads
-
-=================================================================
+✅ Signal Intelligence link in header Learn More dropdown
+✅ Fixes 404 errors on GitHub Pages for /signal-intelligence route
+✅ Enables proper SPA routing on GitHub Pages
