@@ -5,9 +5,17 @@
   <title>ReflectivAI</title>
   <script>
     // GitHub Pages SPA redirect handler
-    // This script takes the current URL and converts it to a query string
-    // that the main index.html can use to route to the correct page
-    sessionStorage.redirect = location.href;
+    // Save the path (including hash) for the main app to handle
+    var path = window.location.pathname;
+    var basePath = '/reflectivAI-marketing-site';
+    
+    // Remove base path if present to get the route
+    if (path.indexOf(basePath) === 0) {
+      path = path.substring(basePath.length);
+    }
+    
+    // Save the route for index.html to restore
+    sessionStorage.setItem('redirectPath', path + window.location.search + window.location.hash);
   </script>
   <meta http-equiv="refresh" content="0;URL='/reflectivAI-marketing-site/'">
 </head>
