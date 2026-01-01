@@ -83,7 +83,7 @@ export default function SignalIntelligencePage() {
           <h2 className="text-xl mb-2.5 font-bold">Core Human Decision Drivers</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
-              <span className="inline-block text-xs text-muted-foreground border border-border rounded-full px-2.5 py-1 mr-2">
+              <span className="inline-block px-2.5 py-1 text-xs rounded-full bg-[#1e3a8a] text-white border-2 border-accent mr-2">
                 Driver
               </span>
               <h3 className="text-base mt-2 mb-2">Cognitive Empathy / Perspective Taking</h3>
@@ -113,7 +113,7 @@ export default function SignalIntelligencePage() {
             </div>
 
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
-              <span className="inline-block text-xs text-muted-foreground border border-border rounded-full px-2.5 py-1 mr-2">
+              <span className="inline-block px-2.5 py-1 text-xs rounded-full bg-[#1e3a8a] text-white border-2 border-accent mr-2">
                 Driver
               </span>
               <h3 className="text-base mt-2 mb-2">Emotional Intelligence (EI)</h3>
@@ -143,7 +143,7 @@ export default function SignalIntelligencePage() {
             </div>
 
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
-              <span className="inline-block text-xs text-muted-foreground border border-border rounded-full px-2.5 py-1 mr-2">
+              <span className="inline-block px-2.5 py-1 text-xs rounded-full bg-[#1e3a8a] text-white border-2 border-accent mr-2">
                 Driver
               </span>
               <h3 className="text-base mt-2 mb-2">Metacognition & Confidence Calibration</h3>
@@ -173,7 +173,7 @@ export default function SignalIntelligencePage() {
             </div>
 
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
-              <span className="inline-block text-xs text-muted-foreground border border-border rounded-full px-2.5 py-1 mr-2">
+              <span className="inline-block px-2.5 py-1 text-xs rounded-full bg-[#1e3a8a] text-white border-2 border-accent mr-2">
                 Driver
               </span>
               <h3 className="text-base mt-2 mb-2">Motivation, Autonomy & Commitment</h3>
@@ -203,7 +203,7 @@ export default function SignalIntelligencePage() {
             </div>
 
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
-              <span className="inline-block text-xs text-muted-foreground border border-border rounded-full px-2.5 py-1 mr-2">
+              <span className="inline-block px-2.5 py-1 text-xs rounded-full bg-[#1e3a8a] text-white border-2 border-accent mr-2">
                 Driver
               </span>
               <h3 className="text-base mt-2 mb-2">Social Threat, Status & Identity</h3>
