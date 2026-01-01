@@ -271,7 +271,7 @@ const scenarios: Scenario[] = [
           capability: 'Signal Awareness',
           metric: 'Question Quality',
           rating: 'strong',
-          note: 'Validates concern and invites customer to articulate specific gap - builds credibility'
+          note: 'Rep acknowledges concern and asks a clarifying question about the perceived gap'
         }]
       },
       {
@@ -285,7 +285,7 @@ const scenarios: Scenario[] = [
           capability: 'Signal Interpretation',
           metric: 'Listening & Responsiveness',
           rating: 'strong',
-          note: 'Acknowledges limitation honestly rather than deflecting - builds trust'
+          note: 'Rep explicitly acknowledges trial limitations and references additional evidence'
         }]
       },
       {
