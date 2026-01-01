@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -57,7 +58,7 @@ const scenarios: Scenario[] = [
           capability: 'Signal Awareness',
           metric: 'Question Quality',
           rating: 'strong',
-          note: 'Acknowledges time constraint upfront—shows awareness of customer context'
+          note: 'Acknowledges time constraint upfront - shows awareness of customer context'
         }]
       },
       {
@@ -85,7 +86,7 @@ const scenarios: Scenario[] = [
           capability: 'Signal Interpretation',
           metric: 'Listening & Responsiveness',
           rating: 'strong',
-          note: 'Picks up on key phrase and explores deeper—demonstrates active listening'
+          note: 'Picks up on key phrase and explores deeper - demonstrates active listening'
         }]
       },
       {
@@ -99,7 +100,7 @@ const scenarios: Scenario[] = [
           capability: 'Value Connection',
           metric: 'Value Framing',
           rating: 'strong',
-          note: 'Connects clinical need to patient adherence—frames value in doctor's terms'
+          note: 'Connects clinical need to patient adherence - frames value in doctor terms'
         }]
       },
       {
@@ -113,22 +114,22 @@ const scenarios: Scenario[] = [
           capability: 'Commitment Generation',
           metric: 'Commitment Gaining',
           rating: 'good',
-          note: 'Asks permission before presenting—respectful of time and builds engagement'
+          note: 'Asks permission before presenting - respectful of time and builds engagement'
         }]
       }
     ],
     coachingFeedback: {
       strengths: [
-        'Excellent signal awareness—acknowledged time constraint immediately',
-        'Strong listening and responsiveness—picked up on "quality of life" and explored deeper',
-        'Effective value framing—connected clinical need to patient adherence'
+        'Excellent signal awareness - acknowledged time constraint immediately',
+        'Strong listening and responsiveness - picked up on "quality of life" and explored deeper',
+        'Effective value framing - connected clinical need to patient adherence'
       ],
       improvements: [
         'Could have explored "failed first-line therapy" comment earlier',
         'Opportunity to ask about decision-making process or formulary considerations'
       ],
       recommendations: [
-        'When a customer mentions a specific patient population ("failed first-line"), dig into that immediately—it often reveals urgency',
+        'When a customer mentions a specific patient population ("failed first-line"), dig into that immediately - it often reveals urgency',
         'Consider asking: "What would need to be true for you to consider changing your current approach?" to understand decision criteria',
         'Before presenting data, confirm: "Is there anything else I should understand about your patient population before I share this?"'
       ],
@@ -154,11 +155,11 @@ const scenarios: Scenario[] = [
     conversation: [
       {
         speaker: 'customer',
-        text: "I've reviewed your proposal, but I have to be honest—the cost is significantly higher than our current standard of care."
+        text: "I've reviewed your proposal, but I have to be honest - the cost is significantly higher than our current standard of care."
       },
       {
         speaker: 'rep',
-        text: "I appreciate you being direct about that. Cost is absolutely a real consideration. Can I ask—what are you currently using as your standard of care?",
+        text: "I appreciate you being direct about that. Cost is absolutely a real consideration. Can I ask - what are you currently using as your standard of care?",
         signals: [{
           capability: 'Objection Navigation',
           metric: 'Objection Handling',
@@ -172,12 +173,12 @@ const scenarios: Scenario[] = [
       },
       {
         speaker: 'rep',
-        text: "That makes sense—familiarity and cost predictability matter. You mentioned it's not perfect. What are the gaps you're seeing with Drug X?",
+        text: "That makes sense - familiarity and cost predictability matter. You mentioned it's not perfect. What are the gaps you're seeing with Drug X?",
         signals: [{
           capability: 'Signal Interpretation',
           metric: 'Listening & Responsiveness',
           rating: 'strong',
-          note: 'Catches subtle signal ("not perfect") and explores it—turns objection into discovery'
+          note: 'Catches subtle signal ("not perfect") and explores it - turns objection into discovery'
         }]
       },
       {
@@ -186,7 +187,7 @@ const scenarios: Scenario[] = [
       },
       {
         speaker: 'rep',
-        text: "So there's a hidden cost when Drug X doesn't work—you're paying for the initial therapy plus the rescue therapy, plus the clinical time managing those transitions. Is that what you're experiencing?",
+        text: "So there's a hidden cost when Drug X doesn't work - you're paying for the initial therapy plus the rescue therapy, plus the clinical time managing those transitions. Is that what you're experiencing?",
         signals: [{
           capability: 'Value Connection',
           metric: 'Value Framing',
@@ -196,16 +197,16 @@ const scenarios: Scenario[] = [
       },
       {
         speaker: 'customer',
-        text: "That's exactly it. We hadn't really quantified that, but yes—the failures are costly."
+        text: "That's exactly it. We hadn't really quantified that, but yes - the failures are costly."
       },
       {
         speaker: 'rep',
-        text: "Would it be useful to look at the total cost per successfully treated patient rather than just the per-unit cost? Our data shows that when you factor in response rates and tolerability, the cost per successful outcome is actually comparable—and in some cases, lower.",
+        text: "Would it be useful to look at the total cost per successfully treated patient rather than just the per-unit cost? Our data shows that when you factor in response rates and tolerability, the cost per successful outcome is actually comparable - and in some cases, lower.",
         signals: [{
           capability: 'Adaptive Response',
           metric: 'Adaptability',
           rating: 'strong',
-          note: 'Shifts conversation from price to value—adapts approach based on customer's hidden cost insight'
+          note: 'Shifts conversation from price to value - adapts approach based on customer hidden cost insight'
         }]
       },
       {
@@ -225,17 +226,17 @@ const scenarios: Scenario[] = [
     ],
     coachingFeedback: {
       strengths: [
-        'Excellent objection handling—acknowledged concern without defensiveness',
-        'Strong listening—caught "not perfect" signal and explored it',
-        'Effective value reframing—shifted from price to total cost of care',
-        'Good adaptability—pivoted approach based on customer insight'
+        'Excellent objection handling - acknowledged concern without defensiveness',
+        'Strong listening - caught "not perfect" signal and explored it',
+        'Effective value reframing - shifted from price to total cost of care',
+        'Good adaptability - pivoted approach based on customer insight'
       ],
       improvements: [
         'Could have asked about budget cycle timing to understand urgency',
         'Opportunity to explore who else needs to be involved in the decision'
       ],
       recommendations: [
-        'When a customer mentions "making the case to the committee," immediately ask: "Who's on that committee, and what matters most to each of them?"',
+        'When a customer mentions "making the case to the committee," immediately ask: "Who is on that committee, and what matters most to each of them?"',
         'Consider asking: "What would a successful outcome look like for you personally in this decision?" to understand individual motivations',
         'Follow up with: "What concerns do you think the committee will raise that we should address proactively?"'
       ],
@@ -265,12 +266,12 @@ const scenarios: Scenario[] = [
       },
       {
         speaker: 'rep',
-        text: "That's a really important question—trial populations don't always match real-world patients. What differences are you seeing that concern you?",
+        text: "That's a really important question - trial populations don't always match real-world patients. What differences are you seeing that concern you?",
         signals: [{
           capability: 'Signal Awareness',
           metric: 'Question Quality',
           rating: 'strong',
-          note: 'Validates concern and invites customer to articulate specific gap—builds credibility'
+          note: 'Validates concern and invites customer to articulate specific gap - builds credibility'
         }]
       },
       {
@@ -279,12 +280,12 @@ const scenarios: Scenario[] = [
       },
       {
         speaker: 'rep',
-        text: "You're right—the trial had those exclusion criteria for safety monitoring purposes. That's a real gap. We do have some emerging real-world evidence from post-marketing surveillance that includes older patients and those with comorbidities. Would that be relevant to review?",
+        text: "You're right - the trial had those exclusion criteria for safety monitoring purposes. That's a real gap. We do have some emerging real-world evidence from post-marketing surveillance that includes older patients and those with comorbidities. Would that be relevant to review?",
         signals: [{
           capability: 'Signal Interpretation',
           metric: 'Listening & Responsiveness',
           rating: 'strong',
-          note: 'Acknowledges limitation honestly rather than deflecting—builds trust'
+          note: 'Acknowledges limitation honestly rather than deflecting - builds trust'
         }]
       },
       {
@@ -293,7 +294,7 @@ const scenarios: Scenario[] = [
       },
       {
         speaker: 'rep',
-        text: "It's about 1,200 patients so far, with a median follow-up of 8 months. It's observational, so not as controlled as the Phase 3 trial, but it does show similar efficacy trends and—importantly—no unexpected safety signals in the older or comorbid populations.",
+        text: "It's about 1,200 patients so far, with a median follow-up of 8 months. It's observational, so not as controlled as the Phase 3 trial, but it does show similar efficacy trends and - importantly - no unexpected safety signals in the older or comorbid populations.",
         signals: [{
           capability: 'Value Connection',
           metric: 'Value Framing',
@@ -303,11 +304,11 @@ const scenarios: Scenario[] = [
       },
       {
         speaker: 'customer',
-        text: "That's helpful. I'd still want to see the actual data. My other concern is the dosing schedule—it's more complex than what we currently use."
+        text: "That's helpful. I'd still want to see the actual data. My other concern is the dosing schedule - it's more complex than what we currently use."
       },
       {
         speaker: 'rep',
-        text: "I hear that—dosing complexity can impact adherence and create operational challenges. Can you help me understand what specifically about the schedule concerns you? Is it the frequency, the administration requirements, or something else?",
+        text: "I hear that - dosing complexity can impact adherence and create operational challenges. Can you help me understand what specifically about the schedule concerns you? Is it the frequency, the administration requirements, or something else?",
         signals: [{
           capability: 'Customer Engagement Monitoring',
           metric: 'Engagement Cues',
@@ -326,7 +327,7 @@ const scenarios: Scenario[] = [
           capability: 'Adaptive Response',
           metric: 'Adaptability',
           rating: 'strong',
-          note: 'Pivots from clinical discussion to operational solution—adapts to customer's real barrier'
+          note: 'Pivots from clinical discussion to operational solution - adapts to customer real barrier'
         }]
       },
       {
@@ -346,10 +347,10 @@ const scenarios: Scenario[] = [
     ],
     coachingFeedback: {
       strengths: [
-        'Excellent credibility building—acknowledged data limitations honestly',
-        'Strong engagement monitoring—recognized shift to operational concerns',
-        'Effective adaptability—pivoted from clinical to operational solutions',
-        'Good listening—explored specific concerns rather than making assumptions'
+        'Excellent credibility building - acknowledged data limitations honestly',
+        'Strong engagement monitoring - recognized shift to operational concerns',
+        'Effective adaptability - pivoted from clinical to operational solutions',
+        'Good listening - explored specific concerns rather than making assumptions'
       ],
       improvements: [
         'Could have asked about decision timeline earlier in conversation',
@@ -385,9 +386,9 @@ const capabilities = [
   {
     name: 'Signal Interpretation',
     metric: 'Listening & Responsiveness',
-    description: 'Understanding the meaning and implications behind what customers say—and what they don\'t say',
+    description: 'Understanding the meaning and implications behind what customers say - and what they do not say',
     example: {
-      good: 'Customer says "it\'s not perfect"—rep explores: "What gaps are you seeing?" rather than moving on',
+      good: 'Customer says "it is not perfect" - rep explores: "What gaps are you seeing?" rather than moving on',
       needsWork: 'Customer mentions a concern but rep continues with scripted talking points'
     }
   },
@@ -397,7 +398,7 @@ const capabilities = [
     description: 'Linking product features to specific customer needs and priorities in their language',
     example: {
       good: '"You mentioned patient adherence is critical. Our once-weekly dosing directly addresses that by reducing administration burden."',
-      needsWork: 'Listing product features without connecting them to customer\'s stated priorities'
+      needsWork: 'Listing product features without connecting them to customer stated priorities'
     }
   },
   {
@@ -405,7 +406,7 @@ const capabilities = [
     metric: 'Engagement Cues',
     description: 'Tracking customer interest, understanding, and receptivity throughout the conversation',
     example: {
-      good: 'Noticing customer\'s energy shift when discussing a specific topic and exploring it further',
+      good: 'Noticing customer energy shift when discussing a specific topic and exploring it further',
       needsWork: 'Continuing to present information despite customer showing signs of disengagement or confusion'
     }
   },
@@ -414,7 +415,7 @@ const capabilities = [
     metric: 'Objection Handling',
     description: 'Addressing concerns and resistance in a way that maintains trust and moves the conversation forward',
     example: {
-      good: '"Cost is a real consideration. Help me understand what you\'re comparing this to and what matters most in that comparison."',
+      good: '"Cost is a real consideration. Help me understand what you are comparing this to and what matters most in that comparison."',
       needsWork: 'Becoming defensive or dismissive when customer raises a concern'
     }
   },
@@ -423,7 +424,7 @@ const capabilities = [
     metric: 'Conversation Control & Structure',
     description: 'Guiding the conversation productively while remaining responsive to customer needs',
     example: {
-      good: '"We\'ve covered efficacy and safety. Should we discuss implementation, or is there something else more pressing?"',
+      good: '"We have covered efficacy and safety. Should we discuss implementation, or is there something else more pressing?"',
       needsWork: 'Letting the conversation drift without clear direction or allowing customer to dominate without addressing key topics'
     }
   },
@@ -432,7 +433,7 @@ const capabilities = [
     metric: 'Adaptability',
     description: 'Adjusting approach, messaging, and tactics based on customer feedback and changing circumstances',
     example: {
-      good: 'Shifting from clinical data discussion to operational implementation when customer reveals that\'s the real barrier',
+      good: 'Shifting from clinical data discussion to operational implementation when customer reveals that is the real barrier',
       needsWork: 'Sticking to planned presentation despite customer signals indicating different priorities'
     }
   },
@@ -441,8 +442,8 @@ const capabilities = [
     metric: 'Commitment Gaining',
     description: 'Moving the customer toward clear next steps and decisions in a natural, pressure-free way',
     example: {
-      good: '"Based on what we\'ve discussed, would it make sense to schedule time with your clinical team to review the protocol?"',
-      needsWork: 'Ending conversations without clear next steps or pushing for commitments that don\'t align with customer readiness'
+      good: '"Based on what we have discussed, would it make sense to schedule time with your clinical team to review the protocol?"',
+      needsWork: 'Ending conversations without clear next steps or pushing for commitments that do not align with customer readiness'
     }
   }
 ];
@@ -469,7 +470,7 @@ export default function DemoPage() {
               Experience ReflectivAI in Action
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Explore our AI-powered coaching platform with interactive demos. See how Signal Intelligence™ transforms sales conversations—no signup required.
+              Explore our AI-powered coaching platform with interactive demos. See how Signal Intelligence™ transforms sales conversations - no signup required.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button size="lg" asChild>
