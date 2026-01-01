@@ -354,7 +354,7 @@ const scenarios: Scenario[] = [
       ],
       improvements: [
         'Could have asked about decision timeline earlier in conversation',
-        'Opportunity to explore what "success" looks like from customer's perspective'
+        'Opportunity to explore what "success" looks like from customer\'s perspective'
       ],
       recommendations: [
         'When a customer raises evidence concerns, ask: "What level of evidence would you need to feel comfortable moving forward?" to understand their threshold',
