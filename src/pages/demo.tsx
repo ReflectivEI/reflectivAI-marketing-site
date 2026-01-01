@@ -546,9 +546,6 @@ export default function DemoPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              //<Badge className="mb-4" variant="outline">
-               // Demo #1
-              //</Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Role Play Simulation
               </h2>
@@ -800,9 +797,6 @@ export default function DemoPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              //<Badge className="mb-4" variant="outline">
-                //Demo #2
-              //</Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Role Play Scenario Sampler
               </h2>
@@ -839,9 +833,6 @@ export default function DemoPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              //<Badge className="mb-4" variant="outline">
-               // Demo #3
-             // </Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Signal Intelligence™ Framework Explorer
               </h2>
