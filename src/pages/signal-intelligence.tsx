@@ -9,7 +9,7 @@ export default function SignalIntelligencePage() {
             Learn More
           </p>
           <h1 className="text-[34px] leading-tight mb-2">Signal Intelligence<sup className="text-lg">™</sup></h1>
-          <p className="text-muted-foreground mb-0">
+          <p className="text-muted-foreground mb-0 font-bold">
             Capabilities, Behavioral Metrics & Methodology (ReflectivAI)
           </p>
           <p className="text-sm text-muted-foreground border-l-3 border-l-accent pl-3 mt-3">
@@ -19,7 +19,7 @@ export default function SignalIntelligencePage() {
 
         {/* Purpose */}
         <section className="border border-border rounded-2xl bg-card p-5 mb-4">
-          <h2 className="text-xl mb-2.5">Purpose</h2>
+          <h2 className="text-xl mb-2.5 font-bold">Purpose</h2>
           <p className="my-2.5">
             Signal Intelligence<sup className="text-xs">™</sup> (SI) is designed to make conversational skill development clearer, safer, and more effective for sales professionals, coaches, and enablement teams working in high-stakes conversations.
           </p>
@@ -36,7 +36,7 @@ export default function SignalIntelligencePage() {
 
         {/* How to Read This Page */}
         <section className="border border-border rounded-2xl bg-card p-5 mb-4">
-          <h2 className="text-xl mb-2.5">How to Read This Page</h2>
+          <h2 className="text-xl mb-2.5 font-bold">How to Read This Page</h2>
           <p className="text-base font-semibold my-2.5">A Visual Map of the System</p>
           <p className="my-2.5">
             This page is organized in three connected layers, each building on the one before it:
@@ -66,7 +66,7 @@ export default function SignalIntelligencePage() {
 
         {/* Human Decision Drivers Framework */}
         <section className="border border-border rounded-2xl bg-card p-5 mb-4">
-          <h2 className="text-xl mb-2.5">Human Decision Drivers Framework</h2>
+          <h2 className="text-xl mb-2.5 font-bold">Human Decision Drivers Framework</h2>
           <p className="my-2.5">
             The Human Decision Drivers Framework explains why conversational behaviors change in real interactions.
           </p>
@@ -80,7 +80,7 @@ export default function SignalIntelligencePage() {
 
         {/* Core Human Decision Drivers */}
         <section className="border border-border rounded-2xl bg-card p-5 mb-4">
-          <h2 className="text-xl mb-2.5">Core Human Decision Drivers</h2>
+          <h2 className="text-xl mb-2.5 font-bold">Core Human Decision Drivers</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
               <span className="inline-block text-xs text-muted-foreground border border-border rounded-full px-2.5 py-1 mr-2">
@@ -246,7 +246,7 @@ export default function SignalIntelligencePage() {
 
         {/* Signal Intelligence Capabilities */}
         <section className="border border-border rounded-2xl bg-card p-5 mb-4">
-          <h2 className="text-xl mb-2.5">Signal Intelligence<sup className="text-xs">™</sup> Capabilities</h2>
+          <h2 className="text-xl mb-2.5 font-bold">Signal Intelligence<sup className="text-xs">™</sup> Capabilities</h2>
           <p className="my-2.5">
             Signal Intelligence<sup className="text-xs">™</sup> Capabilities describe the conversational skills people develop through practice.
           </p>
@@ -260,7 +260,7 @@ export default function SignalIntelligencePage() {
             Capabilities are behavior-based expressions used for coaching and learning—not psychological constructs, diagnostic tools, or classifications of individuals.
           </p>
 
-          <h3 className="text-base mt-4 mb-2">Capability-to-Metric Mapping</h3>
+          <h3 className="text-base mt-4 mb-2 font-bold">Capability-to-Metric Mapping</h3>
           <div className="w-full border border-border rounded-2xl overflow-hidden bg-muted/30 my-2.5">
             <table className="w-full border-collapse">
               <thead>
@@ -370,7 +370,7 @@ export default function SignalIntelligencePage() {
 
         {/* Behavioral Metrics */}
         <section className="border border-border rounded-2xl bg-card p-5 mb-4">
-          <h2 className="text-xl mb-2.5">Behavioral Metrics</h2>
+          <h2 className="text-xl mb-2.5 font-bold">Behavioral Metrics</h2>
           <p className="text-base font-semibold my-2.5">Observable behaviors that support coaching and skill development</p>
           <p className="my-2.5">
             Behavioral Metrics describe how each conversational skill shows up in practice.
@@ -383,7 +383,7 @@ export default function SignalIntelligencePage() {
           </p>
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
-            <h3 className="text-base mb-2">Signal Awareness - Question Quality</h3>
+            <h3 className="text-base mb-2 font-bold">Signal Awareness - Question Quality</h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Purposeful, customer-centered questioning</li>
@@ -399,7 +399,7 @@ export default function SignalIntelligencePage() {
           </div>
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
-            <h3 className="text-base mb-2">Signal Interpretation - Listening & Responsiveness</h3>
+            <h3 className="text-base mb-2 font-bold">Signal Interpretation - Listening & Responsiveness</h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Accurate paraphrasing</li>
@@ -415,7 +415,7 @@ export default function SignalIntelligencePage() {
           </div>
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
-            <h3 className="text-base mb-2">Value Connection - Value Framing</h3>
+            <h3 className="text-base mb-2 font-bold">Value Connection - Value Framing</h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Outcome-focused language</li>
@@ -431,7 +431,7 @@ export default function SignalIntelligencePage() {
           </div>
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
-            <h3 className="text-base mb-2">
+            <h3 className="text-base mb-2 font-bold">
               Customer Engagement Monitoring - Engagement Cues
             </h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
@@ -450,7 +450,7 @@ export default function SignalIntelligencePage() {
           </div>
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
-            <h3 className="text-base mb-2">Objection Navigation - Objection Handling</h3>
+            <h3 className="text-base mb-2 font-bold">Objection Navigation - Objection Handling</h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Calm response to resistance</li>
@@ -466,7 +466,7 @@ export default function SignalIntelligencePage() {
           </div>
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
-            <h3 className="text-base mb-2">
+            <h3 className="text-base mb-2 font-bold">
               Conversation Management - Conversation Control & Structure
             </h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
@@ -485,7 +485,7 @@ export default function SignalIntelligencePage() {
           </div>
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
-            <h3 className="text-base mb-2">Adaptive Response - Adaptability</h3>
+            <h3 className="text-base mb-2 font-bold">Adaptive Response - Adaptability</h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Adjusts tone, depth, or pacing based on signals</li>
@@ -498,7 +498,7 @@ export default function SignalIntelligencePage() {
           </div>
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
-            <h3 className="text-base mb-2">Commitment Generation - Commitment Gaining</h3>
+            <h3 className="text-base mb-2 font-bold">Commitment Generation - Commitment Gaining</h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Secures voluntary, explicit next actions</li>
@@ -515,7 +515,7 @@ export default function SignalIntelligencePage() {
 
         {/* Methodological Safeguards */}
         <section className="border border-border rounded-2xl bg-card p-5 mb-4">
-          <h2 className="text-xl mb-2.5">Methodological Safeguards</h2>
+          <h2 className="text-xl mb-2.5 font-bold">Methodological Safeguards</h2>
           <p className="my-2.5">
             Signal Intelligence<sup className="text-xs">™</sup> is non-clinical and non-diagnostic. It assesses observable conversation behavior only and does not infer protected attributes or mental health status. All metrics are explainable, coachable, and auditable.
           </p>
@@ -523,7 +523,7 @@ export default function SignalIntelligencePage() {
 
         {/* References */}
         <section className="border border-border rounded-2xl bg-card p-5 mb-4">
-          <h2 className="text-xl mb-2.5">References (Links)</h2>
+          <h2 className="text-xl mb-2.5 font-bold">References (Links)</h2>
           <ol className="my-2.5 ml-5 list-decimal">
             <li className="my-2">
               Davis, M. H. (1983).{' '}
