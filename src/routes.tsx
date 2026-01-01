@@ -5,6 +5,7 @@ import AICoachPage from './pages/ai-coach';
 import RolePlayPage from './pages/role-play';
 import SignalIntelligencePage from './pages/signal-intelligence';
 import ContactPage from './pages/contact';
+import DemoPage from './pages/demo';
 
 // Lazy load components for code splitting (except HomePage for instant loading)
 const isDevelopment = (import.meta.env as any).DEV;
@@ -32,12 +33,16 @@ export const routes: RouteObject[] = [
     element: <ContactPage />,
   },
   {
+    path: '/demo',
+    element: <DemoPage />,
+  },
+  {
     path: '*',
     element: <NotFoundPage />,
   },
 ];
 
 // Types for type-safe navigation
-export type Path = '/' | '/ai-coach' | '/role-play' | '/signal-intelligence' | '/contact';
+export type Path = '/' | '/ai-coach' | '/role-play' | '/signal-intelligence' | '/contact' | '/demo';
 
 export type Params = Record<string, string | undefined>;
