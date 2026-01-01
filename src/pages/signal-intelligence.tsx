@@ -270,7 +270,6 @@ export default function SignalIntelligencePage() {
                   Signal Awareness
                 </span>
               </div>
-              <h3 className="text-base font-semibold mb-2">Signal Awareness</h3>
               <p className="my-2">Signal Awareness is the capability to notice relevant customer cues and use those cues to shape purposeful, well-sequenced questions.</p>
               <p className="text-sm text-muted-foreground italic">Often shows up when a seller notices relevant customer cues and uses them to shape their next question.</p>
             </div>
@@ -282,7 +281,6 @@ export default function SignalIntelligencePage() {
                   Signal Interpretation
                 </span>
               </div>
-              <h3 className="text-base font-semibold mb-2">Signal Interpretation</h3>
               <p className="my-2">Signal Interpretation is the capability to make sense of what a customer is communicating and adjust responses as new information emerges.</p>
               <p className="text-sm text-muted-foreground italic">Often shows up when a seller reflects what they're hearing and adapts their response.</p>
             </div>
@@ -294,7 +292,6 @@ export default function SignalIntelligencePage() {
                   Value Connection
                 </span>
               </div>
-              <h3 className="text-base font-semibold mb-2">Value Connection</h3>
               <p className="my-2">Value Connection is the capability to link discussion to what matters to the customer by translating priorities into outcome-based value.</p>
               <p className="text-sm text-muted-foreground italic">Often shows up when a seller connects the conversation back to outcomes or priorities already expressed.</p>
             </div>
@@ -306,7 +303,6 @@ export default function SignalIntelligencePage() {
                   Customer Engagement Monitoring
                 </span>
               </div>
-              <h3 className="text-base font-semibold mb-2">Customer Engagement Monitoring</h3>
               <p className="my-2">Customer Engagement Monitoring is the capability to notice and track changes in customer engagement, including participation, energy, and forward-looking behavior.</p>
               <p className="text-sm text-muted-foreground italic">Often shows up when a seller notices changes in participation, energy, or forward-looking questions.</p>
             </div>
@@ -318,7 +314,6 @@ export default function SignalIntelligencePage() {
                   Objection Navigation
                 </span>
               </div>
-              <h3 className="text-base font-semibold mb-2">Objection Navigation</h3>
               <p className="my-2">Objection Navigation is the capability to respond to resistance calmly by acknowledging concerns and exploring what's behind them.</p>
               <p className="text-sm text-muted-foreground italic">Often shows up when a seller acknowledges a concern before exploring it.</p>
             </div>
@@ -330,7 +325,6 @@ export default function SignalIntelligencePage() {
                   Conversation Management
                 </span>
               </div>
-              <h3 className="text-base font-semibold mb-2">Conversation Management</h3>
               <p className="my-2">Conversation Management is the capability to guide a conversation with purpose through structure, transitions, and shared understanding.</p>
               <p className="text-sm text-muted-foreground italic">Often shows up when a seller summarizes, transitions, or clarifies next steps.</p>
             </div>
@@ -342,7 +336,6 @@ export default function SignalIntelligencePage() {
                   Commitment Generation
                 </span>
               </div>
-              <h3 className="text-base font-semibold mb-2">Commitment Generation</h3>
               <p className="my-2">Commitment Generation is the capability to secure clear, voluntary next actions while preserving autonomy.</p>
               <p className="text-sm text-muted-foreground italic">Often shows up when a seller checks readiness and aligns on next steps.</p>
             </div>
@@ -354,7 +347,6 @@ export default function SignalIntelligencePage() {
                   Adaptive Response
                 </span>
               </div>
-              <h3 className="text-base font-semibold mb-2">Adaptive Response</h3>
               <p className="my-2">Adaptive Response is the capability to adjust tone, depth, pacing, or approach in response to changing customer signals.</p>
               <p className="text-sm text-muted-foreground italic">Often shows up when a seller shifts their approach as signals change.</p>
             </div>
@@ -386,7 +378,6 @@ export default function SignalIntelligencePage() {
                 Question Quality
               </span>
             </div>
-            <h3 className="text-base mb-2 font-bold">Signal Awareness - Question Quality</h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Purposeful, customer-centered questioning</li>
@@ -412,7 +403,6 @@ export default function SignalIntelligencePage() {
                 Listening & Responsiveness
               </span>
             </div>
-            <h3 className="text-base mb-2 font-bold">Signal Interpretation - Listening & Responsiveness</h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Accurate paraphrasing</li>
@@ -438,7 +428,6 @@ export default function SignalIntelligencePage() {
                 Value Framing
               </span>
             </div>
-            <h3 className="text-base mb-2 font-bold">Value Connection - Value Framing</h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Outcome-focused language</li>
@@ -464,9 +453,6 @@ export default function SignalIntelligencePage() {
                 Engagement Cues
               </span>
             </div>
-            <h3 className="text-base mb-2 font-bold">
-              Customer Engagement Monitoring - Engagement Cues
-            </h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Monitors energy and participation</li>
@@ -493,7 +479,6 @@ export default function SignalIntelligencePage() {
                 Objection Handling
               </span>
             </div>
-            <h3 className="text-base mb-2 font-bold">Objection Navigation - Objection Handling</h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Calm response to resistance</li>
@@ -519,9 +504,6 @@ export default function SignalIntelligencePage() {
                 Conversation Control & Structure
               </span>
             </div>
-            <h3 className="text-base mb-2 font-bold">
-              Conversation Management - Conversation Control & Structure
-            </h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Clear purpose setting</li>
@@ -548,7 +530,6 @@ export default function SignalIntelligencePage() {
                 Adaptability
               </span>
             </div>
-            <h3 className="text-base mb-2 font-bold">Adaptive Response - Adaptability</h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Adjusts tone, depth, or pacing based on signals</li>
@@ -571,7 +552,6 @@ export default function SignalIntelligencePage() {
                 Commitment Gaining
               </span>
             </div>
-            <h3 className="text-base mb-2 font-bold">Commitment Generation - Commitment Gaining</h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Secures voluntary, explicit next actions</li>
