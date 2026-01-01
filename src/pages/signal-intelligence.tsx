@@ -264,48 +264,128 @@ export default function SignalIntelligencePage() {
           {/* Individual Capability Descriptions */}
           <div className="mt-6 space-y-4">
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
+              {/* Capability → Metric Badge Pair */}
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
+                  Signal Awareness
+                </span>
+                <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
+                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
+                  Question Quality
+                </span>
+              </div>
               <h3 className="text-base font-semibold mb-2">Signal Awareness</h3>
               <p className="my-2">Signal Awareness is the capability to notice relevant customer cues and use those cues to shape purposeful, well-sequenced questions.</p>
               <p className="text-sm text-muted-foreground italic">Often shows up when a seller notices relevant customer cues and uses them to shape their next question.</p>
             </div>
 
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
+              {/* Capability → Metric Badge Pair */}
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
+                  Signal Interpretation
+                </span>
+                <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
+                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
+                  Listening & Responsiveness
+                </span>
+              </div>
               <h3 className="text-base font-semibold mb-2">Signal Interpretation</h3>
               <p className="my-2">Signal Interpretation is the capability to make sense of what a customer is communicating and adjust responses as new information emerges.</p>
               <p className="text-sm text-muted-foreground italic">Often shows up when a seller reflects what they're hearing and adapts their response.</p>
             </div>
 
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
+              {/* Capability → Metric Badge Pair */}
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
+                  Value Connection
+                </span>
+                <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
+                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
+                  Value Framing
+                </span>
+              </div>
               <h3 className="text-base font-semibold mb-2">Value Connection</h3>
               <p className="my-2">Value Connection is the capability to link discussion to what matters to the customer by translating priorities into outcome-based value.</p>
               <p className="text-sm text-muted-foreground italic">Often shows up when a seller connects the conversation back to outcomes or priorities already expressed.</p>
             </div>
 
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
+              {/* Capability → Metric Badge Pair */}
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
+                  Customer Engagement Monitoring
+                </span>
+                <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
+                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
+                  Engagement Cues
+                </span>
+              </div>
               <h3 className="text-base font-semibold mb-2">Customer Engagement Monitoring</h3>
               <p className="my-2">Customer Engagement Monitoring is the capability to notice and track changes in customer engagement, including participation, energy, and forward-looking behavior.</p>
               <p className="text-sm text-muted-foreground italic">Often shows up when a seller notices changes in participation, energy, or forward-looking questions.</p>
             </div>
 
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
+              {/* Capability → Metric Badge Pair */}
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
+                  Objection Navigation
+                </span>
+                <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
+                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
+                  Objection Handling
+                </span>
+              </div>
               <h3 className="text-base font-semibold mb-2">Objection Navigation</h3>
               <p className="my-2">Objection Navigation is the capability to respond to resistance calmly by acknowledging concerns and exploring what's behind them.</p>
               <p className="text-sm text-muted-foreground italic">Often shows up when a seller acknowledges a concern before exploring it.</p>
             </div>
 
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
+              {/* Capability → Metric Badge Pair */}
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
+                  Conversation Management
+                </span>
+                <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
+                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
+                  Conversation Control & Structure
+                </span>
+              </div>
               <h3 className="text-base font-semibold mb-2">Conversation Management</h3>
               <p className="my-2">Conversation Management is the capability to guide a conversation with purpose through structure, transitions, and shared understanding.</p>
               <p className="text-sm text-muted-foreground italic">Often shows up when a seller summarizes, transitions, or clarifies next steps.</p>
             </div>
 
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
+              {/* Capability → Metric Badge Pair */}
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
+                  Commitment Generation
+                </span>
+                <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
+                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
+                  Commitment Gaining
+                </span>
+              </div>
               <h3 className="text-base font-semibold mb-2">Commitment Generation</h3>
               <p className="my-2">Commitment Generation is the capability to secure clear, voluntary next actions while preserving autonomy.</p>
               <p className="text-sm text-muted-foreground italic">Often shows up when a seller checks readiness and aligns on next steps.</p>
             </div>
 
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
+              {/* Capability → Metric Badge Pair */}
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
+                  Adaptive Response
+                </span>
+                <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
+                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
+                  Adaptability
+                </span>
+              </div>
               <h3 className="text-base font-semibold mb-2">Adaptive Response</h3>
               <p className="my-2">Adaptive Response is the capability to adjust tone, depth, pacing, or approach in response to changing customer signals.</p>
               <p className="text-sm text-muted-foreground italic">Often shows up when a seller shifts their approach as signals change.</p>
