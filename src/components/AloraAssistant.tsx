@@ -361,153 +361,69 @@ class AloraResponseEngine {
 
     switch (primaryIntent) {
       case 'si_overview':
-        return this.kb.definitions.signalIntelligence;
+        return "Signal Intelligence™ is our behavior-based framework that helps sales professionals develop conversational skills through practice. Think of it like a flight simulator for high-stakes conversations—you practice in a safe environment and get feedback on observable behaviors like question quality, listening, and adaptability.\n\nIt's completely non-clinical and non-diagnostic. We focus only on what you say and how you respond, never on emotions or psychological states.\n\nWant to know more about how it works or what skills you can develop?";
 
       case 'three_layer_system':
-        return this.kb.definitions.threeLayerSystem;
+        return "Signal Intelligence™ works in three layers:\n\n**Layer 1: Why behaviors change** - We use the Human Decision Drivers Framework to understand context (like confidence or motivation), but we never measure these directly.\n\n**Layer 2: Skills you develop** - 8 core conversational capabilities like Signal Awareness, Objection Navigation, and Adaptive Response.\n\n**Layer 3: What we observe** - Behavioral metrics from your practice sessions, like question quality and listening patterns.\n\nThink of it like learning to play piano: Layer 1 is music theory, Layer 2 is the techniques, Layer 3 is what the teacher hears when you play.\n\nWant to dive deeper into any of these layers?";
 
       case 'capabilities_overview':
-        return this.formatCapabilitiesOverview();
+        return "We help you develop 8 core conversational skills:\n\n1. Signal Awareness - Asking better questions\n2. Signal Interpretation - Active listening\n3. Value Connection - Making it relevant\n4. Customer Engagement Monitoring - Reading the room\n5. Objection Navigation - Handling pushback\n6. Conversation Management - Staying on track\n7. Adaptive Response - Pivoting when needed\n8. Commitment Generation - Securing next steps\n\nEach one is a distinct skill you can practice and improve. Which one interests you most?";
 
       case 'capability_signal_awareness':
-        return this.formatCapability(this.kb.capabilities.signalAwareness);
+        return "Signal Awareness is about noticing customer cues and asking better questions in response.\n\nFor example, if a doctor mentions time constraints, a rep with strong Signal Awareness might shift from broad questions to focused ones about their specific patient population.\n\nWe measure this through Question Quality—looking at things like open vs. closed questions, relevance to customer goals, and how well you follow up.\n\nWant to see how this shows up in practice scenarios?";
 
       case 'capability_signal_interpretation':
-        return this.formatCapability(this.kb.capabilities.signalInterpretation);
+        return "Signal Interpretation is your ability to understand what customers are really saying and adjust accordingly.\n\nIt's the difference between hearing \"I don't have time\" and recognizing whether that means \"not interested\" or \"show me the value quickly.\"\n\nWe look at behaviors like accurate paraphrasing, acknowledging concerns, and how you shift your approach based on what you hear.\n\nThis is one of the most impactful skills for building trust. Want to know how to practice it?";
 
       case 'capability_value_connection':
-        return this.formatCapability(this.kb.capabilities.valueConnection);
+        return "Value Connection is about linking your message to what actually matters to the customer.\n\nInstead of listing features, you're translating them into outcomes that align with their priorities. Like connecting a drug's dosing schedule to a doctor's concern about patient adherence.\n\nWe observe how well you frame value in customer terms, not product terms.\n\nWant examples of strong vs. weak value framing?";
 
       case 'capability_customer_engagement':
-        return this.formatCapability(this.kb.capabilities.customerEngagement);
+        return "Customer Engagement Monitoring is your ability to read the room—noticing when engagement shifts and adjusting your approach.\n\nMaybe the customer goes quiet, starts multitasking, or suddenly gets more animated. Strong reps pick up on these cues and respond appropriately.\n\nWe track how you recognize participation changes and adjust pacing, tone, or approach.\n\nThis is especially critical in virtual calls. Want tips on improving this skill?";
 
       case 'capability_objection_navigation':
-        return this.formatCapability(this.kb.capabilities.objectionNavigation);
+        return "Objection Navigation is handling pushback without getting defensive—staying calm, acknowledging concerns, and reframing constructively.\n\nThe key is treating objections as information, not attacks. \"I've heard that before\" might mean \"prove you're different\" or \"I'm skeptical but listening.\"\n\nWe look at how you acknowledge concerns, maintain credibility under pressure, and keep the conversation productive.\n\nWant to practice with some common pharma objections?";
 
       case 'capability_conversation_management':
-        return this.formatCapability(this.kb.capabilities.conversationManagement);
+        return "Conversation Management is maintaining purpose and structure while staying flexible to customer needs.\n\nIt's the balance between having a plan and being willing to deviate when the customer takes you somewhere valuable.\n\nWe observe how you maintain conversation flow, manage time, and stay focused on outcomes without being rigid.\n\nThink of it like being a good meeting facilitator. Want to see what good looks like?";
 
       case 'capability_adaptive_response':
-        return this.formatCapability(this.kb.capabilities.adaptiveResponse);
+        return "Adaptive Response is recognizing when your approach isn't working and pivoting mid-conversation.\n\nMaybe your clinical data isn't landing, so you shift to a patient story. Or your questions are too broad, so you get more specific.\n\nWe track how quickly you recognize ineffective patterns and adjust your strategy in real-time.\n\nThis is what separates good reps from great ones. Want to know how to build this skill?";
 
       case 'capability_commitment_generation':
-        return this.formatCapability(this.kb.capabilities.commitmentGeneration);
+        return "Commitment Generation is securing realistic next steps that preserve customer autonomy and build momentum.\n\nIt's not about \"closing\"—it's about co-creating a path forward that the customer actually owns.\n\nWe look at how you secure specific commitments, keep them realistic, and maintain the customer's sense of control.\n\nWant examples of strong commitment language?";
 
       case 'human_drivers':
-        return this.formatHumanDrivers();
+        return "The Human Decision Drivers Framework explains why conversational behaviors change—things like confidence, motivation, emotional regulation, and perceived risk.\n\nHere's the key: we never measure these directly. They're explanatory context, not scores.\n\nThink of them like the \"why\" behind observable behaviors. If someone gets defensive during objections, social threat might be at play. But we're coaching the behavior (staying calm), not diagnosing the internal state.\n\nWant to understand how this connects to the skills you practice?";
 
       case 'behavioral_metrics':
-        return this.formatBehavioralMetrics();
+        return "Behavioral Metrics are what we observe during practice sessions—things like question quality, listening patterns, and how you handle objections.\n\nKey points:\n• Only observed during practice (role play, simulations)\n• Focus on what you say and how you respond\n• Never used for live call monitoring\n• Completely transparent and explainable\n\nWe don't detect emotions, predict intent, or assess personality. Just observable conversation behaviors.\n\nWant to see what metrics look like in action?";
 
       case 'ai_coach':
-        return this.kb.platform.aiCoach;
+        return "AI Coach gives you instant feedback during practice sessions—like having a personal coach available 24/7.\n\nIt highlights patterns in your conversation behaviors (question quality, listening, adaptability) and offers actionable insights. But here's what's important: the AI detects patterns, you make the judgments.\n\nIt only works in simulated practice environments, never on real customer calls.\n\nThink of it like a golf swing analyzer—it shows you the data, you decide how to improve.\n\nWant to see a sample feedback report?";
 
       case 'role_practice':
-        return this.kb.platform.rolePractice;
+        return "Role Play lets you practice high-stakes conversations in a completely safe environment.\n\nWe have 9+ pharma scenarios across HIV, Oncology, Cardiology, Vaccines, and more. You practice, get instant feedback on your Signal Intelligence™ capabilities, and build muscle memory for real conversations.\n\nMost reps spend 15-30 minutes a day. It's like a flight simulator—practice the hard stuff when the stakes are zero.\n\nWant to try a scenario or see what the feedback looks like?";
 
       case 'ethics':
-        return this.kb.ethics.boundaries;
+        return "Ethics and safety are built into everything we do.\n\nOur guiding principle: \"If a response would feel inappropriate if the roles were reversed, it's outside our boundary.\"\n\nWe're non-clinical, non-diagnostic, and behavior-only. We never infer emotions, predict intent, or assess personality. All metrics are transparent, explainable, and used only for learning—never for employment decisions or performance evaluation.\n\nWant to know more about our safeguards or compliance approach?";
 
       case 'boundary_correction':
-        return this.boundaryCorrectionResponse();
+        return "Just to clarify—Signal Intelligence™ focuses only on observable conversation behaviors. We don't detect emotions, predict intent, or assess personality traits.\n\nIf you're asking about how we observe and coach behaviors during practice, I'm happy to explain that. Or if you're curious about what makes our approach different from other training, I can share that too.\n\nWhat specifically were you wondering about?";
 
       case 'use_cases':
-        return this.formatUseCases();
+        return "ReflectivAI works for three key groups:\n\n**Sales Reps**: Practice high-stakes conversations, get instant feedback, build confidence. 89% report feeling more prepared after using it.\n\n**Sales Managers**: Coach with a structured framework, see real-time skill development, scale training across your team.\n\n**Enablement Leaders**: Accelerate onboarding (3x faster ramp time), identify skill gaps, measure training effectiveness with behavioral data.\n\nWhich role are you most interested in learning about?";
 
       case 'platform_features':
-        return this.kb.platform.dashboard;
+        return "The ReflectivAI platform includes:\n\n• AI Coach for instant, personalized feedback\n• Role Play scenarios across 9+ therapeutic areas\n• Dashboard with skill development tracking\n• Coaching cards that translate scores into actionable guidance\n• Team analytics for managers\n\nEverything is based on practice sessions, not live call monitoring. Your data stays private and is used only for learning.\n\nWant a walkthrough of any specific feature?";
 
       case 'results':
-        return this.formatResults();
+        return "Our customers see real results:\n\n• 75% higher skill retention vs. traditional training\n• 3x faster ramp time for new reps\n• 89% of reps report increased confidence\n• 34% increase in close rates (customer testimonial)\n\nThe key is experiential learning in a safe environment. You build muscle memory through practice, not just knowledge through lectures.\n\nWant to hear more about how teams are using this?";
 
       case 'general':
       default:
         return this.generalResponse();
     }
-  }
-
-  private formatCapabilitiesOverview(): string {
-    return `Signal Intelligence™ includes 8 core conversational capabilities:
-
-1. **Signal Awareness** → Question Quality
-2. **Signal Interpretation** → Listening & Responsiveness
-3. **Value Connection** → Value Framing
-4. **Customer Engagement Monitoring** → Engagement Cues
-5. **Objection Navigation** → Objection Handling
-6. **Conversation Management** → Conversation Control & Structure
-7. **Adaptive Response** → Adaptability
-8. **Commitment Generation** → Commitment Gaining
-
-Each capability represents a distinct conversational skill that can be developed through practice. Would you like to learn more about a specific capability?`;
-  }
-
-  private formatCapability(cap: any): string {
-    return `**${cap.name}**
-
-${cap.definition}
-
-**Behavioral Metric**: ${cap.metric}
-
-**What this looks like in conversation**:
-${cap.observableBehaviors.map((b: string) => `• ${b}`).join('\n')}
-
-**Related Human Decision Drivers**: ${cap.relatedDrivers.join(', ')}
-
-Remember: These behaviors are observed only during structured practice sessions, never in live calls.`;
-  }
-
-  private formatHumanDrivers(): string {
-    return `The Human Decision Drivers Framework explains WHY conversational behaviors change. It includes 5 core drivers:
-
-1. **Cognitive Empathy / Perspective Taking**
-2. **Emotional Intelligence**
-3. **Metacognition & Confidence Calibration**
-4. **Motivation, Autonomy & Commitment**
-5. **Social Threat, Status & Identity**
-
-**Critical Note**: These drivers are NOT measured directly. They are NOT latent variables. They serve only as explanatory context to help interpret observable behaviors.
-
-The AI never infers these internal states—they exist only to ensure behaviors are understood in context.`;
-  }
-
-  private formatBehavioralMetrics(): string {
-    return `Behavioral Metrics describe how each Signal Intelligence™ capability shows up in conversation through observable behaviors.
-
-**Key Points**:
-• Metrics are observed ONLY during structured practice (role play, simulations)
-• They focus exclusively on what people say and how they respond
-• They are NEVER used for live call monitoring or surveillance
-• All metrics are explainable, auditable, and transparent
-
-**What Metrics Do NOT Include**:
-• Emotion detection or inference
-• Intent prediction
-• Personality assessment
-• Psychological profiling
-
-${this.kb.ethics.practiceOnly}`;
-  }
-
-  private formatUseCases(): string {
-    return `**For Sales Reps**:
-${this.kb.useCases.salesReps}
-
-**For Sales Managers**:
-${this.kb.useCases.managers}
-
-**For Enablement Leaders**:
-${this.kb.useCases.enablement}`;
-  }
-
-  private formatResults(): string {
-    return `ReflectivAI customers report significant improvements:
-
-• **75%** higher skill retention with experiential learning vs. traditional training
-• **3x** faster ramp time for new sales reps
-• **89%** of reps report increased confidence after practice
-• **34%** increase in close rates within six months (customer testimonial)
-
-These results reflect the effectiveness of behavior-based practice in a safe environment. All metrics are contextual and non-causal—they show correlation with skill development, not psychological prediction.`;
   }
 
   private boundaryCorrectionResponse(): string {
@@ -522,16 +438,7 @@ If you're asking about how behaviors are observed or coached during practice, I 
   }
 
   private generalResponse(): string {
-    return `I'm Alora, your ReflectivAI assistant. I can help you understand:
-
-• **Signal Intelligence™** - Our behavior-based capability framework
-• **The 8 Capabilities** - Core conversational skills you can develop
-• **AI Coach & Role Play** - How practice and feedback work
-• **Behavioral Metrics** - What we observe and how
-• **Ethics & Safeguards** - Our non-clinical, behavior-only approach
-• **Platform Features** - Dashboard, coaching, and more
-
-What would you like to learn about?`;
+    return `I'm here to help! I can explain:\n\n• What Signal Intelligence™ is and how it works\n• The 8 conversational skills you can develop\n• How AI Coach and Role Play work\n• Who uses ReflectivAI and what results they see\n• Our ethics and safeguards\n\nWhat are you most curious about?`;
   }
 }
 
