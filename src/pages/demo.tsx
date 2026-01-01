@@ -470,7 +470,8 @@ export default function DemoPage() {
               Experience ReflectivAI in Action
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Explore our AI-powered coaching platform with interactive demos. See how Signal Intelligence™ transforms sales conversations - no signup required.
+              Explore interactive demos of the ReflectivAI sales coaching and practice platform.
+              Experience how Signal Intelligence™ surfaces conversational patterns, behavioral signals, and decision moments during sales practice.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button size="lg" asChild>
@@ -498,10 +499,10 @@ export default function DemoPage() {
                     <div className="p-2 rounded-lg bg-primary/10 text-primary">
                       <MessageSquare className="h-5 w-5" />
                     </div>
-                    <CardTitle className="text-lg">AI Coach Simulation</CardTitle>
+                    <CardTitle className="text-lg">Role Play Simulator</CardTitle>
                   </div>
                   <CardDescription>
-                    See personalized coaching feedback in action
+                    See observable conversational signals in real time during role-play practice.
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -516,7 +517,7 @@ export default function DemoPage() {
                     <CardTitle className="text-lg">Role Play Sampler</CardTitle>
                   </div>
                   <CardDescription>
-                    Experience practice scenarios with live metrics
+                    Practice a sample sales scenario while observing real-time conversational signals.
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -540,19 +541,19 @@ export default function DemoPage() {
         </div>
       </section>
 
-      {/* Demo #1: AI Coach Simulation */}
+      {/* Role Play Simulator */}
       <section id="ai-coach" className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <Badge className="mb-4" variant="outline">
-                Demo #1
-              </Badge>
+              //<Badge className="mb-4" variant="outline">
+               // Demo #1
+              //</Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                AI Coach Simulation
+                Role Play Simulation
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Watch how our AI Coach analyzes real conversations and provides actionable feedback to improve performance.
+                See observable conversational signals in real time during role-play practice.
               </p>
             </div>
 
@@ -799,9 +800,9 @@ export default function DemoPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <Badge className="mb-4" variant="outline">
-                Demo #2
-              </Badge>
+              //<Badge className="mb-4" variant="outline">
+                //Demo #2
+              //</Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Role Play Scenario Sampler
               </h2>
@@ -838,9 +839,9 @@ export default function DemoPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <Badge className="mb-4" variant="outline">
-                Demo #3
-              </Badge>
+              //<Badge className="mb-4" variant="outline">
+               // Demo #3
+             // </Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Signal Intelligence™ Framework Explorer
               </h2>
