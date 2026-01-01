@@ -260,62 +260,7 @@ export default function SignalIntelligencePage() {
             Capabilities are behavior-based expressions used for coaching and learning—not psychological constructs, diagnostic tools, or classifications of individuals.
           </p>
 
-          <h3 className="text-base mt-4 mb-2 font-bold">Capability-to-Metric Mapping</h3>
-          <div className="w-full border border-border rounded-2xl overflow-hidden bg-muted/30 my-2.5">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr>
-                  <th className="p-3 border-b border-border text-left text-sm font-semibold text-muted-foreground">
-                    Signal Intelligence Capability
-                  </th>
-                  <th className="p-3 border-b border-border text-left text-sm font-semibold text-muted-foreground">
-                    Behavioral Metric
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="p-3 border-b border-border text-sm">Signal Awareness</td>
-                  <td className="p-3 border-b border-border text-sm">Question Quality</td>
-                </tr>
-                <tr>
-                  <td className="p-3 border-b border-border text-sm">Signal Interpretation</td>
-                  <td className="p-3 border-b border-border text-sm">
-                    Listening & Responsiveness
-                  </td>
-                </tr>
-                <tr>
-                  <td className="p-3 border-b border-border text-sm">Value Connection</td>
-                  <td className="p-3 border-b border-border text-sm">Value Framing</td>
-                </tr>
-                <tr>
-                  <td className="p-3 border-b border-border text-sm">
-                    Customer Engagement Monitoring
-                  </td>
-                  <td className="p-3 border-b border-border text-sm">Engagement Cues</td>
-                </tr>
-                <tr>
-                  <td className="p-3 border-b border-border text-sm">Objection Navigation</td>
-                  <td className="p-3 border-b border-border text-sm">Objection Handling</td>
-                </tr>
-                <tr>
-                  <td className="p-3 border-b border-border text-sm">Conversation Management</td>
-                  <td className="p-3 border-b border-border text-sm">
-                    Conversation Control & Structure
-                  </td>
-                </tr>
-                <tr>
-                  <td className="p-3 border-b border-border text-sm">Adaptive Response</td>
-                  <td className="p-3 border-b border-border text-sm">Adaptability</td>
-                </tr>
-                <tr>
-                  <td className="p-3 text-sm">Commitment Generation</td>
-                  <td className="p-3 text-sm">Commitment Gaining</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          
+
           {/* Individual Capability Descriptions */}
           <div className="mt-6 space-y-4">
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
