@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { MessageCircle, X, Send, Sparkles } from 'lucide-react';
+import { MessageCircle, X, Send, Sparkles, Bot } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -278,79 +278,125 @@ They are NEVER used for:
 // Intent Recognition & Response Generation
 class AloraResponseEngine {
   private kb = SIGNAL_INTELLIGENCE_KB;
+  private conversationContext: string[] = [];
 
   detectIntent(query: string): string[] {
     const lowerQuery = query.toLowerCase();
     const intents: string[] = [];
 
+    // Follow-up patterns (check context first)
+    if (lowerQuery.match(/^(yes|yeah|sure|tell me more|more|elaborate|explain|how|show me|examples?|what about|go on|continue|that sounds|interesting|i'd like|i want|please|ok|okay)\b/)) {
+      // Return the last context if available
+      if (this.conversationContext.length > 0) {
+        const lastContext = this.conversationContext[this.conversationContext.length - 1];
+        return [lastContext + '_followup'];
+      }
+    }
+
     // Signal Intelligence overview
     if (lowerQuery.match(/what is signal intelligence|define signal intelligence|explain signal intelligence|si framework/)) {
       intents.push('si_overview');
+      this.conversationContext.push('si_overview');
     }
 
     // Three-layer system
     if (lowerQuery.match(/three layer|3 layer|system model|framework structure|how does it work/)) {
       intents.push('three_layer_system');
+      this.conversationContext.push('three_layer_system');
     }
 
     // Capabilities
     if (lowerQuery.match(/capabilities|8 capabilities|skills|what can i learn|conversational skills/)) {
       intents.push('capabilities_overview');
+      this.conversationContext.push('capabilities_overview');
     }
 
     // Specific capability queries
-    if (lowerQuery.match(/signal awareness|question quality/)) intents.push('capability_signal_awareness');
-    if (lowerQuery.match(/signal interpretation|listening|responsiveness/)) intents.push('capability_signal_interpretation');
-    if (lowerQuery.match(/value connection|value framing/)) intents.push('capability_value_connection');
-    if (lowerQuery.match(/engagement monitoring|engagement cues/)) intents.push('capability_customer_engagement');
-    if (lowerQuery.match(/objection|objection handling|objection navigation/)) intents.push('capability_objection_navigation');
-    if (lowerQuery.match(/conversation management|conversation control|structure/)) intents.push('capability_conversation_management');
-    if (lowerQuery.match(/adaptive response|adaptability|flexibility/)) intents.push('capability_adaptive_response');
-    if (lowerQuery.match(/commitment|commitment generation|next steps/)) intents.push('capability_commitment_generation');
+    if (lowerQuery.match(/signal awareness|question quality/)) {
+      intents.push('capability_signal_awareness');
+      this.conversationContext.push('capability_signal_awareness');
+    }
+    if (lowerQuery.match(/signal interpretation|listening|responsiveness/)) {
+      intents.push('capability_signal_interpretation');
+      this.conversationContext.push('capability_signal_interpretation');
+    }
+    if (lowerQuery.match(/value connection|value framing/)) {
+      intents.push('capability_value_connection');
+      this.conversationContext.push('capability_value_connection');
+    }
+    if (lowerQuery.match(/engagement monitoring|engagement cues/)) {
+      intents.push('capability_customer_engagement');
+      this.conversationContext.push('capability_customer_engagement');
+    }
+    if (lowerQuery.match(/objection|objection handling|objection navigation/)) {
+      intents.push('capability_objection_navigation');
+      this.conversationContext.push('capability_objection_navigation');
+    }
+    if (lowerQuery.match(/conversation management|conversation control|structure/)) {
+      intents.push('capability_conversation_management');
+      this.conversationContext.push('capability_conversation_management');
+    }
+    if (lowerQuery.match(/adaptive response|adaptability|flexibility/)) {
+      intents.push('capability_adaptive_response');
+      this.conversationContext.push('capability_adaptive_response');
+    }
+    if (lowerQuery.match(/commitment|commitment generation|next steps/)) {
+      intents.push('capability_commitment_generation');
+      this.conversationContext.push('capability_commitment_generation');
+    }
 
     // Human Decision Drivers
     if (lowerQuery.match(/human decision drivers|decision drivers|why behaviors change|internal forces/)) {
       intents.push('human_drivers');
+      this.conversationContext.push('human_drivers');
     }
 
     // Behavioral Metrics
     if (lowerQuery.match(/behavioral metrics|metrics|measurement|how do you measure|scoring/)) {
       intents.push('behavioral_metrics');
+      this.conversationContext.push('behavioral_metrics');
     }
 
     // AI Coach
     if (lowerQuery.match(/ai coach|coaching|feedback|how does ai help/)) {
       intents.push('ai_coach');
+      this.conversationContext.push('ai_coach');
     }
 
     // Role Play
-    if (lowerQuery.match(/role play|practice|simulation|training/)) {
+    if (lowerQuery.match(/role play|practice|simulation|training|scenarios?/)) {
       intents.push('role_practice');
+      this.conversationContext.push('role_practice');
     }
 
     // Ethics & Safeguards
     if (lowerQuery.match(/ethics|ethical|safeguards|boundaries|privacy|compliance/)) {
       intents.push('ethics');
+      this.conversationContext.push('ethics');
     }
 
     // What's NOT measured (boundary correction)
     if (lowerQuery.match(/emotion detection|predict intent|personality|psychological|mental health|feelings/)) {
       intents.push('boundary_correction');
+      this.conversationContext.push('boundary_correction');
     }
 
     // Use cases
     if (lowerQuery.match(/use case|who is this for|sales rep|manager|enablement/)) {
       intents.push('use_cases');
+      this.conversationContext.push('use_cases');
     }
 
     // Platform features
     if (lowerQuery.match(/dashboard|platform|features|what can i do/)) {
       intents.push('platform_features');
+      this.conversationContext.push('platform_features');
     }
 
     // Results & effectiveness
     if (lowerQuery.match(/results|effectiveness|roi|statistics|success rate/)) {
       intents.push('results');
+      this.conversationContext.push('results');
     }
 
     return intents.length > 0 ? intents : ['general'];
@@ -363,11 +409,17 @@ class AloraResponseEngine {
       case 'si_overview':
         return "Signal Intelligence™ is our behavior-based framework that helps sales professionals develop conversational skills through practice. Think of it like a flight simulator for high-stakes conversations—you practice in a safe environment and get feedback on observable behaviors like question quality, listening, and adaptability.\n\nIt's completely non-clinical and non-diagnostic. We focus only on what you say and how you respond, never on emotions or psychological states.\n\nWant to know more about how it works or what skills you can develop?";
 
+      case 'si_overview_followup':
+        return "Great question! Signal Intelligence™ works in three layers:\n\n**Layer 1**: Understanding why behaviors change (context like confidence or motivation)\n**Layer 2**: The 8 conversational skills you develop\n**Layer 3**: Observable behaviors we track during practice\n\nWe have 9+ pharma scenarios across HIV, Oncology, Cardiology, and more. You practice, get instant feedback, and build muscle memory for real conversations.\n\nWant to dive into the 8 skills or see how practice sessions work?";
+
       case 'three_layer_system':
         return "Signal Intelligence™ works in three layers:\n\n**Layer 1: Why behaviors change** - We use the Human Decision Drivers Framework to understand context (like confidence or motivation), but we never measure these directly.\n\n**Layer 2: Skills you develop** - 8 core conversational capabilities like Signal Awareness, Objection Navigation, and Adaptive Response.\n\n**Layer 3: What we observe** - Behavioral metrics from your practice sessions, like question quality and listening patterns.\n\nThink of it like learning to play piano: Layer 1 is music theory, Layer 2 is the techniques, Layer 3 is what the teacher hears when you play.\n\nWant to dive deeper into any of these layers?";
 
       case 'capabilities_overview':
         return "We help you develop 8 core conversational skills:\n\n1. Signal Awareness - Asking better questions\n2. Signal Interpretation - Active listening\n3. Value Connection - Making it relevant\n4. Customer Engagement Monitoring - Reading the room\n5. Objection Navigation - Handling pushback\n6. Conversation Management - Staying on track\n7. Adaptive Response - Pivoting when needed\n8. Commitment Generation - Securing next steps\n\nEach one is a distinct skill you can practice and improve. Which one interests you most?";
+
+      case 'capabilities_overview_followup':
+        return "Each capability is measured through specific behavioral patterns during practice sessions.\n\nFor example, Signal Awareness looks at your question quality—open vs. closed questions, relevance to customer goals, and follow-up depth.\n\nObjection Navigation tracks how you acknowledge concerns, stay calm under pressure, and reframe constructively.\n\nThe beauty is you can see exactly where you're strong and where to focus improvement. Want to explore a specific capability in detail?";
 
       case 'capability_signal_awareness':
         return "Signal Awareness is about noticing customer cues and asking better questions in response.\n\nFor example, if a doctor mentions time constraints, a rep with strong Signal Awareness might shift from broad questions to focused ones about their specific patient population.\n\nWe measure this through Question Quality—looking at things like open vs. closed questions, relevance to customer goals, and how well you follow up.\n\nWant to see how this shows up in practice scenarios?";
@@ -402,8 +454,14 @@ class AloraResponseEngine {
       case 'ai_coach':
         return "AI Coach gives you instant feedback during practice sessions—like having a personal coach available 24/7.\n\nIt highlights patterns in your conversation behaviors (question quality, listening, adaptability) and offers actionable insights. But here's what's important: the AI detects patterns, you make the judgments.\n\nIt only works in simulated practice environments, never on real customer calls.\n\nThink of it like a golf swing analyzer—it shows you the data, you decide how to improve.\n\nWant to see a sample feedback report?";
 
+      case 'ai_coach_followup':
+        return "The feedback is specific and actionable. For example:\n\n**Signal Awareness (4.2/5)**: \"You asked 8 open-ended questions and followed up on customer priorities. Consider probing deeper when the customer mentions constraints.\"\n\n**Objection Navigation (3.8/5)**: \"You acknowledged the concern but moved on quickly. Try paraphrasing to show you fully understand before responding.\"\n\nYou also get coaching cards that translate scores into specific actions to practice. Want to know more about any specific capability?"
+
       case 'role_practice':
         return "Role Play lets you practice high-stakes conversations in a completely safe environment.\n\nWe have 9+ pharma scenarios across HIV, Oncology, Cardiology, Vaccines, and more. You practice, get instant feedback on your Signal Intelligence™ capabilities, and build muscle memory for real conversations.\n\nMost reps spend 15-30 minutes a day. It's like a flight simulator—practice the hard stuff when the stakes are zero.\n\nWant to try a scenario or see what the feedback looks like?";
+
+      case 'role_practice_followup':
+        return "Here's how it works:\n\n1. Choose a scenario (e.g., HIV specialist objecting to switch therapy)\n2. Have a conversation with an AI customer\n3. Get instant feedback on your 8 Signal Intelligence™ capabilities\n4. See specific examples of what worked and what to improve\n\nThe AI adapts to your responses—if you handle an objection well, it might open up. If you miss a cue, it might get more guarded.\n\nMost reps see improvement after just 3-5 practice sessions. Want to know what the feedback looks like?";
 
       case 'ethics':
         return "Ethics and safety are built into everything we do.\n\nOur guiding principle: \"If a response would feel inappropriate if the roles were reversed, it's outside our boundary.\"\n\nWe're non-clinical, non-diagnostic, and behavior-only. We never infer emotions, predict intent, or assess personality. All metrics are transparent, explainable, and used only for learning—never for employment decisions or performance evaluation.\n\nWant to know more about our safeguards or compliance approach?";
@@ -518,10 +576,10 @@ export function AloraAssistant() {
       {/* Floating Button */}
       <Button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-primary hover:bg-primary/90 z-50"
+        className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-primary hover:bg-primary/90 z-50 flex items-center justify-center"
         aria-label="Open Alora Assistant"
       >
-        <MessageCircle className="h-6 w-6" />
+        <Bot className="h-7 w-7" />
       </Button>
 
       {/* Chat Window */}
