@@ -13,8 +13,7 @@ export default function SignalIntelligencePage() {
             Capabilities, Behavioral Metrics & Methodology (ReflectivAI)
           </p>
           <p className="text-sm text-muted-foreground border-l-3 border-l-accent pl-3 mt-3">
-            This page is behavior-first, non-clinical, and non-diagnostic. It measures observable
-            conversation behaviors and does not infer protected attributes or mental health status.
+            Signal Intelligence<sup className="text-xs">™</sup> is behavior-first, non-clinical, and non-diagnostic. It focuses exclusively on observable conversation behaviors and does not infer protected attributes or mental health status.
           </p>
         </header>
 
@@ -22,40 +21,46 @@ export default function SignalIntelligencePage() {
         <section className="border border-border rounded-2xl bg-card p-5 mb-4">
           <h2 className="text-xl mb-2.5">Purpose</h2>
           <p className="my-2.5">
-            Signal Intelligence<sup className="text-xs">™</sup> (SI) is ReflectivAI's behavior-based capability framework, derived from the Human Decision Drivers Framework, for understanding and developing conversational skills during structured practice sessions. SI measures observable
-            conversation behaviors—what people say, how they respond, and how they adapt—without
-            inferring psychological states, personality traits, or protected attributes.
+            Signal Intelligence<sup className="text-xs">™</sup> (SI) is designed to make conversational skill development clearer, safer, and more effective for sales professionals, coaches, and enablement teams working in high-stakes conversations.
           </p>
           <p className="my-2.5">
-            The framework is explainable, coachable, and auditable. It is designed for professional
-            development, training, and coaching contexts—not for employment decisions, performance
-            evaluation, or live call monitoring.
+            It helps coaches and learners focus on what improves conversations by grounding practice and feedback in observable behaviors—what people say, how they respond, and how they adapt in real time—making skills easier to coach, practice, and develop with consistency and confidence.
+          </p>
+          <p className="my-2.5">
+            SI is a behavior-based capability framework grounded in the Human Decision Drivers Framework, which explains why conversational behaviors change as factors like confidence, motivation, or perceived risk shift. These drivers inform how behaviors are interpreted but are not measured directly. SI does not infer psychological states, personality traits, or protected attributes.
+          </p>
+          <p className="my-2.5">
+            Designed to be explainable, coachable, and auditable, SI is purpose-built for professional development, training, and coaching—not for employment decisions, performance evaluation, or live call monitoring.
           </p>
         </section>
 
         {/* How to Read This Page */}
         <section className="border border-border rounded-2xl bg-card p-5 mb-4">
           <h2 className="text-xl mb-2.5">How to Read This Page</h2>
+          <p className="text-base font-semibold my-2.5">A Visual Map of the System</p>
           <p className="my-2.5">
-            This page is structured in three layers:
+            This page is organized in three connected layers, each building on the one before it:
           </p>
-          <ol className="my-2.5 ml-5 list-decimal space-y-2">
-            <li>
-              <strong>Human Decision Drivers Framework</strong> — The interpretive lens that explains
-              why behavioral signals appear in conversations (not latent variables and not measured directly)
-            </li>
-            <li>
-              <strong>Signal Intelligence Capabilities</strong> — The core building blocks of SI that
-              represent underlying conversational judgment systems
-            </li>
-            <li>
-              <strong>Behavioral Metrics</strong> — Observable, measurable conversation behaviors that
-              reflect the presence or absence of each capability
-            </li>
-          </ol>
-          <p className="my-2.5">
-            Each layer builds on the previous one, moving from theoretical foundation to practical
-            measurement.
+          <div className="my-3.5 space-y-3">
+            <div>
+              <p className="font-semibold">Human Decision Drivers Framework</p>
+              <p className="text-sm text-muted-foreground">The interpretive lens</p>
+              <p className="my-2">Explains why conversational behaviors change by describing the human forces that influence thinking, engagement, emotional regulation, and commitment.</p>
+              <p className="text-sm">→ These drivers are not latent variables and are not measured directly.</p>
+            </div>
+            <div>
+              <p className="font-semibold">Signal Intelligence Capabilities</p>
+              <p className="text-sm text-muted-foreground">The skill layer</p>
+              <p className="my-2">Defines the core conversational skills that can be developed through practice. Each capability represents a distinct form of conversational judgment.</p>
+            </div>
+            <div>
+              <p className="font-semibold">Behavioral Metrics</p>
+              <p className="text-sm text-muted-foreground">The visibility layer</p>
+              <p className="my-2">Describes the observable behaviors that show how each capability appears in real conversations, making skills easier to recognize, coach, and practice.</p>
+            </div>
+          </div>
+          <p className="my-2.5 font-medium">
+            Each layer moves from explanation → skill → observation.
           </p>
         </section>
 
@@ -63,11 +68,13 @@ export default function SignalIntelligencePage() {
         <section className="border border-border rounded-2xl bg-card p-5 mb-4">
           <h2 className="text-xl mb-2.5">Human Decision Drivers Framework</h2>
           <p className="my-2.5">
-            Signal Intelligence<sup className="text-xs">™</sup> is grounded in the <strong>Human Decision Drivers Framework</strong>,
-            which identifies internal drivers that influence how people think, engage, regulate
-            emotion, and commit during real conversations. This framework serves as an interpretive
-            lens—it explains why behavioral signals appear, but is not measured directly. Instead, it
-            informs the design of Signal Intelligence Capabilities and their associated metrics.
+            The Human Decision Drivers Framework explains why conversational behaviors change in real interactions.
+          </p>
+          <p className="my-2.5">
+            It describes internal forces—such as confidence, motivation, and perceived risk—that shape how people think, engage, regulate emotion, and decide during conversations. These drivers are not measured directly. Instead, they serve as an interpretive lens that ensures observable behaviors are understood in context, rather than treated as isolated actions.
+          </p>
+          <p className="my-2.5">
+            By grounding Signal Intelligence in this framework, behavioral signals can be designed, interpreted, and coached in a way that reflects how people actually make decisions—without inferring psychological states, personality traits, or protected attributes.
           </p>
         </section>
 
@@ -81,8 +88,7 @@ export default function SignalIntelligencePage() {
               </span>
               <h3 className="text-base mt-2 mb-2">Cognitive Empathy / Perspective Taking</h3>
               <p className="my-2.5">
-                The capacity to accurately infer another person's mental and emotional state and
-                adjust behavior accordingly.
+                The capacity to accurately infer another person's perspective and adjust behavior accordingly.
               </p>
               <p className="text-sm text-muted-foreground border-l-3 border-l-accent pl-3 mt-3">
                 References:{' '}
@@ -242,7 +248,16 @@ export default function SignalIntelligencePage() {
         <section className="border border-border rounded-2xl bg-card p-5 mb-4">
           <h2 className="text-xl mb-2.5">Signal Intelligence<sup className="text-xs">™</sup> Capabilities</h2>
           <p className="my-2.5">
-            Signal Intelligence<sup className="text-xs">™</sup> Capabilities are the core building blocks of the SI framework. Each capability represents a conversational skill derived from the Human Decision Drivers Framework, defining how those drivers show up in observable behavior.
+            Signal Intelligence<sup className="text-xs">™</sup> Capabilities describe the conversational skills people develop through practice.
+          </p>
+          <p className="my-2.5">
+            Each capability represents a distinct form of conversational judgment and reflects how underlying Human Decision Drivers shape what can be observed and coached in real conversations.
+          </p>
+          <p className="my-2.5">
+            Each capability is supported by observable behavioral indicators used for coaching and learning.
+          </p>
+          <p className="text-sm text-muted-foreground border-l-3 border-l-accent pl-3 mt-3">
+            Capabilities are behavior-based expressions used for coaching and learning—not psychological constructs, diagnostic tools, or classifications of individuals.
           </p>
 
           <h3 className="text-base mt-4 mb-2">Capability-to-Metric Mapping</h3>
@@ -300,24 +315,82 @@ export default function SignalIntelligencePage() {
               </tbody>
             </table>
           </div>
-          <p className="my-2.5 mt-4">
-            Capabilities are applied, behavior-level expressions of Human Decision Drivers used for coaching and learning, not independent psychological constructs or diagnostic classifications.
-          </p>
+          
+          {/* Individual Capability Descriptions */}
+          <div className="mt-6 space-y-4">
+            <div className="border border-border rounded-2xl bg-muted/30 p-5">
+              <h3 className="text-base font-semibold mb-2">Signal Awareness</h3>
+              <p className="my-2">Signal Awareness is the capability to notice relevant customer cues and use those cues to shape purposeful, well-sequenced questions.</p>
+              <p className="text-sm text-muted-foreground italic">Often shows up when a seller notices relevant customer cues and uses them to shape their next question.</p>
+            </div>
+
+            <div className="border border-border rounded-2xl bg-muted/30 p-5">
+              <h3 className="text-base font-semibold mb-2">Signal Interpretation</h3>
+              <p className="my-2">Signal Interpretation is the capability to make sense of what a customer is communicating and adjust responses as new information emerges.</p>
+              <p className="text-sm text-muted-foreground italic">Often shows up when a seller reflects what they're hearing and adapts their response.</p>
+            </div>
+
+            <div className="border border-border rounded-2xl bg-muted/30 p-5">
+              <h3 className="text-base font-semibold mb-2">Value Connection</h3>
+              <p className="my-2">Value Connection is the capability to link discussion to what matters to the customer by translating priorities into outcome-based value.</p>
+              <p className="text-sm text-muted-foreground italic">Often shows up when a seller connects the conversation back to outcomes or priorities already expressed.</p>
+            </div>
+
+            <div className="border border-border rounded-2xl bg-muted/30 p-5">
+              <h3 className="text-base font-semibold mb-2">Customer Engagement Monitoring</h3>
+              <p className="my-2">Customer Engagement Monitoring is the capability to notice and track changes in customer engagement, including participation, energy, and forward-looking behavior.</p>
+              <p className="text-sm text-muted-foreground italic">Often shows up when a seller notices changes in participation, energy, or forward-looking questions.</p>
+            </div>
+
+            <div className="border border-border rounded-2xl bg-muted/30 p-5">
+              <h3 className="text-base font-semibold mb-2">Objection Navigation</h3>
+              <p className="my-2">Objection Navigation is the capability to respond to resistance calmly by acknowledging concerns and exploring what's behind them.</p>
+              <p className="text-sm text-muted-foreground italic">Often shows up when a seller acknowledges a concern before exploring it.</p>
+            </div>
+
+            <div className="border border-border rounded-2xl bg-muted/30 p-5">
+              <h3 className="text-base font-semibold mb-2">Conversation Management</h3>
+              <p className="my-2">Conversation Management is the capability to guide a conversation with purpose through structure, transitions, and shared understanding.</p>
+              <p className="text-sm text-muted-foreground italic">Often shows up when a seller summarizes, transitions, or clarifies next steps.</p>
+            </div>
+
+            <div className="border border-border rounded-2xl bg-muted/30 p-5">
+              <h3 className="text-base font-semibold mb-2">Commitment Generation</h3>
+              <p className="my-2">Commitment Generation is the capability to secure clear, voluntary next actions while preserving autonomy.</p>
+              <p className="text-sm text-muted-foreground italic">Often shows up when a seller checks readiness and aligns on next steps.</p>
+            </div>
+
+            <div className="border border-border rounded-2xl bg-muted/30 p-5">
+              <h3 className="text-base font-semibold mb-2">Adaptive Response</h3>
+              <p className="my-2">Adaptive Response is the capability to adjust tone, depth, pacing, or approach in response to changing customer signals.</p>
+              <p className="text-sm text-muted-foreground italic">Often shows up when a seller shifts their approach as signals change.</p>
+            </div>
+          </div>
         </section>
 
-        {/* Behavioral Metrics & Measurement Indicators */}
+        {/* Behavioral Metrics */}
         <section className="border border-border rounded-2xl bg-card p-5 mb-4">
-          <h2 className="text-xl mb-2.5">Behavioral Metrics & Measurement Indicators</h2>
+          <h2 className="text-xl mb-2.5">Behavioral Metrics</h2>
+          <p className="text-base font-semibold my-2.5">Observable behaviors that support coaching and skill development</p>
+          <p className="my-2.5">
+            Behavioral Metrics describe how each conversational skill shows up in practice.
+          </p>
+          <p className="my-2.5">
+            Each Signal Intelligence Capability is supported by a small set of observable behaviors that reflect how underlying Human Decision Drivers are expressed in real conversations. These behaviors make skills easier to recognize, discuss, and develop during practice, while focusing only on what can be seen and heard in the interaction.
+          </p>
+          <p className="text-sm text-muted-foreground border-l-3 border-l-accent pl-3 mt-3 mb-4">
+            These behaviors are observed during structured practice sessions such as role play, simulations, and coached conversations.
+          </p>
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
             <h3 className="text-base mb-2">Signal Awareness - Question Quality</h3>
-            <p className="font-semibold my-2.5">Defined behaviors</p>
+            <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Purposeful, customer-centered questioning</li>
               <li>Logical sequencing</li>
               <li>Effective follow-up</li>
             </ul>
-            <p className="font-semibold my-2.5">Measurement indicators</p>
+            <p className="font-semibold my-2.5">Examples of observable indicators</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Open vs. closed ratio</li>
               <li>Relevance to customer goals</li>
@@ -327,13 +400,13 @@ export default function SignalIntelligencePage() {
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
             <h3 className="text-base mb-2">Signal Interpretation - Listening & Responsiveness</h3>
-            <p className="font-semibold my-2.5">Defined behaviors</p>
+            <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Accurate paraphrasing</li>
               <li>Explicit acknowledgment of concerns</li>
               <li>Behavioral adjustment based on new information</li>
             </ul>
-            <p className="font-semibold my-2.5">Measurement indicators</p>
+            <p className="font-semibold my-2.5">Examples of observable indicators</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Paraphrase accuracy</li>
               <li>Concern acknowledgment</li>
@@ -343,13 +416,13 @@ export default function SignalIntelligencePage() {
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
             <h3 className="text-base mb-2">Value Connection - Value Framing</h3>
-            <p className="font-semibold my-2.5">Defined behaviors</p>
+            <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Outcome-focused language</li>
               <li>Customer priority alignment</li>
               <li>Avoids feature dumping</li>
             </ul>
-            <p className="font-semibold my-2.5">Measurement indicators</p>
+            <p className="font-semibold my-2.5">Examples of observable indicators</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Outcome references</li>
               <li>Explicit linkage to customer priorities</li>
@@ -361,13 +434,13 @@ export default function SignalIntelligencePage() {
             <h3 className="text-base mb-2">
               Customer Engagement Monitoring - Engagement Cues
             </h3>
-            <p className="font-semibold my-2.5">Defined behaviors</p>
+            <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Monitors energy and participation</li>
               <li>Identifies forward-looking signals</li>
               <li>Adjusts engagement strategy</li>
             </ul>
-            <p className="font-semibold my-2.5">Measurement indicators</p>
+            <p className="font-semibold my-2.5">Examples of observable indicators</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Talk-time balance</li>
               <li>Quality of customer questions</li>
@@ -378,13 +451,13 @@ export default function SignalIntelligencePage() {
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
             <h3 className="text-base mb-2">Objection Navigation - Objection Handling</h3>
-            <p className="font-semibold my-2.5">Defined behaviors</p>
+            <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Calm response to resistance</li>
               <li>Exploration before response</li>
               <li>Acknowledgment before reframing</li>
             </ul>
-            <p className="font-semibold my-2.5">Measurement indicators</p>
+            <p className="font-semibold my-2.5">Examples of observable indicators</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Acknowledgment-first behavior</li>
               <li>Depth of concern exploration</li>
@@ -396,13 +469,13 @@ export default function SignalIntelligencePage() {
             <h3 className="text-base mb-2">
               Conversation Management - Conversation Control & Structure
             </h3>
-            <p className="font-semibold my-2.5">Defined behaviors</p>
+            <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Clear purpose setting</li>
               <li>Smooth transitions</li>
               <li>Summarizes and clarifies next steps</li>
             </ul>
-            <p className="font-semibold my-2.5">Measurement indicators</p>
+            <p className="font-semibold my-2.5">Examples of observable indicators</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Purpose clarity</li>
               <li>Transition smoothness</li>
@@ -413,12 +486,12 @@ export default function SignalIntelligencePage() {
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
             <h3 className="text-base mb-2">Adaptive Response - Adaptability</h3>
-            <p className="font-semibold my-2.5">Defined behaviors</p>
+            <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Adjusts tone, depth, or pacing based on signals</li>
               <li>Shifts approach in response to new information</li>
             </ul>
-            <p className="font-semibold my-2.5">Measurement indicators</p>
+            <p className="font-semibold my-2.5">Examples of observable indicators</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Signal-aligned behavioral shifts</li>
             </ul>
@@ -426,12 +499,12 @@ export default function SignalIntelligencePage() {
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
             <h3 className="text-base mb-2">Commitment Generation - Commitment Gaining</h3>
-            <p className="font-semibold my-2.5">Defined behaviors</p>
+            <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Secures voluntary, explicit next actions</li>
               <li>Confirms mutual agreement and ownership</li>
             </ul>
-            <p className="font-semibold my-2.5">Measurement indicators</p>
+            <p className="font-semibold my-2.5">Examples of observable indicators</p>
             <ul className="my-2.5 ml-5 list-disc">
               <li>Explicit commitments</li>
               <li>Specific next steps</li>
@@ -444,29 +517,7 @@ export default function SignalIntelligencePage() {
         <section className="border border-border rounded-2xl bg-card p-5 mb-4">
           <h2 className="text-xl mb-2.5">Methodological Safeguards</h2>
           <p className="my-2.5">
-            Signal Intelligence is non-clinical and non-diagnostic. It assesses observable
-            conversation behavior only and does not infer protected attributes or mental health
-            status. Metrics are explainable, coachable, and auditable.
-          </p>
-          <p className="text-sm text-muted-foreground border-l-3 border-l-accent pl-3 mt-3">
-            Validity foundations:{' '}
-            <a
-              href="https://doi.org/10.1037/h0040957"
-              target="_blank"
-              rel="noreferrer"
-              className="text-accent hover:underline"
-            >
-              Cronbach & Meehl (1955)
-            </a>
-            ,{' '}
-            <a
-              href="https://doi.org/10.1037/0003-066X.50.9.741"
-              target="_blank"
-              rel="noreferrer"
-              className="text-accent hover:underline"
-            >
-              Messick (1995)
-            </a>
+            Signal Intelligence<sup className="text-xs">™</sup> is non-clinical and non-diagnostic. It assesses observable conversation behavior only and does not infer protected attributes or mental health status. All metrics are explainable, coachable, and auditable.
           </p>
         </section>
 
