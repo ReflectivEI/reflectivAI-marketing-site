@@ -792,7 +792,7 @@ export default function DemoPage() {
         </div>
       </section>
 
-      {/* Demo #2: Role Play Scenario Sampler */}
+      {/* Role Play Scenario Sampler */}
       <section id="role-play" className="py-16 md:py-24 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -828,7 +828,7 @@ export default function DemoPage() {
         </div>
       </section>
 
-      {/* Demo #3: Signal Intelligence Framework Explorer */}
+      {/* Signal Intelligence Framework Explorer */}
       <section id="framework" className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
