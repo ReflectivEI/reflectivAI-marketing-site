@@ -236,9 +236,9 @@ const scenarios: Scenario[] = [
         'Opportunity to explore who else needs to be involved in the decision'
       ],
       recommendations: [
-        'When a customer mentions "making the case to the committee," immediately ask: "Who is on that committee, and what matters most to each of them?"',
-        'Consider asking: "What would a successful outcome look like for you personally in this decision?" to understand individual motivations',
-        'Follow up with: "What concerns do you think the committee will raise that we should address proactively?"'
+        'When a customer mentions making the case to the committee, immediately ask who is on that committee and what matters most to each of them',
+        'Consider asking what a successful outcome would look like for them personally in this decision to understand individual motivations',
+        'Follow up with what concerns they think the committee will raise that should be addressed proactively'
       ],
       metrics: [
         { name: 'Objection Handling', score: 9, max: 10 },
