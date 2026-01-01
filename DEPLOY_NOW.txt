@@ -7,7 +7,7 @@
 3. **index.html** - Updated with SPA routing support
 
 ## Your GitHub Token:
-[YOUR_GITHUB_TOKEN]
+[YOUR_GITHUB_TOKEN_HERE]
 
 ## Deploy Commands:
 

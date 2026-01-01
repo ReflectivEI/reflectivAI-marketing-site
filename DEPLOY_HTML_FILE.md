@@ -15,7 +15,7 @@
 ## Your GitHub Token
 
 ```
-[YOUR_GITHUB_TOKEN]
+[YOUR_GITHUB_TOKEN_HERE]
 ```
 
 ## Commands to Run in Terminal
