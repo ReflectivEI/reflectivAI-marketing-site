@@ -264,14 +264,10 @@ export default function SignalIntelligencePage() {
           {/* Individual Capability Descriptions */}
           <div className="mt-6 space-y-4">
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
-              {/* Capability → Metric Badge Pair */}
-              <div className="flex flex-wrap items-center gap-3 mb-4">
+              {/* Capability Badge */}
+              <div className="mb-4">
                 <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
                   Signal Awareness
-                </span>
-                <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
-                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
-                  Question Quality
                 </span>
               </div>
               <h3 className="text-base font-semibold mb-2">Signal Awareness</h3>
@@ -280,14 +276,10 @@ export default function SignalIntelligencePage() {
             </div>
 
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
-              {/* Capability → Metric Badge Pair */}
-              <div className="flex flex-wrap items-center gap-3 mb-4">
+              {/* Capability Badge */}
+              <div className="mb-4">
                 <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
                   Signal Interpretation
-                </span>
-                <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
-                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
-                  Listening & Responsiveness
                 </span>
               </div>
               <h3 className="text-base font-semibold mb-2">Signal Interpretation</h3>
@@ -296,14 +288,10 @@ export default function SignalIntelligencePage() {
             </div>
 
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
-              {/* Capability → Metric Badge Pair */}
-              <div className="flex flex-wrap items-center gap-3 mb-4">
+              {/* Capability Badge */}
+              <div className="mb-4">
                 <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
                   Value Connection
-                </span>
-                <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
-                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
-                  Value Framing
                 </span>
               </div>
               <h3 className="text-base font-semibold mb-2">Value Connection</h3>
@@ -312,14 +300,10 @@ export default function SignalIntelligencePage() {
             </div>
 
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
-              {/* Capability → Metric Badge Pair */}
-              <div className="flex flex-wrap items-center gap-3 mb-4">
+              {/* Capability Badge */}
+              <div className="mb-4">
                 <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
                   Customer Engagement Monitoring
-                </span>
-                <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
-                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
-                  Engagement Cues
                 </span>
               </div>
               <h3 className="text-base font-semibold mb-2">Customer Engagement Monitoring</h3>
@@ -328,14 +312,10 @@ export default function SignalIntelligencePage() {
             </div>
 
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
-              {/* Capability → Metric Badge Pair */}
-              <div className="flex flex-wrap items-center gap-3 mb-4">
+              {/* Capability Badge */}
+              <div className="mb-4">
                 <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
                   Objection Navigation
-                </span>
-                <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
-                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
-                  Objection Handling
                 </span>
               </div>
               <h3 className="text-base font-semibold mb-2">Objection Navigation</h3>
@@ -344,14 +324,10 @@ export default function SignalIntelligencePage() {
             </div>
 
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
-              {/* Capability → Metric Badge Pair */}
-              <div className="flex flex-wrap items-center gap-3 mb-4">
+              {/* Capability Badge */}
+              <div className="mb-4">
                 <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
                   Conversation Management
-                </span>
-                <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
-                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
-                  Conversation Control & Structure
                 </span>
               </div>
               <h3 className="text-base font-semibold mb-2">Conversation Management</h3>
@@ -360,14 +336,10 @@ export default function SignalIntelligencePage() {
             </div>
 
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
-              {/* Capability → Metric Badge Pair */}
-              <div className="flex flex-wrap items-center gap-3 mb-4">
+              {/* Capability Badge */}
+              <div className="mb-4">
                 <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
                   Commitment Generation
-                </span>
-                <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
-                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
-                  Commitment Gaining
                 </span>
               </div>
               <h3 className="text-base font-semibold mb-2">Commitment Generation</h3>
@@ -376,14 +348,10 @@ export default function SignalIntelligencePage() {
             </div>
 
             <div className="border border-border rounded-2xl bg-muted/30 p-5">
-              {/* Capability → Metric Badge Pair */}
-              <div className="flex flex-wrap items-center gap-3 mb-4">
+              {/* Capability Badge */}
+              <div className="mb-4">
                 <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
                   Adaptive Response
-                </span>
-                <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
-                <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
-                  Adaptability
                 </span>
               </div>
               <h3 className="text-base font-semibold mb-2">Adaptive Response</h3>
@@ -408,6 +376,16 @@ export default function SignalIntelligencePage() {
           </p>
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
+            {/* Capability → Metric Badge Pair */}
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
+                Signal Awareness
+              </span>
+              <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
+              <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
+                Question Quality
+              </span>
+            </div>
             <h3 className="text-base mb-2 font-bold">Signal Awareness - Question Quality</h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
@@ -424,6 +402,16 @@ export default function SignalIntelligencePage() {
           </div>
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
+            {/* Capability → Metric Badge Pair */}
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
+                Signal Interpretation
+              </span>
+              <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
+              <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
+                Listening & Responsiveness
+              </span>
+            </div>
             <h3 className="text-base mb-2 font-bold">Signal Interpretation - Listening & Responsiveness</h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
@@ -440,6 +428,16 @@ export default function SignalIntelligencePage() {
           </div>
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
+            {/* Capability → Metric Badge Pair */}
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
+                Value Connection
+              </span>
+              <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
+              <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
+                Value Framing
+              </span>
+            </div>
             <h3 className="text-base mb-2 font-bold">Value Connection - Value Framing</h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
@@ -456,6 +454,16 @@ export default function SignalIntelligencePage() {
           </div>
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
+            {/* Capability → Metric Badge Pair */}
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
+                Customer Engagement Monitoring
+              </span>
+              <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
+              <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
+                Engagement Cues
+              </span>
+            </div>
             <h3 className="text-base mb-2 font-bold">
               Customer Engagement Monitoring - Engagement Cues
             </h3>
@@ -475,6 +483,16 @@ export default function SignalIntelligencePage() {
           </div>
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
+            {/* Capability → Metric Badge Pair */}
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
+                Objection Navigation
+              </span>
+              <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
+              <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
+                Objection Handling
+              </span>
+            </div>
             <h3 className="text-base mb-2 font-bold">Objection Navigation - Objection Handling</h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
@@ -491,6 +509,16 @@ export default function SignalIntelligencePage() {
           </div>
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
+            {/* Capability → Metric Badge Pair */}
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
+                Conversation Management
+              </span>
+              <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
+              <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
+                Conversation Control & Structure
+              </span>
+            </div>
             <h3 className="text-base mb-2 font-bold">
               Conversation Management - Conversation Control & Structure
             </h3>
@@ -510,6 +538,16 @@ export default function SignalIntelligencePage() {
           </div>
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
+            {/* Capability → Metric Badge Pair */}
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
+                Adaptive Response
+              </span>
+              <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
+              <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
+                Adaptability
+              </span>
+            </div>
             <h3 className="text-base mb-2 font-bold">Adaptive Response - Adaptability</h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
@@ -523,6 +561,16 @@ export default function SignalIntelligencePage() {
           </div>
 
           <div className="border border-border rounded-2xl bg-muted/30 p-5 my-3.5">
+            {/* Capability → Metric Badge Pair */}
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground border-2 border-primary">
+                Commitment Generation
+              </span>
+              <span className="text-muted-foreground text-lg" aria-hidden="true">→</span>
+              <span className="inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded-full bg-accent text-accent-foreground border-2 border-accent">
+                Commitment Gaining
+              </span>
+            </div>
             <h3 className="text-base mb-2 font-bold">Commitment Generation - Commitment Gaining</h3>
             <p className="font-semibold my-2.5">What this looks like in conversation</p>
             <ul className="my-2.5 ml-5 list-disc">
