@@ -261,7 +261,7 @@ export default function HomePage() {
             <div>
               <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
+                  src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/IMG_9247.jpeg"
                   alt="Professional team collaboration"
                   className="w-full h-full object-cover"
                 />
