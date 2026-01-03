@@ -129,7 +129,7 @@ export default function SignalIntelligencePage() {
           </p>
         </section>
 
-        {/* Human Decision Drivers Framework */
+        {/* Human Decision Drivers Framework */}
         <section className="border border-border rounded-2xl bg-card p-5 mb-4">
           <h2 className="text-xl mb-2.5 font-bold">Human Decision Drivers Framework</h2>
           <p className="my-2.5">
