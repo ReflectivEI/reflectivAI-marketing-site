@@ -98,7 +98,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-border">
+        <div className="mt-12 pt-8 border-t border-border space-y-4">
+          <div className="text-xs text-muted-foreground text-center max-w-4xl mx-auto">
+            Signal Intelligence™ focuses on observable interaction changes and response principles; it does not infer or diagnose a person's intent, emotion, motivation, or psychological state. AI may surface patterns, but people remain responsible for judgment and decisions.
+          </div>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} ReflectivAI. All rights reserved.

@@ -124,9 +124,12 @@ export default function SignalIntelligencePage() {
           <p className="my-2.5 font-semibold">
             Signal Intelligence makes the invisible moments of judgment visible, discussable, and developable.
           </p>
+          <p className="my-2.5">
+            Signals indicate that something has shifted; Human Decision Drivers explain why certain responses preserve credibility, trust, and access once a signal is detected.
+          </p>
         </section>
 
-        {/* Human Decision Drivers Framework */}
+        {/* Human Decision Drivers Framework */
         <section className="border border-border rounded-2xl bg-card p-5 mb-4">
           <h2 className="text-xl mb-2.5 font-bold">Human Decision Drivers Framework</h2>
           <p className="my-2.5">
