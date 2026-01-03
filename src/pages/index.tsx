@@ -279,7 +279,7 @@ export default function HomePage() {
               <div className="bg-primary/5 border-2 border-primary rounded-xl p-8 space-y-4">
                 <div className="flex items-center gap-4 mb-4">
                   <img 
-                    src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/03CEF596-5C80-4E27-88B1-6B17228D5C88.png" 
+                    src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/E3495A4D-3DF5-4F48-A08B-700A67979836-b2f7133.png" 
                     alt="Signal Intelligence Logo" 
                     className="h-8 w-auto object-contain"
                   />
@@ -1237,7 +1237,14 @@ export default function HomePage() {
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-24">
             <div className="space-y-6">
-              <h3 className="text-3xl font-bold">Real-Time Signal Detection</h3>
+              <div className="flex items-center gap-4">
+                <img 
+                  src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/E8C3B8D2-A8F5-4E8E-8F5D-0B8F5E8C3B8D-0a6b0f5.png" 
+                  alt="Perception Logo" 
+                  className="h-10 w-auto object-contain"
+                />
+                <h3 className="text-3xl font-bold">Real-Time Signal Detection</h3>
+              </div>
               <p className="text-lg text-muted-foreground">
                 Our AI analyzes tone, pace, questions, and silence during practice sessions. Get instant insights into customer engagement patterns, uncertainty signals, or resistance indicators—so you can refine your approach.
               </p>
@@ -1276,7 +1283,14 @@ export default function HomePage() {
               />
             </div>
             <div className="space-y-6">
-              <h3 className="text-3xl font-bold">Behavioral Coaching & Development</h3>
+              <div className="flex items-center gap-4">
+                <img 
+                  src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/F3E6B8BC-80B8-4AE3-A65A-D0ADC8BD9FAC-5d38294.png" 
+                  alt="Practice Logo" 
+                  className="h-10 w-auto object-contain"
+                />
+                <h3 className="text-3xl font-bold">Behavioral Coaching & Development</h3>
+              </div>
               <p className="text-lg text-muted-foreground">
                 Build Signal Intelligence™ Capabilities through personalized coaching paths. Practice detecting signals, interpreting behavior, and responding effectively in safe role-play scenarios.
               </p>
@@ -1299,7 +1313,14 @@ export default function HomePage() {
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-6">
-              <h3 className="text-3xl font-bold">Leadership Analytics & Behavioral Metrics</h3>
+              <div className="flex items-center gap-4">
+                <img 
+                  src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/864AFBE9-BF89-4048-AF45-18D6B1BC4B20-c65469f.png" 
+                  alt="Trust Logo" 
+                  className="h-10 w-auto object-contain"
+                />
+                <h3 className="text-3xl font-bold">Leadership Analytics & Behavioral Metrics</h3>
+              </div>
               <p className="text-lg text-muted-foreground">
                 Give sales leaders visibility into team Signal Intelligence™ Capabilities. Track behavioral metrics like Question Quality, Listening & Responsiveness, and Objection Navigation across the team.
               </p>
