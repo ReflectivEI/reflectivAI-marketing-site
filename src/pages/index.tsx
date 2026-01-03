@@ -211,47 +211,61 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-[700px]">
-            <div className="space-y-6">
-              {/* Eyebrow */}
-              <div className="text-xs uppercase tracking-wider text-muted-foreground font-medium">
-                SIGNAL INTELLIGENCE™
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Content */}
+            <div className="max-w-[700px]">
+              <div className="space-y-6">
+                {/* Eyebrow */}
+                <div className="text-xs uppercase tracking-wider text-muted-foreground font-medium">
+                  SIGNAL INTELLIGENCE™
+                </div>
+                
+                {/* Primary Headline */}
+                <h1 className="text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]" style={{ color: 'hsl(210, 50%, 20%)' }}>
+                  Human judgment, made visible.
+                </h1>
+                
+                {/* Secondary Headline */}
+                <h2 className="text-3xl lg:text-4xl font-semibold tracking-tight" style={{ color: 'hsl(180, 50%, 45%)' }}>
+                  AI, responsibly applied.
+                </h2>
+                
+                {/* Body Paragraph */}
+                <p className="text-lg text-gray-700 leading-relaxed max-w-[650px]">
+                  Signal Intelligence™ helps professionals recognize what's changing in a conversation—and respond in ways that preserve trust and credibility.
+                </p>
+                
+                {/* Capability Line */}
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: 'hsl(180, 50%, 45%, 0.1)', color: 'hsl(210, 50%, 20%)' }}>
+                  Behavior-based • Human-in-the-loop by design
+                </div>
               </div>
               
-              {/* Primary Headline */}
-              <h1 className="text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]" style={{ color: 'hsl(210, 50%, 20%)' }}>
-                Human judgment, made visible.
-              </h1>
-              
-              {/* Secondary Headline */}
-              <h2 className="text-3xl lg:text-4xl font-semibold tracking-tight" style={{ color: 'hsl(180, 50%, 45%)' }}>
-                AI, responsibly applied.
-              </h2>
-              
-              {/* Body Paragraph */}
-              <p className="text-lg text-gray-700 leading-relaxed max-w-[650px]">
-                Signal Intelligence™ helps professionals recognize what's changing in a conversation—and respond in ways that preserve trust and credibility.
-              </p>
-              
-              {/* Capability Line */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: 'hsl(180, 50%, 45%, 0.1)', color: 'hsl(210, 50%, 20%)' }}>
-                Behavior-based • Human-in-the-loop by design
-              </div>
-            </div>
-            
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mt-10">
-              <Button size="lg" className="text-base" asChild>
-                <Link to="/contact">
-                  Request Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" className="text-base" asChild>
-                <Link to="/demo">
-                  Explore Platform
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 mt-10">
+                <Button size="lg" className="text-base" asChild>
+                  <Link to="/contact">
+                    Request Demo
+                    <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
+                <Button size="lg" variant="outline" className="text-base" asChild>
+                  <Link to="/demo">
+                    Explore Platform
+                    </Link>
+                  </Button>
+              </div>
+            </div>
+
+            {/* Right Column - Hero Image */}
+            <div className="hidden lg:block">
+              <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
+                  alt="Professional team collaboration"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
