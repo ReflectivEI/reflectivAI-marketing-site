@@ -308,6 +308,7 @@ export default function HomePage() {
               </div>
 
               {/* Human Decision Drivers - Explanatory Only */}
+              {/* HIDDEN: Human Decision Drivers Framework section
               <div className="bg-background border border-border rounded-xl p-8 space-y-4">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="h-12 w-12 rounded-lg bg-muted flex items-center justify-center">
@@ -338,6 +339,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
+              */}
             </div>
           </div>
         </div>
