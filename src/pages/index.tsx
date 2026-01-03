@@ -383,7 +383,7 @@ export default function HomePage() {
       </section>
 
       {/* Traditional Training vs ReflectivAI Impact */}
-      <section className="py-20 bg-background">
+      {/* <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold">Traditional Training vs ReflectivAI Impact</h2>
@@ -395,8 +395,8 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
               {/* Traditional Training */}
-              <div className="space-y-6">
-                <div className="text-center mb-6">
+              {/* <div className="space-y-6">
+              {/*   <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-muted-foreground">Traditional Training</h3>
                 </div>
                 <div className="space-y-4">
@@ -419,7 +419,7 @@ export default function HomePage() {
               </div>
 
               {/* ReflectivAI Impact */}
-              <div className="space-y-6">
+              {/* <div className="space-y-6">
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-primary">ReflectivAI Impact</h3>
                 </div>
