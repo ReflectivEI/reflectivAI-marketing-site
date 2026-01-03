@@ -232,7 +232,7 @@ export default function HomePage() {
                 
                 {/* Body Paragraph */}
                 <p className="text-lg text-gray-700 leading-relaxed max-w-[650px]">
-                  Signal Intelligence™ helps professionals recognize what's changing in a conversation—and respond in ways that preserve trust and credibility.
+                  Signal Intelligence™ helps professionals recognize what's changing in a conversation and respond in ways that preserve trust, credibility, and access.
                 </p>
                 
                 {/* Capability Line */}
