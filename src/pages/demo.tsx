@@ -1,505 +1,966 @@
 import { useState } from 'react';
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Play, Sparkles, MessageSquare, Brain, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Progress } from '@/components/ui/progress';
+import { ArrowRight, Play, CheckCircle2, AlertCircle, TrendingUp, MessageSquare, Users, Target, ChevronRight, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-// AI Coach Mode - Post-Interaction Analysis
-const aiCoachExample = {
-  title: 'AI Coach: Post-Interaction Analysis',
-  subtitle: 'See how ReflectivAI analyzes completed conversations',
-  conversation: [
-    {
-      speaker: 'Rep',
-      text: 'Dr. Martinez, I know you have limited time. What is your biggest concern about switching patients to our therapy?'
-    },
-    {
-      speaker: 'HCP',
-      text: 'The dosing schedule is more complex than what we currently use.'
-    },
-    {
-      speaker: 'Rep',
-      text: 'I hear that - dosing complexity can impact adherence. Can you help me understand what specifically about the schedule concerns you?'
-    }
-  ],
-  analysis: [
-    {
-      capability: 'Signal Awareness',
-      metric: 'Question Quality',
-      rating: 'Strong',
-      insight: 'Opening question directly addresses time pressure and invites the HCP to share their primary concern - demonstrates awareness of context.'
-    },
-    {
-      capability: 'Signal Interpretation',
-      metric: 'Listening & Responsiveness',
-      rating: 'Strong',
-      insight: 'Rep acknowledges the concern without deflecting, then explores the specific nature of the objection rather than immediately defending the product.'
-    },
-    {
-      capability: 'Adaptive Response',
-      metric: 'Adaptability',
-      rating: 'Good',
-      insight: 'Pivots from clinical discussion to operational concerns, adapting to what matters most to this HCP.'
-    }
-  ],
-  coaching: {
-    strengths: [
-      'Excellent credibility building - acknowledged limitation honestly',
-      'Strong engagement monitoring - recognized shift to operational concerns',
-      'Effective adaptability - pivoted from clinical to operational solutions'
-    ],
-    improvements: [
-      'Could have asked about decision timeline earlier in conversation',
-      'Opportunity to explore what success looks like from HCP perspective'
-    ]
-  }
-};
+// Demo data structures
+interface ConversationTurn {
+  speaker: 'rep' | 'customer';
+  text: string;
+  signals?: {
+    capability: string;
+    metric: string;
+    rating: 'strong' | 'good' | 'needs-work';
+    note: string;
+  }[];
+}
 
-// Role Play Mode - Live Conversation Practice
-const rolePlayScenario = {
-  title: 'Role Play Simulator: Live Conversation Practice',
-  subtitle: 'Practice real-world conversations with simulated HCPs',
-  context: {
-    hcp: 'Dr. Sarah Chen, Oncologist',
-    setting: 'Brief hallway conversation, 3 minutes available',
-    priority: 'Concerned about patient out-of-pocket costs',
-    mood: 'Rushed but engaged'
-  },
-  turns: [
-    {
-      turn: 1,
-      hcp: 'I only have a few minutes before my next patient. What brings you by?',
-      userPrompt: 'How do you respond?',
-      sampleResponse: 'Dr. Chen, I appreciate you making time. I wanted to follow up on our last conversation about patient access - I have some new copay assistance information that might help.',
-      feedback: {
-        capability: 'Signal Awareness',
-        metric: 'Question Quality',
-        rating: 'Strong',
-        note: 'Acknowledges time constraint and references previous conversation - shows awareness of context and relationship history.'
-      }
+interface Scenario {
+  id: string;
+  title: string;
+  description: string;
+  persona: {
+    name: string;
+    role: string;
+    concerns: string[];
+    decisionStyle: string;
+  };
+  conversation: ConversationTurn[];
+  coachingFeedback: {
+    strengths: string[];
+    improvements: string[];
+    recommendations: string[];
+    metrics: { name: string; score: number; max: number }[];
+  };
+}
+
+const scenarios: Scenario[] = [
+  {
+    id: 'oncologist-discovery',
+    title: 'Discovery Call with Oncologist',
+    description: 'Navigate a time-constrained conversation while uncovering key priorities',
+    persona: {
+      name: 'Dr. Sarah Chen',
+      role: 'Oncology Department Head',
+      concerns: ['Patient outcomes', 'Time constraints', 'Evidence quality'],
+      decisionStyle: 'Data-driven, values efficiency'
     },
-    {
-      turn: 2,
-      hcp: 'That would be helpful. Several patients have mentioned the cost. What changed?',
-      userPrompt: 'Continue the conversation...',
-      sampleResponse: 'We just launched an enhanced patient support program. For commercially insured patients, we can reduce out-of-pocket costs to $25 per month in most cases.',
-      feedback: {
-        capability: 'Value Connection',
-        metric: 'Value Framing',
-        rating: 'Strong',
-        note: 'Directly addresses the stated concern with specific, actionable information - connects product support to HCP priority.'
+    conversation: [
+      {
+        speaker: 'rep',
+        text: "Dr. Chen, thanks for making time. I know you only have about 10 minutes, so I'll be mindful of that.",
+        signals: [{
+          capability: 'Signal Awareness',
+          metric: 'Question Quality',
+          rating: 'strong',
+          note: 'Acknowledges time constraint upfront - shows awareness of customer context'
+        }]
+      },
+      {
+        speaker: 'customer',
+        text: "I appreciate that. What did you want to discuss?"
+      },
+      {
+        speaker: 'rep',
+        text: "I wanted to understand what's top of mind for you right now when it comes to treatment options for your advanced melanoma patients.",
+        signals: [{
+          capability: 'Signal Awareness',
+          metric: 'Question Quality',
+          rating: 'strong',
+          note: 'Open-ended question focused on customer priorities, not product features'
+        }]
+      },
+      {
+        speaker: 'customer',
+        text: "Honestly, I'm seeing more patients who've failed first-line therapy. The challenge is finding options that balance efficacy with quality of life."
+      },
+      {
+        speaker: 'rep',
+        text: "That balance is critical. When you say quality of life, what specifically are you seeing that concerns you most?",
+        signals: [{
+          capability: 'Signal Interpretation',
+          metric: 'Listening & Responsiveness',
+          rating: 'strong',
+          note: 'Picks up on key phrase and explores deeper - demonstrates active listening'
+        }]
+      },
+      {
+        speaker: 'customer',
+        text: "Side effect profiles. Some of these therapies are so aggressive that patients struggle to maintain daily activities. I need options that work without destroying their remaining quality time."
+      },
+      {
+        speaker: 'rep',
+        text: "So if I'm hearing you right, you're looking for efficacy data, but the tolerability profile is equally important because it directly impacts whether patients can stay on therapy. Is that fair?",
+        signals: [{
+          capability: 'Value Connection',
+          metric: 'Value Framing',
+          rating: 'strong',
+          note: 'Connects clinical need to patient adherence - frames value in doctor terms'
+        }]
+      },
+      {
+        speaker: 'customer',
+        text: "Exactly. If they can't tolerate it, the efficacy doesn't matter."
+      },
+      {
+        speaker: 'rep',
+        text: "That makes complete sense. Would it be helpful if I shared some data on how our therapy performs on both dimensions—efficacy and tolerability—specifically in the second-line setting?",
+        signals: [{
+          capability: 'Commitment Generation',
+          metric: 'Commitment Gaining',
+          rating: 'good',
+          note: 'Asks permission before presenting - respectful of time and builds engagement'
+        }]
       }
-    },
-    {
-      turn: 3,
-      hcp: 'That is better. How quickly can patients get enrolled?',
-      userPrompt: 'Respond to the engagement...',
-      sampleResponse: 'Same day in most cases. I can leave enrollment forms with your staff, or patients can enroll online. Would it help if I trained your team on the process?',
-      feedback: {
-        capability: 'Commitment Gaining',
-        metric: 'Next Steps',
-        rating: 'Strong',
-        note: 'Provides immediate solution and offers concrete next step - recognizes positive engagement signal and moves toward action.'
-      }
+    ],
+    coachingFeedback: {
+      strengths: [
+        'Excellent signal awareness - acknowledged time constraint immediately',
+        'Strong listening and responsiveness - picked up on "quality of life" and explored deeper',
+        'Effective value framing - connected clinical need to patient adherence'
+      ],
+      improvements: [
+        'Could have explored "failed first-line therapy" comment earlier',
+        'Opportunity to ask about decision-making process or formulary considerations'
+      ],
+      recommendations: [
+        'When a customer mentions a specific patient population ("failed first-line"), dig into that immediately - it often reveals urgency',
+        'Consider asking: "What would need to be true for you to consider changing your current approach?" to understand decision criteria',
+        'Before presenting data, confirm: "Is there anything else I should understand about your patient population before I share this?"'
+      ],
+      metrics: [
+        { name: 'Question Quality', score: 9, max: 10 },
+        { name: 'Listening & Responsiveness', score: 9, max: 10 },
+        { name: 'Value Framing', score: 8, max: 10 },
+        { name: 'Engagement Cues', score: 7, max: 10 },
+        { name: 'Commitment Gaining', score: 7, max: 10 }
+      ]
     }
-  ]
-};
+  },
+  {
+    id: 'budget-objection',
+    title: 'Handling Budget Objections',
+    description: 'Navigate cost concerns with a hospital administrator',
+    persona: {
+      name: 'Michael Torres',
+      role: 'Hospital Pharmacy Director',
+      concerns: ['Budget constraints', 'Formulary impact', 'Cost-effectiveness'],
+      decisionStyle: 'Analytical, risk-averse'
+    },
+    conversation: [
+      {
+        speaker: 'customer',
+        text: "I've reviewed your proposal, but I have to be honest - the cost is significantly higher than our current standard of care."
+      },
+      {
+        speaker: 'rep',
+        text: "I appreciate you being direct about that. Cost is absolutely a real consideration. Can I ask - what are you currently using as your standard of care?",
+        signals: [{
+          capability: 'Objection Navigation',
+          metric: 'Objection Handling',
+          rating: 'strong',
+          note: 'Acknowledges objection without being defensive, then seeks to understand context'
+        }]
+      },
+      {
+        speaker: 'customer',
+        text: "We're using Drug X. It's been on formulary for years, and while it's not perfect, it's affordable and physicians are comfortable with it."
+      },
+      {
+        speaker: 'rep',
+        text: "That makes sense - familiarity and cost predictability matter. You mentioned it's not perfect. What are the gaps you're seeing with Drug X?",
+        signals: [{
+          capability: 'Signal Interpretation',
+          metric: 'Listening & Responsiveness',
+          rating: 'strong',
+          note: 'Catches subtle signal ("not perfect") and explores it - turns objection into discovery'
+        }]
+      },
+      {
+        speaker: 'customer',
+        text: "Well, we do see some patients who don't respond or have to discontinue due to side effects. Then we're scrambling for alternatives, which gets expensive."
+      },
+      {
+        speaker: 'rep',
+        text: "So there's a hidden cost when Drug X doesn't work - you're paying for the initial therapy plus the rescue therapy, plus the clinical time managing those transitions. Is that what you're experiencing?",
+        signals: [{
+          capability: 'Value Connection',
+          metric: 'Value Framing',
+          rating: 'strong',
+          note: 'Reframes cost conversation from acquisition price to total cost of care'
+        }]
+      },
+      {
+        speaker: 'customer',
+        text: "That's exactly it. We hadn't really quantified that, but yes - the failures are costly."
+      },
+      {
+        speaker: 'rep',
+        text: "Would it be useful to look at the total cost per successfully treated patient rather than just the per-unit cost? Our data shows that when you factor in response rates and tolerability, the cost per successful outcome is actually comparable - and in some cases, lower.",
+        signals: [{
+          capability: 'Adaptive Response',
+          metric: 'Adaptability',
+          rating: 'strong',
+          note: 'Shifts conversation from price to value - adapts approach based on customer hidden cost insight'
+        }]
+      },
+      {
+        speaker: 'customer',
+        text: "I'd need to see that analysis. If you can show me the math on that, it would help me make the case to the committee."
+      },
+      {
+        speaker: 'rep',
+        text: "Absolutely. I can pull together a cost-per-outcome analysis specific to your patient population. Would it also be helpful to include some case examples from similar institutions who've made this transition?",
+        signals: [{
+          capability: 'Commitment Generation',
+          metric: 'Commitment Gaining',
+          rating: 'good',
+          note: 'Secures next step and offers additional value (peer examples) to strengthen case'
+        }]
+      }
+    ],
+    coachingFeedback: {
+      strengths: [
+        'Excellent objection handling - acknowledged concern without defensiveness',
+        'Strong listening - caught "not perfect" signal and explored it',
+        'Effective value reframing - shifted from price to total cost of care',
+        'Good adaptability - pivoted approach based on customer insight'
+      ],
+      improvements: [
+        'Could have asked about budget cycle timing to understand urgency',
+        'Opportunity to explore who else needs to be involved in the decision'
+      ],
+      recommendations: [
+        'When a customer mentions making the case to the committee, immediately ask who is on that committee and what matters most to each of them',
+        'Consider asking what a successful outcome would look like for them personally in this decision to understand individual motivations',
+        'Follow up with what concerns they think the committee will raise that should be addressed proactively'
+      ],
+      metrics: [
+        { name: 'Objection Handling', score: 9, max: 10 },
+        { name: 'Listening & Responsiveness', score: 9, max: 10 },
+        { name: 'Value Framing', score: 9, max: 10 },
+        { name: 'Adaptability', score: 8, max: 10 },
+        { name: 'Commitment Gaining', score: 7, max: 10 }
+      ]
+    }
+  },
+  {
+    id: 'clinical-evidence',
+    title: 'Clinical Evidence Discussion',
+    description: 'Present complex clinical data to a skeptical pharmacy director',
+    persona: {
+      name: 'Dr. Jennifer Patel',
+      role: 'Pharmacy Director',
+      concerns: ['Evidence quality', 'Real-world applicability', 'Patient safety'],
+      decisionStyle: 'Evidence-focused, methodical'
+    },
+    conversation: [
+      {
+        speaker: 'customer',
+        text: "I've seen your Phase 3 data. The efficacy looks promising, but I have questions about the patient population in the trial versus who we actually treat."
+      },
+      {
+        speaker: 'rep',
+        text: "That's a really important question - trial populations don't always match real-world patients. What differences are you seeing that concern you?",
+        signals: [{
+          capability: 'Signal Awareness',
+          metric: 'Question Quality',
+          rating: 'strong',
+          note: 'Validates concern and invites customer to articulate specific gap - builds credibility'
+        }]
+      },
+      {
+        speaker: 'customer',
+        text: "Well, your trial excluded patients over 75 and those with significant comorbidities. That's probably 40% of the patients I see."
+      },
+      {
+        speaker: 'rep',
+        text: "You're right - the trial had those exclusion criteria for safety monitoring purposes. That's a real gap. We do have some emerging real-world evidence from post-marketing surveillance that includes older patients and those with comorbidities. Would that be relevant to review?",
+        signals: [{
+          capability: 'Signal Interpretation',
+          metric: 'Listening & Responsiveness',
+          rating: 'strong',
+          note: 'Acknowledges limitation honestly rather than deflecting - builds trust'
+        }]
+      },
+      {
+        speaker: 'customer',
+        text: "Yes, I'd want to see that. What's the sample size and how robust is the data?"
+      },
+      {
+        speaker: 'rep',
+        text: "It's about 1,200 patients so far, with a median follow-up of 8 months. It's observational, so not as controlled as the Phase 3 trial, but it does show similar efficacy trends and - importantly - no unexpected safety signals in the older or comorbid populations.",
+        signals: [{
+          capability: 'Value Connection',
+          metric: 'Value Framing',
+          rating: 'good',
+          note: 'Provides transparent context about data limitations while highlighting relevant findings'
+        }]
+      },
+      {
+        speaker: 'customer',
+        text: "That's helpful. I'd still want to see the actual data. My other concern is the dosing schedule - it's more complex than what we currently use."
+      },
+      {
+        speaker: 'rep',
+        text: "I hear that - dosing complexity can impact adherence and create operational challenges. Can you help me understand what specifically about the schedule concerns you? Is it the frequency, the administration requirements, or something else?",
+        signals: [{
+          capability: 'Customer Engagement Monitoring',
+          metric: 'Engagement Cues',
+          rating: 'strong',
+          note: 'Recognizes shift to new concern and explores it rather than defending dosing schedule'
+        }]
+      },
+      {
+        speaker: 'customer',
+        text: "It's the administration requirements. We'd need to ensure nursing staff are properly trained, and that takes time and resources."
+      },
+      {
+        speaker: 'rep',
+        text: "That's a legitimate operational consideration. We actually offer a comprehensive training program for clinical staff at no cost, including on-site support during the first few administrations. Would it be worth exploring what that looks like and whether it addresses your concern?",
+        signals: [{
+          capability: 'Adaptive Response',
+          metric: 'Adaptability',
+          rating: 'strong',
+          note: 'Pivots from clinical discussion to operational solution - adapts to customer real barrier'
+        }]
+      },
+      {
+        speaker: 'customer',
+        text: "Yes, that would help. If you can send me the real-world evidence data and information about the training program, I'll review it with my team."
+      },
+      {
+        speaker: 'rep',
+        text: "Absolutely. I'll get both of those to you by end of week. When you say 'review with your team,' who else should I make sure is included in this conversation?",
+        signals: [{
+          capability: 'Commitment Generation',
+          metric: 'Commitment Gaining',
+          rating: 'good',
+          note: 'Secures commitment and begins to map decision-making process'
+        }]
+      }
+    ],
+    coachingFeedback: {
+      strengths: [
+        'Excellent credibility building - acknowledged data limitations honestly',
+        'Strong engagement monitoring - recognized shift to operational concerns',
+        'Effective adaptability - pivoted from clinical to operational solutions',
+        'Good listening - explored specific concerns rather than making assumptions'
+      ],
+      improvements: [
+        'Could have asked about decision timeline earlier in conversation',
+        'Opportunity to explore what "success" looks like from customer\'s perspective'
+      ],
+      recommendations: [
+        'When a customer raises evidence concerns, ask: "What level of evidence would you need to feel comfortable moving forward?" to understand their threshold',
+        'Consider asking: "Beyond the data, what else would need to be in place for this to work in your setting?" to uncover hidden barriers',
+        'Before ending, confirm: "What questions do you anticipate from your team that we should address proactively?"'
+      ],
+      metrics: [
+        { name: 'Question Quality', score: 8, max: 10 },
+        { name: 'Listening & Responsiveness', score: 9, max: 10 },
+        { name: 'Value Framing', score: 7, max: 10 },
+        { name: 'Engagement Cues', score: 8, max: 10 },
+        { name: 'Adaptability', score: 9, max: 10 },
+        { name: 'Commitment Gaining', score: 7, max: 10 }
+      ]
+    }
+  }
+];
+
+const capabilities = [
+  {
+    name: 'Signal Awareness',
+    metric: 'Question Quality',
+    description: 'Recognizing verbal and contextual cues that reveal customer priorities, concerns, and decision-making factors',
+    example: {
+      good: '"I notice you mentioned time constraints twice. Should we focus on the most critical aspects first?"',
+      needsWork: 'Launching into a full product presentation without acknowledging the customer said they only have 10 minutes'
+    }
+  },
+  {
+    name: 'Signal Interpretation',
+    metric: 'Listening & Responsiveness',
+    description: 'Understanding the meaning and implications behind what customers say - and what they do not say',
+    example: {
+      good: 'Customer says "it is not perfect" - rep explores: "What gaps are you seeing?" rather than moving on',
+      needsWork: 'Customer mentions a concern but rep continues with scripted talking points'
+    }
+  },
+  {
+    name: 'Value Connection',
+    metric: 'Value Framing',
+    description: 'Linking product features to specific customer needs and priorities in their language',
+    example: {
+      good: '"You mentioned patient adherence is critical. Our once-weekly dosing directly addresses that by reducing administration burden."',
+      needsWork: 'Listing product features without connecting them to customer stated priorities'
+    }
+  },
+  {
+    name: 'Customer Engagement Monitoring',
+    metric: 'Engagement Cues',
+    description: 'Tracking customer interest, understanding, and receptivity throughout the conversation',
+    example: {
+      good: 'Noticing customer energy shift when discussing a specific topic and exploring it further',
+      needsWork: 'Continuing to present information despite customer showing signs of disengagement or confusion'
+    }
+  },
+  {
+    name: 'Objection Navigation',
+    metric: 'Objection Handling',
+    description: 'Addressing concerns and resistance in a way that maintains trust and moves the conversation forward',
+    example: {
+      good: '"Cost is a real consideration. Help me understand what you are comparing this to and what matters most in that comparison."',
+      needsWork: 'Becoming defensive or dismissive when customer raises a concern'
+    }
+  },
+  {
+    name: 'Conversation Management',
+    metric: 'Conversation Control & Structure',
+    description: 'Guiding the conversation productively while remaining responsive to customer needs',
+    example: {
+      good: '"We have covered efficacy and safety. Should we discuss implementation, or is there something else more pressing?"',
+      needsWork: 'Letting the conversation drift without clear direction or allowing customer to dominate without addressing key topics'
+    }
+  },
+  {
+    name: 'Adaptive Response',
+    metric: 'Adaptability',
+    description: 'Adjusting approach, messaging, and tactics based on customer feedback and changing circumstances',
+    example: {
+      good: 'Shifting from clinical data discussion to operational implementation when customer reveals that is the real barrier',
+      needsWork: 'Sticking to planned presentation despite customer signals indicating different priorities'
+    }
+  },
+  {
+    name: 'Commitment Generation',
+    metric: 'Commitment Gaining',
+    description: 'Moving the customer toward clear next steps and decisions in a natural, pressure-free way',
+    example: {
+      good: '"Based on what we have discussed, would it make sense to schedule time with your clinical team to review the protocol?"',
+      needsWork: 'Ending conversations without clear next steps or pushing for commitments that do not align with customer readiness'
+    }
+  }
+];
 
 export default function DemoPage() {
-  const [activeDemo, setActiveDemo] = useState<'coach' | 'roleplay' | null>(null);
-  const [currentStep, setCurrentStep] = useState(0);
+  const [selectedScenario, setSelectedScenario] = useState<string>(scenarios[0].id);
+  const [currentStep, setCurrentStep] = useState<number>(0);
+  const [activeCapability, setActiveCapability] = useState<number | null>(null);
 
-  const resetDemo = () => {
-    setActiveDemo(null);
-    setCurrentStep(0);
-  };
+  const scenario = scenarios.find(s => s.id === selectedScenario) || scenarios[0];
+  const maxSteps = scenario.conversation.length;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4">
-        <div className="container mx-auto max-w-5xl text-center">
-          <Badge className="mb-4" variant="secondary">
-            <Sparkles className="h-3 w-3 mr-1" />
-            Interactive Experience
-          </Badge>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Experience ReflectivAI in Action
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8">
-            Explore two distinct ways Signal Intelligence transforms pharma sales conversations
-          </p>
+      <section className="border-b border-border bg-gradient-to-b from-primary/5 to-background">
+        <div className="container mx-auto px-4 py-16 md:py-24">
+          <div className="max-w-3xl mx-auto text-center">
+            <Badge className="mb-4" variant="secondary">
+              <Sparkles className="h-3 w-3 mr-1" />
+              Interactive Experience
+            </Badge>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Experience ReflectivAI in Action
+            </h1>
+            <p className="text-xl text-muted-foreground mb-8">
+              Explore our AI-powered coaching platform with interactive demos. See how Signal Intelligence™ transforms sales conversations - no signup required.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button size="lg" asChild>
+                <Link to="/contact">
+                  Book a Live Demo
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <a href="#demos">Explore Interactive Demos</a>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
-      {!activeDemo ? (
-        <>
-          {/* Mode Selection */}
-          <section className="py-16 px-4">
-            <div className="container mx-auto max-w-6xl">
-              <div className="grid md:grid-cols-2 gap-8">
-                {/* AI Coach Demo */}
-                <Card className="hover:shadow-lg transition-shadow border-2 hover:border-primary cursor-pointer" onClick={() => setActiveDemo('coach')}>
-                  <CardHeader>
-                    <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                      <Brain className="h-6 w-6 text-primary" />
+      {/* Demo Navigation */}
+      <section id="demos" className="border-b border-border bg-muted/30">
+        <div className="container mx-auto px-4 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <a href="#ai-coach" className="group">
+              <Card className="h-full transition-all hover:shadow-lg hover:border-primary">
+                <CardHeader>
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                      <MessageSquare className="h-5 w-5" />
                     </div>
-                    <CardTitle className="text-2xl">AI Coach Simulation</CardTitle>
-                    <CardDescription className="text-base">
-                      Post-Interaction Coaching & Analysis
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-muted-foreground">
-                      See how AI Coach analyzes completed conversations and provides coaching feedback using Signal Intelligence.
-                    </p>
-                    <div className="space-y-2">
-                      <div className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm">Reviews completed conversation exchanges</span>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm">Maps behavior to Signal Intelligence Capabilities</span>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm">Provides explainable coaching insights</span>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm">No live conversation - analysis only</span>
-                      </div>
+                    <CardTitle className="text-lg">AI Coach Simulation</CardTitle>
+                  </div>
+                  <CardDescription>
+                    See personalized coaching feedback in action
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </a>
+            <a href="#role-play" className="group">
+              <Card className="h-full transition-all hover:shadow-lg hover:border-primary">
+                <CardHeader>
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                      <Users className="h-5 w-5" />
                     </div>
-                    <Button className="w-full" size="lg">
-                      <Play className="h-4 w-4 mr-2" />
-                      Try AI Coach Demo
-                    </Button>
-                  </CardContent>
-                </Card>
+                    <CardTitle className="text-lg">Role Play Sampler</CardTitle>
+                  </div>
+                  <CardDescription>
+                    Experience practice scenarios with live metrics
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </a>
+            <a href="#framework" className="group">
+              <Card className="h-full transition-all hover:shadow-lg hover:border-primary">
+                <CardHeader>
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                      <Target className="h-5 w-5" />
+                    </div>
+                    <CardTitle className="text-lg">Framework Explorer</CardTitle>
+                  </div>
+                  <CardDescription>
+                    Explore Signal Intelligence™ capabilities
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </a>
+          </div>
+        </div>
+      </section>
 
-                {/* Role Play Demo */}
-                <Card className="hover:shadow-lg transition-shadow border-2 hover:border-secondary cursor-pointer" onClick={() => setActiveDemo('roleplay')}>
+      {/* Demo #1: AI Coach Simulation */}
+      <section id="ai-coach" className="py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge className="mb-4" variant="outline">
+                Demo #1
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                AI Coach Simulation
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Watch how our AI Coach analyzes real conversations and provides actionable feedback to improve performance.
+              </p>
+            </div>
+
+            {/* Scenario Selector */}
+            <div className="mb-8">
+              <h3 className="text-sm font-medium mb-4">Choose a scenario:</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {scenarios.map((s) => (
+                  <button
+                    key={s.id}
+                    onClick={() => {
+                      setSelectedScenario(s.id);
+                      setCurrentStep(0);
+                    }}
+                    className={`text-left p-4 rounded-lg border-2 transition-all ${
+                      selectedScenario === s.id
+                        ? 'border-primary bg-primary/5'
+                        : 'border-border hover:border-primary/50'
+                    }`}
+                  >
+                    <h4 className="font-semibold mb-2">{s.title}</h4>
+                    <p className="text-sm text-muted-foreground">{s.description}</p>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {/* Left: Conversation Display */}
+              <div className="lg:col-span-2">
+                <Card>
                   <CardHeader>
-                    <div className="h-12 w-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
-                      <MessageSquare className="h-6 w-6 text-secondary" />
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <CardTitle>Conversation</CardTitle>
+                        <CardDescription>Step through the interaction</CardDescription>
+                      </div>
+                      <Badge variant="secondary">
+                        {currentStep + 1} / {maxSteps}
+                      </Badge>
                     </div>
-                    <CardTitle className="text-2xl">Role Play Simulator</CardTitle>
-                    <CardDescription className="text-base">
-                      Live Conversation Practice
-                    </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-muted-foreground">
-                      Practice real-world conversations with simulated HCPs and receive behavioral feedback in real-time.
-                    </p>
-                    <div className="space-y-2">
-                      <div className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm">Interactive turn-by-turn conversation</span>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm">Realistic HCP personas with priorities</span>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm">Behavioral metrics evaluated per turn</span>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm">Build skills through practice</span>
-                      </div>
+                    {/* Conversation turns */}
+                    <div className="space-y-4 min-h-[400px]">
+                      {scenario.conversation.slice(0, currentStep + 1).map((turn, idx) => (
+                        <div key={idx} className="space-y-2">
+                          <div
+                            className={`p-4 rounded-lg ${
+                              turn.speaker === 'rep'
+                                ? 'bg-primary/10 ml-8'
+                                : 'bg-muted mr-8'
+                            }`}
+                          >
+                            <div className="flex items-center gap-2 mb-2">
+                              <span className="text-xs font-semibold uppercase tracking-wide">
+                                {turn.speaker === 'rep' ? 'Sales Rep' : scenario.persona.name}
+                              </span>
+                            </div>
+                            <p className="text-sm">{turn.text}</p>
+                          </div>
+                          {/* Signal annotations */}
+                          {turn.signals && turn.signals.map((signal, sIdx) => (
+                            <div key={sIdx} className="ml-12 p-3 rounded-lg bg-accent/10 border border-accent/20">
+                              <div className="flex items-start gap-2">
+                                {signal.rating === 'strong' && <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />}
+                                {signal.rating === 'good' && <CheckCircle2 className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />}
+                                {signal.rating === 'needs-work' && <AlertCircle className="h-4 w-4 text-orange-600 mt-0.5 flex-shrink-0" />}
+                                <div className="flex-1">
+                                  <div className="flex items-center gap-2 mb-1">
+                                    <Badge variant="outline" className="text-xs">
+                                      {signal.capability}
+                                    </Badge>
+                                    <ChevronRight className="h-3 w-3 text-muted-foreground" />
+                                    <Badge variant="secondary" className="text-xs">
+                                      {signal.metric}
+                                    </Badge>
+                                  </div>
+                                  <p className="text-xs text-muted-foreground">{signal.note}</p>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      ))}
                     </div>
-                    <Button className="w-full" size="lg" variant="secondary">
-                      <Play className="h-4 w-4 mr-2" />
-                      Try Role Play Demo
-                    </Button>
+
+                    {/* Controls */}
+                    <div className="flex items-center justify-between pt-4 border-t border-border">
+                      <Button
+                        variant="outline"
+                        onClick={() => setCurrentStep(Math.max(0, currentStep - 1))}
+                        disabled={currentStep === 0}
+                      >
+                        Previous
+                      </Button>
+                      <Button
+                        onClick={() => setCurrentStep(Math.min(maxSteps - 1, currentStep + 1))}
+                        disabled={currentStep === maxSteps - 1}
+                      >
+                        {currentStep === maxSteps - 1 ? 'View Feedback' : 'Next'}
+                        <ChevronRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
-            </div>
-          </section>
 
-          {/* Framework Explorer */}
-          <section className="py-16 px-4 bg-muted">
-            <div className="container mx-auto max-w-4xl">
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader className="text-center">
-                  <div className="h-12 w-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4 mx-auto">
-                    <Sparkles className="h-6 w-6 text-accent" />
-                  </div>
-                  <CardTitle className="text-2xl">Signal Intelligence Framework</CardTitle>
-                  <CardDescription className="text-base">
-                    Explore the 8 core capabilities that power both modes
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="text-center">
+              {/* Right: Customer Persona & AI Feedback */}
+              <div className="space-y-6">
+                {/* Persona Card */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Customer Profile</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <div>
+                      <p className="font-semibold">{scenario.persona.name}</p>
+                      <p className="text-sm text-muted-foreground">{scenario.persona.role}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs font-medium mb-2">Key Concerns:</p>
+                      <div className="flex flex-wrap gap-2">
+                        {scenario.persona.concerns.map((concern, idx) => (
+                          <Badge key={idx} variant="secondary" className="text-xs">
+                            {concern}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <p className="text-xs font-medium mb-1">Decision Style:</p>
+                      <p className="text-sm text-muted-foreground">{scenario.persona.decisionStyle}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* AI Coaching Feedback (shown when conversation complete) */}
+                {currentStep === maxSteps - 1 && (
+                  <Card className="border-primary">
+                    <CardHeader>
+                      <div className="flex items-center gap-2">
+                        <Sparkles className="h-5 w-5 text-primary" />
+                        <CardTitle className="text-lg">AI Coach Feedback</CardTitle>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      {/* Metrics */}
+                      <div>
+                        <p className="text-sm font-medium mb-3">Performance Metrics</p>
+                        <div className="space-y-3">
+                          {scenario.coachingFeedback.metrics.map((metric, idx) => (
+                            <div key={idx}>
+                              <div className="flex items-center justify-between mb-1">
+                                <span className="text-xs font-medium">{metric.name}</span>
+                                <span className="text-xs text-muted-foreground">
+                                  {metric.score}/{metric.max}
+                                </span>
+                              </div>
+                              <Progress value={(metric.score / metric.max) * 100} className="h-2" />
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Strengths */}
+                      <div>
+                        <p className="text-sm font-medium mb-2 flex items-center gap-2">
+                          <CheckCircle2 className="h-4 w-4 text-green-600" />
+                          What You Did Well
+                        </p>
+                        <ul className="space-y-2">
+                          {scenario.coachingFeedback.strengths.map((strength, idx) => (
+                            <li key={idx} className="text-xs text-muted-foreground pl-6 relative">
+                              <span className="absolute left-0 top-1">•</span>
+                              {strength}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Improvements */}
+                      <div>
+                        <p className="text-sm font-medium mb-2 flex items-center gap-2">
+                          <TrendingUp className="h-4 w-4 text-blue-600" />
+                          Growth Opportunities
+                        </p>
+                        <ul className="space-y-2">
+                          {scenario.coachingFeedback.improvements.map((improvement, idx) => (
+                            <li key={idx} className="text-xs text-muted-foreground pl-6 relative">
+                              <span className="absolute left-0 top-1">•</span>
+                              {improvement}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Recommendations */}
+                      <div>
+                        <p className="text-sm font-medium mb-2 flex items-center gap-2">
+                          <Sparkles className="h-4 w-4 text-primary" />
+                          Try This Next Time
+                        </p>
+                        <ul className="space-y-2">
+                          {scenario.coachingFeedback.recommendations.map((rec, idx) => (
+                            <li key={idx} className="text-xs text-muted-foreground pl-6 relative">
+                              <span className="absolute left-0 top-1">•</span>
+                              {rec}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </CardContent>
+                  </Card>
+                )}
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="mt-12 text-center">
+              <Card className="bg-primary/5 border-primary/20">
+                <CardContent className="py-8">
+                  <h3 className="text-xl font-semibold mb-2">
+                    Want to practice with your own scenarios?
+                  </h3>
                   <p className="text-muted-foreground mb-6">
-                    Both AI Coach and Role Play Simulator use the same Signal Intelligence framework to analyze observable behavior and provide actionable feedback.
+                    Get personalized AI coaching on your actual customer conversations.
                   </p>
-                  <Button variant="outline" size="lg" asChild>
-                    <Link to="/signal-intelligence">
-                      Explore Framework
-                      <ArrowRight className="h-4 w-4 ml-2" />
+                  <Button size="lg" asChild>
+                    <Link to="/contact">
+                      Book a Demo
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                 </CardContent>
               </Card>
             </div>
-          </section>
-        </>
-      ) : activeDemo === 'coach' ? (
-        <AICoachDemo example={aiCoachExample} currentStep={currentStep} setCurrentStep={setCurrentStep} onReset={resetDemo} />
-      ) : (
-        <RolePlayDemo scenario={rolePlayScenario} currentStep={currentStep} setCurrentStep={setCurrentStep} onReset={resetDemo} />
-      )}
+          </div>
+        </div>
+      </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-primary text-primary-foreground">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Transform Your Sales Team?
-          </h2>
-          <p className="text-xl mb-8 opacity-90">
-            See how ReflectivAI can help your team master high-stakes conversations
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" variant="secondary" asChild>
-              <Link to="/contact">Request a Demo</Link>
-            </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-              <Link to="/">Learn More</Link>
-            </Button>
+      {/* Demo #2: Role Play Scenario Sampler */}
+      <section id="role-play" className="py-16 md:py-24 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge className="mb-4" variant="outline">
+                Demo #2
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Role Play Scenario Sampler
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Experience our practice environment where reps build skills through realistic pharma scenarios.
+              </p>
+            </div>
+
+            <Card>
+              <CardContent className="p-8">
+                <div className="text-center py-12">
+                  <Users className="h-16 w-16 mx-auto mb-4 text-muted-foreground" />
+                  <h3 className="text-xl font-semibold mb-2">
+                    Interactive Role Play Coming Soon
+                  </h3>
+                  <p className="text-muted-foreground mb-6">
+                    We're building an interactive role play experience where you can practice responding to customer scenarios in real-time.
+                  </p>
+                  <Button asChild>
+                    <Link to="/contact">
+                      Request Early Access
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Demo #3: Signal Intelligence Framework Explorer */}
+      <section id="framework" className="py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge className="mb-4" variant="outline">
+                Demo #3
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Signal Intelligence™ Framework Explorer
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Explore the 8 capabilities that power our coaching system. Click any capability to see real examples.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {capabilities.map((capability, idx) => (
+                <Card
+                  key={idx}
+                  className={`cursor-pointer transition-all ${
+                    activeCapability === idx
+                      ? 'border-primary shadow-lg'
+                      : 'hover:border-primary/50'
+                  }`}
+                  onClick={() => setActiveCapability(activeCapability === idx ? null : idx)}
+                >
+                  <CardHeader>
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-2">
+                          <Badge variant="outline">{capability.name}</Badge>
+                          <ChevronRight className="h-3 w-3 text-muted-foreground" />
+                          <Badge variant="secondary" className="text-xs">
+                            {capability.metric}
+                          </Badge>
+                        </div>
+                        <CardDescription>{capability.description}</CardDescription>
+                      </div>
+                      <ChevronRight
+                        className={`h-5 w-5 text-muted-foreground transition-transform ${
+                          activeCapability === idx ? 'rotate-90' : ''
+                        }`}
+                      />
+                    </div>
+                  </CardHeader>
+                  {activeCapability === idx && (
+                    <CardContent className="space-y-4 pt-0">
+                      <div>
+                        <div className="flex items-center gap-2 mb-2">
+                          <CheckCircle2 className="h-4 w-4 text-green-600" />
+                          <p className="text-sm font-medium">What Good Looks Like</p>
+                        </div>
+                        <p className="text-sm text-muted-foreground pl-6">
+                          {capability.example.good}
+                        </p>
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-2 mb-2">
+                          <AlertCircle className="h-4 w-4 text-orange-600" />
+                          <p className="text-sm font-medium">What Needs Work</p>
+                        </div>
+                        <p className="text-sm text-muted-foreground pl-6">
+                          {capability.example.needsWork}
+                        </p>
+                      </div>
+                    </CardContent>
+                  )}
+                </Card>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <div className="mt-12 text-center">
+              <Card className="bg-primary/5 border-primary/20">
+                <CardContent className="py-8">
+                  <h3 className="text-xl font-semibold mb-2">
+                    Ready to develop these capabilities in your team?
+                  </h3>
+                  <p className="text-muted-foreground mb-6">
+                    See how Signal Intelligence™ transforms sales performance.
+                  </p>
+                  <div className="flex flex-wrap gap-4 justify-center">
+                    <Button size="lg" asChild>
+                      <Link to="/contact">
+                        Book a Demo
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                    <Button size="lg" variant="outline" asChild>
+                      <Link to="/signal-intelligence">
+                        Learn More About Signal Intelligence™
+                      </Link>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-16 md:py-24 border-t border-border">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Experience the Full Platform
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              These demos show just a glimpse of what ReflectivAI can do. Book a personalized demo to see how we can transform your team's performance.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button size="lg" asChild>
+                <Link to="/contact">
+                  Book a Live Demo
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <Link to="/">
+                  Back to Home
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
     </div>
-  );
-}
-
-// AI Coach Demo Component - Shows post-interaction analysis
-function AICoachDemo({ example, currentStep, setCurrentStep, onReset }: any) {
-  const maxSteps = example.conversation.length + example.analysis.length + 1;
-
-  return (
-    <section className="py-16 px-4">
-      <div className="container mx-auto max-w-5xl">
-        <div className="mb-8 text-center">
-          <Badge className="mb-4" variant="default">
-            <Brain className="h-3 w-3 mr-1" />
-            AI Coach Mode
-          </Badge>
-          <h2 className="text-3xl font-bold mb-2">{example.title}</h2>
-          <p className="text-muted-foreground">{example.subtitle}</p>
-        </div>
-
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle>Completed Conversation</CardTitle>
-            <CardDescription>AI Coach analyzes this exchange to provide coaching insights</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            {example.conversation.map((turn: any, index: number) => (
-              <div key={index} className={`p-4 rounded-lg ${turn.speaker === 'Rep' ? 'bg-primary/5 border-l-4 border-primary' : 'bg-muted'}`}>
-                <div className="font-semibold text-sm mb-1">{turn.speaker}</div>
-                <div className="text-sm">{turn.text}</div>
-              </div>
-            ))}
-          </CardContent>
-        </Card>
-
-        {currentStep > 0 && (
-          <Card className="mb-8">
-            <CardHeader>
-              <CardTitle>AI Coach Analysis</CardTitle>
-              <CardDescription>Signal Intelligence Capabilities & Behavioral Metrics</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              {example.analysis.slice(0, Math.min(currentStep, example.analysis.length)).map((item: any, index: number) => (
-                <div key={index} className="p-4 rounded-lg border border-border bg-card space-y-2">
-                  <div className="flex items-center justify-between">
-                    <div className="font-semibold">{item.capability}</div>
-                    <Badge variant={item.rating === 'Strong' ? 'default' : 'secondary'}>{item.rating}</Badge>
-                  </div>
-                  <div className="text-sm text-muted-foreground">Behavioral Metric: {item.metric}</div>
-                  <div className="text-sm">{item.insight}</div>
-                </div>
-              ))}
-            </CardContent>
-          </Card>
-        )}
-
-        {currentStep > example.analysis.length && (
-          <Card className="mb-8">
-            <CardHeader>
-              <CardTitle>Coaching Feedback</CardTitle>
-              <CardDescription>Strengths and development opportunities</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div>
-                <h4 className="font-semibold mb-3 text-green-600">Strengths</h4>
-                <ul className="space-y-2">
-                  {example.coaching.strengths.map((item: string, index: number) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-3 text-amber-600">Development Opportunities</h4>
-                <ul className="space-y-2">
-                  {example.coaching.improvements.map((item: string, index: number) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <ArrowRight className="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </CardContent>
-          </Card>
-        )}
-
-        <div className="flex gap-4 justify-center">
-          {currentStep < maxSteps - 1 ? (
-            <Button size="lg" onClick={() => setCurrentStep(currentStep + 1)}>
-              {currentStep === 0 ? 'Start Analysis' : 'Continue'}
-              <ArrowRight className="h-4 w-4 ml-2" />
-            </Button>
-          ) : (
-            <Button size="lg" variant="outline" onClick={onReset}>
-              Try Another Demo
-            </Button>
-          )}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// Role Play Demo Component - Shows live conversation practice
-function RolePlayDemo({ scenario, currentStep, setCurrentStep, onReset }: any) {
-  const currentTurn = scenario.turns[Math.min(currentStep, scenario.turns.length - 1)];
-  const showFeedback = currentStep > 0;
-
-  return (
-    <section className="py-16 px-4">
-      <div className="container mx-auto max-w-5xl">
-        <div className="mb-8 text-center">
-          <Badge className="mb-4" variant="secondary">
-            <MessageSquare className="h-3 w-3 mr-1" />
-            Role Play Mode
-          </Badge>
-          <h2 className="text-3xl font-bold mb-2">{scenario.title}</h2>
-          <p className="text-muted-foreground">{scenario.subtitle}</p>
-        </div>
-
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle>Scenario Context</CardTitle>
-          </CardHeader>
-          <CardContent className="grid md:grid-cols-2 gap-4">
-            <div>
-              <div className="text-sm font-semibold mb-1">HCP</div>
-              <div className="text-sm text-muted-foreground">{scenario.context.hcp}</div>
-            </div>
-            <div>
-              <div className="text-sm font-semibold mb-1">Setting</div>
-              <div className="text-sm text-muted-foreground">{scenario.context.setting}</div>
-            </div>
-            <div>
-              <div className="text-sm font-semibold mb-1">Priority</div>
-              <div className="text-sm text-muted-foreground">{scenario.context.priority}</div>
-            </div>
-            <div>
-              <div className="text-sm font-semibold mb-1">Mood</div>
-              <div className="text-sm text-muted-foreground">{scenario.context.mood}</div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {currentStep < scenario.turns.length && (
-          <Card className="mb-8">
-            <CardHeader>
-              <CardTitle>Turn {currentTurn.turn}</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="p-4 rounded-lg bg-muted">
-                <div className="font-semibold text-sm mb-1">Dr. Chen</div>
-                <div className="text-sm">{currentTurn.hcp}</div>
-              </div>
-
-              <div className="p-4 rounded-lg border-2 border-dashed border-primary/30 bg-primary/5">
-                <div className="font-semibold text-sm mb-2">{currentTurn.userPrompt}</div>
-                {showFeedback && currentStep === currentTurn.turn && (
-                  <div className="mt-4 p-4 rounded-lg bg-background border border-border">
-                    <div className="font-semibold text-sm mb-1">Sample Response</div>
-                    <div className="text-sm mb-4">{currentTurn.sampleResponse}</div>
-                    <div className="pt-4 border-t border-border space-y-2">
-                      <div className="flex items-center justify-between">
-                        <div className="font-semibold text-sm">{currentTurn.feedback.capability}</div>
-                        <Badge variant={currentTurn.feedback.rating === 'Strong' ? 'default' : 'secondary'}>
-                          {currentTurn.feedback.rating}
-                        </Badge>
-                      </div>
-                      <div className="text-xs text-muted-foreground">Metric: {currentTurn.feedback.metric}</div>
-                      <div className="text-sm">{currentTurn.feedback.note}</div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </CardContent>
-          </Card>
-        )}
-
-        {currentStep >= scenario.turns.length && (
-          <Card className="mb-8">
-            <CardHeader>
-              <CardTitle>Scenario Complete</CardTitle>
-              <CardDescription>You have practiced all conversation turns</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground mb-4">
-                In the full Role Play Simulator, you would continue the conversation organically, with the HCP responding to your actual inputs. This demo shows sample responses to illustrate how behavioral feedback works.
-              </p>
-              <div className="p-4 rounded-lg bg-muted">
-                <h4 className="font-semibold mb-2">Key Takeaways</h4>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Role Play evaluates observable behavior in real-time</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Each turn maps to Signal Intelligence Capabilities</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>HCP personas reflect realistic priorities and constraints</span>
-                  </li>
-                </ul>
-              </div>
-            </CardContent>
-          </Card>
-        )}
-
-        <div className="flex gap-4 justify-center">
-          {currentStep < scenario.turns.length ? (
-            <Button size="lg" variant="secondary" onClick={() => setCurrentStep(currentStep + 1)}>
-              {currentStep === 0 ? 'Start Conversation' : 'Next Turn'}
-              <ArrowRight className="h-4 w-4 ml-2" />
-            </Button>
-          ) : (
-            <Button size="lg" variant="outline" onClick={onReset}>
-              Try Another Demo
-            </Button>
-          )}
-        </div>
-      </div>
-    </section>
   );
 }
