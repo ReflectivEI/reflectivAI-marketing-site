@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -13,6 +13,21 @@ import {
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleFAQClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMobileMenuOpen(false);
+  };
 
   const navLinks = [
     { href: '/', label: 'Platform' },
@@ -41,13 +56,24 @@ export default function Header() {
 
           <nav className="hidden md:flex gap-8 items-center">
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className="text-sm font-medium hover:text-primary transition-colors"
-              >
-                {link.label}
-              </Link>
+              link.label === 'FAQ' ? (
+                <a
+                  key={link.href}
+                  href="#faq"
+                  onClick={handleFAQClick}
+                  className="text-sm font-medium hover:text-primary transition-colors cursor-pointer"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="text-sm font-medium hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
             
             <NavigationMenu>
@@ -102,14 +128,25 @@ export default function Header() {
           <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  className="text-sm font-medium hover:text-primary transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
+                link.label === 'FAQ' ? (
+                  <a
+                    key={link.href}
+                    href="#faq"
+                    onClick={handleFAQClick}
+                    className="text-sm font-medium hover:text-primary transition-colors cursor-pointer"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    className="text-sm font-medium hover:text-primary transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
               <div className="border-t border-border pt-4">
                 <div className="text-xs font-semibold text-muted-foreground mb-2 px-2">Learn More</div>
