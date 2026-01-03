@@ -252,7 +252,6 @@ export default function HomePage() {
                   Explore Platform
                   </Link>
                 </Button>
-              </div>
             </div>
           </div>
         </div>
