@@ -211,61 +211,47 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Content */}
-            <div className="max-w-[700px]">
-              <div className="space-y-6">
-                {/* Eyebrow */}
-                <div className="text-xs uppercase tracking-wider text-muted-foreground font-medium">
-                  SIGNAL INTELLIGENCE™
-                </div>
-                
-                {/* Primary Headline */}
-                <h1 className="text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]" style={{ color: 'hsl(210, 50%, 20%)' }}>
-                  Human judgment, made visible.
-                </h1>
-                
-                {/* Secondary Headline */}
-                <h2 className="text-3xl lg:text-4xl font-semibold tracking-tight" style={{ color: 'hsl(180, 50%, 45%)' }}>
-                  AI, responsibly applied.
-                </h2>
-                
-                {/* Body Paragraph */}
-                <p className="text-lg text-gray-700 leading-relaxed max-w-[650px]">
-                  Signal Intelligence™ helps professionals recognize what's changing in a conversation and respond in ways that preserve trust, credibility, and access.
-                </p>
-                
-                {/* Capability Line */}
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: 'hsl(180, 50%, 45%, 0.1)', color: 'hsl(210, 50%, 20%)' }}>
-                  Behavior-based • Human-in-the-loop by design
-                </div>
+          <div className="max-w-[720px]">
+            <div className="space-y-8">
+              {/* Domain Descriptor */}
+              <div className="text-[15px] md:text-[17px] uppercase tracking-[0.06em] font-medium" style={{ color: 'hsl(215, 16%, 47%)' }}>
+                SIGNAL INTELLIGENCE™ FOR LIFE SCIENCES SALES
               </div>
               
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 mt-10">
-                <Button size="lg" className="text-base" asChild>
-                  <Link to="/contact">
-                    Request Demo
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button size="lg" variant="outline" className="text-base" asChild>
-                  <Link to="/demo">
-                    Explore Platform
-                    </Link>
-                  </Button>
+              {/* Primary Headline */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1]" style={{ color: 'hsl(210, 50%, 20%)' }}>
+                Human judgment, made visible.
+              </h1>
+              
+              {/* Secondary Headline */}
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold" style={{ color: 'hsl(180, 50%, 45%)' }}>
+                AI, responsibly applied.
+              </h2>
+              
+              {/* Body Paragraph */}
+              <p className="text-lg leading-[1.5] max-w-[640px]" style={{ color: 'hsl(215, 16%, 27%)' }}>
+                Signal Intelligence™ helps professionals recognize what's changing in a conversation—and respond in ways that preserve trust and credibility.
+              </p>
+              
+              {/* Capability Line */}
+              <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: 'hsl(180, 50%, 45%, 0.1)', color: 'hsl(210, 50%, 20%)' }}>
+                Behavior-based • Human-in-the-loop by design
               </div>
             </div>
-
-            {/* Right Column - Hero Image */}
-            <div>
-              <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/IMG_9247.jpeg"
-                  alt="Professional team collaboration"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 mt-12">
+              <Button size="lg" className="text-base" asChild>
+                <Link to="/contact">
+                  Request Demo
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="text-base" asChild>
+                <Link to="/demo">
+                  Explore Platform
+                  </Link>
+                </Button>
             </div>
           </div>
         </div>
@@ -292,13 +278,11 @@ export default function HomePage() {
               {/* Signal Intelligence™ - Primary */}
               <div className="bg-primary/5 border-2 border-primary rounded-xl p-8 space-y-4">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="h-32 w-32 rounded-lg flex items-center justify-center" style={{ backgroundColor: 'hsl(var(--primary) / 0.05)' }}>
-                    <img 
-                      src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/D1C18103-FC48-4EA3-807D-2E83DB06A63E.png" 
-                      alt="Signal Intelligence Logo" 
-                      className="w-full h-full object-contain p-2"
-                    />
-                  </div>
+                  <img 
+                    src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/03CEF596-5C80-4E27-88B1-6B17228D5C88.png" 
+                    alt="Signal Intelligence Logo" 
+                    className="h-8 w-auto object-contain"
+                  />
                   <h3 className="text-2xl font-bold">Signal Intelligence™</h3>
                 </div>
                 <p className="text-lg font-semibold text-primary">The Core Capabilities</p>
