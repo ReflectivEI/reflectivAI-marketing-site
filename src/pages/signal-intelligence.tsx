@@ -64,6 +64,68 @@ export default function SignalIntelligencePage() {
           </p>
         </section>
 
+        {/* What We Mean by a "Signal" */}
+        <section className="border border-border rounded-2xl bg-card p-5 mb-4">
+          <h2 className="text-xl mb-2.5 font-bold">What We Mean by a "Signal"</h2>
+          <p className="my-2.5">
+            In real conversations, a signal is:
+          </p>
+          <p className="my-2.5 font-semibold">
+            An observable change in behavior or context that indicates something meaningful has shifted and may require a different conversational approach.
+          </p>
+          <p className="my-2.5">
+            Signals are:
+          </p>
+          <ul className="my-2.5 ml-5 list-disc space-y-2">
+            <li><strong>Observable</strong> — they can be seen or heard</li>
+            <li><strong>Contextual</strong> — their meaning depends on what has already happened</li>
+            <li><strong>Action-relevant</strong> — they suggest a need to adjust, not a diagnosis</li>
+            <li><strong>Non-diagnostic</strong> — they do not explain internal emotion, intent, or motivation</li>
+          </ul>
+          <p className="my-2.5">
+            Examples of signals include:
+          </p>
+          <ul className="my-2.5 ml-5 list-disc space-y-2">
+            <li>a shift in the type or depth of questions being asked</li>
+            <li>a change in energy, pacing, or participation</li>
+            <li>the introduction of a new concern or objection</li>
+            <li>movement from exploration to next-step language</li>
+          </ul>
+          <p className="my-2.5 font-semibold">
+            Signals are not conclusions. They are moments of choice.
+          </p>
+
+          {/* Why Signal Intelligence — and Why Now */}
+          <h3 className="text-lg mt-6 mb-2.5 font-bold">Why Signal Intelligence — and Why Now</h3>
+          <p className="my-2.5">
+            Modern conversations are more complex, less linear, and more consequential than ever.
+          </p>
+          <p className="my-2.5">
+            Today's professionals face:
+          </p>
+          <ul className="my-2.5 ml-5 list-disc space-y-2">
+            <li>better-informed and more skeptical counterparts</li>
+            <li>fewer scripted paths and more situational judgment</li>
+            <li>higher expectations for credibility and trust</li>
+            <li>increasing use of AI without clear boundaries</li>
+          </ul>
+          <p className="my-2.5">
+            Traditional training focuses on what to say.
+            Signal Intelligence focuses on when and how to adapt.
+          </p>
+          <p className="my-2.5">
+            Signal Intelligence<sup className="text-xs">™</sup> exists because:
+          </p>
+          <ul className="my-2.5 ml-5 list-disc space-y-2">
+            <li>the most important conversational skills are contextual and judgment-based</li>
+            <li>those skills are learnable but rarely taught explicitly</li>
+            <li>AI can support learning responsibly — if human judgment remains central</li>
+          </ul>
+          <p className="my-2.5 font-semibold">
+            Signal Intelligence makes the invisible moments of judgment visible, discussable, and developable.
+          </p>
+        </section>
+
         {/* Human Decision Drivers Framework */}
         <section className="border border-border rounded-2xl bg-card p-5 mb-4">
           <h2 className="text-xl mb-2.5 font-bold">Human Decision Drivers Framework</h2>
