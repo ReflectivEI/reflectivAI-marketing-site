@@ -294,7 +294,7 @@ export default function HomePage() {
                 <div className="flex items-center gap-4 mb-4">
                   <div className="h-32 w-32 rounded-lg flex items-center justify-center" style={{ backgroundColor: 'hsl(var(--primary) / 0.05)' }}>
                     <img 
-                      src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/2CD42AFD-BAE9-4621-A114-B8B89A33926D.png" 
+                      src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/D1C18103-FC48-4EA3-807D-2E83DB06A63E.png" 
                       alt="Signal Intelligence Logo" 
                       className="w-full h-full object-contain p-2"
                     />
