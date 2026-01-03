@@ -33,6 +33,7 @@ export function CTASection() {
             </Button>
           </div>
 
+          {/* Hidden: Free Trial / No Credit Card / 24/7 Support cards
           <div className="grid md:grid-cols-3 gap-6 mt-16">
             <Card className="bg-primary-foreground/10 border-primary-foreground/20">
               <CardContent className="p-6 text-center">
@@ -53,6 +54,7 @@ export function CTASection() {
               </CardContent>
             </Card>
           </div>
+          */}
         </div>
       </div>
     </section>
