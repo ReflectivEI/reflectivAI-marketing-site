@@ -278,11 +278,11 @@ export default function HomePage() {
               {/* Signal Intelligence™ - Primary */}
               <div className="bg-primary/5 border-2 border-primary rounded-xl p-8 space-y-4">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="h-12 w-12 rounded-lg overflow-hidden flex items-center justify-center">
+                  <div className="h-20 w-20 flex items-center justify-center">
                     <img 
                       src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/2CD42AFD-BAE9-4621-A114-B8B89A33926D.png" 
                       alt="Signal Intelligence Logo" 
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                   <h3 className="text-2xl font-bold">Signal Intelligence™</h3>
