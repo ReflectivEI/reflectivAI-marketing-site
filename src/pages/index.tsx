@@ -258,7 +258,7 @@ export default function HomePage() {
             </div>
 
             {/* Right Column - Hero Image */}
-            <div className="hidden lg:block">
+            <div>
               <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
