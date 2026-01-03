@@ -209,47 +209,49 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="py-20 lg:py-32">
+      <section className="py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
-                  Signal Intelligence™
-                  <br />
-                  <span className="text-primary">for Life Sciences Sales</span>
-                </h1>
-                <p className="text-xl text-muted-foreground max-w-xl">
-                  Signal Intelligence™ is the ability to detect changes in human behavior and respond in ways that preserve credibility, trust, and access.
-                </p>
-                <p className="text-lg text-muted-foreground max-w-xl">
-                  ReflectivAI helps professionals develop this capability through structured practice—without claiming authority over meaning, emotion, or choice.
-                </p>
-                <p className="text-base text-muted-foreground max-w-xl">
-                  Built for sales and customer-facing teams navigating high-stakes conversations where credibility and access are on the line.
-                </p>
+          <div className="max-w-[700px]">
+            <div className="space-y-6">
+              {/* Eyebrow */}
+              <div className="text-xs uppercase tracking-wider text-muted-foreground font-medium">
+                SIGNAL INTELLIGENCE™
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-base" asChild>
-                  <Link to="/contact">
-                    Request Demo
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button size="lg" variant="outline" className="text-base" asChild>
-                  <Link to="/ai-coach">
-                    Explore Platform
-                  </Link>
-                </Button>
+              
+              {/* Primary Headline */}
+              <h1 className="text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]" style={{ color: 'hsl(210, 50%, 20%)' }}>
+                Human judgment, made visible.
+              </h1>
+              
+              {/* Secondary Headline */}
+              <h2 className="text-3xl lg:text-4xl font-semibold tracking-tight" style={{ color: 'hsl(180, 50%, 45%)' }}>
+                AI, responsibly applied.
+              </h2>
+              
+              {/* Body Paragraph */}
+              <p className="text-lg text-gray-700 leading-relaxed max-w-[650px]">
+                Signal Intelligence™ helps professionals recognize what's changing in a conversation—and respond in ways that preserve trust and credibility.
+              </p>
+              
+              {/* Capability Line */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: 'hsl(180, 50%, 45%, 0.1)', color: 'hsl(210, 50%, 20%)' }}>
+                Behavior-based • Human-in-the-loop by design
               </div>
             </div>
-            <div className="relative">
-              <div className="aspect-[4/3] rounded-lg overflow-hidden border border-border shadow-2xl">
-                <img
-                  src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/IMG_9247.jpeg"
-                  alt="ReflectivAI Platform Interface"
-                  className="w-full h-full object-cover"
-                />
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 mt-10">
+              <Button size="lg" className="text-base" asChild>
+                <Link to="/contact">
+                  Request Demo
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="text-base" asChild>
+                <Link to="/demo">
+                  Explore Platform
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>
