@@ -6,6 +6,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 
 export function CTASection() {
+  return null; // Hidden: Entire CTA section with "Ready to Transform Your Sales Team?"
+  
+  /* Hidden entire CTA section
   return (
     <section className="py-20 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
       <div className="container mx-auto px-4">
@@ -33,7 +36,6 @@ export function CTASection() {
             </Button>
           </div>
 
-          {/* Hidden: Free Trial / No Credit Card / 24/7 Support cards
           <div className="grid md:grid-cols-3 gap-6 mt-16">
             <Card className="bg-primary-foreground/10 border-primary-foreground/20">
               <CardContent className="p-6 text-center">
@@ -54,9 +56,9 @@ export function CTASection() {
               </CardContent>
             </Card>
           </div>
-          */}
         </div>
       </div>
     </section>
   );
+  */
 }
