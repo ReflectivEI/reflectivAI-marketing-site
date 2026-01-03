@@ -19,6 +19,7 @@ export default function Header() {
     { href: '/demo', label: 'Interactive Demo' },
     { href: '/ai-coach', label: 'AI Coach' },
     { href: '/role-play', label: 'Role Play' },
+    { href: '/#faq', label: 'FAQ' },
   ];
 
   const learnMoreLinks = [
