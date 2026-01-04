@@ -1250,7 +1250,7 @@ export default function HomePage() {
             <div className="space-y-6">
               <div className="flex items-center gap-4">
                 <img 
-                  src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/E8C3B8D2-A8F5-4E8E-8F5D-0B8F5E8C3B8D-0a6b0f5.png" 
+                  src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/IMG_9988.jpeg" 
                   alt="Perception Logo" 
                   className="h-10 w-auto object-contain"
                 />
