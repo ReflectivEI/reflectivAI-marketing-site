@@ -211,7 +211,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-[720px]">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-8">
               {/* Domain Descriptor */}
               <div className="text-[15px] md:text-[17px] uppercase tracking-[0.06em] font-medium" style={{ color: 'hsl(215, 16%, 47%)' }}>
@@ -237,21 +237,32 @@ export default function HomePage() {
               <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: 'hsl(180, 50%, 45%, 0.1)', color: 'hsl(210, 50%, 20%)' }}>
                 Behavior-based • Human-in-the-loop by design
               </div>
-            </div>
-            
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mt-12">
-              <Button size="lg" className="text-base" asChild>
-                <Link to="/contact">
-                  Request Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" className="text-base" asChild>
-                <Link to="/demo">
-                  Explore Platform
+              
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 mt-4">
+                <Button size="lg" className="text-base" asChild>
+                  <Link to="/contact">
+                    Request Demo
+                    <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
+                <Button size="lg" variant="outline" className="text-base" asChild>
+                  <Link to="/demo">
+                    Explore Platform
+                  </Link>
+                </Button>
+              </div>
+            </div>
+            
+            {/* Hero Image */}
+            <div className="order-first lg:order-last">
+              <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-2xl">
+                <img
+                  src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/IMG_9247.jpeg"
+                  alt="ReflectivAI Platform"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -277,12 +288,11 @@ export default function HomePage() {
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               {/* Signal Intelligence™ - Primary */}
               <div className="bg-primary/5 border-2 border-primary rounded-xl p-8 space-y-4">
-                <div className="flex items-baseline gap-3">
+                <div className="flex items-center gap-4 mb-4">
                   <img 
                     src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/E3495A4D-3DF5-4F48-A08B-700A67979836-b2f7133.png" 
                     alt="Signal Intelligence Logo" 
-                    className="h-16 w-auto object-contain flex-shrink-0"
-                    style={{ marginTop: '-0.25rem' }}
+                    className="h-8 w-auto object-contain"
                   />
                   <h3 className="text-2xl font-bold">Signal Intelligence™</h3>
                 </div>
@@ -1238,12 +1248,11 @@ export default function HomePage() {
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-24">
             <div className="space-y-6">
-              <div className="flex items-baseline gap-3">
+              <div className="flex items-center gap-4">
                 <img 
                   src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/E8C3B8D2-A8F5-4E8E-8F5D-0B8F5E8C3B8D-0a6b0f5.png" 
                   alt="Perception Logo" 
-                  className="h-20 w-auto object-contain flex-shrink-0"
-                  style={{ marginTop: '-0.5rem' }}
+                  className="h-10 w-auto object-contain"
                 />
                 <h3 className="text-3xl font-bold">Real-Time Signal Detection</h3>
               </div>
@@ -1285,12 +1294,11 @@ export default function HomePage() {
               />
             </div>
             <div className="space-y-6">
-              <div className="flex items-baseline gap-3">
+              <div className="flex items-center gap-4">
                 <img 
                   src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/F3E6B8BC-80B8-4AE3-A65A-D0ADC8BD9FAC-5d38294.png" 
                   alt="Practice Logo" 
-                  className="h-20 w-auto object-contain flex-shrink-0"
-                  style={{ marginTop: '-0.5rem' }}
+                  className="h-10 w-auto object-contain"
                 />
                 <h3 className="text-3xl font-bold">Behavioral Coaching & Development</h3>
               </div>
@@ -1316,12 +1324,11 @@ export default function HomePage() {
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-6">
-              <div className="flex items-baseline gap-3">
+              <div className="flex items-center gap-4">
                 <img 
                   src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/864AFBE9-BF89-4048-AF45-18D6B1BC4B20-c65469f.png" 
                   alt="Trust Logo" 
-                  className="h-20 w-auto object-contain flex-shrink-0"
-                  style={{ marginTop: '-0.5rem' }}
+                  className="h-10 w-auto object-contain"
                 />
                 <h3 className="text-3xl font-bold">Leadership Analytics & Behavioral Metrics</h3>
               </div>
