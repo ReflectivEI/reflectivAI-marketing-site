@@ -425,17 +425,10 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="flex justify-center mb-12">
               {/* Signal Intelligence™ - Primary */}
-              <div className="bg-primary/5 border-2 border-primary rounded-xl p-8 space-y-4">
-                <div className="flex items-center gap-4 mb-4">
-                  <img 
-                    src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/E3495A4D-3DF5-4F48-A08B-700A67979836-b2f7133.png" 
-                    alt="Signal Intelligence Logo" 
-                    className="h-8 w-auto object-contain"
-                  />
-                  <h3 className="text-2xl font-bold">Signal Intelligence™</h3>
-                </div>
+              <div className="bg-primary/5 border-2 border-primary rounded-xl p-8 space-y-4 max-w-2xl w-full">
+                <h3 className="text-2xl font-bold text-center mb-4">Signal Intelligence™</h3>
                 <p className="text-lg font-semibold text-primary">The Core Capabilities</p>
                 <p className="text-muted-foreground">
                   Detects patterns in observable behaviors during practice conversations and surfaces reflections for professional judgment.
