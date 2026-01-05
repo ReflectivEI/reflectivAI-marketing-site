@@ -366,6 +366,76 @@ export default function AppliedCapabilitiesPage() {
                   <p className="text-muted-foreground">{currentCapability.howMeasured}</p>
                 </div>
 
+                {/* Signal Intelligence™ Metrics */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl lg:text-5xl font-bold">Signal Intelligence™ Metrics</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Observable, behavioral outcomes that drive measurable performance improvement
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Metric 1: Question Quality */}
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
+              <div className="text-4xl font-bold text-primary">92%</div>
+              <div className="text-sm font-semibold text-foreground">Question Quality</div>
+              <p className="text-xs text-muted-foreground">Open-ended, diagnostic questions that uncover needs</p>
+            </div>
+
+            {/* Metric 2: Listening & Responsiveness */}
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
+              <div className="text-4xl font-bold text-primary">88%</div>
+              <div className="text-sm font-semibold text-foreground">Listening & Responsiveness</div>
+              <p className="text-xs text-muted-foreground">Paraphrasing, acknowledging, building on customer input</p>
+            </div>
+
+            {/* Metric 3: Customer Engagement Cues */}
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
+              <div className="text-4xl font-bold text-primary">91%</div>
+              <div className="text-sm font-semibold text-foreground">Customer Engagement Cues</div>
+              <p className="text-xs text-muted-foreground">Detecting and responding to customer interest and resistance</p>
+            </div>
+
+            {/* Metric 4: Conversation Control & Structure */}
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
+              <div className="text-4xl font-bold text-primary">85%</div>
+              <div className="text-sm font-semibold text-foreground">Conversation Control & Structure</div>
+              <p className="text-xs text-muted-foreground">Guiding dialogue without dominating or losing direction</p>
+            </div>
+
+            {/* Metric 5: Objection Handling */}
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
+              <div className="text-4xl font-bold text-primary">87%</div>
+              <div className="text-sm font-semibold text-foreground">Objection Handling</div>
+              <p className="text-xs text-muted-foreground">Addressing concerns without defensiveness or avoidance</p>
+            </div>
+
+            {/* Metric 6: Adaptability */}
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
+              <div className="text-4xl font-bold text-primary">90%</div>
+              <div className="text-sm font-semibold text-foreground">Adaptability</div>
+              <p className="text-xs text-muted-foreground">Adjusting tone, pace, and approach based on signals</p>
+            </div>
+
+            {/* Metric 7: Value Framing (Making It Matter) */}
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
+              <div className="text-4xl font-bold text-primary">86%</div>
+              <div className="text-sm font-semibold text-foreground">Value Framing (Making It Matter)</div>
+              <p className="text-xs text-muted-foreground">Connecting information to outcomes that matter to customers</p>
+            </div>
+
+            {/* Metric 8: Commitment Gaining */}
+            <div className="p-6 rounded-xl border-2 border-primary bg-white space-y-3 hover:shadow-xl transition-shadow shadow-md">
+              <div className="text-4xl font-bold text-primary">83%</div>
+              <div className="text-sm font-semibold text-foreground">Commitment Gaining</div>
+              <p className="text-xs text-muted-foreground">Securing clear, voluntary next actions with mutual agreement</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
                 {/* Disclaimers */}
                 <div className="border-t border-border pt-4 space-y-3">
                   <p className="text-sm text-muted-foreground italic">
