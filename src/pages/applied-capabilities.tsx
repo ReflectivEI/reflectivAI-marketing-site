@@ -7,6 +7,8 @@
  * All metrics shown must remain illustrative and contextual.
  */
 
+import { SignalIntelligenceCapabilityCards } from '@/components/SignalIntelligenceCapabilityCards';
+
 type CapabilityDetail = {
   id: string;
   index: number;
@@ -237,6 +239,9 @@ export default function AppliedCapabilitiesPage() {
         </div>
       </section>
 
+      {/* Detailed Capability Cards */}
+      <SignalIntelligenceCapabilityCards />
+
       {/* Signal Intelligence™ Capabilities in Practice */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
@@ -266,12 +271,14 @@ export default function AppliedCapabilitiesPage() {
                     <p className="text-xs text-muted-foreground mt-1">{capability.behavioralMetric}</p>
                   </div>
 
+                  <div className="text-2xl font-bold text-primary">{capability.exampleScore}</div>
                 </div>
               ))}
             </div>
           </div>
         </div>
       </section>
+
       {/* Signal Intelligence™ Metrics */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
