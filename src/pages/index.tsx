@@ -269,13 +269,13 @@ export default function HomePage() {
       </section>
 
       {/* Where Signal Intelligence Fits - Conceptual Onboarding */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-primary">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-16 space-y-4">
-              <h2 className="text-3xl lg:text-5xl font-bold">Designed to Fit How You Already Sell</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <h2 className="text-3xl lg:text-5xl font-bold text-white">Designed to Fit How You Already Sell</h2>
+              <p className="text-xl text-white/90 max-w-3xl mx-auto">
                 Signal Intelligence™ strengthens execution without changing your selling model.
               </p>
             </div>
@@ -283,15 +283,15 @@ export default function HomePage() {
             {/* Block 2 & 3 - Two Column Layout */}
             <div className="grid md:grid-cols-2 gap-8 mb-16">
               {/* Block 2 - Selling Structure (WHAT) */}
-              <div className="border border-border rounded-xl p-8 space-y-4">
-                <div className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded mb-2">
+              <div className="bg-accent rounded-xl p-8 space-y-4">
+                <div className="inline-block px-3 py-1 bg-primary text-white text-sm font-semibold rounded mb-2">
                   WHAT
                 </div>
-                <h3 className="text-2xl font-bold">Your Selling Structure Defines the Foundation</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-2xl font-bold text-primary">Your Selling Structure Defines the Foundation</h3>
+                <p className="text-primary/90">
                   Across Life Sciences organizations, selling frameworks and established selling approaches provide consistency and alignment across commercial teams. They define:
                 </p>
-                <ul className="space-y-2 text-muted-foreground">
+                <ul className="space-y-2 text-primary/90">
                   <li className="flex items-start">
                     <span className="mr-2">•</span>
                     <span>Stages and behaviors</span>
@@ -305,21 +305,21 @@ export default function HomePage() {
                     <span>Standards for success across the organization</span>
                   </li>
                 </ul>
-                <p className="text-muted-foreground">
+                <p className="text-primary/90">
                   They are essential, and intentionally stable.
                 </p>
               </div>
 
               {/* Block 3 - Signal Intelligence (HOW) */}
-              <div className="border border-border rounded-xl p-8 space-y-4">
-                <div className="inline-block px-3 py-1 bg-accent/10 text-accent-foreground text-sm font-semibold rounded mb-2">
+              <div className="bg-accent rounded-xl p-8 space-y-4">
+                <div className="inline-block px-3 py-1 bg-primary text-white text-sm font-semibold rounded mb-2">
                   HOW
                 </div>
-                <h3 className="text-2xl font-bold">Signal Intelligence Supports Decisions in the Moment</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-2xl font-bold text-primary">Signal Intelligence Supports Decisions in the Moment</h3>
+                <p className="text-primary/90">
                   Signal Intelligence operates beneath your existing selling structure, supporting real-time decision-making by helping reps:
                 </p>
-                <ul className="space-y-2 text-muted-foreground">
+                <ul className="space-y-2 text-primary/90">
                   <li className="flex items-start">
                     <span className="mr-2">•</span>
                     <span>Recognize meaningful customer signals</span>
@@ -333,7 +333,7 @@ export default function HomePage() {
                     <span>Prioritize which selling behaviors matter most in each interaction</span>
                   </li>
                 </ul>
-                <p className="text-muted-foreground">
+                <p className="text-primary/90">
                   Signal Intelligence introduces a decision-support capability that strengthens judgment inside the selling approach you already use.
                 </p>
               </div>
@@ -341,66 +341,66 @@ export default function HomePage() {
 
             {/* Block 4 - Hierarchy Diagram */}
             <div className="max-w-2xl mx-auto mb-16">
-              <h3 className="text-2xl font-bold text-center mb-8">How Signal Intelligence Fits</h3>
-              <div className="bg-muted/50 border border-border rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-center mb-8 text-white">How Signal Intelligence Fits</h3>
+              <div className="bg-accent rounded-xl p-8">
                 <div className="flex flex-col items-center space-y-4">
-                  <div className="w-full text-center py-4 px-6 bg-background border border-border rounded-lg">
-                    <p className="font-semibold text-foreground">Commercial Strategy</p>
+                  <div className="w-full text-center py-4 px-6 bg-primary rounded-lg">
+                    <p className="font-semibold text-white">Commercial Strategy</p>
                   </div>
-                  <div className="text-2xl text-muted-foreground">↓</div>
-                  <div className="w-full text-center py-4 px-6 bg-background border border-border rounded-lg">
-                    <p className="font-semibold text-foreground">Selling Framework or Established Selling Structure</p>
-                    <p className="text-sm text-muted-foreground mt-1">(WHAT)</p>
+                  <div className="text-2xl text-primary">↓</div>
+                  <div className="w-full text-center py-4 px-6 bg-primary rounded-lg">
+                    <p className="font-semibold text-white">Selling Framework or Established Selling Structure</p>
+                    <p className="text-sm text-white/80 mt-1">(WHAT)</p>
                   </div>
-                  <div className="text-2xl text-muted-foreground">↓</div>
-                  <div className="w-full text-center py-4 px-6 bg-primary/5 border-2 border-primary rounded-lg">
-                    <p className="font-semibold text-primary">Signal Intelligence</p>
-                    <p className="text-sm text-primary/80 mt-1">(HOW)</p>
+                  <div className="text-2xl text-primary">↓</div>
+                  <div className="w-full text-center py-4 px-6 bg-primary rounded-lg">
+                    <p className="font-semibold text-white">Signal Intelligence</p>
+                    <p className="text-sm text-white/80 mt-1">(HOW)</p>
                   </div>
-                  <div className="text-2xl text-muted-foreground">↓</div>
-                  <div className="w-full text-center py-4 px-6 bg-background border border-border rounded-lg">
-                    <p className="font-semibold text-foreground">Rep Execution</p>
-                    <p className="text-sm text-muted-foreground mt-1">(In the Moment)</p>
+                  <div className="text-2xl text-primary">↓</div>
+                  <div className="w-full text-center py-4 px-6 bg-primary rounded-lg">
+                    <p className="font-semibold text-white">Rep Execution</p>
+                    <p className="text-sm text-white/80 mt-1">(In the Moment)</p>
                   </div>
                 </div>
               </div>
-              <p className="text-center text-muted-foreground mt-6 italic">
+              <p className="text-center text-white/90 mt-6 italic">
                 Signal Intelligence is the decision layer between how selling is defined and real customer behavior.
               </p>
             </div>
 
             {/* Block 5 - Comparative Table */}
             <div className="max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-center mb-8">How Selling Structures and Signal Intelligence Work Together</h3>
-              <div className="overflow-x-auto">
+              <h3 className="text-2xl font-bold text-center mb-8 text-white">How Selling Structures and Signal Intelligence Work Together</h3>
+              <div className="overflow-x-auto bg-accent rounded-xl p-6">
                 <table className="w-full border-collapse">
                   <thead>
-                    <tr className="border-b-2 border-border">
-                      <th className="text-left py-4 px-6 font-bold text-foreground">Your Selling Structure Provides</th>
-                      <th className="text-left py-4 px-6 font-bold text-foreground">Signal Intelligence Enables</th>
+                    <tr className="border-b-2 border-primary">
+                      <th className="text-left py-4 px-6 font-bold text-primary">Your Selling Structure Provides</th>
+                      <th className="text-left py-4 px-6 font-bold text-primary">Signal Intelligence Enables</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b border-border">
-                      <td className="py-4 px-6 text-muted-foreground">A shared language for commercial execution</td>
-                      <td className="py-4 px-6 text-muted-foreground">Decision-making within that structure</td>
+                    <tr className="border-b border-primary/30">
+                      <td className="py-4 px-6 text-primary/90">A shared language for commercial execution</td>
+                      <td className="py-4 px-6 text-primary/90">Decision-making within that structure</td>
                     </tr>
-                    <tr className="border-b border-border">
-                      <td className="py-4 px-6 text-muted-foreground">Defined stages and behaviors</td>
-                      <td className="py-4 px-6 text-muted-foreground">Recognition of which behaviors matter most in each situation</td>
+                    <tr className="border-b border-primary/30">
+                      <td className="py-4 px-6 text-primary/90">Defined stages and behaviors</td>
+                      <td className="py-4 px-6 text-primary/90">Recognition of which behaviors matter most in each situation</td>
                     </tr>
-                    <tr className="border-b border-border">
-                      <td className="py-4 px-6 text-muted-foreground">Best-practice guidance</td>
-                      <td className="py-4 px-6 text-muted-foreground">Interpretation of customer signals in real time</td>
+                    <tr className="border-b border-primary/30">
+                      <td className="py-4 px-6 text-primary/90">Best-practice guidance</td>
+                      <td className="py-4 px-6 text-primary/90">Interpretation of customer signals in real time</td>
                     </tr>
-                    <tr className="border-b border-border">
-                      <td className="py-4 px-6 text-muted-foreground">Consistency across teams</td>
-                      <td className="py-4 px-6 text-muted-foreground">Confident adaptation at the point of interaction</td>
+                    <tr className="border-b border-primary/30">
+                      <td className="py-4 px-6 text-primary/90">Consistency across teams</td>
+                      <td className="py-4 px-6 text-primary/90">Confident adaptation at the point of interaction</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <p className="text-center text-muted-foreground mt-6">
+              <p className="text-center text-white/90 mt-6">
                 Together, they support consistent strategy and effective execution in complex customer environments.
               </p>
             </div>
