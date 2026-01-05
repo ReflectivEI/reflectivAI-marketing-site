@@ -268,6 +268,34 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 1. Page-Level Interpretive Anchor (MANDATORY) */}
+      <section className="py-12 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-background border-l-4 border-primary rounded-lg p-8">
+              <h3 className="text-xl font-semibold text-primary mb-4">How to Read This Page</h3>
+              <p className="text-base text-foreground leading-relaxed">
+                Signal Intelligence™ focuses on observable conversational behavior, not internal traits, intent, or competence.
+              </p>
+              <p className="text-base text-foreground leading-relaxed mt-3">
+                AI highlights patterns in what happens during interactions. Professionals retain full judgment over how—and whether—to respond.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. Narrative Transition Cue (STRUCTURAL ONLY) */}
+      <section className="py-6 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-base text-primary text-center">
+              The sections below explain how Signal Intelligence supports decision-making without changing how selling is defined or measured.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Where Signal Intelligence Fits - Conceptual Onboarding */}
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4">
@@ -391,6 +419,12 @@ export default function HomePage() {
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
+            {/* 3. Canonical Explanation Declaration */}
+            <div className="text-left mb-6">
+              <p className="text-xs uppercase tracking-wider font-semibold" style={{ color: 'hsl(215, 16%, 47%)' }}>
+                This is the core Signal Intelligence process. Other sections on this page build from it.
+              </p>
+            </div>
             <div className="text-center mb-12 space-y-4">
               <h2 className="text-3xl lg:text-5xl font-bold">How It Works</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
