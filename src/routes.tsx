@@ -5,6 +5,7 @@ import AICoachPage from './pages/ai-coach';
 import RolePlayPage from './pages/role-play';
 import SignalIntelligencePage from './pages/signal-intelligence';
 import AppliedCapabilitiesPage from './pages/applied-capabilities';
+import HowSignalIntelligenceIsApplied from './pages/learn-more/HowSignalIntelligenceIsApplied';
 import ContactPage from './pages/contact';
 import DemoPage from './pages/demo';
 
@@ -34,6 +35,10 @@ export const routes: RouteObject[] = [
     element: <AppliedCapabilitiesPage />,
   },
   {
+    path: '/learn-more/how-signal-intelligence-is-applied',
+    element: <HowSignalIntelligenceIsApplied />,
+  },
+  {
     path: '/contact',
     element: <ContactPage />,
   },
@@ -48,6 +53,14 @@ export const routes: RouteObject[] = [
 ];
 
 // Types for type-safe navigation
-export type Path = '/' | '/ai-coach' | '/role-play' | '/signal-intelligence' | '/applied-capabilities' | '/contact' | '/demo';
+export type Path =
+  | '/'
+  | '/ai-coach'
+  | '/role-play'
+  | '/signal-intelligence'
+  | '/applied-capabilities'
+  | '/learn-more/how-signal-intelligence-is-applied'
+  | '/contact'
+  | '/demo';
 
 export type Params = Record<string, string | undefined>;

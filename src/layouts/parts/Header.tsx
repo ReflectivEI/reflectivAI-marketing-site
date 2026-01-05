@@ -38,8 +38,9 @@ export default function Header() {
   ];
 
   const learnMoreLinks = [
-    { href: '/signal-intelligence', label: 'Signal Intelligence', description: 'Science, methodology, and theoretical foundations' },
+    { href: '/signal-intelligence', label: 'Signal Intelligence™', description: 'Science, methodology, and theoretical foundations' },
     { href: '/applied-capabilities', label: 'How Signal Intelligence™ Is Applied', description: 'Explore capabilities used in practice' },
+    { href: '/learn-more/how-signal-intelligence-is-applied', label: 'How Signal Intelligence™ Is Applied', description: 'Signal Intelligence™ capabilities, calculations, and exploration' },
   ];
 
   return (
