@@ -283,7 +283,7 @@ export default function HomePage() {
             {/* Block 2 & 3 - Two Column Layout */}
             <div className="grid md:grid-cols-2 gap-8 mb-16">
               {/* Block 2 - Selling Structure (WHAT) */}
-              <div className="bg-accent rounded-xl p-8 space-y-4">
+              <div className="bg-white rounded-xl p-8 space-y-4">
                 <div className="inline-block px-3 py-1 bg-primary text-white text-sm font-semibold rounded mb-2">
                   WHAT
                 </div>
@@ -311,7 +311,7 @@ export default function HomePage() {
               </div>
 
               {/* Block 3 - Signal Intelligence (HOW) */}
-              <div className="bg-accent rounded-xl p-8 space-y-4">
+              <div className="bg-white rounded-xl p-8 space-y-4">
                 <div className="inline-block px-3 py-1 bg-primary text-white text-sm font-semibold rounded mb-2">
                   HOW
                 </div>
@@ -342,7 +342,7 @@ export default function HomePage() {
             {/* Block 4 - Hierarchy Diagram */}
             <div className="max-w-2xl mx-auto mb-16">
               <h3 className="text-2xl font-bold text-center mb-8 text-white">How Signal Intelligence Fits</h3>
-              <div className="bg-accent rounded-xl p-8">
+              <div className="bg-white rounded-xl p-8">
                 <div className="flex flex-col items-center space-y-4">
                   <div className="w-full text-center py-4 px-6 bg-primary rounded-lg">
                     <p className="font-semibold text-white">Commercial Strategy</p>
@@ -372,7 +372,7 @@ export default function HomePage() {
             {/* Block 5 - Comparative Table */}
             <div className="max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold text-center mb-8 text-white">How Selling Structures and Signal Intelligence Work Together</h3>
-              <div className="overflow-x-auto bg-accent rounded-xl p-6">
+              <div className="overflow-x-auto bg-white rounded-xl p-6">
                 <table className="w-full border-collapse">
                   <thead>
                     <tr className="border-b-2 border-primary">
