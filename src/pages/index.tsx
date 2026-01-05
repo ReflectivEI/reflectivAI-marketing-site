@@ -276,21 +276,7 @@ export default function HomePage() {
             <div className="text-center mb-16 space-y-4">
               <h2 className="text-3xl lg:text-5xl font-bold">Designed to Fit How You Already Sell</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Signal Intelligence strengthens execution without changing your selling model.
-              </p>
-            </div>
-
-            {/* Block 1 - Foundation */}
-            <div className="max-w-3xl mx-auto mb-16 space-y-4 text-lg text-muted-foreground">
-              <p>
-                Most Life Sciences organizations already have an established way of defining good selling — whether through a formal framework or an agreed set of practices.
-              </p>
-              <p>
-                Signal Intelligence brings that structure into live customer interactions — where judgment and timing matter most.
-              </p>
-              <p>
-                How you define great selling stays the same.
-                Signal Intelligence supports how it is applied in the moment.
+                Signal Intelligence™ strengthens execution without changing your selling model.
               </p>
             </div>
 
