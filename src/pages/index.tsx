@@ -341,32 +341,11 @@ export default function HomePage() {
 
             {/* Block 4 - Hierarchy Diagram */}
             <div className="max-w-2xl mx-auto mb-16">
-              <h3 className="text-2xl font-bold text-center mb-8 text-white">How Signal Intelligence Fits</h3>
-              <div className="bg-white rounded-xl p-8">
-                <div className="flex flex-col items-center space-y-4">
-                  <div className="w-full text-center py-4 px-6 bg-primary rounded-lg">
-                    <p className="font-semibold text-white">Commercial Strategy</p>
-                  </div>
-                  <div className="text-2xl text-primary">↓</div>
-                  <div className="w-full text-center py-4 px-6 bg-primary rounded-lg">
-                    <p className="font-semibold text-white">Selling Framework or Established Selling Structure</p>
-                    <p className="text-sm text-white/80 mt-1">(WHAT)</p>
-                  </div>
-                  <div className="text-2xl text-primary">↓</div>
-                  <div className="w-full text-center py-4 px-6 bg-primary rounded-lg">
-                    <p className="font-semibold text-white">Signal Intelligence</p>
-                    <p className="text-sm text-white/80 mt-1">(HOW)</p>
-                  </div>
-                  <div className="text-2xl text-primary">↓</div>
-                  <div className="w-full text-center py-4 px-6 bg-primary rounded-lg">
-                    <p className="font-semibold text-white">Rep Execution</p>
-                    <p className="text-sm text-white/80 mt-1">(In the Moment)</p>
-                  </div>
-                </div>
-              </div>
-              <p className="text-center text-white/90 mt-6 italic">
-                Signal Intelligence is the decision layer between how selling is defined and real customer behavior.
-              </p>
+              <img 
+                src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/d99854ba-ef71-445d-b8b1-0617a82e9a8b.png" 
+                alt="How Signal Intelligence Fits" 
+                className="w-full h-auto rounded-xl"
+              />
             </div>
 
             {/* Block 5 - Comparative Table */}
