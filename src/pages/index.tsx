@@ -419,6 +419,12 @@ export default function HomePage() {
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
+            {/* 1. Visual Classification Label */}
+            <div className="mb-4">
+              <span className="inline-block px-3 py-1 bg-background border border-primary rounded-full text-xs font-medium text-primary">
+                Decision-Support View
+              </span>
+            </div>
             {/* 3. Canonical Explanation Declaration */}
             <div className="text-left mb-6">
               <p className="text-xs uppercase tracking-wider font-semibold" style={{ color: 'hsl(215, 16%, 47%)' }}>
@@ -435,6 +441,13 @@ export default function HomePage() {
               </p>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4">
                 For sales professionals, these insights reveal where conversations stay aligned with purpose—and where hesitation, overload, or disengagement may be emerging before deals are at risk.
+              </p>
+            </div>
+
+            {/* 3. Behavioral Scope Clarifier */}
+            <div className="bg-muted/50 border-l-4 border-primary rounded p-4 mb-12">
+              <p className="text-sm text-foreground">
+                Outputs reflect observable interaction patterns used for reflection and coaching. They are not performance ratings or assessments.
               </p>
             </div>
 
@@ -1239,6 +1252,12 @@ export default function HomePage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-12">
+            {/* 1. Visual Classification Label */}
+            <div className="text-center mb-4">
+              <span className="inline-block px-3 py-1 bg-background border border-primary rounded-full text-xs font-medium text-primary">
+                Conceptual Framework
+              </span>
+            </div>
             <div className="text-center space-y-4">
               <h2 className="text-3xl lg:text-5xl font-bold">
                 Powered by Signal Intelligence™
@@ -1756,6 +1775,17 @@ export default function HomePage() {
 
       {/* FAQ */}
       <FAQ />
+
+      {/* 2. Trust Reinforcement Line (Single Use Only) */}
+      <section className="py-12 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-lg font-medium" style={{ color: 'hsl(215, 16%, 27%)' }}>
+              AI surfaces patterns. People decide what to do next.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Credibility Statement */}
       <section className="py-12 bg-muted">
