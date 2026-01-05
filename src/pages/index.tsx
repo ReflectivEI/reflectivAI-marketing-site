@@ -848,7 +848,7 @@ export default function HomePage() {
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 ReflectivAI evaluates communication using eight Signal Intelligence™ capabilities. Each capability focuses on observable behaviors during structured practice.
             </p>
-            <p className="text-base text-muted-foreground max-w-2xl mx-auto italic">
+           {/*   <p className="text-base text-muted-foreground max-w-2xl mx-auto italic">
                 Scores shown are illustrative examples for demonstration purposes.
             </p>
           </div>
@@ -862,12 +862,12 @@ export default function HomePage() {
                 aria-label={`View details for ${capability.name}`}
               >
                 {/* Index number badge */}
-                <div className="absolute top-4 left-4 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                {/*  <div className="absolute top-4 left-4 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
                   <span className="text-sm font-bold text-primary">{capability.index}</span>
                 </div>
 
                 {/* Capability name */}
-                <div className="mt-8 mb-3">
+                 {/* <div className="mt-8 mb-3">
                   <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
                     {capability.name}
                   </h3>
@@ -875,12 +875,12 @@ export default function HomePage() {
                 </div>
 
                 {/* Example score */}
-                <div className="mb-3">
+               {/*   <div className="mb-3">
                   <div className="text-2xl font-bold text-primary">{capability.exampleScore}</div>
                 </div>
 
                 {/* Tap to view affordance */}
-                <div className="text-xs text-muted-foreground">
+                 {/* <div className="text-xs text-muted-foreground">
                   Tap to view calculation
                 </div>
               </button>
