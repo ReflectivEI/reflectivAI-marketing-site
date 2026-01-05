@@ -1,9 +1,5 @@
 'use client';
 
-import { CheckCircle2 } from 'lucide-react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { useState } from 'react';
-
 /*
  * INTERNAL NOTE FOR FUTURE EDITORS:
  * This page is for applied transparency only.
@@ -193,16 +189,6 @@ const capabilityDetails: Record<string, CapabilityDetail> = {
 };
 
 export default function AppliedCapabilitiesPage() {
-  const [selectedCapability, setSelectedCapability] = useState<string | null>(null);
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-
-  const openCapabilityDetail = (capabilityKey: string) => {
-    setSelectedCapability(capabilityKey);
-    setIsDialogOpen(true);
-  };
-
-  const currentCapability = selectedCapability ? capabilityDetails[selectedCapability] : null;
-
   return (
     <div className="flex flex-col">
       {/* Page Title */}
@@ -262,11 +248,10 @@ export default function AppliedCapabilitiesPage() {
             {/* Project Cards Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {Object.values(capabilityDetails).map((capability) => (
-                <button
+                <div
                   key={capability.id}
-                  onClick={() => openCapabilityDetail(capability.id)}
-                  className="group relative p-6 rounded-xl border-2 border-primary bg-white hover:bg-white text-left transition-all duration-200 cursor-pointer hover:scale-[1.02] hover:shadow-xl hover:border-accent focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 shadow-md"
-                  aria-label={`View details for ${capability.name}`}
+                  className="group relative p-6 rounded-xl border-2 border-primary bg-white text-left transition-all duration-200 shadow-md"
+                  aria-label={`Signal Intelligence capability ${capability.name}`}
                 >
                   {/* Index number badge */}
                   <div className="absolute top-4 left-4 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
@@ -281,92 +266,13 @@ export default function AppliedCapabilitiesPage() {
                     <p className="text-xs text-muted-foreground mt-1">{capability.behavioralMetric}</p>
                   </div>
 
-                  {/* Example score */}
-                  <div className="mb-3">
-                    <div className="text-2xl font-bold text-primary">{capability.exampleScore}</div>
-                  </div>
-
-                  {/* Tap to view affordance */}
-                  <div className="text-xs text-muted-foreground">
-                    Tap to view calculation
-                  </div>
-                </button>
+                </div>
               ))}
             </div>
           </div>
         </div>
       </section>
-
-      {/* Capability Detail Dialog */}
-      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto bg-white">
-          {currentCapability && (
-            <>
-              {/* Navy header bar */}
-              <DialogHeader className="bg-primary text-primary-foreground -m-6 mb-0 p-6 rounded-t-lg">
-                <DialogTitle className="text-2xl font-bold">{currentCapability.name}</DialogTitle>
-                <p className="text-sm text-primary-foreground/90 mt-2">Behavioral Metric: {currentCapability.behavioralMetric}</p>
-              </DialogHeader>
-              
-              <div className="space-y-6 mt-6 px-6 pb-6">
-                {/* Example Score */}
-                <div className="flex items-center gap-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-                  <div>
-                    <div className="text-2xl font-bold text-foreground">{currentCapability.exampleScore}</div>
-                    <div className="text-sm text-muted-foreground mt-1">Example score (illustrative)</div>
-                  </div>
-                </div>
-
-                {/* Definition */}
-                <div>
-                  <h4 className="text-lg font-semibold mb-2 text-foreground">Definition</h4>
-                  <p className="text-muted-foreground">{currentCapability.definition}</p>
-                </div>
-
-                {/* How it's evaluated */}
-                <div>
-                  <h4 className="text-lg font-semibold mb-2 text-foreground">How it's evaluated</h4>
-                  <p className="text-muted-foreground">{currentCapability.whatScoreReflects}</p>
-                </div>
-
-                {/* What good looks like */}
-                <div className="bg-muted rounded-lg p-4">
-                  <h4 className="text-lg font-semibold mb-3 text-foreground">What Good Looks Like</h4>
-                  <ul className="space-y-2">
-                    {currentCapability.whatGoodLooksLike.map((item, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-foreground">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* How It's Calculated */}
-                <div>
-                  <h4 className="text-lg font-semibold mb-2 text-foreground">How It's Calculated</h4>
-                  <ul className="space-y-1 list-disc list-inside text-muted-foreground">
-                    {currentCapability.howCalculated.map((item, index) => (
-                      <li key={index}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Score Calculation (Example) */}
-                <div className="border-t border-border pt-4">
-                  <h4 className="text-lg font-semibold mb-2 text-foreground">Score Calculation (Example)</h4>
-                  <div className="bg-muted p-4 rounded-lg font-mono text-sm text-foreground">
-                    {currentCapability.scoreCalculation}
-                  </div>
-                </div>
-
-                {/* How It's Measured */}
-                <div>
-                  <h4 className="text-lg font-semibold mb-2 text-foreground">How It's Measured</h4>
-                  <p className="text-muted-foreground">{currentCapability.howMeasured}</p>
-                </div>
-
-                {/* Signal Intelligence™ Metrics */}
+      {/* Signal Intelligence™ Metrics */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
@@ -435,21 +341,6 @@ export default function AppliedCapabilitiesPage() {
           </div>
         </div>
       </section>
-
-                {/* Disclaimers */}
-                <div className="border-t border-border pt-4 space-y-3">
-                  <p className="text-sm text-muted-foreground italic">
-                    Signal Intelligence™ scores reflect observable communication behaviors during structured practice. They are not assessments of personality, intent, emotional state, or professional competence, and are not used for automated decision-making.
-                  </p>
-                  <p className="text-sm text-muted-foreground italic">
-                    AI identifies behavioral patterns; interpretation and judgment remain with the professional.
-                  </p>
-                </div>
-              </div>
-            </>
-          )}
-        </DialogContent>
-      </Dialog>
     </div>
   );
 }
