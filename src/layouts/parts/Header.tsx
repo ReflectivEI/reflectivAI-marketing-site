@@ -38,7 +38,8 @@ export default function Header() {
   ];
 
   const learnMoreLinks = [
-    { href: '/signal-intelligence', label: 'Signal Intelligence', description: 'Learn more about our core capabilities' },
+    { href: '/signal-intelligence', label: 'Signal Intelligence', description: 'Science, methodology, and theoretical foundations' },
+    { href: '/applied-capabilities', label: 'How Signal Intelligence™ Is Applied', description: 'Explore capabilities used in practice' },
   ];
 
   return (
