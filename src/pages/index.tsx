@@ -850,7 +850,7 @@ export default function HomePage() {
             </p>
            {/*   <p className="text-base text-muted-foreground max-w-2xl mx-auto italic">
                 Scores shown are illustrative examples for demonstration purposes.
-            </p>
+            </p> */}
           </div>
 
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -864,7 +864,7 @@ export default function HomePage() {
                 {/* Index number badge */}
                 {/*  <div className="absolute top-4 left-4 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
                   <span className="text-sm font-bold text-primary">{capability.index}</span>
-                </div>
+                </div> */}
 
                 {/* Capability name */}
                  {/* <div className="mt-8 mb-3">
@@ -872,17 +872,17 @@ export default function HomePage() {
                     {capability.name}
                   </h3>
                   <p className="text-xs text-muted-foreground mt-1">{capability.behavioralMetric}</p>
-                </div>
+                </div> */}
 
                 {/* Example score */}
                {/*   <div className="mb-3">
                   <div className="text-2xl font-bold text-primary">{capability.exampleScore}</div>
-                </div>
+                </div> */}
 
                 {/* Tap to view affordance */}
                  {/* <div className="text-xs text-muted-foreground">
                   Tap to view calculation
-                </div>
+                </div> */}
               </button>
             ))}
           </div>
