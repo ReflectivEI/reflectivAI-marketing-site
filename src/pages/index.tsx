@@ -341,9 +341,15 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* FUTURE VISIBILITY REDUCTION CANDIDATE (NO ACTION TAKEN)
+         Safe to comment out when homepage reduction phase begins.
+         Fully reversible. No dependencies. */}
       {/* Social Proof Ticker */}
       <SocialProofTicker />
 
+      {/* FUTURE VISIBILITY REDUCTION CANDIDATE (NO ACTION TAKEN)
+         Safe to comment out when homepage reduction phase begins.
+         Fully reversible. No dependencies. */}
       {/* Trusted By */}
       <section className="w-full py-16 bg-background">
         <div className="container mx-auto px-4">
@@ -435,6 +441,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* FUTURE VISIBILITY REDUCTION CANDIDATE (NO ACTION TAKEN)
+         Safe to comment out when homepage reduction phase begins.
+         Fully reversible. No dependencies. */}
       {/* Platform Features */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
@@ -582,6 +591,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* FUTURE VISIBILITY REDUCTION CANDIDATE (NO ACTION TAKEN)
+         Safe to comment out when homepage reduction phase begins.
+         Fully reversible. No dependencies. */}
       {/* Coaching Modules */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -747,6 +759,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* FUTURE VISIBILITY REDUCTION CANDIDATE (NO ACTION TAKEN)
+         Safe to comment out when homepage reduction phase begins.
+         Fully reversible. No dependencies. */}
       {/* Real-Time Coaching Cards */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -845,6 +860,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* FUTURE VISIBILITY REDUCTION CANDIDATE (NO ACTION TAKEN)
+         Safe to comment out when homepage reduction phase begins.
+         Fully reversible. No dependencies. */}
       {/* Compliance Disclosures */}
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
@@ -1137,6 +1155,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* FUTURE VISIBILITY REDUCTION CANDIDATE (NO ACTION TAKEN)
+         Safe to comment out when homepage reduction phase begins.
+         Fully reversible. No dependencies. */}
       {/* Platform Capabilities */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -1285,6 +1306,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* FUTURE VISIBILITY REDUCTION CANDIDATE (NO ACTION TAKEN)
+         Safe to comment out when homepage reduction phase begins.
+         Fully reversible. No dependencies. */}
       {/* Testimonial */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -1311,6 +1335,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* FUTURE VISIBILITY REDUCTION CANDIDATE (NO ACTION TAKEN)
+         Safe to comment out when homepage reduction phase begins.
+         Fully reversible. No dependencies. */}
       {/* Ethics & Governance */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -1369,23 +1396,41 @@ export default function HomePage() {
       <PlatformShowcase />
 
       {/* Animated Stats */}
+      {/* FUTURE VISIBILITY REDUCTION CANDIDATE (NO ACTION TAKEN)
+         Safe to comment out when homepage reduction phase begins.
+         Fully reversible. No dependencies. */}
       <AnimatedStats />
 
       {/* Testimonials */}
+      {/* FUTURE VISIBILITY REDUCTION CANDIDATE (NO ACTION TAKEN)
+         Safe to comment out when homepage reduction phase begins.
+         Fully reversible. No dependencies. */}
       <Testimonials />
 
       {/* Social Proof Ticker */}
       <SocialProofTicker />
 
       {/* Live Metrics Dashboard */}
+      {/* FUTURE VISIBILITY REDUCTION CANDIDATE (NO ACTION TAKEN)
+         Safe to comment out when homepage reduction phase begins.
+         Fully reversible. No dependencies. */}
       <LiveMetricsDashboard />
 
       {/* Live Activity Feed */}
+      {/* FUTURE VISIBILITY REDUCTION CANDIDATE (NO ACTION TAKEN)
+         Safe to comment out when homepage reduction phase begins.
+         Fully reversible. No dependencies. */}
       <LiveActivityFeed />
 
       {/* ROI Calculator */}
+      {/* FUTURE VISIBILITY REDUCTION CANDIDATE (NO ACTION TAKEN)
+         Safe to comment out when homepage reduction phase begins.
+         Fully reversible. No dependencies. */}
       <ROICalculator />
 
+      {/* FUTURE VISIBILITY REDUCTION CANDIDATE (NO ACTION TAKEN)
+         Safe to comment out when homepage reduction phase begins.
+         Fully reversible. No dependencies. */}
       {/* Trust & Transparency */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
@@ -1439,6 +1484,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* FUTURE VISIBILITY REDUCTION CANDIDATE (NO ACTION TAKEN)
+         Safe to comment out when homepage reduction phase begins.
+         Fully reversible. No dependencies. */}
       {/* FAQ */}
       <FAQ />
 
@@ -1453,6 +1501,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* FUTURE VISIBILITY REDUCTION CANDIDATE (NO ACTION TAKEN)
+         Safe to comment out when homepage reduction phase begins.
+         Fully reversible. No dependencies. */}
       {/* Credibility Statement */}
       <section className="py-12 bg-muted">
         <div className="container mx-auto px-4">
@@ -1464,6 +1515,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* FUTURE VISIBILITY REDUCTION CANDIDATE (NO ACTION TAKEN)
+         Safe to comment out when homepage reduction phase begins.
+         Fully reversible. No dependencies. */}
       {/* CTA */}
       <CTASection />
     </div>
