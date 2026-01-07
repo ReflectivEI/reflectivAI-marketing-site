@@ -98,7 +98,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <p className="text-base text-primary text-center">
-              The sections below explain how Signal Intelligence supports decision-making without changing how selling is defined or measured.
+              The sections below explain how Signal Intelligence™ supports decision-making without changing how selling is defined or measured.
             </p>
           </div>
         </div>
@@ -113,6 +113,16 @@ export default function HomePage() {
               <h2 className="text-3xl lg:text-5xl font-bold text-white">Designed to Fit How You Already Sell</h2>
               <p className="text-xl text-white/90 max-w-3xl mx-auto">
                 Signal Intelligence™ strengthens execution without changing your selling model.
+              </p>
+              <p className="text-lg text-white/90 max-w-3xl mx-auto mt-4">
+                Most Life Sciences organizations already have an established way of defining good selling — whether through a formal framework or an agreed set of practices.
+              </p>
+              <p className="text-lg text-white/90 max-w-3xl mx-auto mt-2">
+                Signal Intelligence™ brings that structure into live customer interactions — where judgment and timing matter most.
+              </p>
+              <p className="text-lg text-white/90 max-w-3xl mx-auto mt-2">
+                How you define great selling stays the same.
+                Signal Intelligence™ supports how it is applied in the moment.
               </p>
             </div>
 
@@ -151,9 +161,9 @@ export default function HomePage() {
                 <div className="inline-block px-3 py-1 bg-primary text-white text-sm font-semibold rounded mb-2">
                   HOW
                 </div>
-                <h3 className="text-2xl font-bold text-primary">Signal Intelligence Supports Decisions in the Moment</h3>
+                <h3 className="text-2xl font-bold text-primary">Signal Intelligence™ Supports Decisions in the Moment</h3>
                 <p className="text-primary/90">
-                  Signal Intelligence operates beneath your existing selling structure, supporting real-time decision-making by helping reps:
+                  Signal Intelligence™ operates beneath your existing selling structure, supporting real-time decision-making by helping reps:
                 </p>
                 <ul className="space-y-2 text-primary/90">
                   <li className="flex items-start">
@@ -170,7 +180,7 @@ export default function HomePage() {
                   </li>
                 </ul>
                 <p className="text-primary/90">
-                  Signal Intelligence introduces a decision-support capability that strengthens judgment inside the selling approach you already use.
+                  Signal Intelligence™ introduces a decision-support capability that strengthens judgment inside the selling approach you already use.
                 </p>
               </div>
             </div>
@@ -182,17 +192,20 @@ export default function HomePage() {
                 alt="How Signal Intelligence Fits" 
                 className="w-full h-auto rounded-xl"
               />
+              <p className="text-center text-white/90 mt-4">
+                Signal Intelligence™ is the decision layer between how selling is defined and real customer behavior.
+              </p>
             </div>
 
             {/* Block 5 - Comparative Table */}
             <div className="max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-center mb-8 text-white">How Selling Structures and Signal Intelligence Work Together</h3>
+              <h3 className="text-2xl font-bold text-center mb-8 text-white">How Selling Structures and Signal Intelligence™ Work Together</h3>
               <div className="overflow-x-auto bg-white rounded-xl p-6">
                 <table className="w-full border-collapse">
                   <thead>
                     <tr className="border-b-2 border-primary">
                       <th className="text-left py-4 px-6 font-bold text-primary">Your Selling Structure Provides</th>
-                      <th className="text-left py-4 px-6 font-bold text-primary">Signal Intelligence Enables</th>
+                      <th className="text-left py-4 px-6 font-bold text-primary">Signal Intelligence™ Enables</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -236,19 +249,22 @@ export default function HomePage() {
             {/* 3. Canonical Explanation Declaration */}
             <div className="text-left mb-6">
               <p className="text-xs uppercase tracking-wider font-semibold" style={{ color: 'hsl(215, 16%, 47%)' }}>
-                This is the core Signal Intelligence process. Other sections on this page build from it.
+                This is the core Signal Intelligence™ process. Other sections on this page build from it.
               </p>
             </div>
             <div className="text-center mb-12 space-y-4">
               <h2 className="text-3xl lg:text-5xl font-bold">How It Works</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                During role-play practice, ReflectivAI highlights patterns in how conversations unfold—such as pacing, clarity, and engagement—using the Signal Intelligence™ framework. These insights support reflection and improvement, while judgment and decisions remain with the professional.
+                During role-play practice, ReflectivAI highlights patterns in how conversations unfold using the Signal Intelligence™ framework. These patterns are drawn from observable interaction behaviors—not internal traits, intent, or motivation—and are presented to support professional reflection.
               </p>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4">
-                Reps practice in simulated conversations. After each session, ReflectivAI organizes observable behaviors into Signal Intelligence™ domains to support reflection and coaching. Managers use coaching cards in 1:1s and training programs. Signal Intelligence™ is used in structured practice sessions, not on live customer calls.
+                Reps practice in simulated conversations. After each session, ReflectivAI organizes observable behaviors into Signal Intelligence™ domains so they can be reviewed and discussed in coaching and training contexts. Managers use these outputs in 1:1s and structured programs.
               </p>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4">
-                For sales professionals, these insights reveal where conversations stay aligned with purpose—and where hesitation, overload, or disengagement may be emerging before deals are at risk.
+                Signal Intelligence™ is used in structured practice sessions—not on live customer calls. Judgment, interpretation, and decisions remain with the professional.
+              </p>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4">
+                For sales professionals, this process helps reveal where conversations remain aligned with purpose—and where hesitation, overload, or disengagement may be emerging before deals are at risk.
               </p>
             </div>
 
