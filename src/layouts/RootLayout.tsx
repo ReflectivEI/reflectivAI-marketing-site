@@ -2,6 +2,7 @@ import { ReactElement } from 'react';
 import Website from '@/layouts/Website';
 import Header from '@/layouts/parts/Header';
 import Footer from '@/layouts/parts/Footer';
+import { AloraAssistant } from '@/components/AloraAssistant';
 
 /**
  * Root layout component that wraps all pages with consistent header and footer
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <Header />
       {children}
       <Footer />
+      <AloraAssistant />
     </Website>
   );
 }

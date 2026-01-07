@@ -2,7 +2,7 @@ interface SpinnerProps {
   className?: string;
 }
 
-export function Spinner({ className }: SpinnerProps) {
+export default function Spinner({ className }: SpinnerProps) {
   return (
     <div className={`inline-block ${className || ''}`}>
       <svg
@@ -28,5 +28,3 @@ export function Spinner({ className }: SpinnerProps) {
     </div>
   );
 }
-
-export default Spinner;
