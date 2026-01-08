@@ -309,7 +309,7 @@ export default function HomePage() {
             </div>
             
             <div className="text-center mt-8">
-              <Link to="/signal-intelligence" className="text-lg font-medium" style={{ color: 'hsl(180, 50%, 45%)' }}>
+              <Link to="/how-it-fits" className="text-lg font-medium" style={{ color: 'hsl(180, 50%, 45%)' }}>
                 Learn more about how Signal Intelligence fits the way you already sell →
               </Link>
             </div>
