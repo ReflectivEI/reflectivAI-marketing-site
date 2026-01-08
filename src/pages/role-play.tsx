@@ -393,6 +393,7 @@ export default function RolePlayPage() {
                 />
               </div>
               <div className="space-y-4 order-last md:order-first">
+                {/* Commitment Generation Practice Scenario */}
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
                   Commitment Gaining
                 </div>
