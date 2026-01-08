@@ -194,28 +194,18 @@ export default function HomePage() {
               These behaviors are observable, coachable, and measurable.
             </p>
 
-            {/* Video/Image Embed - REPLACE THIS SECTION WHEN YOU HAVE THE VIDEO */}
+            {/* Signal Intelligence Demo Video */}
             <div className="mt-8 rounded-lg overflow-hidden shadow-lg">
-              {/* TODO: Replace with video element when video file is ready */}
-              {/* Current: Placeholder image */}
-              <img 
-                src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/99674842-DA04-42EA-BF6A-CF60A157E5AE_4_5005_c.jpeg"
-                alt="Signal Intelligence Framework Demo"
-                className="w-full h-auto"
-              />
-              {/* 
-                TO REPLACE WITH VIDEO:
-                1. Upload your video file using the file upload button in chat
-                2. Replace the <img> tag above with:
-                   <video 
-                     controls 
-                     className="w-full h-auto"
-                     poster="[optional thumbnail image URL]"
-                   >
-                     <source src="[YOUR VIDEO URL]" type="video/mp4" />
-                     Your browser does not support the video tag.
-                   </video>
-              */}
+              <div className="relative" style={{ padding: '56.25% 0 0 0' }}>
+                <iframe 
+                  src="https://player.vimeo.com/video/1152490995?badge=0&autopause=0&player_id=0&app_id=58479"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                  title="Signal Intelligence Framework Demo"
+                />
+              </div>
+              <script src="https://player.vimeo.com/api/player.js" async />
             </div>
           </div>
         </div>
