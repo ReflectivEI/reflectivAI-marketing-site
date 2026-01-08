@@ -75,7 +75,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold leading-tight">
+              <h2 className="text-3xl lg:text-[2.5rem] font-bold leading-tight">
                 What Gets Missed in High-Stakes Conversations
               </h2>
             </div>
@@ -146,7 +146,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold leading-tight">Where Judgment Comes into Focus</h2>
+              <h2 className="text-3xl lg:text-[2.5rem] font-bold leading-tight">Where Judgment Comes into Focus</h2>
             </div>
             <div className="space-y-6 text-lg text-foreground/90">
             <p>
@@ -170,7 +170,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold leading-tight">What Signal Intelligence™ Looks Like in Practice</h2>
+              <h2 className="text-3xl lg:text-[2.5rem] font-bold leading-tight">What Signal Intelligence™ Looks Like in Practice</h2>
             </div>
             <div className="space-y-6 text-lg text-foreground/90">
               <p>
@@ -226,7 +226,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold leading-tight">How ReflectivAI Applies Signal Intelligence™</h2>
+              <h2 className="text-3xl lg:text-[2.5rem] font-bold leading-tight">How ReflectivAI Applies Signal Intelligence™</h2>
             </div>
             <div className="space-y-6 text-lg text-foreground/90">
             <p>
@@ -254,7 +254,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold leading-tight">Structured Practice and Coaching</h2>
+              <h2 className="text-3xl lg:text-[2.5rem] font-bold leading-tight">Structured Practice and Coaching</h2>
             </div>
             <div className="space-y-6 text-lg text-foreground/90">
               <p>
