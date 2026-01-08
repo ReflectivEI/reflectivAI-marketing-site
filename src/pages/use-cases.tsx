@@ -210,7 +210,7 @@ export default function UseCasesPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl lg:text-4xl font-bold">
+              <h2 className="text-2xl lg:text-3xl font-bold">
                 Designed to Integrate with Existing Programs
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
