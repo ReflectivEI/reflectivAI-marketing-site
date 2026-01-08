@@ -8,6 +8,11 @@
  */
 
 import * as React from 'react';
+import { Link } from 'react-router-dom';
+import { Card, CardContent, CardDescription, CardHeader } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { CheckCircle2, AlertCircle, ChevronRight, ArrowRight } from 'lucide-react';
 
 type CapabilityDetail = {
   id: string;
@@ -422,12 +427,91 @@ function CapabilityCardButton({
   );
 }
 
+// Framework Explorer capabilities data (relocated from demo.tsx)
+const frameworkCapabilities = [
+  {
+    name: 'Signal Awareness',
+    metric: 'Question Quality',
+    description: 'Recognizing verbal and contextual cues that reveal customer priorities, concerns, and decision-making factors',
+    example: {
+      good: '"I notice you mentioned time constraints twice. Should we focus on the most critical aspects first?"',
+      needsWork: 'Launching into a full product presentation without acknowledging the customer said they only have 10 minutes'
+    }
+  },
+  {
+    name: 'Signal Interpretation',
+    metric: 'Listening & Responsiveness',
+    description: 'Understanding the meaning and implications behind what customers say - and what they do not say',
+    example: {
+      good: 'Customer says "it is not perfect" - rep explores: "What gaps are you seeing?" rather than moving on',
+      needsWork: 'Customer mentions a concern but rep continues with scripted talking points'
+    }
+  },
+  {
+    name: 'Value Connection',
+    metric: 'Value Framing',
+    description: 'Linking product features to specific customer needs and priorities in their language',
+    example: {
+      good: '"You mentioned patient adherence is critical. Our once-weekly dosing directly addresses that by reducing administration burden."',
+      needsWork: 'Listing product features without connecting them to customer stated priorities'
+    }
+  },
+  {
+    name: 'Customer Engagement Monitoring',
+    metric: 'Engagement Cues',
+    description: 'Tracking customer interest, understanding, and receptivity throughout the conversation',
+    example: {
+      good: 'Noticing customer energy shift when discussing a specific topic and exploring it further',
+      needsWork: 'Continuing to present information despite customer showing signs of disengagement or confusion'
+    }
+  },
+  {
+    name: 'Objection Navigation',
+    metric: 'Objection Handling',
+    description: 'Addressing concerns and resistance in a way that maintains trust and moves the conversation forward',
+    example: {
+      good: '"Cost is a real consideration. Help me understand what you are comparing this to and what matters most in that comparison."',
+      needsWork: 'Becoming defensive or dismissive when customer raises a concern'
+    }
+  },
+  {
+    name: 'Conversation Management',
+    metric: 'Conversation Control & Structure',
+    description: 'Guiding the conversation productively while remaining responsive to customer needs',
+    example: {
+      good: '"We have covered efficacy and safety. Should we discuss implementation, or is there something else more pressing?"',
+      needsWork: 'Letting the conversation drift without clear direction or allowing customer to dominate without addressing key topics'
+    }
+  },
+  {
+    name: 'Adaptive Response',
+    metric: 'Adaptability',
+    description: 'Adjusting approach, messaging, and tactics based on customer feedback and changing circumstances',
+    example: {
+      good: 'Shifting from clinical data discussion to operational implementation when customer reveals that is the real barrier',
+      needsWork: 'Sticking to planned presentation despite customer signals indicating different priorities'
+    }
+  },
+  {
+    name: 'Commitment Generation',
+    metric: 'Commitment Gaining',
+    description: 'Moving the customer toward clear next steps and decisions in a natural, pressure-free way',
+    example: {
+      good: '"Based on what we have discussed, would it make sense to schedule time with your clinical team to review the protocol?"',
+      needsWork: 'Ending conversations without clear next steps or pushing for commitments that do not align with customer readiness'
+    }
+  }
+];
+
 export default function AppliedCapabilitiesPage() {
   const [section1Open, setSection1Open] = React.useState(false);
   const [section1Selected, setSection1Selected] = React.useState<CapabilityDetail | null>(null);
 
   const [section2Open, setSection2Open] = React.useState(false);
   const [section2Selected, setSection2Selected] = React.useState<CapabilityDetail | null>(null);
+
+  // Framework Explorer state
+  const [activeFrameworkCapability, setActiveFrameworkCapability] = React.useState<number | null>(null);
 
   const openSection1 = React.useCallback((capability: CapabilityDetail) => {
     setSection1Selected(capability);
@@ -582,6 +666,105 @@ export default function AppliedCapabilitiesPage() {
           onClose={closeSection2}
           labelledById="capabilities-in-practice-modal-title"
         />
+      </section>
+
+      {/* FRAMEWORK EXPLORER SECTION - Relocated from Product Tour */}
+      <section id="framework" className="py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Signal Intelligence™ Framework Explorer
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Explore the 8 capabilities that power our coaching system. Click any capability to see real examples.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {frameworkCapabilities.map((capability, idx) => (
+                <Card
+                  key={idx}
+                  className={`cursor-pointer transition-all ${
+                    activeFrameworkCapability === idx
+                      ? 'border-primary shadow-lg'
+                      : 'hover:border-primary/50'
+                  }`}
+                  onClick={() => setActiveFrameworkCapability(activeFrameworkCapability === idx ? null : idx)}
+                >
+                  <CardHeader>
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-2">
+                          <Badge variant="outline">{capability.name}</Badge>
+                          <ChevronRight className="h-3 w-3 text-muted-foreground" />
+                          <Badge variant="secondary" className="text-xs">
+                            {capability.metric}
+                          </Badge>
+                        </div>
+                        <CardDescription>{capability.description}</CardDescription>
+                      </div>
+                      <ChevronRight
+                        className={`h-5 w-5 text-muted-foreground transition-transform ${
+                          activeFrameworkCapability === idx ? 'rotate-90' : ''
+                        }`}
+                      />
+                    </div>
+                  </CardHeader>
+                  {activeFrameworkCapability === idx && (
+                    <CardContent className="space-y-4 pt-0">
+                      <div>
+                        <div className="flex items-center gap-2 mb-2">
+                          <CheckCircle2 className="h-4 w-4 text-green-600" />
+                          <p className="text-sm font-medium">What Good Looks Like</p>
+                        </div>
+                        <p className="text-sm text-muted-foreground pl-6">
+                          {capability.example.good}
+                        </p>
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-2 mb-2">
+                          <AlertCircle className="h-4 w-4 text-orange-600" />
+                          <p className="text-sm font-medium">What Needs Work</p>
+                        </div>
+                        <p className="text-sm text-muted-foreground pl-6">
+                          {capability.example.needsWork}
+                        </p>
+                      </div>
+                    </CardContent>
+                  )}
+                </Card>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <div className="mt-12 text-center">
+              <Card className="bg-primary/5 border-primary/20">
+                <CardContent className="py-8">
+                  <h3 className="text-xl font-semibold mb-2">
+                    Ready to develop these capabilities in your team?
+                  </h3>
+                  <p className="text-muted-foreground mb-6">
+                    See how Signal Intelligence™ transforms sales performance.
+                  </p>
+                  <div className="flex flex-wrap gap-4 justify-center">
+                    <Button size="lg" asChild>
+                      <Link to="/contact">
+                        Book a Demo
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                    <Button size="lg" variant="outline" asChild>
+                      <Link to="/signal-intelligence">
+                        Learn More About Signal Intelligence™
+                      </Link>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* SECTION 3 — STATIC SUMMARY GRID (NON-INTERACTIVE) — HIDDEN
