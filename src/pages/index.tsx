@@ -170,7 +170,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold leading-tight">What Signal Intelligence™ Looks Like in Practice</h2>
+              <h2 className="text-4xl font-bold leading-tight">What Signal Intelligence™ Looks Like in Practice</h2>
             </div>
             <div className="space-y-6 text-lg text-foreground/90">
               <p>
