@@ -15,7 +15,7 @@ export default function PricingPage() {
               Pricing Built for Life Sciences Commercial Teams
             </h1>
             <p className="text-xl md:text-2xl leading-[1.4]" style={{ color: 'hsl(0, 0%, 90%)' }}>
-              Value-based pricing designed for regulated, high-expertise selling environments. Scaled by deployment scope, governance requirements, and use cases—not by emotions, diagnoses, or personality scores.
+              Value-based pricing designed for regulated, high-expertise selling environments.
             </p>
           </div>
         </div>
@@ -28,7 +28,7 @@ export default function PricingPage() {
             <div className="text-center space-y-4">
               <h2 className="text-3xl lg:text-4xl font-bold">How ReflectivAI Pricing Works</h2>
               <p className="text-lg text-muted-foreground">
-                Our pricing reflects the complexity of your deployment, the governance standards you require, and the capabilities you need—not arbitrary per-user counts or behavioral metrics.
+                Our pricing reflects deployment complexity, governance requirements, and required capabilities.
               </p>
             </div>
 
