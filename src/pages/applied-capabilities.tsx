@@ -250,10 +250,7 @@ function CapabilityModal({ isOpen, title, capability, onClose, labelledById }: C
               <h3 id={labelledById} className="mt-1 text-xl font-bold text-primary">
                 {capability.name}
               </h3>
-              <div className="mt-3 flex flex-wrap items-center gap-2">
-                <span className="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
-                  Capability
-                </span>
+              <div className="mt-3">
                 <span className="inline-flex items-center rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">
                   {capability.behavioralMetric}
                 </span>
@@ -278,7 +275,7 @@ function CapabilityModal({ isOpen, title, capability, onClose, labelledById }: C
                     <p className="text-sm font-semibold text-foreground">Definition</p>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{capability.definition}</p>
                   </div>
-                  <div className="shrink-0 rounded-xl border-2 border-primary bg-muted/30 px-4 py-3 text-center">
+                  <div className="shrink-0 rounded-xl border-2 border-yellow-200 bg-yellow-50 px-4 py-3 text-center">
                     <p className="text-xs font-semibold text-muted-foreground">Example Score</p>
                     <p className="mt-1 text-2xl font-bold text-primary">{capability.exampleScore}</p>
                   </div>
