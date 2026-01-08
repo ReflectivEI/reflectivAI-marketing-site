@@ -644,7 +644,7 @@ export default function AppliedCapabilitiesPage() {
                     </div>
                   </div>
 
-                  <div className="mt-5 text-xs font-semibold text-accent hover:text-accent/80 transition-colors duration-200 underline decoration-accent/40 hover:decoration-accent/60 underline-offset-4 cursor-pointer">
+                  <div className="mt-5 text-xs font-semibold text-primary hover:text-accent transition-colors duration-200 underline decoration-primary/40 hover:decoration-accent/60 underline-offset-4 cursor-pointer">
                     Click to view the full calculation and what good looks like.
                   </div>
                 </button>
