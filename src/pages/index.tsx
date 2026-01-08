@@ -75,7 +75,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
-              <h2 className="text-3xl lg:text-5xl font-bold leading-tight">
+              <h2 className="text-3xl lg:text-4xl font-bold leading-tight">
                 What Gets Missed in High-Stakes Conversations
               </h2>
             </div>
