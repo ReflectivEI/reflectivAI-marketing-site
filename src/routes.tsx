@@ -6,6 +6,7 @@ import RolePlayPage from './pages/role-play';
 import SignalIntelligencePage from './pages/signal-intelligence';
 import HowItFitsPage from './pages/how-it-fits';
 import AppliedCapabilitiesPage from './pages/applied-capabilities';
+import UseCasesPage from './pages/use-cases';
 import ContactPage from './pages/contact';
 import DemoPage from './pages/demo';
 import PricingPage from './pages/pricing';
@@ -40,6 +41,10 @@ export const routes: RouteObject[] = [
     element: <AppliedCapabilitiesPage />,
   },
   {
+    path: '/use-cases',
+    element: <UseCasesPage />,
+  },
+  {
     path: '/contact',
     element: <ContactPage />,
   },
@@ -58,6 +63,6 @@ export const routes: RouteObject[] = [
 ];
 
 // Types for type-safe navigation
-export type Path = '/' | '/ai-coach' | '/role-play' | '/signal-intelligence' | '/how-it-fits' | '/applied-capabilities' | '/contact' | '/demo' | '/pricing';
+export type Path = '/' | '/ai-coach' | '/role-play' | '/signal-intelligence' | '/how-it-fits' | '/applied-capabilities' | '/use-cases' | '/contact' | '/demo' | '/pricing';
 
 export type Params = Record<string, string | undefined>;
