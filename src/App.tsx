@@ -34,6 +34,17 @@ const router = createBrowserRouter([
   },
 ], {
   basename: import.meta.env.BASE_URL,
+  future: {
+    v7_startTransition: true,
+    v7_relativeSplatPath: true,
+  },
+});
+
+// Scroll to top on route change
+router.subscribe((state) => {
+  if (state.navigation.state === 'idle') {
+    window.scrollTo(0, 0);
+  }
 });
 
 export default function App() {
