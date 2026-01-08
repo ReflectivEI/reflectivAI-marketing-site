@@ -106,7 +106,7 @@ export default function HowItFits() {
                 </h3>
                 
                 <img 
-                  src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/Signal%20intelligence%20in%20sales%20enablement%20proces.png"
+                  src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/717e2651-b203-4ccd-899a-4b30dfcb7245.jpeg"
                   alt="Signal Intelligence in Sales Enablement Process - Flow diagram showing Commercial Strategy flowing to Selling Framework (WHAT), then to Signal Intelligence (HOW), and finally to Rep Execution"
                   className="w-full h-auto rounded-lg"
                 />
