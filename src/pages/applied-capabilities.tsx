@@ -487,8 +487,8 @@ export default function AppliedCapabilitiesPage() {
         </div>
       </section>
 
-      {/* SECTION 1 — INTERACTIVE CAPABILITY SYSTEM — HIDDEN */}
-      {/* <section className="py-20 bg-background">
+      {/* SECTION 1 — INTERACTIVE CAPABILITY SYSTEM — HIDDEN
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-10 space-y-3">
@@ -583,8 +583,8 @@ export default function AppliedCapabilitiesPage() {
         />
       </section>
 
-      {/* SECTION 3 — STATIC SUMMARY GRID (NON-INTERACTIVE) — HIDDEN */}
-      {/* <section className="py-20 bg-background">
+      {/* SECTION 3 — STATIC SUMMARY GRID (NON-INTERACTIVE) — HIDDEN
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold">Signal Intelligence™ Metrics</h2>
