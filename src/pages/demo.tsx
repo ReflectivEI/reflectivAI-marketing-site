@@ -385,17 +385,17 @@ export default function DemoPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="border-b border-border bg-gradient-to-b from-primary/5 to-background">
+      <section className="border-b border-border" style={{ backgroundColor: 'hsl(210, 50%, 20%)' }}>
         <div className="container mx-auto px-4 py-16 md:py-24">
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-4" variant="secondary">
               <Sparkles className="h-3 w-3 mr-1" />
               Interactive Experience
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'hsl(0, 0%, 100%)' }}>
               Experience ReflectivAI in Action
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl mb-8" style={{ color: 'hsl(0, 0%, 90%)' }}>
               Explore our AI-powered coaching platform with interactive demos. See how Signal Intelligence™ transforms sales conversations - no signup required.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">

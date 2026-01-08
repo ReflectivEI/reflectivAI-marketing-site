@@ -550,17 +550,17 @@ export default function AppliedCapabilitiesPage() {
               <p className="font-medium" style={{ color: 'hsl(0, 0%, 100%)' }}>Signal Intelligence™ is applied through structured observation, not interpretation or automation.</p>
             </div>
 
-            <div className="bg-white/10 border-l-4 border-white rounded p-6 space-y-4">
-              <h2 className="text-xl font-semibold" style={{ color: 'hsl(0, 0%, 100%)' }}>How to Read This Page</h2>
-              <p className="text-base" style={{ color: 'hsl(0, 0%, 90%)' }}>This page is designed for exploration, not evaluation.</p>
-              <ul className="space-y-2 text-base list-disc list-inside" style={{ color: 'hsl(0, 0%, 90%)' }}>
+            <div className="bg-white border-l-4 border-primary rounded p-6 space-y-4">
+              <h2 className="text-xl font-semibold text-primary">How to Read This Page</h2>
+              <p className="text-base text-foreground">This page is designed for exploration, not evaluation.</p>
+              <ul className="space-y-2 text-base list-disc list-inside text-foreground">
                 <li>Each card represents a Signal Intelligence™ capability used in practice.</li>
                 <li>Capabilities are grounded in observable behaviors only, such as what is said, how responses unfold, and how momentum shifts.</li>
                 <li>Expanding a card reveals the behavioral focus, observable indicators, and an illustrative explanation of how the signal is surfaced.</li>
               </ul>
               <div className="pt-2">
-                <p className="text-base font-semibold mb-2" style={{ color: 'hsl(0, 0%, 100%)' }}>Important:</p>
-                <ul className="space-y-2 text-base list-disc list-inside" style={{ color: 'hsl(0, 0%, 90%)' }}>
+                <p className="text-base font-semibold mb-2 text-primary">Important:</p>
+                <ul className="space-y-2 text-base list-disc list-inside text-foreground">
                   <li>Examples shown are illustrative, not prescriptive.</li>
                   <li>Signals support reflection and coaching. They do not determine outcomes.</li>
                   <li>Interpretation and judgment always remain with the professional.</li>
