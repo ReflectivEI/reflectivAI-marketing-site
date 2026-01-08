@@ -215,9 +215,9 @@ export default function HomePage() {
                 />
               </div>
             </div>
+            </div>
           </div>
         </div>
-      </div>
       </section>
 
       {/* Section: How ReflectivAI Applies Signal Intelligence */}
