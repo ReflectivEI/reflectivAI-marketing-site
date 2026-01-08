@@ -73,12 +73,13 @@ export default function HomePage() {
       {/* Section: What Gets Missed in High-Stakes Conversations */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto space-y-6">
-            <h2 className="text-2xl lg:text-3xl font-bold max-w-4xl mx-auto leading-tight text-center">
-              What Gets Missed in High-Stakes Conversations
-            </h2>
-            
-            <div className="space-y-4 text-lg text-foreground/90">
+          <div className="max-w-5xl mx-auto">
+            <div className="mb-12">
+              <h2 className="text-3xl lg:text-5xl font-bold leading-tight">
+                What Gets Missed in High-Stakes Conversations
+              </h2>
+            </div>
+            <div className="space-y-6 text-lg text-foreground/90">
               <p>
                 Subtle shifts in engagement often determine whether conversations advance—or quietly stall.
               </p>
@@ -169,14 +170,14 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
-              <h2 className="text-2xl lg:text-3xl font-bold leading-tight">What Signal Intelligence™ Looks Like in Practice</h2>
+              <h2 className="text-3xl lg:text-5xl font-bold leading-tight">What Signal Intelligence™ Looks Like in Practice</h2>
             </div>
-            <div className="space-y-6">
-              <p className="text-lg text-foreground/90">
+            <div className="space-y-6 text-lg text-foreground/90">
+              <p>
                 Signal Intelligence™ isn't a mindset or a personality trait. It's visible in how conversations unfold.
               </p>
               
-              <ul className="space-y-3 text-lg text-foreground/90 pl-6">
+              <ul className="space-y-3 pl-6">
                 <li className="flex items-start">
                   <span className="mr-2">•</span>
                   <span>Asking purposeful, customer-centric questions</span>
@@ -252,15 +253,19 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <div className="mb-12 space-y-4">
-              <h2 className="text-2xl lg:text-3xl font-bold max-w-3xl leading-tight">Structured Practice and Coaching</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl">
+            <div className="mb-12">
+              <h2 className="text-3xl lg:text-5xl font-bold leading-tight">Structured Practice and Coaching</h2>
+            </div>
+            <div className="space-y-6 text-lg text-foreground/90">
+              <p>
                 During role-play practice, ReflectivAI highlights patterns in how conversations unfold—such as pacing, clarity, and engagement—using the Signal Intelligence™ framework. These insights support reflection and improvement, while judgment and decisions remain with the professional.
               </p>
-              <p className="text-lg text-muted-foreground max-w-3xl mt-4">
+              
+              <p>
                 Reps practice in simulated conversations. After each session, ReflectivAI organizes observable behaviors into Signal Intelligence™ domains to support reflection and coaching. Managers use coaching cards in 1:1s and training programs. Signal Intelligence™ is used in structured practice sessions, not on live customer calls.
               </p>
-              <p className="text-lg text-muted-foreground max-w-3xl mt-4">
+              
+              <p>
                 For sales professionals, these insights reveal where conversations stay aligned with purpose—and where hesitation, overload, or disengagement may be emerging before deals are at risk.
               </p>
             </div>
