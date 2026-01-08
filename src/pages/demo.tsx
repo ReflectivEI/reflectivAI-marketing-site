@@ -405,7 +405,7 @@ export default function DemoPage() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" asChild style={{ backgroundColor: 'hsl(180, 100%, 35%)', color: 'white', border: '2px solid white' }}>
                 <a href="#demos">Explore Interactive Demos</a>
               </Button>
             </div>
@@ -419,7 +419,7 @@ export default function DemoPage() {
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <a href="#ai-coach" className="group">
-                <Card className="h-full transition-all hover:shadow-lg hover:border-primary">
+                <Card className="h-full transition-all hover:shadow-lg hover:border-primary" style={{ border: '2px solid hsl(210, 50%, 20%)' }}>
                   <CardHeader>
                     <div className="flex items-center gap-3">
                       <div className="p-2 rounded-lg bg-primary/10 text-primary">
@@ -434,7 +434,7 @@ export default function DemoPage() {
                 </Card>
               </a>
               <a href="#role-play" className="group">
-                <Card className="h-full transition-all hover:shadow-lg hover:border-primary">
+                <Card className="h-full transition-all hover:shadow-lg hover:border-primary" style={{ border: '2px solid hsl(210, 50%, 20%)' }}>
                   <CardHeader>
                     <div className="flex items-center gap-3">
                       <div className="p-2 rounded-lg bg-primary/10 text-primary">
@@ -458,9 +458,6 @@ export default function DemoPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <Badge className="mb-4" variant="outline">
-                Demo #1
-              </Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 AI Coach Simulation
               </h2>
@@ -712,9 +709,6 @@ export default function DemoPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <Badge className="mb-4" variant="outline">
-                Demo #2
-              </Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Role Play Scenario Sampler
               </h2>
