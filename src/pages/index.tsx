@@ -143,7 +143,11 @@ export default function HomePage() {
       {/* Section: Where Judgment Comes Into Focus */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto space-y-6 text-lg text-foreground/90">
+          <div className="max-w-5xl mx-auto">
+            <div className="mb-12">
+              <h2 className="text-3xl lg:text-5xl font-bold max-w-3xl leading-tight">Where Judgment Comes into Focus</h2>
+            </div>
+            <div className="space-y-6 text-lg text-foreground/90">
             <p>
               Signal Intelligence™ helps professionals recognize what's changing in a conversation and respond in ways that preserve trust, credibility, and access.
             </p>
@@ -155,6 +159,7 @@ export default function HomePage() {
             <p>
               By making these moments visible, Signal Intelligence allows professional judgment to be understood, coached, and strengthened over time, without reducing complex interactions to activity metrics or automated decisions.
             </p>
+          </div>
           </div>
         </div>
       </section>
@@ -213,7 +218,11 @@ export default function HomePage() {
       {/* Section: How ReflectivAI Applies Signal Intelligence */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto space-y-6 text-lg text-foreground/90">
+          <div className="max-w-5xl mx-auto">
+            <div className="mb-12">
+              <h2 className="text-3xl lg:text-5xl font-bold max-w-3xl leading-tight">How ReflectivAI Applies Signal Intelligence</h2>
+            </div>
+            <div className="space-y-6 text-lg text-foreground/90">
             <p>
               ReflectivAI applies Signal Intelligence by making the moments that matter visible and coachable, while keeping professional decision-making firmly in human hands.
             </p>
@@ -229,6 +238,7 @@ export default function HomePage() {
             <p className="font-semibold">
               One way ReflectivAI applies Signal Intelligence safely is through structured practice and coaching.
             </p>
+          </div>
           </div>
         </div>
       </section>
