@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ROICalculator } from '@/components/ROICalculator';
 
 export default function ROIBusinessImpactPage() {
+  // ROI & Business Impact page with calculator and metrics
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
