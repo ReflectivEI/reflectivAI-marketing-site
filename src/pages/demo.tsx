@@ -464,7 +464,7 @@ export default function DemoPage() {
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 AI Coach Simulation
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 Watch how our AI Coach analyzes real conversations and provides actionable feedback to improve performance.
               </p>
             </div>

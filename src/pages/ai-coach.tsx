@@ -108,7 +108,7 @@ export default function AICoachPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold">What You Can Do with AI Coach</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Access your personal coaching assistant anytime through our chat interface
             </p>
           </div>
@@ -154,7 +154,7 @@ export default function AICoachPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold">8 Signal Intelligence™ Capabilities</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
               AI Coach helps professionals develop all 8 Signal Intelligence™ Capabilities with scored feedback
             </p>
           </div>
@@ -234,7 +234,7 @@ export default function AICoachPage() {
           </div>
           
           <div className="mt-8 text-center">
-            <p className="text-sm text-muted-foreground italic max-w-2xl mx-auto">
+            <p className="text-sm text-muted-foreground italic max-w-4xl mx-auto">
               If a response would feel inappropriate if the roles were reversed, it is outside the Signal Intelligence™ boundary.
             </p>
           </div>
@@ -246,7 +246,7 @@ export default function AICoachPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold">How the Coach Works</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
               AI Coach analyzes conversations using the 8 Signal Intelligence™ Capabilities to provide scored, actionable feedback
             </p>
           </div>
@@ -349,7 +349,7 @@ export default function AICoachPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold">How It Works: Detect, Analyze, Support</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
               Signal Intelligence™ captures observable patterns in your conversation. AI Coach highlights what happened and suggests what it might mean—but you decide how to respond.
             </p>
           </div>
@@ -418,7 +418,7 @@ export default function AICoachPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold">AI Coach in Action</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Real scenarios where Signal Intelligence™ makes the difference
             </p>
           </div>
