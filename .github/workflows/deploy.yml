@@ -1,3 +1,7 @@
+# LOCKED DEPLOYMENT WORKFLOW - DO NOT MODIFY
+# This workflow is the ONLY way to deploy to GitHub Pages
+# Any changes must be carefully reviewed
+
 name: Deploy to GitHub Pages
 
 on:
@@ -19,10 +23,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -31,16 +35,31 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
+      - name: Build application
         run: npm run build
+        env:
+          NODE_ENV: production
 
-      - name: Add .nojekyll to prevent GitHub Pages Jekyll processing
-        run: touch dist/client/.nojekyll
+      - name: Verify build output
+        run: |
+          echo "Checking build output..."
+          ls -la dist/client/
+          if [ ! -f "dist/client/index.html" ]; then
+            echo "ERROR: index.html not found in dist/client/"
+            exit 1
+          fi
+          echo "Build verification passed"
 
-      - name: Setup Pages
+      - name: Add .nojekyll file (CRITICAL - prevents Jekyll processing)
+        run: |
+          touch dist/client/.nojekyll
+          echo "Created .nojekyll file"
+          ls -la dist/client/.nojekyll
+
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v4
 
-      - name: Upload artifact
+      - name: Upload artifact to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
           path: './dist/client'
@@ -55,3 +74,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Verify deployment
+        run: |
+          echo "Deployment completed successfully"
+          echo "Site URL: ${{ steps.deployment.outputs.page_url }}"
