@@ -92,7 +92,7 @@ export default function RolePlayPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold">Simulation Capabilities</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Realistic scenarios powered by AI that adapt to your responses
             </p>
           </div>
@@ -166,7 +166,7 @@ export default function RolePlayPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold">Disease State Scenarios</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Practice with realistic pharma sales scenarios across major therapeutic areas
             </p>
           </div>
@@ -279,7 +279,7 @@ export default function RolePlayPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold">Practice Signal Intelligence™ Across All Scenarios</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
               Build capabilities for detecting signals, interpreting behavior, and responding effectively in every conversation type
             </p>
           </div>
@@ -425,7 +425,7 @@ export default function RolePlayPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold">How Role Play Simulations Work</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               A simple, effective process for building sales mastery
             </p>
           </div>

@@ -237,23 +237,23 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12 space-y-4">
-              <h2 className="text-3xl lg:text-5xl font-bold max-w-3xl mx-auto leading-tight">Structured Practice and Coaching</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <div className="mb-12 space-y-4">
+              <h2 className="text-3xl lg:text-5xl font-bold max-w-3xl leading-tight">Structured Practice and Coaching</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl">
                 During role-play practice, ReflectivAI highlights patterns in how conversations unfold—such as pacing, clarity, and engagement—using the Signal Intelligence™ framework. These insights support reflection and improvement, while judgment and decisions remain with the professional.
               </p>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4">
+              <p className="text-lg text-muted-foreground max-w-3xl mt-4">
                 Reps practice in simulated conversations. After each session, ReflectivAI organizes observable behaviors into Signal Intelligence™ domains to support reflection and coaching. Managers use coaching cards in 1:1s and training programs. Signal Intelligence™ is used in structured practice sessions, not on live customer calls.
               </p>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4">
+              <p className="text-lg text-muted-foreground max-w-3xl mt-4">
                 For sales professionals, these insights reveal where conversations stay aligned with purpose—and where hesitation, overload, or disengagement may be emerging before deals are at risk.
               </p>
             </div>
 
             {/* Visual Workflow */}
             <div className="grid md:grid-cols-3 gap-8 mt-16">
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center">
+              <div className="space-y-4">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
                   <span className="text-2xl font-bold text-primary">1</span>
                 </div>
                 <h3 className="text-xl font-semibold">Practice</h3>
@@ -262,8 +262,8 @@ export default function HomePage() {
                 </p>
               </div>
               
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center">
+              <div className="space-y-4">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
                   <span className="text-2xl font-bold text-primary">2</span>
                 </div>
                 <h3 className="text-xl font-semibold">Analyze</h3>
@@ -272,8 +272,8 @@ export default function HomePage() {
                 </p>
               </div>
               
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center">
+              <div className="space-y-4">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
                   <span className="text-2xl font-bold text-primary">3</span>
                 </div>
                 <h3 className="text-xl font-semibold">Coach</h3>

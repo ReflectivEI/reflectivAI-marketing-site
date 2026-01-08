@@ -361,7 +361,7 @@ export default function PricingPage() {
             </div>
 
             <div className="text-center pt-8">
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground max-w-4xl mx-auto">
                 Add-on pricing is determined by deployment scope, configuration requirements, and integration complexity. Contact our team to explore options.
               </p>
             </div>
