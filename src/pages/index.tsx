@@ -145,7 +145,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
-              <h2 className="text-3xl lg:text-5xl font-bold leading-tight whitespace-nowrap">Where Judgment Comes into Focus</h2>
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight whitespace-nowrap">Where Judgment Comes into Focus</h2>
             </div>
             <div className="space-y-6 text-lg text-foreground/90">
             <p>
@@ -169,7 +169,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
-              <h2 className="text-3xl lg:text-5xl font-bold leading-tight whitespace-nowrap">What Signal Intelligence Looks Like in Practice</h2>
+              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold leading-tight whitespace-nowrap">What Signal Intelligence Looks Like in Practice</h2>
             </div>
             <div className="space-y-6">
             <p className="text-lg text-foreground/90">
@@ -225,7 +225,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
-              <h2 className="text-3xl lg:text-5xl font-bold leading-tight whitespace-nowrap">How ReflectivAI Applies Signal Intelligence™</h2>
+              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold leading-tight whitespace-nowrap">How ReflectivAI Applies Signal Intelligence™</h2>
             </div>
             <div className="space-y-6 text-lg text-foreground/90">
             <p>
