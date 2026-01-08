@@ -101,13 +101,13 @@ export default function HowItFits() {
             {/* Flow Diagram - Image */}
             <div className="max-w-4xl mx-auto">
               <div className="bg-white rounded-xl p-8 lg:p-12 shadow-lg">
-                <h3 className="text-2xl lg:text-3xl font-bold text-center mb-8">
+                <h3 className="text-3xl lg:text-5xl font-bold text-center mb-8">
                   How Signal Intelligence™ Fits
                 </h3>
                 
                 <img 
                   src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/717e2651-b203-4ccd-899a-4b30dfcb7245.jpeg"
-                  alt="Signal Intelligence in Sales Enablement Process - Flow diagram showing Commercial Strategy flowing to Selling Framework (WHAT), then to Signal Intelligence (HOW), and finally to Rep Execution"
+                  alt="Signal Intelligence™ in Sales Enablement Process - Flow diagram showing Commercial Strategy flowing to Selling Framework (WHAT), then to Signal Intelligence™ (HOW), and finally to Rep Execution"
                   className="w-full h-auto rounded-lg"
                 />
                 
@@ -120,7 +120,7 @@ export default function HowItFits() {
             {/* Comparison Table */}
             <div className="max-w-6xl mx-auto">
               <div className="bg-white rounded-xl p-8 lg:p-12 shadow-lg">
-                <h3 className="text-2xl lg:text-3xl font-bold text-center mb-12">
+                <h3 className="text-3xl lg:text-5xl font-bold text-center mb-12">
                   How Selling Structures and Signal Intelligence™ Work Together
                 </h3>
                 
@@ -187,7 +187,7 @@ export default function HowItFits() {
       <section className="py-20 bg-gradient-to-b from-muted to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl lg:text-4xl font-bold">
+            <h2 className="text-3xl lg:text-5xl font-bold">
               Ready to See Signal Intelligence™ in Action?
             </h2>
             <p className="text-xl text-muted-foreground">

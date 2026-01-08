@@ -31,7 +31,7 @@ export default function UseCasesPage() {
                   <GraduationCap className="w-6 h-6 text-primary" />
                   <span className="font-semibold text-primary">Onboarding & Training</span>
                 </div>
-                <h2 className="text-3xl lg:text-4xl font-bold">
+                <h2 className="text-3xl lg:text-5xl font-bold">
                   Accelerate New Rep Readiness
                 </h2>
                 <p className="text-lg text-muted-foreground">
@@ -83,7 +83,7 @@ export default function UseCasesPage() {
                   <Users className="w-6 h-6 text-primary" />
                   <span className="font-semibold text-primary">Ongoing Coaching</span>
                 </div>
-                <h2 className="text-3xl lg:text-4xl font-bold">
+                <h2 className="text-3xl lg:text-5xl font-bold">
                   Scale Personalized Development
                 </h2>
                 <p className="text-lg text-muted-foreground">
@@ -117,7 +117,7 @@ export default function UseCasesPage() {
                   <TrendingUp className="w-6 h-6 text-primary" />
                   <span className="font-semibold text-primary">Program Insights</span>
                 </div>
-                <h2 className="text-3xl lg:text-4xl font-bold">
+                <h2 className="text-3xl lg:text-5xl font-bold">
                   Understand Capability Trends Across Teams
                 </h2>
                 <p className="text-lg text-muted-foreground">
@@ -162,7 +162,7 @@ export default function UseCasesPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl lg:text-4xl font-bold" style={{ color: 'hsl(0, 0%, 100%)' }}>
+              <h2 className="text-3xl lg:text-5xl font-bold" style={{ color: 'hsl(0, 0%, 100%)' }}>
                 How Use Cases Work Together
               </h2>
               <p className="text-xl" style={{ color: 'hsl(0, 0%, 90%)' }}>

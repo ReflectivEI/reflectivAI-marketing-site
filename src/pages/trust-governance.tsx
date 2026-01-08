@@ -24,7 +24,7 @@ export default function TrustGovernancePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl lg:text-4xl font-bold">
+              <h2 className="text-3xl lg:text-5xl font-bold">
                 Built on Responsible AI Principles
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -82,7 +82,7 @@ export default function TrustGovernancePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl lg:text-4xl font-bold" style={{ color: 'hsl(0, 0%, 100%)' }}>
+              <h2 className="text-3xl lg:text-5xl font-bold" style={{ color: 'hsl(0, 0%, 100%)' }}>
                 Data Privacy & Security
               </h2>
               <p className="text-xl" style={{ color: 'hsl(0, 0%, 90%)' }}>

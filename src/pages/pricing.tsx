@@ -26,7 +26,7 @@ export default function PricingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl lg:text-4xl font-bold">How ReflectivAI Pricing Works</h2>
+              <h2 className="text-3xl lg:text-5xl font-bold">How ReflectivAI Pricing Works</h2>
               <p className="text-lg text-muted-foreground">
                 Our pricing reflects deployment complexity, governance requirements, and required capabilities.
               </p>
@@ -89,7 +89,7 @@ export default function PricingPage() {
       <section className="py-16 lg:py-24" style={{ backgroundColor: 'hsl(210, 50%, 20%)' }}>
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold" style={{ color: 'hsl(0, 0%, 100%)' }}>
+            <h2 className="text-3xl lg:text-5xl font-bold" style={{ color: 'hsl(0, 0%, 100%)' }}>
               Core Deployment Tiers
             </h2>
             <p className="text-lg" style={{ color: 'hsl(0, 0%, 90%)' }}>
@@ -102,7 +102,7 @@ export default function PricingPage() {
             <div className="bg-white rounded-xl p-8 space-y-6 shadow-lg">
               <div className="space-y-2">
                 <h3 className="text-2xl font-bold">Foundation</h3>
-                <p className="text-muted-foreground">Signal Intelligence fundamentals for individual or small-team use</p>
+                <p className="text-muted-foreground">Signal Intelligence™ fundamentals for individual or small-team use</p>
               </div>
 
               <div className="space-y-4 pt-4 border-t">
@@ -128,7 +128,7 @@ export default function PricingPage() {
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Core Signal Intelligence framework</span>
+                    <span>Core Signal Intelligence™ framework</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
@@ -149,7 +149,7 @@ export default function PricingPage() {
                 <h4 className="font-semibold">Not Included</h4>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>• Advanced analytics</li>
-                  <li>• Custom Signal Intelligence mappings</li>
+                  <li>• Custom Signal Intelligence™ mappings</li>
                   <li>• CRM integrations</li>
                   <li>• Enterprise governance controls</li>
                 </ul>
@@ -198,7 +198,7 @@ export default function PricingPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Expanded Signal Intelligence coverage</span>
+                    <span>Expanded Signal Intelligence™ coverage</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
@@ -222,7 +222,7 @@ export default function PricingPage() {
               <div className="space-y-4 pt-4 border-t">
                 <h4 className="font-semibold">Not Included</h4>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Custom Signal Intelligence mappings</li>
+                  <li>• Custom Signal Intelligence™ mappings</li>
                   <li>• Enterprise governance controls</li>
                   <li>• Advanced compliance configuration</li>
                   <li>• Dedicated support</li>
@@ -238,7 +238,7 @@ export default function PricingPage() {
             <div className="bg-white rounded-xl p-8 space-y-6 shadow-lg">
               <div className="space-y-2">
                 <h3 className="text-2xl font-bold">Enterprise</h3>
-                <p className="text-muted-foreground">Full Signal Intelligence framework with custom configuration and enterprise governance</p>
+                <p className="text-muted-foreground">Full Signal Intelligence™ framework with custom configuration and enterprise governance</p>
               </div>
 
               <div className="space-y-4 pt-4 border-t">
@@ -268,7 +268,7 @@ export default function PricingPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Full Signal Intelligence framework</span>
+                    <span>Full Signal Intelligence™ framework</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
@@ -310,7 +310,7 @@ export default function PricingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto space-y-12">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl lg:text-4xl font-bold">Modular Add-Ons</h2>
+              <h2 className="text-3xl lg:text-5xl font-bold">Modular Add-Ons</h2>
               <p className="text-lg text-muted-foreground">
                 Enhance your deployment with optional modules. Add-ons extend tier capabilities but do not replace human judgment or decision-making.
               </p>
@@ -325,7 +325,7 @@ export default function PricingPage() {
               </div>
 
               <div className="p-6 rounded-lg border border-border bg-card space-y-3">
-                <h3 className="text-xl font-semibold">Custom Signal Intelligence Mappings</h3>
+                <h3 className="text-xl font-semibold">Custom Signal Intelligence™ Mappings</h3>
                 <p className="text-muted-foreground">
                   Tailored behavioral frameworks aligned to your selling methodology, therapeutic areas, or customer segments. Priced by configuration complexity.
                 </p>
@@ -374,7 +374,7 @@ export default function PricingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-6">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl lg:text-4xl font-bold">Compliance & Ethical Use</h2>
+              <h2 className="text-3xl lg:text-5xl font-bold">Compliance & Ethical Use</h2>
               <p className="text-lg text-muted-foreground">
                 ReflectivAI is designed to support professional judgment in regulated commercial environments. Our platform operates within clear ethical boundaries.
               </p>
@@ -408,7 +408,7 @@ export default function PricingPage() {
       <section className="py-16 lg:py-24" style={{ backgroundColor: 'hsl(210, 50%, 20%)' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl lg:text-4xl font-bold" style={{ color: 'hsl(0, 0%, 100%)' }}>
+            <h2 className="text-3xl lg:text-5xl font-bold" style={{ color: 'hsl(0, 0%, 100%)' }}>
               Ready to Explore Deployment Options?
             </h2>
             <p className="text-xl" style={{ color: 'hsl(0, 0%, 90%)' }}>

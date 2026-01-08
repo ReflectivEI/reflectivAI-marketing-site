@@ -37,7 +37,7 @@ export default function HomePage() {
               
               {/* Supporting Line */}
               <p className="text-base leading-[1.5] max-w-[640px]" style={{ color: 'hsl(0, 0%, 80%)' }}>
-                Built on Signal Intelligence™. Designed to fit your existing selling structure.
+                Built on Signal Intelligence. Designed to fit your existing selling structure.
               </p>
               
               {/* CTA Buttons */}
@@ -73,8 +73,8 @@ export default function HomePage() {
       {/* Section: What Gets Missed in High-Stakes Conversations */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto space-y-6">
-            <h2 className="text-3xl lg:text-5xl font-bold leading-tight">
+          <div className="max-w-4xl mx-auto space-y-6">
+            <h2 className="text-3xl lg:text-5xl font-bold max-w-4xl mx-auto leading-tight text-center">
               What Gets Missed in High-Stakes Conversations
             </h2>
             
@@ -164,7 +164,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Section: What Signal Intelligence™ Looks Like in Practice */}
+      {/* Section: What Signal Intelligence Looks Like in Practice */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
@@ -203,7 +203,7 @@ export default function HomePage() {
               These behaviors are observable, coachable, and measurable.
             </p>
 
-            {/* Signal Intelligence™ Demo Video - Vimeo Embed */
+            {/* Signal Intelligence Demo Video - Vimeo Embed */}
             <div className="mt-8 rounded-lg overflow-hidden shadow-lg">
               <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
                 <iframe
@@ -220,7 +220,7 @@ export default function HomePage() {
         </div> {/* Close container */}
       </section>
 
-      {/* Section: How ReflectivAI Applies Signal Intelligence™ */}
+      {/* Section: How ReflectivAI Applies Signal Intelligence */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
@@ -311,7 +311,7 @@ export default function HomePage() {
             
             <div className="space-y-4 text-lg" style={{ color: 'hsl(0, 0%, 90%)' }}>
               <p>
-                Signal Intelligence™ strengthens how judgment is exercised during conversations—regardless of the selling approach or framework in use.
+                Signal Intelligence strengthens how judgment is exercised during conversations—regardless of the selling approach or framework in use.
               </p>
               
               <p>
@@ -319,13 +319,13 @@ export default function HomePage() {
               </p>
               
               <p>
-                Whether teams follow a defined methodology or rely on individual expertise, Signal Intelligence™ complements existing practices without requiring change or disruption.
+                Whether teams follow a defined methodology or rely on individual expertise, Signal Intelligence complements existing practices without requiring change or disruption.
               </p>
             </div>
             
             <div className="text-center mt-8">
               <Link to="/how-it-fits" className="text-lg font-medium" style={{ color: 'hsl(180, 50%, 45%)' }}>
-                Learn more about how Signal Intelligence™ fits the way you already sell →
+                Learn more about how Signal Intelligence fits the way you already sell →
               </Link>
             </div>
           </div>
@@ -333,7 +333,7 @@ export default function HomePage() {
       </section>
 
       {/* TEMPORARILY HIDDEN — "Designed to Fit How You Already Sell" Section */}
-      {/* This section teaches the hierarchy: Selling Structure (WHAT) vs Signal Intelligence™ (HOW) */
+      {/* This section teaches the hierarchy: Selling Structure (WHAT) vs Signal Intelligence (HOW) */}
       {/* Can be re-enabled by uncommenting this block */}
       {/*
       <section className="py-20" style={{ backgroundColor: 'hsl(210, 50%, 20%)' }}>
@@ -477,7 +477,7 @@ export default function HomePage() {
       </section>
       */}
 
-      {/* TEMPORARILY HIDDEN — "Explore Signal Intelligence™ in Practice" Section */
+      {/* TEMPORARILY HIDDEN — "Explore Signal Intelligence in Practice" Section */}
       {/* Interactive demo showcase */}
       {/* Can be re-enabled by uncommenting this block */}
       {/*
@@ -523,7 +523,7 @@ export default function HomePage() {
       </section>
       */}
 
-      {/* TEMPORARILY HIDDEN — "How ReflectivAI Supports Signal Intelligence™" Section */
+      {/* TEMPORARILY HIDDEN — "How ReflectivAI Supports Signal Intelligence" Section */}
       {/* Platform support capabilities with feature breakdown */}
       {/* Can be re-enabled by uncommenting this block */}
       {/*
