@@ -535,32 +535,32 @@ export default function AppliedCapabilitiesPage() {
 
   return (
     <div className="flex flex-col">
-      <section className="py-20 bg-white">
+      <section className="py-20" style={{ backgroundColor: 'hsl(210, 50%, 20%)' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-primary mb-8">How Signal Intelligence™ Is Applied</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-8" style={{ color: 'hsl(0, 0%, 100%)' }}>How Signal Intelligence™ Is Applied</h1>
 
-            <div className="space-y-4 text-lg text-foreground leading-relaxed mb-12">
+            <div className="space-y-4 text-lg leading-relaxed mb-12" style={{ color: 'hsl(0, 0%, 90%)' }}>
               <p>
                 Signal Intelligence™ is applied through observable behaviors that occur during real conversations. This page shows how those behaviors are organized, monitored, and used to support professional judgment, without diagnosing intent, emotion, or competence.
               </p>
               <p>
                 Each capability represents what can be noticed in the moment, how it is described, and why it may matter for next decisions. The goal is not to score people, but to support reflection, coaching, and consistency in conversations.
               </p>
-              <p className="font-medium">Signal Intelligence™ is applied through structured observation, not interpretation or automation.</p>
+              <p className="font-medium" style={{ color: 'hsl(0, 0%, 100%)' }}>Signal Intelligence™ is applied through structured observation, not interpretation or automation.</p>
             </div>
 
-            <div className="bg-muted/50 border-l-4 border-primary rounded p-6 space-y-4">
-              <h2 className="text-xl font-semibold text-primary">How to Read This Page</h2>
-              <p className="text-base text-foreground">This page is designed for exploration, not evaluation.</p>
-              <ul className="space-y-2 text-base text-foreground list-disc list-inside">
+            <div className="bg-white/10 border-l-4 border-white rounded p-6 space-y-4">
+              <h2 className="text-xl font-semibold" style={{ color: 'hsl(0, 0%, 100%)' }}>How to Read This Page</h2>
+              <p className="text-base" style={{ color: 'hsl(0, 0%, 90%)' }}>This page is designed for exploration, not evaluation.</p>
+              <ul className="space-y-2 text-base list-disc list-inside" style={{ color: 'hsl(0, 0%, 90%)' }}>
                 <li>Each card represents a Signal Intelligence™ capability used in practice.</li>
                 <li>Capabilities are grounded in observable behaviors only, such as what is said, how responses unfold, and how momentum shifts.</li>
                 <li>Expanding a card reveals the behavioral focus, observable indicators, and an illustrative explanation of how the signal is surfaced.</li>
               </ul>
               <div className="pt-2">
-                <p className="text-base font-semibold text-foreground mb-2">Important:</p>
-                <ul className="space-y-2 text-base text-foreground list-disc list-inside">
+                <p className="text-base font-semibold mb-2" style={{ color: 'hsl(0, 0%, 100%)' }}>Important:</p>
+                <ul className="space-y-2 text-base list-disc list-inside" style={{ color: 'hsl(0, 0%, 90%)' }}>
                   <li>Examples shown are illustrative, not prescriptive.</li>
                   <li>Signals support reflection and coaching. They do not determine outcomes.</li>
                   <li>Interpretation and judgment always remain with the professional.</li>

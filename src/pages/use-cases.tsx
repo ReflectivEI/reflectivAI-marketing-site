@@ -6,7 +6,7 @@ export default function UseCasesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-b from-background to-muted">
+      <section className="py-20" style={{ backgroundColor: 'hsl(210, 50%, 20%)' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight">

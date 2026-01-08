@@ -8,13 +8,13 @@ export default function ROIBusinessImpactPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-b from-background to-muted">
+      <section className="py-20" style={{ backgroundColor: 'hsl(210, 50%, 20%)' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-4xl lg:text-6xl font-bold leading-tight" style={{ color: 'hsl(0, 0%, 100%)' }}>
               ROI & Business Impact
             </h1>
-            <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl lg:text-2xl max-w-3xl mx-auto" style={{ color: 'hsl(0, 0%, 90%)' }}>
               Measurable outcomes that drive revenue, reduce costs, and accelerate team performance.
             </p>
           </div>
