@@ -399,14 +399,15 @@ function CapabilityCardButton({
       </div>
 
       <div className="mt-1 pl-10">
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="space-y-2">
           <span className="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
             {capability.name}
           </span>
-          <span className="text-muted-foreground">→</span>
-          <span className="inline-flex items-center rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">
-            {capability.behavioralMetric}
-          </span>
+          <div>
+            <span className="inline-flex items-center rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">
+              {capability.behavioralMetric}
+            </span>
+          </div>
         </div>
 
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground"><span className="font-bold">Definition:</span> {capability.definition}</p>
@@ -543,14 +544,15 @@ export default function AppliedCapabilitiesPage() {
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="min-w-0">
-                      <div className="flex flex-wrap items-center gap-2">
+                      <div className="space-y-2">
                         <span className="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
                           {capability.name}
                         </span>
-                        <span className="text-muted-foreground">→</span>
-                        <span className="inline-flex items-center rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">
-                          {capability.behavioralMetric}
-                        </span>
+                        <div>
+                          <span className="inline-flex items-center rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">
+                            {capability.behavioralMetric}
+                          </span>
+                        </div>
                       </div>
                       <p className="mt-3 text-sm leading-relaxed text-muted-foreground"><span className="font-bold">Definition:</span> {capability.definition}</p>
                     </div>
@@ -600,16 +602,18 @@ export default function AppliedCapabilitiesPage() {
                 key={capability.id}
                 className="rounded-xl border-2 border-primary bg-white p-6 shadow-md transition-transform duration-200 hover:shadow-xl"
               >
-                <div className="flex flex-wrap items-center gap-2">
+                <div className="space-y-2">
                   <span className="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
                     {capability.name}
                   </span>
-                  <span className="inline-flex items-center rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">
-                    {capability.behavioralMetric}
-                  </span>
+                  <div>
+                    <span className="inline-flex items-center rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">
+                      {capability.behavioralMetric}
+                    </span>
+                  </div>
                 </div>
 
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{capability.definition}</p>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground"><span className="font-bold">Definition:</span> {capability.definition}</p>
 
                 <div className="mt-5 flex items-end justify-between gap-3">
                   <div className="text-xs font-semibold text-muted-foreground">Example score</div>
