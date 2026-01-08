@@ -19,7 +19,20 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
+    
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`Demo Request from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Company: ${formData.company}\n` +
+      `Phone: ${formData.phone}\n\n` +
+      `Message:\n${formData.message}`
+    );
+    
+    window.location.href = `mailto:reflectivei.ai@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Show success message
     setIsSubmitted(true);
     setTimeout(() => {
       setIsSubmitted(false);
@@ -162,8 +175,9 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">Email</h3>
-                      <p className="text-muted-foreground">info@reflectivai.com</p>
-                      <p className="text-muted-foreground">support@reflectivai.com</p>
+                      <a href="mailto:reflectivei.ai@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                        reflectivei.ai@gmail.com
+                      </a>
                     </div>
                   </div>
 
@@ -174,9 +188,8 @@ export default function ContactPage() {
                       </div>
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">Phone</h3>
-                      <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                      <p className="text-sm text-muted-foreground">Mon-Fri, 9am-6pm EST</p>
+                      <h3 className="font-semibold mb-1">Location</h3>
+                      <p className="text-muted-foreground">Los Angeles, CA 90018</p>
                     </div>
                   </div>
 
@@ -187,9 +200,8 @@ export default function ContactPage() {
                       </div>
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">Office</h3>
-                      <p className="text-muted-foreground">123 Innovation Drive</p>
-                      <p className="text-muted-foreground">San Francisco, CA 94105</p>
+                      <h3 className="font-semibold mb-1">Business Hours</h3>
+                      <p className="text-muted-foreground">Mon-Fri, 9am-6pm PST</p>
                     </div>
                   </div>
                 </div>

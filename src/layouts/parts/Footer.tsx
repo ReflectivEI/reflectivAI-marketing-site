@@ -24,7 +24,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
                 <Link to="/" className="hover:text-foreground transition-colors">
-                  Overview
+                  Platform Overview
                 </Link>
               </li>
               <li>
@@ -38,7 +38,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-foreground transition-colors">
+                <Link to="/pricing" className="hover:text-foreground transition-colors">
                   Pricing
                 </Link>
               </li>
@@ -59,7 +59,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/" className="hover:text-foreground transition-colors">
+                <Link to="/signal-intelligence" className="hover:text-foreground transition-colors">
                   Signal Intelligence™
                 </Link>
               </li>
@@ -75,7 +75,7 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link to="/" className="hover:text-foreground transition-colors">
+                <Link to="/how-it-fits" className="hover:text-foreground transition-colors">
                   About Us
                 </Link>
               </li>
@@ -90,7 +90,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/" className="hover:text-foreground transition-colors">
+                <Link to="/trust-governance" className="hover:text-foreground transition-colors">
                   Privacy Policy
                 </Link>
               </li>
