@@ -168,40 +168,70 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
+            {/* OPTION B: Logo centered above header with pale teal background */}
+            <div className="flex justify-center mb-8">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-teal-50 via-cyan-50 to-teal-100/40 rounded-full blur-2xl opacity-70" />
+                <img 
+                  src="/assets/signal-intelligence-logo.png" 
+                  alt="Signal Intelligence"
+                  className="relative w-32 lg:w-40 drop-shadow-lg"
+                />
+              </div>
+            </div>
+            
             <div className="mb-12">
               <h2 className="text-3xl lg:text-5xl font-bold leading-tight whitespace-nowrap">What Signal Intelligence Looks Like in Practice</h2>
             </div>
-            <div className="space-y-6">
-            <p className="text-lg text-foreground/90">
-              Signal Intelligence isn't a mindset or a personality trait. It's visible in how conversations unfold.
-            </p>
             
-            <ul className="space-y-3 text-lg text-foreground/90 pl-6">
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>Asking purposeful, customer-centric questions</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>Listening accurately and responding appropriately</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>Recognizing engagement shifts and adjusting in real time</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>Navigating resistance without pressure</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>Securing clear, voluntary next steps</span>
-              </li>
-            </ul>
-            
-            <p className="text-lg text-foreground/90 font-semibold">
-              These behaviors are observable, coachable, and measurable.
-            </p>
+            {/* OPTION A: Two-column layout with logo on right (your original idea) */}
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              {/* Left column: Text content */}
+              <div className="space-y-6">
+                <p className="text-lg text-foreground/90">
+                  Signal Intelligence isn't a mindset or a personality trait. It's visible in how conversations unfold.
+                </p>
+                
+                <ul className="space-y-3 text-lg text-foreground/90 pl-6">
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>Asking purposeful, customer-centric questions</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>Listening accurately and responding appropriately</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>Recognizing engagement shifts and adjusting in real time</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>Navigating resistance without pressure</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>Securing clear, voluntary next steps</span>
+                  </li>
+                </ul>
+                
+                <p className="text-lg text-foreground/90 font-semibold">
+                  These behaviors are observable, coachable, and measurable.
+                </p>
+              </div>
+              
+              {/* Right column: Logo with pale teal background */}
+              <div className="flex justify-center items-center">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-teal-50 via-cyan-50 to-teal-100/40 rounded-3xl blur-xl opacity-80" />
+                  <img 
+                    src="/assets/signal-intelligence-logo.png" 
+                    alt="Signal Intelligence"
+                    className="relative w-48 lg:w-56 drop-shadow-xl"
+                  />
+                </div>
+              </div>
+            </div>
 
             {/* Signal Intelligence Demo Video - Vimeo Embed */}
             <div className="mt-8 rounded-lg overflow-hidden shadow-lg">
@@ -215,7 +245,6 @@ export default function HomePage() {
                 />
               </div>
             </div>
-          </div>
           </div>
         </div>
       </section>

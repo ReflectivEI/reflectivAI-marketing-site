@@ -3,6 +3,18 @@ export default function SignalIntelligencePage() {
   return (
     <div className="min-h-screen bg-background">
       <div className="max-w-[980px] mx-auto px-5 py-14">
+        {/* OPTION C: Logo in hero section with large pale teal background */}
+        <div className="flex justify-center mb-12">
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-br from-teal-50 via-cyan-50 to-teal-100/50 rounded-full blur-3xl opacity-80" />
+            <img 
+              src="/assets/signal-intelligence-logo.png" 
+              alt="Signal Intelligence"
+              className="relative w-56 lg:w-64 drop-shadow-2xl"
+            />
+          </div>
+        </div>
+        
         {/* Hero Section */}
         <header className="bg-gradient-to-b from-accent/10 to-transparent border border-border rounded-2xl shadow-lg p-7 mb-7">
           <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2.5">
