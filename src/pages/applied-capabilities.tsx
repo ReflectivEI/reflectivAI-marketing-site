@@ -547,11 +547,12 @@ export default function AppliedCapabilitiesPage() {
                         <span className="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
                           {capability.name}
                         </span>
+                        <span className="text-muted-foreground">→</span>
                         <span className="inline-flex items-center rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">
                           {capability.behavioralMetric}
                         </span>
                       </div>
-                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{capability.definition}</p>
+                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground"><span className="font-bold">Definition:</span> {capability.definition}</p>
                     </div>
 
                     <div className="shrink-0 rounded-full border-2 border-primary bg-muted/30 px-3 py-1 text-xs font-semibold text-primary">
