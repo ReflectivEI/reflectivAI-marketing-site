@@ -71,7 +71,7 @@ export default function HomePage() {
       </section>
 
       {/* Section: What Gets Missed in High-Stakes Conversations */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
@@ -142,7 +142,7 @@ export default function HomePage() {
       </section>
 
       {/* Section: Where Judgment Comes Into Focus */}
-      <section className="py-20 bg-muted">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
@@ -166,7 +166,7 @@ export default function HomePage() {
       </section>
 
       {/* Section: What Signal Intelligence Looks Like in Practice */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
@@ -222,7 +222,7 @@ export default function HomePage() {
       </section>
 
       {/* Section: How ReflectivAI Applies Signal Intelligence */}
-      <section className="py-20 bg-muted">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
@@ -250,7 +250,7 @@ export default function HomePage() {
       </section>
 
       {/* Structured Practice and Coaching (How It Works) */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
@@ -307,7 +307,7 @@ export default function HomePage() {
       </section>
 
       {/* Section: Approach-Agnostic by Design */}
-      <section className="py-20" style={{ backgroundColor: 'hsl(210, 50%, 20%)' }}>
+      <section className="py-16" style={{ backgroundColor: 'hsl(210, 50%, 20%)' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-6">
             <h2 className="text-3xl lg:text-5xl font-bold max-w-4xl mx-auto leading-tight text-center" style={{ color: 'hsl(0, 0%, 100%)' }}>
@@ -398,7 +398,7 @@ export default function HomePage() {
       {/* Platform capabilities overview with feature cards */}
       {/* Can be re-enabled by uncommenting this block */}
       {/*
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold max-w-3xl mx-auto leading-tight">Everything You Need to Excel</h2>
@@ -434,7 +434,7 @@ export default function HomePage() {
       */}
 
       {/* Live Metrics Dashboard */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <LiveMetricsDashboard />
         </div>
@@ -444,7 +444,7 @@ export default function HomePage() {
       {/* Interactive coaching scenario cards */}
       {/* Can be re-enabled by uncommenting this block */}
       {/*
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold max-w-3xl mx-auto leading-tight">Real-Time Coaching in Action</h2>
@@ -486,7 +486,7 @@ export default function HomePage() {
       {/* Interactive demo showcase */}
       {/* Can be re-enabled by uncommenting this block */}
       {/*
-      <section className="py-20 bg-muted">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4 text-center space-y-6">
           <h2 className="text-3xl lg:text-5xl font-bold max-w-4xl mx-auto leading-tight">Explore Signal Intelligence™ in Practice</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -505,7 +505,7 @@ export default function HomePage() {
       */}
 
       {/* ROI Calculator */}
-      <section className="py-20 bg-muted">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <ROICalculator />
         </div>
@@ -521,7 +521,7 @@ export default function HomePage() {
       {/* TEMPORARILY HIDDEN — Live Activity Feed */}
       {/* Can be re-enabled by uncommenting this block */}
       {/*
-      <section className="py-20 bg-muted">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <LiveActivityFeed />
         </div>
@@ -532,7 +532,7 @@ export default function HomePage() {
       {/* Platform support capabilities with feature breakdown */}
       {/* Can be re-enabled by uncommenting this block */}
       {/*
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold max-w-5xl mx-auto leading-tight">How ReflectivAI Supports Signal Intelligence™</h2>
@@ -577,7 +577,7 @@ export default function HomePage() {
       {/* Trust and transparency information */}
       {/* Can be re-enabled by uncommenting this block */}
       {/*
-      <section className="py-20 bg-muted">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold max-w-3xl mx-auto leading-tight">Ethics, Privacy & Governance</h2>
@@ -616,21 +616,21 @@ export default function HomePage() {
       */}
 
       {/* Testimonials */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <Testimonials />
         </div>
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="py-20 bg-muted">
+      <section id="faq" className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <FAQ />
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <CTASection />
         </div>
