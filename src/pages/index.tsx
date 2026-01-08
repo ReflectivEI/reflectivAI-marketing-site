@@ -253,7 +253,7 @@ export default function HomePage() {
             {/* Visual Workflow */}
             <div className="grid md:grid-cols-3 gap-8 mt-16">
               <div className="space-y-4">
-                <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
                   <span className="text-2xl font-bold text-primary">1</span>
                 </div>
                 <h3 className="text-xl font-semibold">Practice</h3>
