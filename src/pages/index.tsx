@@ -66,7 +66,6 @@ export default function HomePage() {
                 />
               </div>
             </div>
-            </div>
           </div>
         </div>
       </section>
@@ -215,6 +214,7 @@ export default function HomePage() {
                   title="Signal Intelligence™ Demo"
                 />
               </div>
+            </div>
             </div>
           </div>
         </div>
