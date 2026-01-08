@@ -513,7 +513,7 @@ export default function AppliedCapabilitiesPage() {
           onClose={closeSection1}
           labelledById="capability-detail-modal-title"
         />
-      </section> */
+      </section> */}
 
       {/* SECTION 2 — INTERACTIVE "CAPABILITIES IN PRACTICE" */}
       <section className="py-20 bg-muted">
