@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Progress } from '@/components/ui/progress';
-import { ArrowRight, Play, CheckCircle2, AlertCircle, TrendingUp, MessageSquare, Users, Target, ChevronRight, Sparkles } from 'lucide-react';
+import { ArrowRight, CheckCircle2, AlertCircle, TrendingUp, MessageSquare, Users, ChevronRight, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Demo data structures
@@ -416,52 +416,39 @@ export default function DemoPage() {
       {/* Demo Navigation */}
       <section id="demos" className="border-b border-border bg-muted/30">
         <div className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <a href="#ai-coach" className="group">
-              <Card className="h-full transition-all hover:shadow-lg hover:border-primary">
-                <CardHeader>
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                      <MessageSquare className="h-5 w-5" />
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <a href="#ai-coach" className="group">
+                <Card className="h-full transition-all hover:shadow-lg hover:border-primary">
+                  <CardHeader>
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                        <MessageSquare className="h-5 w-5" />
+                      </div>
+                      <CardTitle className="text-lg">AI Coach Simulation</CardTitle>
                     </div>
-                    <CardTitle className="text-lg">AI Coach Simulation</CardTitle>
-                  </div>
-                  <CardDescription>
-                    See personalized coaching feedback in action
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-            </a>
-            <a href="#role-play" className="group">
-              <Card className="h-full transition-all hover:shadow-lg hover:border-primary">
-                <CardHeader>
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                      <Users className="h-5 w-5" />
+                    <CardDescription>
+                      See personalized coaching feedback in action
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </a>
+              <a href="#role-play" className="group">
+                <Card className="h-full transition-all hover:shadow-lg hover:border-primary">
+                  <CardHeader>
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                        <Users className="h-5 w-5" />
+                      </div>
+                      <CardTitle className="text-lg">Role Play Sampler</CardTitle>
                     </div>
-                    <CardTitle className="text-lg">Role Play Sampler</CardTitle>
-                  </div>
-                  <CardDescription>
-                    Experience practice scenarios with live metrics
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-            </a>
-            <a href="#framework" className="group">
-              <Card className="h-full transition-all hover:shadow-lg hover:border-primary">
-                <CardHeader>
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                      <Target className="h-5 w-5" />
-                    </div>
-                    <CardTitle className="text-lg">Framework Explorer</CardTitle>
-                  </div>
-                  <CardDescription>
-                    Explore Signal Intelligence™ capabilities
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-            </a>
+                    <CardDescription>
+                      Experience practice scenarios with live metrics
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </a>
+            </div>
           </div>
         </div>
       </section>
