@@ -74,7 +74,7 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-6">
-            <h2 className="text-3xl lg:text-5xl font-bold max-w-4xl mx-auto leading-tight text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold max-w-4xl mx-auto leading-tight text-center">
               What Gets Missed in High-Stakes Conversations
             </h2>
             
@@ -169,7 +169,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
-              <h2 className="text-3xl lg:text-5xl font-bold leading-tight">What Signal Intelligence™ Looks Like in Practice</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold leading-tight">What Signal Intelligence™ Looks Like in Practice</h2>
             </div>
             <div className="space-y-6">
               <p className="text-lg text-foreground/90">
@@ -253,7 +253,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12 space-y-4">
-              <h2 className="text-3xl lg:text-5xl font-bold max-w-3xl leading-tight">Structured Practice and Coaching</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold max-w-3xl leading-tight">Structured Practice and Coaching</h2>
               <p className="text-xl text-muted-foreground max-w-3xl">
                 During role-play practice, ReflectivAI highlights patterns in how conversations unfold—such as pacing, clarity, and engagement—using the Signal Intelligence™ framework. These insights support reflection and improvement, while judgment and decisions remain with the professional.
               </p>
