@@ -44,6 +44,9 @@ export default function Header() {
     { href: '/signal-intelligence', label: 'Signal Intelligence™', description: 'Science, methodology, and theoretical foundations' },
     { href: '/how-it-fits', label: 'How It Fits', description: 'How Signal Intelligence™ works with your existing selling structure' },
     { href: '/applied-capabilities', label: 'How Signal Intelligence™ Is Applied', description: 'Detailed capability breakdown and metrics' },
+    { href: '/use-cases', label: 'Use Cases', description: 'Onboarding, coaching, and program insights' },
+    { href: '/trust-governance', label: 'Trust & Governance', description: 'Ethics, privacy, and responsible AI' },
+    { href: '/roi-business-impact', label: 'ROI & Business Impact', description: 'Metrics, calculator, and business value' },
   ];
 
   return (
