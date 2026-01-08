@@ -520,9 +520,9 @@ export default function AppliedCapabilitiesPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 space-y-3">
-              <h2 className="text-3xl lg:text-4xl font-bold">How Signal Intelligence™ Is Applied</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold">8 Signal Intelligence™ Capabilities</h2>
               <p className="text-base text-muted-foreground max-w-4xl mx-auto">
-                Signal Intelligence™ is applied through observable behaviors that occur during real conversations. This page shows how those behaviors are organized, monitored, and used to support professional judgment.
+                ReflectivAI evaluates communication using eight Signal Intelligence™ capabilities. Each capability focuses on observable behaviors during structured practice.
               </p>
             </div>
 
