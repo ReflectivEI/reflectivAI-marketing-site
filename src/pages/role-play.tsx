@@ -394,7 +394,7 @@ export default function RolePlayPage() {
               </div>
               <div className="space-y-4 order-last md:order-first">
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                  Closing
+                  Commitment Gaining
                 </div>
                 <h3 className="text-2xl font-bold">Commitment Generation</h3>
                 <p className="text-lg text-muted-foreground">
