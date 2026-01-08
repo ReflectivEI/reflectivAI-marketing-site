@@ -245,8 +245,8 @@ export default function HomePage() {
                 />
               </div>
             </div>
-          </div>
-        </div>
+          </div> {/* Close max-w-5xl */}
+        </div> {/* Close container */}
       </section>
 
       {/* Section: How ReflectivAI Applies Signal Intelligence */}
