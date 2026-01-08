@@ -521,9 +521,10 @@ export default function AppliedCapabilitiesPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 space-y-3">
               <h2 className="text-3xl lg:text-4xl font-bold">8 Signal Intelligence™ Capabilities</h2>
-              <p className="text-base text-muted-foreground max-w-3xl mx-auto">
-                ReflectivAI evaluates communication using eight Signal Intelligence™ capabilities. Each capability focuses on observable behaviors during structured practice.
-              </p>
+              <div className="text-base text-muted-foreground max-w-3xl mx-auto space-y-1">
+                <p>ReflectivAI evaluates communication using eight Signal Intelligence™ capabilities.</p>
+                <p>Each capability focuses on observable behaviors during structured practice.</p>
+              </div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
