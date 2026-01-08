@@ -194,18 +194,18 @@ export default function HomePage() {
               These behaviors are observable, coachable, and measurable.
             </p>
 
-            {/* Signal Intelligence Demo Video */}
-            <div className="mt-8 rounded-lg overflow-hidden shadow-lg">
-              <div className="relative" style={{ padding: '56.25% 0 0 0' }}>
-                <iframe 
-                  src="https://player.vimeo.com/video/1152490995?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0"
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                  title="Signal Intelligence Framework Demo"
-                />
-              </div>
-              <script src="https://player.vimeo.com/api/player.js" async />
+            {/* Signal Intelligence Demo Video - Self-Hosted */}
+            <div className="mt-8 rounded-lg overflow-hidden shadow-lg bg-black">
+              <video 
+                controls 
+                className="w-full h-auto"
+                preload="metadata"
+                poster="/assets/signal-intelligence-thumbnail.jpg"
+              >
+                <source src="/assets/signal-intelligence-demo.mp4" type="video/mp4" />
+                <source src="/assets/signal-intelligence-demo.webm" type="video/webm" />
+                Your browser does not support the video tag. Please upgrade to a modern browser.
+              </video>
             </div>
           </div>
         </div>
