@@ -111,7 +111,7 @@ export default function HowItFits() {
                   className="w-full h-auto rounded-lg"
                 />
                 
-                <p className="text-center text-muted-foreground mt-8 text-lg italic">
+                <p className="text-center text-muted-foreground mt-8 text-lg italic whitespace-nowrap">
                   Signal Intelligence™ is the decision layer between how selling is defined and real customer behavior.
                 </p>
               </div>
