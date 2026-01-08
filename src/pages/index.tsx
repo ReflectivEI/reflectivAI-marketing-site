@@ -193,6 +193,30 @@ export default function HomePage() {
             <p className="text-lg text-foreground/90 font-semibold">
               These behaviors are observable, coachable, and measurable.
             </p>
+
+            {/* Video/Image Embed - REPLACE THIS SECTION WHEN YOU HAVE THE VIDEO */}
+            <div className="mt-8 rounded-lg overflow-hidden shadow-lg">
+              {/* TODO: Replace with video element when video file is ready */}
+              {/* Current: Placeholder image */}
+              <img 
+                src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/99674842-DA04-42EA-BF6A-CF60A157E5AE_4_5005_c.jpeg"
+                alt="Signal Intelligence Framework Demo"
+                className="w-full h-auto"
+              />
+              {/* 
+                TO REPLACE WITH VIDEO:
+                1. Upload your video file using the file upload button in chat
+                2. Replace the <img> tag above with:
+                   <video 
+                     controls 
+                     className="w-full h-auto"
+                     poster="[optional thumbnail image URL]"
+                   >
+                     <source src="[YOUR VIDEO URL]" type="video/mp4" />
+                     Your browser does not support the video tag.
+                   </video>
+              */}
+            </div>
           </div>
         </div>
       </section>
