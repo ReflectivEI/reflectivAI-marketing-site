@@ -170,7 +170,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
-              <h2 className="text-4xl font-bold leading-tight">What Signal Intelligence™ Looks Like in Practice</h2>
+              <h2 className="text-3xl lg:text-5xl font-bold leading-tight">What Signal Intelligence™ Looks Like in Practice</h2>
             </div>
             <div className="space-y-6 text-lg text-foreground/90">
               <p>
@@ -273,8 +273,8 @@ export default function HomePage() {
             {/* Visual Workflow */}
             <div className="grid md:grid-cols-3 gap-8 mt-16">
               <div className="space-y-4">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-primary">1</span>
+                <div className="w-16 h-16 rounded-full border-4 border-[hsl(210,50%,20%)] flex items-center justify-center" style={{ backgroundColor: 'hsl(180, 50%, 45%)' }}>
+                  <span className="text-2xl font-bold text-white">1</span>
                 </div>
                 <h3 className="text-xl font-semibold">Practice</h3>
                 <p className="text-muted-foreground">
@@ -283,8 +283,8 @@ export default function HomePage() {
               </div>
               
               <div className="space-y-4">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-primary">2</span>
+                <div className="w-16 h-16 rounded-full border-4 border-[hsl(210,50%,20%)] flex items-center justify-center" style={{ backgroundColor: 'hsl(180, 50%, 45%)' }}>
+                  <span className="text-2xl font-bold text-white">2</span>
                 </div>
                 <h3 className="text-xl font-semibold">Analyze</h3>
                 <p className="text-muted-foreground">
@@ -293,8 +293,8 @@ export default function HomePage() {
               </div>
               
               <div className="space-y-4">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-primary">3</span>
+                <div className="w-16 h-16 rounded-full border-4 border-[hsl(210,50%,20%)] flex items-center justify-center" style={{ backgroundColor: 'hsl(180, 50%, 45%)' }}>
+                  <span className="text-2xl font-bold text-white">3</span>
                 </div>
                 <h3 className="text-xl font-semibold">Coach</h3>
                 <p className="text-muted-foreground">
