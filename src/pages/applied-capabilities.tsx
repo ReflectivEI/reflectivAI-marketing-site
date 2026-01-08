@@ -627,6 +627,7 @@ export default function AppliedCapabilitiesPage() {
           </div>
         </div>
       </section> */}
+
     </div>
   );
 }
