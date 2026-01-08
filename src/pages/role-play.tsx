@@ -388,7 +388,7 @@ export default function RolePlayPage() {
               <div className="aspect-video rounded-lg overflow-hidden border border-border shadow-lg order-first md:order-last">
                 <img
                   src="https://media.gettyimages.com/id/1280309693/photo/manager-showing-presentation-details-to-boss.jpg?b=1&s=2048x2048&w=0&k=20&c=rrf5fD5CwJXOCJw3OPauuuoDwvzfhhJb6Ewl0hnbetY="
-                  alt="Closing simulation"
+                  alt="Commitment Generation simulation"
                   className="w-full h-full object-cover"
                 />
               </div>
