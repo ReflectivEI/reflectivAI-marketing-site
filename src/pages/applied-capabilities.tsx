@@ -627,16 +627,16 @@ export default function AppliedCapabilitiesPage() {
                   <div className="flex items-start justify-between gap-4">
                     <div className="min-w-0">
                       <div className="space-y-2">
-                        <span className="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
+                        <h3 className="text-lg font-bold text-primary">
                           {capability.name}
-                        </span>
+                        </h3>
                         <div>
                           <span className="inline-flex items-center rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">
                             {capability.behavioralMetric}
                           </span>
                         </div>
                       </div>
-                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground"><span className="font-bold">Definition:</span> {capability.definition}</p>
+                      <p className="mt-3 text-sm leading-relaxed text-foreground/80"><span className="font-bold">Definition:</span> {capability.definition}</p>
                     </div>
 
                     <div className="shrink-0 rounded-full border-2 border-yellow-200 bg-yellow-50 px-3 py-1 text-xs font-semibold text-primary">
@@ -644,7 +644,7 @@ export default function AppliedCapabilitiesPage() {
                     </div>
                   </div>
 
-                  <div className="mt-5 text-xs font-semibold text-muted-foreground underline decoration-muted-foreground/40 underline-offset-4">
+                  <div className="mt-5 text-xs font-semibold text-accent hover:text-accent/80 transition-colors duration-200 underline decoration-accent/40 hover:decoration-accent/60 underline-offset-4 cursor-pointer">
                     Click to view the full calculation and what good looks like.
                   </div>
                 </button>
