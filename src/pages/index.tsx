@@ -214,8 +214,8 @@ export default function HomePage() {
                   title="Signal Intelligence™ Demo"
                 />
               </div>
-              </div>
-            </div> {/* Close space-y-6 */}
+            </div>
+          </div> {/* Close space-y-6 */}
           </div> {/* Close max-w-5xl */}
         </div> {/* Close container */}
       </section>
