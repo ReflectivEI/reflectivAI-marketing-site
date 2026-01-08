@@ -32,15 +32,12 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: NODE_ENV=production npm run build:vite
+        run: npm run build
 
-      - name: Copy 404.html for SPA routing
+      - name: Verify build output
         run: |
           ls -la dist/
-          ls -la dist/client/ || echo "dist/client does not exist yet"
-          cp public/404.html dist/client/404.html
-          echo "✅ Copied 404.html to dist/client/"
-          ls -la dist/client/404.html
+          echo "✅ Build completed successfully"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -48,7 +45,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist/client'
+          path: './dist'
 
   deploy:
     environment:
