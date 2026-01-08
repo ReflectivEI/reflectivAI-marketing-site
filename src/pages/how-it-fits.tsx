@@ -98,51 +98,18 @@ export default function HowItFits() {
               </div>
             </div>
 
-            {/* Flow Diagram */}
+            {/* Flow Diagram - Image */}
             <div className="max-w-4xl mx-auto">
               <div className="bg-white rounded-xl p-8 lg:p-12 shadow-lg">
-                <h3 className="text-2xl lg:text-3xl font-bold text-center mb-12">
+                <h3 className="text-2xl lg:text-3xl font-bold text-center mb-8">
                   How Signal Intelligence™ Fits
                 </h3>
                 
-                <div className="space-y-6">
-                  {/* Commercial Strategy */}
-                  <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg p-6 border-l-4 border-primary">
-                    <h4 className="text-xl font-bold text-primary">Commercial Strategy</h4>
-                  </div>
-                  
-                  {/* Arrow */}
-                  <div className="flex justify-center">
-                    <ArrowRight className="w-8 h-8 text-primary rotate-90" />
-                  </div>
-                  
-                  {/* Selling Framework */}
-                  <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg p-6 border-l-4 border-primary">
-                    <h4 className="text-xl font-bold text-primary">Selling Framework or Established Selling Structure</h4>
-                    <p className="text-sm text-muted-foreground mt-2 font-semibold">(WHAT)</p>
-                  </div>
-                  
-                  {/* Arrow */}
-                  <div className="flex justify-center">
-                    <ArrowRight className="w-8 h-8 rotate-90" style={{ color: 'hsl(180, 50%, 45%)' }} />
-                  </div>
-                  
-                  {/* Signal Intelligence */}
-                  <div className="rounded-lg p-6 border-l-4" style={{ backgroundColor: 'hsl(180, 50%, 95%)', borderColor: 'hsl(180, 50%, 45%)' }}>
-                    <h4 className="text-xl font-bold" style={{ color: 'hsl(180, 50%, 35%)' }}>Signal Intelligence™</h4>
-                    <p className="text-sm text-muted-foreground mt-2 font-semibold">(HOW)</p>
-                  </div>
-                  
-                  {/* Arrow */}
-                  <div className="flex justify-center">
-                    <ArrowRight className="w-8 h-8 text-primary rotate-90" />
-                  </div>
-                  
-                  {/* Rep Execution */}
-                  <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg p-6 border-l-4 border-primary">
-                    <h4 className="text-xl font-bold text-primary">Rep Execution (In the Moment)</h4>
-                  </div>
-                </div>
+                <img 
+                  src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/Signal%20intelligence%20in%20sales%20enablement%20proces.png"
+                  alt="Signal Intelligence in Sales Enablement Process - Flow diagram showing Commercial Strategy flowing to Selling Framework (WHAT), then to Signal Intelligence (HOW), and finally to Rep Execution"
+                  className="w-full h-auto rounded-lg"
+                />
                 
                 <p className="text-center text-muted-foreground mt-8 text-lg italic">
                   Signal Intelligence™ is the decision layer between how selling is defined and real customer behavior.
