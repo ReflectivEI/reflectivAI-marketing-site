@@ -354,31 +354,31 @@ export default function RolePlayPage() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                  Negotiation
+                  Value Framing
                 </div>
-                <h3 className="text-2xl font-bold">Contract Negotiation</h3>
+                <h3 className="text-2xl font-bold">Value Connection</h3>
                 <p className="text-lg text-muted-foreground">
-                  Develop negotiation skills that protect margins while maintaining strong customer relationships. Practice finding win-win solutions in complex deal structures.
+                  Practice Value Connection capability: link product information to customer outcomes that matter. Focus on impact over features, connecting to stated priorities.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Value-based pricing discussions</span>
+                    <span>Outcome-based language (not feature dumping)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Multi-stakeholder negotiations</span>
+                    <span>Clear linkage to customer priorities</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Contract terms and conditions</span>
+                    <span>Making information relevant and actionable</span>
                   </li>
                 </ul>
               </div>
               <div className="aspect-video rounded-lg overflow-hidden border border-border shadow-lg">
                 <img
                   src="https://media.gettyimages.com/id/1953319673/photo/business-presentation.jpg?b=1&s=2048x2048&w=0&k=20&c=NWT1d90SqhQpceOCPHbWrjaDYZf5UTsXfX8Ka6zTjY8="
-                  alt="Negotiation simulation"
+                  alt="Value connection simulation"
                   className="w-full h-full object-cover"
                 />
               </div>
