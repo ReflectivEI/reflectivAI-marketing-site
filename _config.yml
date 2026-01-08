@@ -1,0 +1,18 @@
+# Disable Jekyll processing for GitHub Pages
+# This project uses a custom build workflow
+
+exclude:
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - vite.config.ts
+  - tsconfig.json
+  - src/
+  - public/
+  - dist/
+  - .github/
+  - '*.md'
+  - '*.sh'
+  - '*.js'
+  - '*.ts'
+  - '*.tsx'
