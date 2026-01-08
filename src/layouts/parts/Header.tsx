@@ -30,16 +30,21 @@ export default function Header() {
   };
 
   const navLinks = [
-    { href: '/', label: 'Platform' },
-    { href: '/demo', label: 'Interactive Demo' },
-    { href: '/ai-coach', label: 'AI Coach' },
-    { href: '/role-play', label: 'Role Play' },
+    { href: '/demo', label: 'Product Tour' },
     { href: '/#faq', label: 'FAQ' },
   ];
 
+  const platformCapabilitiesLinks = [
+    { href: '/ai-coach', label: 'AI Coach', description: 'Personalized coaching and feedback' },
+    { href: '/role-play', label: 'Role Play', description: 'Practice with realistic scenarios' },
+  ];
+
   const learnMoreLinks = [
-    { href: '/signal-intelligence', label: 'Signal Intelligence', description: 'Science, methodology, and theoretical foundations' },
-    { href: '/applied-capabilities', label: 'How Signal Intelligence™ Is Applied', description: 'Explore capabilities used in practice' },
+    { href: '/signal-intelligence', label: 'Signal Intelligence™', description: 'Science, methodology, and theoretical foundations' },
+    { href: '/applied-capabilities', label: 'How Signal Intelligence™ Is Applied', description: 'Detailed capability breakdown and metrics' },
+    { href: '/use-cases', label: 'Use Cases', description: 'Onboarding, coaching, and program insights' },
+    { href: '/trust-governance', label: 'Trust & Governance', description: 'Ethics, privacy, and responsible AI' },
+    { href: '/roi-business-impact', label: 'ROI & Business Impact', description: 'Metrics, calculator, and business value' },
   ];
 
   return (
@@ -79,6 +84,30 @@ export default function Header() {
             
             <NavigationMenu>
               <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium bg-transparent hover:bg-transparent data-[state=open]:bg-transparent">
+                    Platform Capabilities
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-3 p-4">
+                      {platformCapabilitiesLinks.map((link) => (
+                        <li key={link.href}>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              to={link.href}
+                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            >
+                              <div className="text-sm font-medium leading-none">{link.label}</div>
+                              <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                {link.description}
+                              </p>
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-sm font-medium bg-transparent hover:bg-transparent data-[state=open]:bg-transparent">
                     Learn More
@@ -149,6 +178,19 @@ export default function Header() {
                   </Link>
                 )
               ))}
+              <div className="border-t border-border pt-4">
+                <div className="text-xs font-semibold text-muted-foreground mb-2 px-2">Platform Capabilities</div>
+                {platformCapabilitiesLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    className="block text-sm font-medium hover:text-primary transition-colors px-2 py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
               <div className="border-t border-border pt-4">
                 <div className="text-xs font-semibold text-muted-foreground mb-2 px-2">Learn More</div>
                 {learnMoreLinks.map((link) => (
