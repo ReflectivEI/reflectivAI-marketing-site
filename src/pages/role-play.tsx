@@ -288,24 +288,24 @@ export default function RolePlayPage() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                  Discovery
+                  Conversation Control
                 </div>
-                <h3 className="text-2xl font-bold">Initial Discovery Calls</h3>
+                <h3 className="text-2xl font-bold">Conversation Management</h3>
               <p className="text-lg text-muted-foreground">
-                Practice detecting signals and reflecting on patterns: asking purposeful questions, listening actively, and noticing customer engagement cues.
+                Practice Conversation Management capability: guide conversations with clarity and purpose. Set clear direction, transition smoothly between topics, and summarize effectively.
               </p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Question Quality: open vs. closed ratio, sequencing</span>
+                    <span>Clear purpose setting and agenda framing</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Listening & Responsiveness: paraphrasing, acknowledgment</span>
+                    <span>Smooth transitions between conversation topics</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Customer Engagement Monitoring: talk time, forward-looking cues</span>
+                    <span>Effective summarization and progress tracking</span>
                   </li>
                 </ul>
               </div>
