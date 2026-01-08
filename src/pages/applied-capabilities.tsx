@@ -685,10 +685,10 @@ export default function AppliedCapabilitiesPage() {
               {frameworkCapabilities.map((capability, idx) => (
                 <Card
                   key={idx}
-                  className={`cursor-pointer transition-all ${
+                  className={`cursor-pointer transition-all border-2 border-teal-500 ${
                     activeFrameworkCapability === idx
-                      ? 'border-primary shadow-lg'
-                      : 'hover:border-primary/50'
+                      ? 'shadow-lg'
+                      : 'hover:border-teal-600'
                   }`}
                   onClick={() => setActiveFrameworkCapability(activeFrameworkCapability === idx ? null : idx)}
                 >
@@ -696,9 +696,9 @@ export default function AppliedCapabilitiesPage() {
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-2">
-                          <Badge variant="outline">{capability.name}</Badge>
+                          <Badge variant="outline" className="border-2 border-blue-900">{capability.name}</Badge>
                           <ChevronRight className="h-3 w-3 text-muted-foreground" />
-                          <Badge variant="secondary" className="text-xs">
+                          <Badge variant="secondary" className="text-xs border-2 border-blue-900">
                             {capability.metric}
                           </Badge>
                         </div>
