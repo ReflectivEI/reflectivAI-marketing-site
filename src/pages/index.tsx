@@ -172,49 +172,49 @@ export default function HomePage() {
               <h2 className="text-3xl lg:text-5xl font-bold leading-tight">What Signal Intelligence™ Looks Like in Practice</h2>
             </div>
             <div className="space-y-6">
-            <p className="text-lg text-foreground/90">
-              Signal Intelligence™ isn't a mindset or a personality trait. It's visible in how conversations unfold.
-            </p>
-            
-            <ul className="space-y-3 text-lg text-foreground/90 pl-6">
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>Asking purposeful, customer-centric questions</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>Listening accurately and responding appropriately</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>Recognizing engagement shifts and adjusting in real time</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>Navigating resistance without pressure</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>Securing clear, voluntary next steps</span>
-              </li>
-            </ul>
-            
-            <p className="text-lg text-foreground/90 font-semibold">
-              These behaviors are observable, coachable, and measurable.
-            </p>
+              <p className="text-lg text-foreground/90">
+                Signal Intelligence™ isn't a mindset or a personality trait. It's visible in how conversations unfold.
+              </p>
+              
+              <ul className="space-y-3 text-lg text-foreground/90 pl-6">
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Asking purposeful, customer-centric questions</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Listening accurately and responding appropriately</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Recognizing engagement shifts and adjusting in real time</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Navigating resistance without pressure</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Securing clear, voluntary next steps</span>
+                </li>
+              </ul>
+              
+              <p className="text-lg text-foreground/90 font-semibold">
+                These behaviors are observable, coachable, and measurable.
+              </p>
 
-            {/* Signal Intelligence Demo Video - Vimeo Embed */}
-            <div className="mt-8 rounded-lg overflow-hidden shadow-lg">
-              <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
-                <iframe
-                  src="https://player.vimeo.com/video/1152490995?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0"
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                  title="Signal Intelligence™ Demo"
-                />
+              {/* Signal Intelligence Demo Video - Vimeo Embed */}
+              <div className="mt-8 rounded-lg overflow-hidden shadow-lg">
+                <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
+                  <iframe
+                    src="https://player.vimeo.com/video/1152490995?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                    title="Signal Intelligence™ Demo"
+                  />
+                </div>
               </div>
-            </div>
             </div>
           </div>
         </div>
