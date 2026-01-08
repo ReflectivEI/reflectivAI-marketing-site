@@ -545,7 +545,7 @@ export default function AppliedCapabilitiesPage() {
                 Signal Intelligence™ is applied through observable behaviors that occur during real conversations. This page shows how those behaviors are organized, monitored, and used to support professional judgment, without diagnosing intent, emotion, or competence.
               </p>
               <p>
-                Each capability represents what can be noticed in the moment, how it is described, and why it may matter for next decisions. The goal is not to score people, but to support reflection, coaching, and consistency in complex conversations.
+                Each capability represents what can be noticed in the moment, how it is described, and why it may matter for next decisions. The goal is not to score people, but to support reflection, coaching, and consistency in conversations.
               </p>
               <p className="font-medium">Signal Intelligence™ is applied through structured observation, not interpretation or automation.</p>
             </div>
