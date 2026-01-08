@@ -9,10 +9,10 @@ export default function UseCasesPage() {
       <section className="py-20" style={{ backgroundColor: 'hsl(210, 50%, 20%)' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-4xl lg:text-6xl font-bold leading-tight" style={{ color: 'hsl(0, 0%, 100%)' }}>
               Use Cases for Signal Intelligence™
             </h1>
-            <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl lg:text-2xl max-w-3xl mx-auto" style={{ color: 'hsl(0, 0%, 90%)' }}>
               Onboarding, coaching, and program insights across the commercial organization.
             </p>
           </div>
