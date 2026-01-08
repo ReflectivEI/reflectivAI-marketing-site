@@ -145,7 +145,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
-              <h2 className="text-3xl lg:text-5xl font-bold max-w-3xl leading-tight">Where Judgment Comes into Focus</h2>
+              <h2 className="text-3xl lg:text-5xl font-bold leading-tight whitespace-nowrap">Where Judgment Comes into Focus</h2>
             </div>
             <div className="space-y-6 text-lg text-foreground/90">
             <p>
@@ -220,7 +220,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
-              <h2 className="text-3xl lg:text-5xl font-bold max-w-3xl leading-tight">How ReflectivAI Applies Signal Intelligence</h2>
+              <h2 className="text-3xl lg:text-5xl font-bold leading-tight whitespace-nowrap">How ReflectivAI Applies Signal Intelligence™</h2>
             </div>
             <div className="space-y-6 text-lg text-foreground/90">
             <p>
