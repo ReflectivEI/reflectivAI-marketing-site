@@ -403,12 +403,13 @@ function CapabilityCardButton({
           <span className="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
             {capability.name}
           </span>
+          <span className="text-muted-foreground">→</span>
           <span className="inline-flex items-center rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">
             {capability.behavioralMetric}
           </span>
         </div>
 
-        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{capability.definition}</p>
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground"><span className="font-bold">Definition:</span> {capability.definition}</p>
 
         <div className="mt-4 flex items-end justify-between gap-3">
           <div className="text-xs font-semibold text-muted-foreground">Example score</div>
