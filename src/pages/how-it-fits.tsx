@@ -8,7 +8,7 @@ export default function HowItFits() {
       <section className="py-20 bg-gradient-to-b from-background to-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-4xl lg:text-6xl font-bold leading-tight whitespace-nowrap">
               Designed to Fit How You Already Sell
             </h1>
             <p className="text-xl lg:text-2xl text-muted-foreground">
@@ -18,7 +18,7 @@ export default function HowItFits() {
               <p>
                 Most Life Sciences organizations already have an established way of defining good selling — whether through a formal framework or an agreed set of practices.
               </p>
-              <p>
+              <p className="whitespace-nowrap">
                 Signal Intelligence™ brings that structure into live customer interactions — where judgment and timing matter most.
               </p>
               <p className="font-semibold text-foreground pt-4">
