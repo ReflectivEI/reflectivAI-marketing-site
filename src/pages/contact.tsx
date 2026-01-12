@@ -30,7 +30,7 @@ export default function ContactPage() {
       `Message:\n${formData.message}`
     );
     
-    window.location.href = `mailto:reflectivei.ai@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:legal@reflectiv-ai.com?subject=${subject}&body=${body}`;
     
     // Show success message
     setIsSubmitted(true);
@@ -175,8 +175,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">Email</h3>
-                      <a href="mailto:reflectivei.ai@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
-                        reflectivei.ai@gmail.com
+                      <a href="mailto:legal@reflectiv-ai.com" className="text-muted-foreground hover:text-primary transition-colors">
+                        legal@reflectiv-ai.com
                       </a>
                     </div>
                   </div>
