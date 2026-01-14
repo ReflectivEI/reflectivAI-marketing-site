@@ -776,6 +776,7 @@ class AloraResponseEngine {
 
 const responseEngine = new AloraResponseEngine();
 
+// Alora Assistant Component - Updated Jan 14, 2026
 export function AloraAssistant() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
