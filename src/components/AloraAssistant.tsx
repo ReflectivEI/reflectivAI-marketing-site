@@ -76,7 +76,7 @@ Observable behaviors that show how each capability appears during structured pra
         'Paraphrase accuracy',
         'Observable response shifts'
       ],
-      relatedDrivers: ['Cognitive Empathy', 'Emotional Intelligence']
+      relatedDrivers: ['Cognitive Empathy', 'Emotional Intelligence (Driver)']
     },
     valueConnection: {
       name: 'Value Connection',
@@ -100,7 +100,7 @@ Observable behaviors that show how each capability appears during structured pra
         'Tone modulation',
         'Response to engagement shifts'
       ],
-      relatedDrivers: ['Emotional Intelligence', 'Social Threat Awareness']
+      relatedDrivers: ['Emotional Intelligence (Driver)', 'Social Threat Awareness']
     },
     objectionNavigation: {
       name: 'Objection Navigation',
@@ -112,7 +112,7 @@ Observable behaviors that show how each capability appears during structured pra
         'Reframing objections constructively',
         'Maintaining credibility'
       ],
-      relatedDrivers: ['Emotional Intelligence', 'Social Threat Awareness']
+      relatedDrivers: ['Emotional Intelligence (Driver)', 'Social Threat Awareness']
     },
     conversationManagement: {
       name: 'Conversation Management',
@@ -136,7 +136,7 @@ Observable behaviors that show how each capability appears during structured pra
         'Flexible response patterns',
         'Real-time adjustment'
       ],
-      relatedDrivers: ['Metacognition', 'Emotional Intelligence']
+      relatedDrivers: ['Metacognition', 'Emotional Intelligence (Driver)']
     },
     commitmentGeneration: {
       name: 'Commitment Generation',
@@ -161,8 +161,8 @@ Observable behaviors that show how each capability appears during structured pra
       notMeasured: true
     },
     emotionalIntelligence: {
-      name: 'Emotional Intelligence',
-      description: 'The ability to perceive, understand, and regulate emotions in oneself and others.',
+      name: 'Emotional Intelligence (Human Decision Driver)',
+      description: 'The ability to perceive, understand, and regulate emotions in oneself and others. This is a Human Decision Driver that influences multiple Signal Intelligence capabilities but is not directly measured.',
       influences: ['Objection navigation', 'Engagement monitoring', 'Tone regulation'],
       notMeasured: true
     },
@@ -277,135 +277,168 @@ They are NEVER used for:
 
 // Intent Recognition & Response Generation
 class AloraResponseEngine {
-  private kb = SIGNAL_INTELLIGENCE_KB;
-  private conversationContext: string[] = [];
+  private conversationContext: string = '';
 
-  detectIntent(query: string): string[] {
-    const lowerQuery = query.toLowerCase();
-    const intents: string[] = [];
+  detectIntent(query: string): string {
+    const lowerQuery = query.toLowerCase().trim();
 
-    // Follow-up patterns (check context first)
-    if (lowerQuery.match(/^(yes|yeah|sure|tell me more|more|elaborate|explain|how|show me|examples?|what about|go on|continue|that sounds|interesting|i'd like|i want|please|ok|okay)\b/)) {
-      // Return the last context if available
-      if (this.conversationContext.length > 0) {
-        const lastContext = this.conversationContext[this.conversationContext.length - 1];
-        return [lastContext + '_followup'];
+    // Handle empty or very short queries
+    if (lowerQuery.length < 2) {
+      return 'clarification_needed';
+    }
+
+    // Follow-up patterns - only trigger if query is VERY short and generic
+    if (lowerQuery.match(/^(yes|yeah|sure|tell me more|more|go on|continue)$/)) {
+      if (this.conversationContext) {
+        return this.conversationContext + '_followup';
       }
+      return 'general';
+    }
+
+    // Greetings
+    if (lowerQuery.match(/^(hi|hello|hey|greetings|good morning|good afternoon|good evening)$/)) {
+      return 'greeting';
+    }
+
+    // Thanks
+    if (lowerQuery.match(/^(thanks|thank you|thx|appreciate it|ty)$/)) {
+      return 'thanks';
     }
 
     // Signal Intelligence overview
-    if (lowerQuery.match(/what is signal intelligence|define signal intelligence|explain signal intelligence|si framework/)) {
-      intents.push('si_overview');
-      this.conversationContext.push('si_overview');
+    if (lowerQuery.match(/what is signal intelligence|define signal intelligence|explain signal intelligence|si framework|what does signal intelligence|tell me about signal intelligence/)) {
+      this.conversationContext = 'si_overview';
+      return 'si_overview';
     }
 
     // Three-layer system
-    if (lowerQuery.match(/three layer|3 layer|system model|framework structure|how does it work/)) {
-      intents.push('three_layer_system');
-      this.conversationContext.push('three_layer_system');
+    if (lowerQuery.match(/three layer|3 layer|system model|framework structure|how does it work|how it works|how does the system work/)) {
+      this.conversationContext = 'three_layer_system';
+      return 'three_layer_system';
     }
 
     // Capabilities
-    if (lowerQuery.match(/capabilities|8 capabilities|skills|what can i learn|conversational skills/)) {
-      intents.push('capabilities_overview');
-      this.conversationContext.push('capabilities_overview');
+    if (lowerQuery.match(/capabilities|8 capabilities|skills|what can i learn|conversational skills|what skills|list capabilities/)) {
+      this.conversationContext = 'capabilities_overview';
+      return 'capabilities_overview';
     }
 
     // Specific capability queries
     if (lowerQuery.match(/signal awareness|question quality/)) {
-      intents.push('capability_signal_awareness');
-      this.conversationContext.push('capability_signal_awareness');
+      this.conversationContext = 'capability_signal_awareness';
+      return 'capability_signal_awareness';
     }
     if (lowerQuery.match(/signal interpretation|listening|responsiveness/)) {
-      intents.push('capability_signal_interpretation');
-      this.conversationContext.push('capability_signal_interpretation');
+      this.conversationContext = 'capability_signal_interpretation';
+      return 'capability_signal_interpretation';
     }
-    if (lowerQuery.match(/value connection|value framing/)) {
-      intents.push('capability_value_connection');
-      this.conversationContext.push('capability_value_connection');
+    if (lowerQuery.match(/value connection|value framing|making it matter/)) {
+      this.conversationContext = 'capability_value_connection';
+      return 'capability_value_connection';
     }
-    if (lowerQuery.match(/engagement monitoring|engagement cues/)) {
-      intents.push('capability_customer_engagement');
-      this.conversationContext.push('capability_customer_engagement');
+    if (lowerQuery.match(/engagement monitoring|engagement cues|reading the room/)) {
+      this.conversationContext = 'capability_customer_engagement';
+      return 'capability_customer_engagement';
     }
-    if (lowerQuery.match(/objection|objection handling|objection navigation/)) {
-      intents.push('capability_objection_navigation');
-      this.conversationContext.push('capability_objection_navigation');
+    if (lowerQuery.match(/objection|objection handling|objection navigation|handling pushback/)) {
+      this.conversationContext = 'capability_objection_navigation';
+      return 'capability_objection_navigation';
     }
-    if (lowerQuery.match(/conversation management|conversation control|structure/)) {
-      intents.push('capability_conversation_management');
-      this.conversationContext.push('capability_conversation_management');
+    if (lowerQuery.match(/conversation management|conversation control|structure|staying on track/)) {
+      this.conversationContext = 'capability_conversation_management';
+      return 'capability_conversation_management';
     }
-    if (lowerQuery.match(/adaptive response|adaptability|flexibility/)) {
-      intents.push('capability_adaptive_response');
-      this.conversationContext.push('capability_adaptive_response');
+    if (lowerQuery.match(/adaptive response|adaptability|flexibility|pivoting/)) {
+      this.conversationContext = 'capability_adaptive_response';
+      return 'capability_adaptive_response';
     }
-    if (lowerQuery.match(/commitment|commitment generation|next steps/)) {
-      intents.push('capability_commitment_generation');
-      this.conversationContext.push('capability_commitment_generation');
+    if (lowerQuery.match(/commitment|commitment generation|next steps|securing commitments/)) {
+      this.conversationContext = 'capability_commitment_generation';
+      return 'capability_commitment_generation';
     }
 
     // Human Decision Drivers
     if (lowerQuery.match(/human decision drivers|decision drivers|why behaviors change|internal forces/)) {
-      intents.push('human_drivers');
-      this.conversationContext.push('human_drivers');
+      this.conversationContext = 'human_drivers';
+      return 'human_drivers';
     }
 
     // Behavioral Metrics
     if (lowerQuery.match(/behavioral metrics|metrics|measurement|how do you measure|scoring/)) {
-      intents.push('behavioral_metrics');
-      this.conversationContext.push('behavioral_metrics');
+      this.conversationContext = 'behavioral_metrics';
+      return 'behavioral_metrics';
     }
 
     // AI Coach
     if (lowerQuery.match(/ai coach|coaching|feedback|how does ai help/)) {
-      intents.push('ai_coach');
-      this.conversationContext.push('ai_coach');
+      this.conversationContext = 'ai_coach';
+      return 'ai_coach';
     }
 
     // Role Play
     if (lowerQuery.match(/role play|practice|simulation|training|scenarios?/)) {
-      intents.push('role_practice');
-      this.conversationContext.push('role_practice');
+      this.conversationContext = 'role_practice';
+      return 'role_practice';
     }
 
     // Ethics & Safeguards
     if (lowerQuery.match(/ethics|ethical|safeguards|boundaries|privacy|compliance/)) {
-      intents.push('ethics');
-      this.conversationContext.push('ethics');
+      this.conversationContext = 'ethics';
+      return 'ethics';
     }
 
     // What's NOT measured (boundary correction)
     if (lowerQuery.match(/emotion detection|predict intent|personality|psychological|mental health|feelings/)) {
-      intents.push('boundary_correction');
-      this.conversationContext.push('boundary_correction');
+      this.conversationContext = 'boundary_correction';
+      return 'boundary_correction';
     }
 
     // Use cases
     if (lowerQuery.match(/use case|who is this for|sales rep|manager|enablement/)) {
-      intents.push('use_cases');
-      this.conversationContext.push('use_cases');
+      this.conversationContext = 'use_cases';
+      return 'use_cases';
     }
 
     // Platform features
     if (lowerQuery.match(/dashboard|platform|features|what can i do/)) {
-      intents.push('platform_features');
-      this.conversationContext.push('platform_features');
+      this.conversationContext = 'platform_features';
+      return 'platform_features';
     }
 
     // Results & effectiveness
     if (lowerQuery.match(/results|effectiveness|roi|statistics|success rate/)) {
-      intents.push('results');
-      this.conversationContext.push('results');
+      this.conversationContext = 'results';
+      return 'results';
     }
 
-    return intents.length > 0 ? intents : ['general'];
+    // Pricing
+    if (lowerQuery.match(/pricing|price|cost|how much/)) {
+      this.conversationContext = 'pricing';
+      return 'pricing';
+    }
+
+    // Getting started
+    if (lowerQuery.match(/get started|sign up|demo|try it|how do i start/)) {
+      this.conversationContext = 'getting_started';
+      return 'getting_started';
+    }
+
+    // If no specific intent matched, return general
+    this.conversationContext = 'general';
+    return 'general';
   }
 
-  generateResponse(intents: string[]): string {
-    const primaryIntent = intents[0];
+  generateResponse(intent: string): string {
+    switch (intent) {
+      case 'clarification_needed':
+        return "I'd be happy to help! Could you tell me a bit more about what you're interested in learning about ReflectivAI?";
 
-    switch (primaryIntent) {
+      case 'greeting':
+        return "Hello! Great to connect with you. I'm here to answer any questions about ReflectivAI, Signal Intelligence™, or how our platform helps sales professionals develop conversational skills. What would you like to know?";
+
+      case 'thanks':
+        return "You're very welcome! Is there anything else about ReflectivAI or Signal Intelligence™ you'd like to explore?";
+
       case 'si_overview':
         return "Signal Intelligence™ is our behavior-based framework that helps sales professionals develop conversational skills through practice. Think of it like a flight simulator for high-stakes conversations—you practice in a safe environment and get feedback on observable behaviors like question quality, listening, and adaptability.\n\nIt's completely non-clinical and non-diagnostic. We focus only on what you say and how you respond, never on emotions or psychological states.\n\nWant to know more about how it works or what skills you can develop?";
 
@@ -455,7 +488,7 @@ class AloraResponseEngine {
         return "AI Coach gives you instant feedback during practice sessions—like having a personal coach available 24/7.\n\nIt highlights patterns in your conversation behaviors (question quality, listening, adaptability) and offers actionable insights. But here's what's important: the AI detects patterns, you make the judgments.\n\nIt only works in simulated practice environments, never on real customer calls.\n\nThink of it like a golf swing analyzer—it shows you the data, you decide how to improve.\n\nWant to see a sample feedback report?";
 
       case 'ai_coach_followup':
-        return "The feedback is specific and actionable. For example:\n\n**Signal Awareness (4.2/5)**: \"You asked 8 open-ended questions and followed up on customer priorities. Consider probing deeper when the customer mentions constraints.\"\n\n**Objection Navigation (3.8/5)**: \"You acknowledged the concern but moved on quickly. Try paraphrasing to show you fully understand before responding.\"\n\nYou also get coaching cards that translate scores into specific actions to practice. Want to know more about any specific capability?"
+        return "The feedback is specific and actionable. For example:\n\n**Signal Awareness (4.2/5)**: \"You asked 8 open-ended questions and followed up on customer priorities. Consider probing deeper when the customer mentions constraints.\"\n\n**Objection Navigation (3.8/5)**: \"You acknowledged the concern but moved on quickly. Try paraphrasing to show you fully understand before responding.\"\n\nYou also get coaching cards that translate scores into specific actions to practice. Want to know more about any specific capability?";
 
       case 'role_practice':
         return "Role Play lets you practice high-stakes conversations in a completely safe environment.\n\nWe have 9+ pharma scenarios across HIV, Oncology, Cardiology, Vaccines, and more. You practice, get instant feedback on your Signal Intelligence™ capabilities, and build muscle memory for real conversations.\n\nMost reps spend 15-30 minutes a day. It's like a flight simulator—practice the hard stuff when the stakes are zero.\n\nWant to try a scenario or see what the feedback looks like?";
@@ -478,25 +511,28 @@ class AloraResponseEngine {
       case 'results':
         return "Our customers see real results:\n\n• 75% higher skill retention vs. traditional training\n• 3x faster ramp time for new reps\n• 89% of reps report increased confidence\n• 34% increase in close rates (customer testimonial)\n\nThe key is experiential learning in a safe environment. You build muscle memory through practice, not just knowledge through lectures.\n\nWant to hear more about how teams are using this?";
 
+      case 'pricing':
+        return "I'd be happy to connect you with our team to discuss pricing options tailored to your organization's needs.\n\nPricing typically depends on:\n• Number of users\n• Therapeutic areas needed\n• Custom scenario development\n• Team vs. enterprise deployment\n\nWould you like to schedule a demo to discuss your specific requirements? You can also visit our Pricing page for more details.";
+
+      case 'getting_started':
+        return "Great! Here's how to get started:\n\n1. **Schedule a Demo**: See the platform in action with your use cases\n2. **Try Role Play**: Experience AI Coach feedback firsthand\n3. **Pilot Program**: Start with a small team to see results\n4. **Scale**: Roll out across your organization\n\nMost teams see measurable improvement within 2-3 weeks of practice.\n\nWant to schedule a demo or have questions about implementation?";
+
       case 'general':
       default:
         return this.generalResponse();
     }
   }
 
-  private boundaryCorrectionResponse(): string {
-    return `Signal Intelligence™ focuses on observable conversation behavior only. It does not infer emotions, intent, or internal states.
-
-${this.kb.ethics.whatNotMeasured}
-
-If you're asking about how behaviors are observed or coached during practice, I can explain that. Would you like to know more about:
-• How behavioral metrics work
-• What AI Coach provides
-• How practice sessions are structured`;
-  }
-
   private generalResponse(): string {
-    return `I'm here to help! I can explain:\n\n• What Signal Intelligence™ is and how it works\n• The 8 conversational skills you can develop\n• How AI Coach and Role Play work\n• Who uses ReflectivAI and what results they see\n• Our ethics and safeguards\n\nWhat are you most curious about?`;
+    const responses = [
+      "That's an interesting question! While I may not have specific information about that, I'm here to help you learn about ReflectivAI and Signal Intelligence™. Would you like to know about our platform capabilities, how we help sales professionals, or see a demo?",
+      "I appreciate your question! My expertise is in ReflectivAI and Signal Intelligence™. I can tell you about:\n\n• The 8 conversational skills you can develop\n• How AI Coach provides instant feedback\n• Role Play practice scenarios\n• Results our customers are seeing\n\nWhat interests you most?",
+      "Great question! Let me help you explore ReflectivAI. I can explain:\n\n• What Signal Intelligence™ is and how it works\n• How our platform helps sales professionals\n• AI Coach and Role Play features\n• Pricing and getting started\n\nWhat would you like to learn about?"
+    ];
+    
+    // Rotate through responses to avoid repetition
+    const randomIndex = Math.floor(Math.random() * responses.length);
+    return responses[randomIndex];
   }
 }
 
@@ -550,8 +586,8 @@ export function AloraAssistant() {
     await new Promise((resolve) => setTimeout(resolve, 800));
 
     // Generate response using intent detection
-    const intents = responseEngine.detectIntent(inputValue);
-    const responseContent = responseEngine.generateResponse(intents);
+    const intent = responseEngine.detectIntent(inputValue);
+    const responseContent = responseEngine.generateResponse(intent);
 
     const assistantMessage: Message = {
       id: (Date.now() + 1).toString(),
