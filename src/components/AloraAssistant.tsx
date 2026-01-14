@@ -855,19 +855,21 @@ export function AloraAssistant() {
 
   return (
     <>
-      {/* Floating Button */}
+      {/* Floating Button - Oval Pill */}
       <Button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 h-14 w-14 rounded-xl shadow-lg z-50"
+        className="fixed bottom-6 right-6 px-4 py-3 rounded-full shadow-lg z-50 flex items-center gap-2"
         style={{ 
           backgroundColor: '#1e3a8a',
           color: 'white',
-          border: '2px solid #14b8a6',
-          boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)'
+          border: '2px solid white',
+          boxShadow: '0 0 0 2px #14b8a6, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)'
         }}
         aria-label="Open Alora Assistant"
       >
-        <MessageCircle className="h-6 w-6" />
+        <MessageCircle className="h-5 w-5" />
+        <MessageCircle className="h-5 w-5 -ml-3" />
+        <span className="font-medium text-sm">Chat</span>
       </Button>
 
       {/* Chat Window */}
@@ -878,7 +880,7 @@ export function AloraAssistant() {
             <div className="flex items-center gap-2">
               <div className="h-10 w-10 rounded-full overflow-hidden bg-white/10 flex-shrink-0">
                 <img 
-                  src="https://media.gettyimages.com/id/2207543701/photo/confident-businesswoman-smiling-portrait-close-up.jpg?b=1&s=2048x2048&w=0&k=20&c=wuUpyJovvltq5irLMjclpBTuF6JAIpemFnB_kpBfazQ=" 
+                  src="https://media.gettyimages.com/id/1357723717/photo/studio-portrait-of-a-mature-woman-looking-serious-in-front-of-white-background.jpg?b=1&s=2048x2048&w=0&k=20&c=_pQRGdZa0ew1M0zBv8P6ERE6mSZHa1qB1-BHOBGGcdU=" 
                   alt="Alora"
                   className="h-full w-full object-cover"
                 />
