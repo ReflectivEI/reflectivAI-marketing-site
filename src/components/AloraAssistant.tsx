@@ -572,16 +572,16 @@ class AloraResponseEngine {
         return "I'd be happy to help! Could you tell me a bit more about what you're interested in learning about ReflectivAI?";
 
       case 'greeting':
-        return "Hello! Great to connect with you. I'm here to answer any questions about ReflectivAI, Signal Intelligence™, or how our platform helps sales professionals develop conversational skills. What would you like to know?";
+        return "Hey there! 👋 I'm Alora. Think of me as your friendly guide to all things ReflectivAI. Whether you're curious about Signal Intelligence™, want to know how our AI Coach works, or just wondering if this could help your team—I've got you covered. What's on your mind?";
 
       case 'enlighten_me':
-        return "I'd love to! Here's what makes ReflectivAI special:\n\n**Signal Intelligence™** is a framework for developing 8 core conversational skills—things like asking better questions, reading engagement cues, and handling objections with confidence.\n\n**AI Coach** gives you instant, personalized feedback on practice conversations.\n\n**Role Play** lets you practice with AI customers across 9+ pharma scenarios—HIV, Oncology, Cardiology, and more.\n\nWhat would you like to dive into first?";
+        return "Ooh, I like your style! Here's the quick version:\n\nReflectivAI is basically a training gym for sales conversations. We help pharma reps get really good at the hard stuff—reading customer signals, handling objections, asking questions that actually land.\n\n**The secret sauce?** You practice with AI customers in realistic scenarios (HIV, Oncology, Cardiology—you name it), and our AI Coach gives you instant feedback. No waiting for your manager to review call recordings.\n\nIt's like having a flight simulator for sales calls. Practice the scary stuff when the stakes are zero. 🎯\n\nWhat part sounds most interesting to you?";
 
       case 'favorite_feature':
         return "Great question! While I don't have personal preferences, I can tell you what users rave about most:\n\n🎯 **Role Play Practice** - Sales reps love the safe space to practice tough conversations without real-world stakes. It's like a flight simulator for sales calls.\n\n💡 **Instant AI Feedback** - No waiting for manager reviews. You get specific, actionable coaching right after each practice session.\n\n📊 **Skill Tracking** - Seeing your progress across the 8 Signal Intelligence™ capabilities is incredibly motivating.\n\nMost reps say the combination of realistic practice + immediate feedback is what makes it stick. Want to see how any of these work?";
 
       case 'thanks':
-        return "You're very welcome! Is there anything else about ReflectivAI or Signal Intelligence™ you'd like to explore?";
+        return "You're so welcome! Happy to help. Anything else you want to know? I'm here all day. ☕";
 
       case 'conversational_signals':
         return `${SIGNAL_INTELLIGENCE_KB.definitions.conversationalSignals}\n\nThese signals are what Signal Intelligence™ helps sales professionals recognize and respond to effectively. Want to learn more about the Signal Intelligence™ framework?`;
