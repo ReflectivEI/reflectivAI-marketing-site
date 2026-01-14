@@ -878,7 +878,7 @@ export function AloraAssistant() {
             <div className="flex items-center gap-2">
               <div className="h-10 w-10 rounded-full overflow-hidden bg-white/10 flex-shrink-0">
                 <img 
-                  src="https://media.gettyimages.com/id/1357723717/photo/studio-portrait-of-a-mature-woman-looking-serious-in-front-of-white-background.jpg?b=1&s=2048x2048&w=0&k=20&c=_pQRGdZa0ew1M0zBv8P6ERE6mSZHa1qB1-BHOBGGcdU=" 
+                  src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/Screenshot%202026-01-13%20at%205.47.45%E2%80%AFPM.png" 
                   alt="Alora"
                   className="h-full w-full object-cover"
                 />
