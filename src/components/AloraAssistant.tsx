@@ -11,7 +11,9 @@ interface Message {
   timestamp: Date;
 }
 
-// Signal Intelligence™ Knowledge Base
+// Signal Intelligence™ Knowledge Base - CANONICAL SOURCE ONLY
+// KNOWLEDGE SOURCE LOCK: All responses MUST pull from this KB
+// NO hallucination, inference, or expansion beyond what exists here
 const SIGNAL_INTELLIGENCE_KB = {
   // Core Definitions
   definitions: {
@@ -47,7 +49,16 @@ Defines 8 core conversational skills that can be developed through practice:
 8. Commitment Generation
 
 **Layer 3: Behavioral Metrics (Visibility Layer)**
-Observable behaviors that show how each capability appears during structured practice sessions (role play, simulations). These are never used for live monitoring or surveillance.`
+Observable behaviors that show how each capability appears during structured practice sessions (role play, simulations). These are never used for live monitoring or surveillance.`,
+
+    conversationalSignals: `Conversational signals are observable cues in communication that indicate a customer's state of engagement, interest, concern, or readiness. These include:
+
+• Verbal cues: Tone, pacing, word choice, questions asked
+• Participation patterns: Speaking time, engagement level, responsiveness
+• Content signals: Topics raised, objections voiced, priorities mentioned
+• Engagement shifts: Changes in energy, focus, or openness
+
+These signals are what sales professionals learn to recognize and respond to through Signal Intelligence™ training.`
   },
 
   // Capabilities with Behavioral Metrics
@@ -275,9 +286,91 @@ They are NEVER used for:
   }
 };
 
-// Intent Recognition & Response Generation
+// ALORA Response Engine with HARDENED ANTI-LOOP GUARDS
 class AloraResponseEngine {
   private conversationContext: string = '';
+  private ambiguousQuestionCount: number = 0;
+  private lastAmbiguousQuery: string = '';
+  private queryHistory: string[] = [];
+
+  // RULE 1: AMBIGUITY DETECTION
+  private detectAmbiguousSignal(query: string): boolean {
+    const lowerQuery = query.toLowerCase().trim();
+    
+    // Check if query mentions "signal" but NOT "Signal Intelligence™"
+    const hasSignalMention = lowerQuery.includes('signal');
+    const hasExplicitSI = lowerQuery.match(/signal intelligence|si framework|signal intelligence™/);
+    
+    // Ambiguous patterns: "What is a signal?", "Explain signals", "What do you mean by signal?"
+    const isAmbiguousPattern = lowerQuery.match(/^(what is|what's|define|explain|tell me about|what do you mean by|what are|describe).*\bsignal/);
+    
+    return hasSignalMention && !hasExplicitSI && !!isAmbiguousPattern;
+  }
+
+  // RULE 2: CLARIFYING QUESTION RESPONSE
+  private clarifyingQuestionResponse(): string {
+    return "Do you mean a general conversational signal (like body language, tone cues, or customer engagement indicators), or Signal Intelligence™ as used in the ReflectivAI platform?";
+  }
+
+  // RULE 3: ANTI-LOOP GUARD WITH ESCALATION
+  private handleRepeatedAmbiguity(query: string): string | null {
+    const normalizedQuery = query.toLowerCase().trim();
+    
+    // Check if this is the same ambiguous question repeated
+    if (normalizedQuery === this.lastAmbiguousQuery) {
+      this.ambiguousQuestionCount++;
+    } else {
+      this.ambiguousQuestionCount = 1;
+      this.lastAmbiguousQuery = normalizedQuery;
+    }
+
+    // After 2 identical attempts, escalate
+    if (this.ambiguousQuestionCount >= 2) {
+      return "I want to make sure I answer correctly — could you clarify what you're referring to? Are you asking about Signal Intelligence™ (our framework), or general conversational signals (customer cues)?";
+    }
+
+    return null; // No escalation needed yet
+  }
+
+  // RULE 4: KNOWLEDGE SOURCE LOCK - DEFER WHEN CONTENT MISSING
+  private deferResponse(): string {
+    return "That isn't something I can define without more context. Could you clarify what you're asking about?";
+  }
+
+  // Check if content exists in canonical KB
+  private hasCanonicalContent(intent: string): boolean {
+    const validIntents = [
+      'si_overview', 'three_layer_system', 'capabilities_overview',
+      'capability_signal_awareness', 'capability_signal_interpretation',
+      'capability_value_connection', 'capability_customer_engagement',
+      'capability_objection_navigation', 'capability_conversation_management',
+      'capability_adaptive_response', 'capability_commitment_generation',
+      'human_drivers', 'behavioral_metrics', 'ai_coach', 'role_practice',
+      'ethics', 'boundary_correction', 'use_cases', 'platform_features',
+      'results', 'pricing', 'getting_started', 'conversational_signals'
+    ];
+    
+    return validIntents.includes(intent);
+  }
+
+  // REPEATED QUESTION TRACKING
+  private isRepeatedQuestion(query: string): boolean {
+    const normalizedQuery = query.toLowerCase().trim();
+    
+    // Check last 5 queries for exact repetition
+    const recentQueries = this.queryHistory.slice(-5);
+    const repetitionCount = recentQueries.filter(q => q === normalizedQuery).length;
+    
+    // Add to history
+    this.queryHistory.push(normalizedQuery);
+    
+    // Keep history manageable (last 20 queries)
+    if (this.queryHistory.length > 20) {
+      this.queryHistory.shift();
+    }
+    
+    return repetitionCount >= 2;
+  }
 
   detectIntent(query: string): string {
     const lowerQuery = query.toLowerCase().trim();
@@ -285,6 +378,16 @@ class AloraResponseEngine {
     // Handle empty or very short queries
     if (lowerQuery.length < 2) {
       return 'clarification_needed';
+    }
+
+    // CRITICAL: Check for repeated questions (anti-loop)
+    if (this.isRepeatedQuestion(query)) {
+      return 'repeated_question';
+    }
+
+    // CRITICAL: Check for ambiguous "signal" questions FIRST
+    if (this.detectAmbiguousSignal(query)) {
+      return 'ambiguous_signal';
     }
 
     // Follow-up patterns - only trigger if query is VERY short and generic
@@ -305,8 +408,14 @@ class AloraResponseEngine {
       return 'thanks';
     }
 
-    // Signal Intelligence overview
-    if (lowerQuery.match(/what is signal intelligence|define signal intelligence|explain signal intelligence|si framework|what does signal intelligence|tell me about signal intelligence/)) {
+    // Conversational signals (general concept)
+    if (lowerQuery.match(/conversational signal|customer signal|engagement signal|what are signals|types of signals/) && !lowerQuery.match(/signal intelligence/)) {
+      this.conversationContext = 'conversational_signals';
+      return 'conversational_signals';
+    }
+
+    // Signal Intelligence overview (explicit)
+    if (lowerQuery.match(/what is signal intelligence|define signal intelligence|explain signal intelligence|si framework|what does signal intelligence|tell me about signal intelligence|signal intelligence™/)) {
       this.conversationContext = 'si_overview';
       return 'si_overview';
     }
@@ -428,7 +537,26 @@ class AloraResponseEngine {
     return 'general';
   }
 
-  generateResponse(intent: string): string {
+  generateResponse(intent: string, originalQuery: string = ''): string {
+    // CRITICAL: Handle ambiguous signal questions with clarification
+    if (intent === 'ambiguous_signal') {
+      const escalation = this.handleRepeatedAmbiguity(originalQuery);
+      if (escalation) {
+        return escalation;
+      }
+      return this.clarifyingQuestionResponse();
+    }
+
+    // CRITICAL: Handle repeated questions
+    if (intent === 'repeated_question') {
+      return "I notice you've asked this a few times. Let me try to help differently. Could you rephrase your question or let me know what specific aspect you'd like to understand better?";
+    }
+
+    // KNOWLEDGE SOURCE LOCK: Check if content exists in canonical KB
+    if (!this.hasCanonicalContent(intent) && intent !== 'general' && intent !== 'clarification_needed' && intent !== 'greeting' && intent !== 'thanks') {
+      return this.deferResponse();
+    }
+
     switch (intent) {
       case 'clarification_needed':
         return "I'd be happy to help! Could you tell me a bit more about what you're interested in learning about ReflectivAI?";
@@ -439,14 +567,17 @@ class AloraResponseEngine {
       case 'thanks':
         return "You're very welcome! Is there anything else about ReflectivAI or Signal Intelligence™ you'd like to explore?";
 
+      case 'conversational_signals':
+        return `${SIGNAL_INTELLIGENCE_KB.definitions.conversationalSignals}\n\nThese signals are what Signal Intelligence™ helps sales professionals recognize and respond to effectively. Want to learn more about the Signal Intelligence™ framework?`;
+
       case 'si_overview':
-        return "Signal Intelligence™ is our behavior-based framework that helps sales professionals develop conversational skills through practice. Think of it like a flight simulator for high-stakes conversations—you practice in a safe environment and get feedback on observable behaviors like question quality, listening, and adaptability.\n\nIt's completely non-clinical and non-diagnostic. We focus only on what you say and how you respond, never on emotions or psychological states.\n\nWant to know more about how it works or what skills you can develop?";
+        return `${SIGNAL_INTELLIGENCE_KB.definitions.signalIntelligence}\n\nWant to know more about how it works or what skills you can develop?`;
 
       case 'si_overview_followup':
         return "Great question! Signal Intelligence™ works in three layers:\n\n**Layer 1**: Understanding why behaviors change (context like confidence or motivation)\n**Layer 2**: The 8 conversational skills you develop\n**Layer 3**: Observable behaviors we track during practice\n\nWe have 9+ pharma scenarios across HIV, Oncology, Cardiology, and more. You practice, get instant feedback, and build muscle memory for real conversations.\n\nWant to dive into the 8 skills or see how practice sessions work?";
 
       case 'three_layer_system':
-        return "Signal Intelligence™ works in three layers:\n\n**Layer 1: Why behaviors change** - We use the Human Decision Drivers Framework to understand context (like confidence or motivation), but we never measure these directly.\n\n**Layer 2: Skills you develop** - 8 core conversational capabilities like Signal Awareness, Objection Navigation, and Adaptive Response.\n\n**Layer 3: What we observe** - Behavioral metrics from your practice sessions, like question quality and listening patterns.\n\nThink of it like learning to play piano: Layer 1 is music theory, Layer 2 is the techniques, Layer 3 is what the teacher hears when you play.\n\nWant to dive deeper into any of these layers?";
+        return `${SIGNAL_INTELLIGENCE_KB.definitions.threeLayerSystem}\n\nThink of it like learning to play piano: Layer 1 is music theory, Layer 2 is the techniques, Layer 3 is what the teacher hears when you play.\n\nWant to dive deeper into any of these layers?`;
 
       case 'capabilities_overview':
         return "We help you develop 8 core conversational skills:\n\n1. Signal Awareness - Asking better questions\n2. Signal Interpretation - Active listening\n3. Value Connection - Making it relevant\n4. Customer Engagement Monitoring - Reading the room\n5. Objection Navigation - Handling pushback\n6. Conversation Management - Staying on track\n7. Adaptive Response - Pivoting when needed\n8. Commitment Generation - Securing next steps\n\nEach one is a distinct skill you can practice and improve. Which one interests you most?";
@@ -455,28 +586,28 @@ class AloraResponseEngine {
         return "Each capability is measured through specific behavioral patterns during practice sessions.\n\nFor example, Signal Awareness looks at your question quality—open vs. closed questions, relevance to customer goals, and follow-up depth.\n\nObjection Navigation tracks how you acknowledge concerns, stay calm under pressure, and reframe constructively.\n\nThe beauty is you can see exactly where you're strong and where to focus improvement. Want to explore a specific capability in detail?";
 
       case 'capability_signal_awareness':
-        return "Signal Awareness is about noticing customer cues and asking better questions in response.\n\nFor example, if a doctor mentions time constraints, a rep with strong Signal Awareness might shift from broad questions to focused ones about their specific patient population.\n\nWe measure this through Question Quality—looking at things like open vs. closed questions, relevance to customer goals, and how well you follow up.\n\nWant to see how this shows up in practice scenarios?";
+        return `**${SIGNAL_INTELLIGENCE_KB.capabilities.signalAwareness.name}**\n\n${SIGNAL_INTELLIGENCE_KB.capabilities.signalAwareness.definition}\n\nFor example, if a doctor mentions time constraints, a rep with strong Signal Awareness might shift from broad questions to focused ones about their specific patient population.\n\nWe measure this through ${SIGNAL_INTELLIGENCE_KB.capabilities.signalAwareness.metric}.\n\nWant to see how this shows up in practice scenarios?`;
 
       case 'capability_signal_interpretation':
-        return "Signal Interpretation is your ability to understand what customers are really saying and adjust accordingly.\n\nIt's the difference between hearing \"I don't have time\" and recognizing whether that means \"not interested\" or \"show me the value quickly.\"\n\nWe look at behaviors like accurate paraphrasing, acknowledging concerns, and how you shift your approach based on what you hear.\n\nThis is one of the most impactful skills for building trust. Want to know how to practice it?";
+        return `**${SIGNAL_INTELLIGENCE_KB.capabilities.signalInterpretation.name}**\n\n${SIGNAL_INTELLIGENCE_KB.capabilities.signalInterpretation.definition}\n\nIt's the difference between hearing "I don't have time" and recognizing whether that means "not interested" or "show me the value quickly."\n\nWe measure this through ${SIGNAL_INTELLIGENCE_KB.capabilities.signalInterpretation.metric}.\n\nThis is one of the most impactful skills for building trust. Want to know how to practice it?`;
 
       case 'capability_value_connection':
-        return "Value Connection is about linking your message to what actually matters to the customer.\n\nInstead of listing features, you're translating them into outcomes that align with their priorities. Like connecting a drug's dosing schedule to a doctor's concern about patient adherence.\n\nWe observe how well you frame value in customer terms, not product terms.\n\nWant examples of strong vs. weak value framing?";
+        return `**${SIGNAL_INTELLIGENCE_KB.capabilities.valueConnection.name}**\n\n${SIGNAL_INTELLIGENCE_KB.capabilities.valueConnection.definition}\n\nInstead of listing features, you're translating them into outcomes that align with their priorities. Like connecting a drug's dosing schedule to a doctor's concern about patient adherence.\n\nWe measure this through ${SIGNAL_INTELLIGENCE_KB.capabilities.valueConnection.metric}.\n\nWant examples of strong vs. weak value framing?`;
 
       case 'capability_customer_engagement':
-        return "Customer Engagement Monitoring is your ability to read the room—noticing when engagement shifts and adjusting your approach.\n\nMaybe the customer goes quiet, starts multitasking, or suddenly gets more animated. Strong reps pick up on these cues and respond appropriately.\n\nWe track how you recognize participation changes and adjust pacing, tone, or approach.\n\nThis is especially critical in virtual calls. Want tips on improving this skill?";
+        return `**${SIGNAL_INTELLIGENCE_KB.capabilities.customerEngagement.name}**\n\n${SIGNAL_INTELLIGENCE_KB.capabilities.customerEngagement.definition}\n\nMaybe the customer goes quiet, starts multitasking, or suddenly gets more animated. Strong reps pick up on these cues and respond appropriately.\n\nWe measure this through ${SIGNAL_INTELLIGENCE_KB.capabilities.customerEngagement.metric}.\n\nThis is especially critical in virtual calls. Want tips on improving this skill?`;
 
       case 'capability_objection_navigation':
-        return "Objection Navigation is handling pushback without getting defensive—staying calm, acknowledging concerns, and reframing constructively.\n\nThe key is treating objections as information, not attacks. \"I've heard that before\" might mean \"prove you're different\" or \"I'm skeptical but listening.\"\n\nWe look at how you acknowledge concerns, maintain credibility under pressure, and keep the conversation productive.\n\nWant to practice with some common pharma objections?";
+        return `**${SIGNAL_INTELLIGENCE_KB.capabilities.objectionNavigation.name}**\n\n${SIGNAL_INTELLIGENCE_KB.capabilities.objectionNavigation.definition}\n\nThe key is treating objections as information, not attacks. "I've heard that before" might mean "prove you're different" or "I'm skeptical but listening."\n\nWe measure this through ${SIGNAL_INTELLIGENCE_KB.capabilities.objectionNavigation.metric}.\n\nWant to practice with some common pharma objections?`;
 
       case 'capability_conversation_management':
-        return "Conversation Management is maintaining purpose and structure while staying flexible to customer needs.\n\nIt's the balance between having a plan and being willing to deviate when the customer takes you somewhere valuable.\n\nWe observe how you maintain conversation flow, manage time, and stay focused on outcomes without being rigid.\n\nThink of it like being a good meeting facilitator. Want to see what good looks like?";
+        return `**${SIGNAL_INTELLIGENCE_KB.capabilities.conversationManagement.name}**\n\n${SIGNAL_INTELLIGENCE_KB.capabilities.conversationManagement.definition}\n\nIt's the balance between having a plan and being willing to deviate when the customer takes you somewhere valuable.\n\nWe measure this through ${SIGNAL_INTELLIGENCE_KB.capabilities.conversationManagement.metric}.\n\nThink of it like being a good meeting facilitator. Want to see what good looks like?`;
 
       case 'capability_adaptive_response':
-        return "Adaptive Response is recognizing when your approach isn't working and pivoting mid-conversation.\n\nMaybe your clinical data isn't landing, so you shift to a patient story. Or your questions are too broad, so you get more specific.\n\nWe track how quickly you recognize ineffective patterns and adjust your strategy in real-time.\n\nThis is what separates good reps from great ones. Want to know how to build this skill?";
+        return `**${SIGNAL_INTELLIGENCE_KB.capabilities.adaptiveResponse.name}**\n\n${SIGNAL_INTELLIGENCE_KB.capabilities.adaptiveResponse.definition}\n\nMaybe your clinical data isn't landing, so you shift to a patient story. Or your questions are too broad, so you get more specific.\n\nWe measure this through ${SIGNAL_INTELLIGENCE_KB.capabilities.adaptiveResponse.metric}.\n\nThis is what separates good reps from great ones. Want to know how to build this skill?`;
 
       case 'capability_commitment_generation':
-        return "Commitment Generation is securing realistic next steps that preserve customer autonomy and build momentum.\n\nIt's not about \"closing\"—it's about co-creating a path forward that the customer actually owns.\n\nWe look at how you secure specific commitments, keep them realistic, and maintain the customer's sense of control.\n\nWant examples of strong commitment language?";
+        return `**${SIGNAL_INTELLIGENCE_KB.capabilities.commitmentGeneration.name}**\n\n${SIGNAL_INTELLIGENCE_KB.capabilities.commitmentGeneration.definition}\n\nIt's not about "closing"—it's about co-creating a path forward that the customer actually owns.\n\nWe measure this through ${SIGNAL_INTELLIGENCE_KB.capabilities.commitmentGeneration.metric}.\n\nWant examples of strong commitment language?`;
 
       case 'human_drivers':
         return "The Human Decision Drivers Framework explains why conversational behaviors change—things like confidence, motivation, emotional regulation, and perceived risk.\n\nHere's the key: we never measure these directly. They're explanatory context, not scores.\n\nThink of them like the \"why\" behind observable behaviors. If someone gets defensive during objections, social threat might be at play. But we're coaching the behavior (staying calm), not diagnosing the internal state.\n\nWant to understand how this connects to the skills you practice?";
@@ -485,28 +616,28 @@ class AloraResponseEngine {
         return "Behavioral Metrics are what we observe during practice sessions—things like question quality, listening patterns, and how you handle objections.\n\nKey points:\n• Only observed during practice (role play, simulations)\n• Focus on what you say and how you respond\n• Never used for live call monitoring\n• Completely transparent and explainable\n\nWe don't detect emotions, predict intent, or assess personality. Just observable conversation behaviors.\n\nWant to see what metrics look like in action?";
 
       case 'ai_coach':
-        return "AI Coach gives you instant feedback during practice sessions—like having a personal coach available 24/7.\n\nIt highlights patterns in your conversation behaviors (question quality, listening, adaptability) and offers actionable insights. But here's what's important: the AI detects patterns, you make the judgments.\n\nIt only works in simulated practice environments, never on real customer calls.\n\nThink of it like a golf swing analyzer—it shows you the data, you decide how to improve.\n\nWant to see a sample feedback report?";
+        return `${SIGNAL_INTELLIGENCE_KB.platform.aiCoach}\n\nThink of it like a golf swing analyzer—it shows you the data, you decide how to improve.\n\nWant to see a sample feedback report?`;
 
       case 'ai_coach_followup':
         return "The feedback is specific and actionable. For example:\n\n**Signal Awareness (4.2/5)**: \"You asked 8 open-ended questions and followed up on customer priorities. Consider probing deeper when the customer mentions constraints.\"\n\n**Objection Navigation (3.8/5)**: \"You acknowledged the concern but moved on quickly. Try paraphrasing to show you fully understand before responding.\"\n\nYou also get coaching cards that translate scores into specific actions to practice. Want to know more about any specific capability?";
 
       case 'role_practice':
-        return "Role Play lets you practice high-stakes conversations in a completely safe environment.\n\nWe have 9+ pharma scenarios across HIV, Oncology, Cardiology, Vaccines, and more. You practice, get instant feedback on your Signal Intelligence™ capabilities, and build muscle memory for real conversations.\n\nMost reps spend 15-30 minutes a day. It's like a flight simulator—practice the hard stuff when the stakes are zero.\n\nWant to try a scenario or see what the feedback looks like?";
+        return `${SIGNAL_INTELLIGENCE_KB.platform.rolePractice}\n\nWe have 9+ pharma scenarios across HIV, Oncology, Cardiology, Vaccines, and more. Most reps spend 15-30 minutes a day. It's like a flight simulator—practice the hard stuff when the stakes are zero.\n\nWant to try a scenario or see what the feedback looks like?`;
 
       case 'role_practice_followup':
         return "Here's how it works:\n\n1. Choose a scenario (e.g., HIV specialist objecting to switch therapy)\n2. Have a conversation with an AI customer\n3. Get instant feedback on your 8 Signal Intelligence™ capabilities\n4. See specific examples of what worked and what to improve\n\nThe AI adapts to your responses—if you handle an objection well, it might open up. If you miss a cue, it might get more guarded.\n\nMost reps see improvement after just 3-5 practice sessions. Want to know what the feedback looks like?";
 
       case 'ethics':
-        return "Ethics and safety are built into everything we do.\n\nOur guiding principle: \"If a response would feel inappropriate if the roles were reversed, it's outside our boundary.\"\n\nWe're non-clinical, non-diagnostic, and behavior-only. We never infer emotions, predict intent, or assess personality. All metrics are transparent, explainable, and used only for learning—never for employment decisions or performance evaluation.\n\nWant to know more about our safeguards or compliance approach?";
+        return `${SIGNAL_INTELLIGENCE_KB.ethics.boundaries}\n\nWant to know more about our safeguards or compliance approach?`;
 
       case 'boundary_correction':
-        return "Just to clarify—Signal Intelligence™ focuses only on observable conversation behaviors. We don't detect emotions, predict intent, or assess personality traits.\n\nIf you're asking about how we observe and coach behaviors during practice, I'm happy to explain that. Or if you're curious about what makes our approach different from other training, I can share that too.\n\nWhat specifically were you wondering about?";
+        return `Just to clarify—Signal Intelligence™ focuses only on observable conversation behaviors. We don't detect emotions, predict intent, or assess personality traits.\n\n${SIGNAL_INTELLIGENCE_KB.ethics.whatNotMeasured}\n\nIf you're asking about how we observe and coach behaviors during practice, I'm happy to explain that. What specifically were you wondering about?`;
 
       case 'use_cases':
-        return "ReflectivAI works for three key groups:\n\n**Sales Reps**: Practice high-stakes conversations, get instant feedback, build confidence. 89% report feeling more prepared after using it.\n\n**Sales Managers**: Coach with a structured framework, see real-time skill development, scale training across your team.\n\n**Enablement Leaders**: Accelerate onboarding (3x faster ramp time), identify skill gaps, measure training effectiveness with behavioral data.\n\nWhich role are you most interested in learning about?";
+        return `ReflectivAI works for three key groups:\n\n**Sales Reps**: ${SIGNAL_INTELLIGENCE_KB.useCases.salesReps}\n\n**Sales Managers**: ${SIGNAL_INTELLIGENCE_KB.useCases.managers}\n\n**Enablement Leaders**: ${SIGNAL_INTELLIGENCE_KB.useCases.enablement}\n\nWhich role are you most interested in learning about?`;
 
       case 'platform_features':
-        return "The ReflectivAI platform includes:\n\n• AI Coach for instant, personalized feedback\n• Role Play scenarios across 9+ therapeutic areas\n• Dashboard with skill development tracking\n• Coaching cards that translate scores into actionable guidance\n• Team analytics for managers\n\nEverything is based on practice sessions, not live call monitoring. Your data stays private and is used only for learning.\n\nWant a walkthrough of any specific feature?";
+        return `The ReflectivAI platform includes:\n\n• AI Coach for instant, personalized feedback\n• Role Play scenarios across 9+ therapeutic areas\n• Dashboard with skill development tracking\n• Coaching cards that translate scores into actionable guidance\n• Team analytics for managers\n\nEverything is based on practice sessions, not live call monitoring. Your data stays private and is used only for learning.\n\nWant a walkthrough of any specific feature?`;
 
       case 'results':
         return "Our customers see real results:\n\n• 75% higher skill retention vs. traditional training\n• 3x faster ramp time for new reps\n• 89% of reps report increased confidence\n• 34% increase in close rates (customer testimonial)\n\nThe key is experiential learning in a safe environment. You build muscle memory through practice, not just knowledge through lectures.\n\nWant to hear more about how teams are using this?";
@@ -579,15 +710,16 @@ export function AloraAssistant() {
     };
 
     setMessages((prev) => [...prev, userMessage]);
+    const queryToProcess = inputValue;
     setInputValue('');
     setIsTyping(true);
 
     // Simulate AI thinking time
     await new Promise((resolve) => setTimeout(resolve, 800));
 
-    // Generate response using intent detection
-    const intent = responseEngine.detectIntent(inputValue);
-    const responseContent = responseEngine.generateResponse(intent);
+    // Generate response using intent detection with HARDENED GUARDS
+    const intent = responseEngine.detectIntent(queryToProcess);
+    const responseContent = responseEngine.generateResponse(intent, queryToProcess);
 
     const assistantMessage: Message = {
       id: (Date.now() + 1).toString(),
