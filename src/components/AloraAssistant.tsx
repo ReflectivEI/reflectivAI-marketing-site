@@ -636,7 +636,7 @@ class AloraResponseEngine {
         return "I'd be happy to help! Could you tell me a bit more about what you're interested in learning about ReflectivAI?";
 
       case 'about_alora':
-        return "I'm Alora!  Think of me as your personal guide to ReflectivAI. I'm here to answer questions, explain how things work, and help you figure out if our platform is right for your team.\n\nI know everything about Signal Intelligence™, our AI Coach, Role Play scenarios, pricing—you name it. And I promise to keep things conversational, not corporate-speak. 😊\n\nWhat would you like to know?";
+        return "I'm Alora, your guide to ReflectivAI! I'm here to answer questions about Signal Intelligence™, our AI Coach, Role Play scenarios, pricing—pretty much anything. What would you like to know?";
 
       case 'inappropriate_redirect':
         const redirects = [
@@ -648,67 +648,67 @@ class AloraResponseEngine {
         return redirects[Math.floor(Math.random() * redirects.length)];
 
       case 'what_makes_unique':
-        return "Great question! Here's what makes ReflectivAI different:\n\n Not creepy surveillance - We only measure behaviors during practice sessions, never live calls. It's a training tool, not Big Brother.\n\n Behavior-first, not psych tests - We focus on what you say and do, not personality assessments or emotional detection. Observable skills you can actually improve.\n\n Instant feedback - No waiting for your manager to review recordings. Practice a conversation, get coaching immediately.\n\n Realistic practice - Our AI customers respond like real people. Handle an objection well? They open up. Miss a cue? They get guarded.\n\n 8 trainable skills - Signal Intelligence™ breaks down the art of conversation into specific, measurable capabilities you can level up.\n\nMost training is lectures and theory. We're experiential—like a flight simulator for sales calls. Want to dive deeper into any of these?";
+        return "Great question! We're practice-only (never live call monitoring), behavior-first (no psych tests), with instant AI feedback. You practice with realistic AI customers across 9+ pharma scenarios and develop 8 trainable conversation skills. It's like a flight simulator for sales calls. Want to dive deeper into any of these?";
 
       case 'greeting':
-        return "Hey there!  I'm Alora. Think of me as your friendly guide to all things ReflectivAI. Whether you're curious about Signal Intelligence™, want to know how our AI Coach works, or just wondering if this could help your team—I've got you covered. What's on your mind?";
+        return "Hey there! I'm Alora, your guide to ReflectivAI. I can help with Signal Intelligence™, our AI Coach, Role Play scenarios, pricing—anything you're curious about. What's on your mind?";
 
       case 'enlighten_me':
-        return "Ooh, I like your style! Here's the quick version:\n\nReflectivAI is basically a training gym for sales conversations. We help pharma reps get really good at the hard stuff—reading customer signals, handling objections, asking questions that actually land.\n\nThe secret sauce? You practice with AI customers in realistic scenarios (HIV, Oncology, Cardiology—you name it), and our AI Coach gives you instant feedback. No waiting for your manager to review call recordings.\n\nIt's like having a flight simulator for sales calls. Practice the scary stuff when the stakes are zero. \n\nWhat part sounds most interesting to you?";
+        return "I like your style! ReflectivAI is a training gym for sales conversations. You practice with AI customers in realistic pharma scenarios, get instant feedback from our AI Coach, and build 8 core conversation skills. It's like a flight simulator for sales calls. What part sounds most interesting?";
 
       case 'favorite_feature':
-        return "Great question! While I don't have personal preferences, I can tell you what users rave about most:\n\n Role Play Practice - Sales reps love the safe space to practice tough conversations without real-world stakes. It's like a flight simulator for sales calls.\n\n Instant AI Feedback - No waiting for manager reviews. You get specific, actionable coaching right after each practice session.\n\n Skill Tracking - Seeing your progress across the 8 Signal Intelligence™ capabilities is incredibly motivating.\n\nMost reps say the combination of realistic practice + immediate feedback is what makes it stick. Want to see how any of these work?";
+        return "Users rave about three things: realistic Role Play practice in a safe space, instant AI feedback after each session, and tracking progress across 8 Signal Intelligence™ capabilities. The combo of practice plus immediate coaching is what makes it stick. Want to see how any of these work?";
 
       case 'thanks':
-        return "You're so welcome! Happy to help. Anything else you want to know? I'm here all day. ";
+        return "You're so welcome! Anything else you'd like to know? Or if you're all set, have a great day!";
 
       case 'conversational_signals':
-        return `Good question! Here's what conversational signals are:\n\n${SIGNAL_INTELLIGENCE_KB.definitions.conversationalSignals}\n\nThese signals are what Signal Intelligence™ helps sales professionals recognize and respond to effectively. Want to learn more about the Signal Intelligence™ framework?`;
+        return "Good question! Conversational signals are observable cues like tone, pacing, word choice, participation patterns, and engagement shifts. Signal Intelligence™ helps sales professionals recognize and respond to these effectively. Want to learn more about the framework?";
 
       case 'si_overview':
-        return `Happy to explain! Signal Intelligence™ is:\n\n${SIGNAL_INTELLIGENCE_KB.definitions.signalIntelligence}\n\nIn plain English? It's a transparent, behavior-based framework that helps sales reps get better at conversations through practice. No mind-reading, no personality tests, no surveillance.\n\nWould you like the deep dive on how it works, or are you curious about the 8 skills you can develop?`;
+        return "Happy to explain! Signal Intelligence™ is a behavior-based capability framework for professional development in high-stakes conversations. It's non-clinical, non-diagnostic, and focuses only on observable behaviors—never used for employment decisions or live monitoring. Want the deep dive on how it works, or curious about the 8 skills?";
 
       case 'si_overview_followup':
-        return "Great question! Signal Intelligence™ works in three layers:\n\nLayer 1: Understanding why behaviors change (context like confidence or motivation)\nLayer 2: The 8 conversational skills you develop\nLayer 3: Observable behaviors we track during practice\n\nWe have 9+ pharma scenarios across HIV, Oncology, Cardiology, and more. You practice, get instant feedback, and build muscle memory for real conversations.\n\nWant to dive into the 8 skills or see how practice sessions work?";
+        return "Signal Intelligence™ has three layers: understanding why behaviors change, the 8 conversational skills you develop, and observable behaviors tracked during practice. We have 9+ pharma scenarios. You practice, get instant feedback, build muscle memory. Want to explore the 8 skills or see how practice works?";
 
       case 'three_layer_system':
-        return `Great question! Signal Intelligence™ operates as a three-layer system:\n\n${SIGNAL_INTELLIGENCE_KB.definitions.threeLayerSystem}\n\nThink of it like learning to play piano: Layer 1 is music theory, Layer 2 is the techniques, Layer 3 is what the teacher hears when you play.\n\nWant to dive deeper into any of these layers?`;
+        return "Great question! Layer 1: Human Decision Drivers (why behaviors change). Layer 2: 8 Signal Intelligence™ capabilities (skills you develop). Layer 3: Behavioral Metrics (observable behaviors during practice). Think piano: theory, techniques, what the teacher hears. Want to dive deeper into any layer?";
 
       case 'capabilities_overview':
-        return "Great question! Signal Intelligence™ is built on 8 core capabilities:\n\n1. Signal Awareness - Ask questions that actually matter\n2. Signal Interpretation - Listen like you mean it\n3. Value Connection - Make it about *them*, not your product\n4. Customer Engagement Monitoring - Read the room (even on Zoom)\n5. Objection Navigation - Handle pushback without getting defensive\n6. Conversation Management - Stay on track without being robotic\n7. Adaptive Response - Pivot when your plan isn't working\n8. Commitment Generation - Get to next steps naturally\n\nEach one is trainable through practice. Which one would you like to explore in detail?";
+        return "Great question! The 8 capabilities are: Signal Awareness, Signal Interpretation, Value Connection, Customer Engagement Monitoring, Objection Navigation, Conversation Management, Adaptive Response, and Commitment Generation. Each is trainable through practice. Which one would you like to explore?";
 
       case 'capabilities_overview_followup':
-        return "Each capability is measured through specific behavioral patterns during practice sessions.\n\nFor example, Signal Awareness looks at your question quality—open vs. closed questions, relevance to customer goals, and follow-up depth.\n\nObjection Navigation tracks how you acknowledge concerns, stay calm under pressure, and reframe constructively.\n\nThe beauty is you can see exactly where you're strong and where to focus improvement. Want to explore a specific capability in detail?";
+        return "Each capability is measured through specific behavioral patterns during practice. For example, Signal Awareness tracks question quality, while Objection Navigation tracks how you handle concerns. You can see exactly where you're strong and where to improve. Want to explore a specific capability?";
 
       case 'capability_signal_awareness':
-        return `Let me break down Signal Awareness for you:\n\n${SIGNAL_INTELLIGENCE_KB.capabilities.signalAwareness.definition}\n\nFor example, if a doctor mentions time constraints, a rep with strong Signal Awareness might shift from broad questions to focused ones about their specific patient population.\n\nWe measure this through ${SIGNAL_INTELLIGENCE_KB.capabilities.signalAwareness.metric}.\n\nWant to see how this shows up in practice scenarios?`;
+        return "Signal Awareness is the capability to notice relevant customer cues and use those cues to shape purposeful, well-sequenced questions. We measure this through Question Quality. Want to see how this shows up in practice scenarios?";
 
       case 'capability_signal_interpretation':
-        return `Here's how Signal Interpretation works:\n\n${SIGNAL_INTELLIGENCE_KB.capabilities.signalInterpretation.definition}\n\nIt's the difference between hearing "I don't have time" and recognizing whether that means "not interested" or "show me the value quickly."\n\nWe measure this through ${SIGNAL_INTELLIGENCE_KB.capabilities.signalInterpretation.metric}.\n\nThis is one of the most impactful skills for building trust. Want to know how to practice it?`;
+        return "Signal Interpretation is the capability to make sense of what a customer is communicating and adjust responses as new information emerges. We measure this through Listening & Responsiveness. This is one of the most impactful skills for building trust. Want to know how to practice it?";
 
       case 'capability_value_connection':
-        return `Let me explain Value Connection:\n\n${SIGNAL_INTELLIGENCE_KB.capabilities.valueConnection.definition}\n\nInstead of listing features, you're translating them into outcomes that align with their priorities. Like connecting a drug's dosing schedule to a doctor's concern about patient adherence.\n\nWe measure this through ${SIGNAL_INTELLIGENCE_KB.capabilities.valueConnection.metric}.\n\nWant examples of strong vs. weak value framing?`;
+        return "Value Connection is the capability to link discussion to what matters to the customer by translating priorities into outcome-based value. We measure this through Value Framing. Want examples of strong vs. weak value framing?";
 
       case 'capability_customer_engagement':
-        return `Here's what Customer Engagement Monitoring is all about:\n\n${SIGNAL_INTELLIGENCE_KB.capabilities.customerEngagement.definition}\n\nMaybe the customer goes quiet, starts multitasking, or suddenly gets more animated. Strong reps pick up on these cues and respond appropriately.\n\nWe measure this through ${SIGNAL_INTELLIGENCE_KB.capabilities.customerEngagement.metric}.\n\nThis is especially critical in virtual calls. Want tips on improving this skill?`;
+        return "Customer Engagement Monitoring is the capability to track and respond to shifts in customer attention, interest, or openness during conversations. We measure this through Engagement Tracking. This is especially critical in virtual calls. Want tips on improving this skill?";
 
       case 'capability_objection_navigation':
-        return `Let me break down Objection Navigation:\n\n${SIGNAL_INTELLIGENCE_KB.capabilities.objectionNavigation.definition}\n\nThe key is treating objections as information, not attacks. "I've heard that before" might mean "prove you're different" or "I'm skeptical but listening."\n\nWe measure this through ${SIGNAL_INTELLIGENCE_KB.capabilities.objectionNavigation.metric}.\n\nWant to practice with some common pharma objections?`;
+        return "Objection Navigation is the capability to acknowledge, explore, and address customer concerns without defensiveness or avoidance. We measure this through Objection Handling. The key is treating objections as information, not attacks. Want to practice with some common pharma objections?";
 
       case 'capability_conversation_management':
-        return `Here's how Conversation Management works:\n\n${SIGNAL_INTELLIGENCE_KB.capabilities.conversationManagement.definition}\n\nIt's the balance between having a plan and being willing to deviate when the customer takes you somewhere valuable.\n\nWe measure this through ${SIGNAL_INTELLIGENCE_KB.capabilities.conversationManagement.metric}.\n\nThink of it like being a good meeting facilitator. Want to see what good looks like?`;
+        return "Conversation Management is the capability to guide discussions toward productive outcomes while remaining flexible to customer priorities. We measure this through Conversation Control. It's the balance between having a plan and being willing to deviate. Want to see what good looks like?";
 
       case 'capability_adaptive_response':
-        return `Let me explain Adaptive Response:\n\n${SIGNAL_INTELLIGENCE_KB.capabilities.adaptiveResponse.definition}\n\nMaybe your clinical data isn't landing, so you shift to a patient story. Or your questions are too broad, so you get more specific.\n\nWe measure this through ${SIGNAL_INTELLIGENCE_KB.capabilities.adaptiveResponse.metric}.\n\nThis is what separates good reps from great ones. Want to know how to build this skill?`;
+        return "Adaptive Response is the capability to recognize when an approach isn't working and adjust strategy mid-conversation. We measure this through Behavioral Flexibility. This is what separates good reps from great ones. Want to know how to build this skill?";
 
       case 'capability_commitment_generation':
-        return `Here's what Commitment Generation is all about:\n\n${SIGNAL_INTELLIGENCE_KB.capabilities.commitmentGeneration.definition}\n\nIt's not about "closing"—it's about co-creating a path forward that the customer actually owns.\n\nWe measure this through ${SIGNAL_INTELLIGENCE_KB.capabilities.commitmentGeneration.metric}.\n\nWant examples of strong commitment language?`;
+        return "Commitment Generation is the capability to co-create clear next steps that the customer owns and is motivated to complete. We measure this through Commitment Quality. It's not about 'closing'—it's about co-creating a path forward. Want examples of strong commitment language?";
 
       case 'human_drivers':
-        return "Great question! The Human Decision Drivers Framework explains why conversational behaviors change—things like confidence, motivation, emotional regulation, and perceived risk.\n\nHere's the key: we never measure these directly. They're explanatory context, not scores.\n\nThink of them like the \"why\" behind observable behaviors. If someone gets defensive during objections, social threat might be at play. But we're coaching the behavior (staying calm), not diagnosing the internal state.\n\nWant to understand how this connects to the skills you practice?";
+        return "Great question! The Human Decision Drivers Framework explains why conversational behaviors change—things like confidence, motivation, and perceived risk. Key point: we never measure these directly. They're explanatory context, not scores. We coach observable behaviors, not internal states. Want to understand how this connects to practice?";
 
       case 'behavioral_metrics':
-        return "Great question! Signal Intelligence™ is comprised of 8 core behavioral metrics. Each one measures specific observable conversation behaviors during practice sessions—things like question quality, listening patterns, and how you handle objections.\n\nKey points about our metrics:\n• Only observed during practice (role play, simulations)\n• Focus on what you say and how you respond\n• Never used for live call monitoring\n• Completely transparent and explainable\n\nWe don't detect emotions, predict intent, or assess personality. Just observable conversation behaviors.\n\nWould you like me to list all 8 metrics, dive into how each is measured, or focus on one in particular?";
+        return "Great question! Signal Intelligence™ is comprised of 8 core behavioral metrics measuring observable conversation behaviors during practice sessions only—never live calls. We focus on what you say and how you respond, not emotions or personality. Would you like me to list all 8, explain how they're measured, or focus on one?";
 
       case 'ai_coach':
         return `${SIGNAL_INTELLIGENCE_KB.platform.aiCoach}\n\nHere's the cool part: you don't have to wait for your manager to listen to call recordings and schedule a coaching session. You practice a conversation, and boom—instant feedback on what worked and what didn't.\n\nIt's like having a golf swing analyzer for sales calls. The AI shows you the data, you decide how to improve. No judgment, just insights.\n\nWant to see what the feedback actually looks like?`;
