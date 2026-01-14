@@ -57,7 +57,7 @@ export default function Header() {
             <img 
               src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/C52B91E8-CCCB-4206-8153-DCBAAEF0B7C9.jpeg" 
               alt="ReflectivAI Logo" 
-              className="h-12 w-auto"
+              className="h-[55px] w-auto"
             />
           </Link>
 
