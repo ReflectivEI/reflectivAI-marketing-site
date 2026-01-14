@@ -876,7 +876,13 @@ export function AloraAssistant() {
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-border bg-primary text-primary-foreground rounded-t-lg">
             <div className="flex items-center gap-2">
-              <Sparkles className="h-5 w-5" />
+              <div className="h-10 w-10 rounded-full overflow-hidden bg-white/10 flex-shrink-0">
+                <img 
+                  src="https://media.gettyimages.com/id/2207543701/photo/confident-businesswoman-smiling-portrait-close-up.jpg?b=1&s=2048x2048&w=0&k=20&c=wuUpyJovvltq5irLMjclpBTuF6JAIpemFnB_kpBfazQ=" 
+                  alt="Alora"
+                  className="h-full w-full object-cover"
+                />
+              </div>
               <div>
                 <h3 className="font-semibold">Alora</h3>
                 <p className="text-xs opacity-90">ReflectivAI Assistant</p>
