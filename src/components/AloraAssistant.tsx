@@ -672,9 +672,9 @@ class AloraResponseEngine {
 
   private generalResponse(): string {
     const responses = [
-      "I'm here to help you learn about ReflectivAI and Signal Intelligence™! I can tell you about:\n\n• The 8 conversational skills you can develop\n• How AI Coach provides instant feedback\n• Role Play practice scenarios\n• Results our customers are seeing\n\nWhat interests you most?",
-      "Great! Let me help you explore ReflectivAI. I can explain:\n\n• What Signal Intelligence™ is and how it works\n• How our platform helps sales professionals\n• AI Coach and Role Play features\n• Pricing and getting started\n\nWhat would you like to learn about?",
-      "I'd be happy to help! Here's what I can share about ReflectivAI:\n\n• Our Signal Intelligence™ framework\n• How practice sessions work\n• What makes our AI Coach different\n• Real results from sales teams\n\nWhere would you like to start?"
+      "I'm all ears! 👂 I can help you understand:\n\n• The 8 conversational skills we help you build\n• How our AI Coach gives instant feedback\n• What Role Play practice actually looks like\n• Real results teams are seeing\n\nWhat's most interesting to you?",
+      "Happy to help! I know a lot about:\n\n• Signal Intelligence™ (the framework behind everything)\n• How the platform works for pharma sales teams\n• AI Coach and Role Play features\n• Pricing and getting your team started\n\nWhat do you want to explore?",
+      "Let's dive in! I can explain:\n\n• What makes our approach different (hint: it's not creepy surveillance)\n• How practice sessions actually work\n• Why our AI Coach is better than waiting for manager feedback\n• Results from real sales teams\n\nWhere should we start?"
     ];
     
     // Rotate through responses to avoid repetition
