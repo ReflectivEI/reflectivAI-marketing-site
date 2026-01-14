@@ -53,13 +53,12 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center">
             <img 
-              src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/83AD436E-122D-4EE6-BF94-AE7A018FBE00.png" 
+              src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/C52B91E8-CCCB-4206-8153-DCBAAEF0B7C9.jpeg" 
               alt="ReflectivAI Logo" 
-              className="h-14 w-auto"
+              className="h-12 w-auto"
             />
-            <span className="text-2xl font-bold">ReflectivAI</span>
           </Link>
 
           <nav className="hidden md:flex gap-8 items-center">
