@@ -711,16 +711,16 @@ class AloraResponseEngine {
         return "Great question! Signal Intelligence™ is comprised of 8 core behavioral metrics measuring observable conversation behaviors during practice sessions only—never live calls. We focus on what you say and how you respond, not emotions or personality. Would you like me to list all 8, explain how they're measured, or focus on one?";
 
       case 'ai_coach':
-        return `${SIGNAL_INTELLIGENCE_KB.platform.aiCoach}\n\nHere's the cool part: you don't have to wait for your manager to listen to call recordings and schedule a coaching session. You practice a conversation, and boom—instant feedback on what worked and what didn't.\n\nIt's like having a golf swing analyzer for sales calls. The AI shows you the data, you decide how to improve. No judgment, just insights.\n\nWant to see what the feedback actually looks like?`;
+        return "Our AI Coach provides instant, personalized feedback after each practice session. You practice a conversation and immediately get specific coaching on what worked and what to improve. It's like a golf swing analyzer for sales calls. Want to see what the feedback looks like?";
 
       case 'ai_coach_followup':
-        return "The feedback is specific and actionable. For example:\n\nSignal Awareness (4.2/5): \"You asked 8 open-ended questions and followed up on customer priorities. Consider probing deeper when the customer mentions constraints.\"\n\nObjection Navigation (3.8/5): \"You acknowledged the concern but moved on quickly. Try paraphrasing to show you fully understand before responding.\"\n\nYou also get coaching cards that translate scores into specific actions to practice. Want to know more about any specific capability?";
+        return "The feedback is specific and actionable. For example: 'Signal Awareness (4.2/5): You asked 8 open-ended questions. Consider probing deeper on constraints.' You also get coaching cards that translate scores into practice actions. Want to know more about any specific capability?";
 
       case 'role_practice':
-        return `${SIGNAL_INTELLIGENCE_KB.platform.rolePractice}\n\nWe've got 9+ pharma scenarios across HIV, Oncology, Cardiology, Vaccines, and more. The AI customer responds like a real person—if you handle an objection well, they open up. Miss a cue? They get guarded.\n\nMost reps spend 15-30 minutes a day. It's like a flight simulator for sales calls—practice the scary stuff when the stakes are zero. No real doctors were harmed in the making of your skills. 😄\n\nWant to see how a practice session works?`;
+        return "We have 9+ pharma scenarios across HIV, Oncology, Cardiology, and more. The AI customer responds like a real person—handle an objection well, they open up. Miss a cue, they get guarded. Most reps spend 15-30 minutes per session. Want to see how a practice session works?";
 
       case 'role_practice_followup':
-        return "Here's how it works:\n\n1. Choose a scenario (e.g., HIV specialist objecting to switch therapy)\n2. Have a conversation with an AI customer\n3. Get instant feedback on your 8 Signal Intelligence™ capabilities\n4. See specific examples of what worked and what to improve\n\nThe AI adapts to your responses—if you handle an objection well, it might open up. If you miss a cue, it might get more guarded.\n\nMost reps see improvement after just 3-5 practice sessions. Want to know what the feedback looks like?";
+        return "Choose a scenario, have a conversation with an AI customer, get instant feedback on your 8 Signal Intelligence™ capabilities, and see specific examples of what worked. The AI adapts to your responses. Most reps see improvement after 3-5 sessions. Want to know what the feedback looks like?";
 
       case 'ethics':
         return `${SIGNAL_INTELLIGENCE_KB.ethics.boundaries}\n\nWant to know more about our safeguards or compliance approach?`;
@@ -732,28 +732,28 @@ class AloraResponseEngine {
         return `ReflectivAI works for three key groups:\n\nSales Reps: ${SIGNAL_INTELLIGENCE_KB.useCases.salesReps}\n\nSales Managers: ${SIGNAL_INTELLIGENCE_KB.useCases.managers}\n\nEnablement Leaders: ${SIGNAL_INTELLIGENCE_KB.useCases.enablement}\n\nWhich role are you most interested in learning about?`;
 
       case 'platform_features':
-        return `The ReflectivAI platform includes:\n\n• AI Coach for instant, personalized feedback\n• Role Play scenarios across 9+ therapeutic areas\n• Dashboard with skill development tracking\n• Coaching cards that translate scores into actionable guidance\n• Team analytics for managers\n\nEverything is based on practice sessions, not live call monitoring. Your data stays private and is used only for learning.\n\nWant a walkthrough of any specific feature?`;
+        return "The platform includes AI Coach feedback, Role Play scenarios across 9+ therapeutic areas, skill tracking dashboard, coaching cards, and team analytics for managers. Everything is practice-based, never live monitoring. Your data stays private. Want a walkthrough of any specific feature?";
 
       case 'results':
-        return "Our customers see real results:\n\n• 75% higher skill retention vs. traditional training\n• 3x faster ramp time for new reps\n• 89% of reps report increased confidence\n• 34% increase in close rates (customer testimonial)\n\nThe key is experiential learning in a safe environment. You build muscle memory through practice, not just knowledge through lectures.\n\nWant to hear more about how teams are using this?";
+        return "Our customers see 75% higher skill retention, 3x faster ramp time, 89% report increased confidence, and 34% increase in close rates. The key is experiential learning—you build muscle memory through practice, not just knowledge through lectures. Want to hear more about how teams are using this?";
 
       case 'pricing':
-        return "I'd be happy to connect you with our team to discuss pricing options tailored to your organization's needs.\n\nPricing typically depends on:\n• Number of users\n• Therapeutic areas needed\n• Custom scenario development\n• Team vs. enterprise deployment\n\nWould you like to schedule a demo to discuss your specific requirements? You can also visit our Pricing page for more details.";
+        return "I'd be happy to connect you with our team! Pricing depends on number of users, therapeutic areas needed, custom scenarios, and team vs. enterprise deployment. Would you like to schedule a demo to discuss your specific requirements? You can also visit our Pricing page.";
 
       case 'demo_trial':
-        return "I'd love to show you! Here's how you can experience ReflectivAI:\n\n Interactive Demo: See the platform in action with real scenarios\n Try Role Play: Have a conversation with an AI customer and get instant feedback\n See Your Scores: Get a sample Signal Intelligence™ report\n\nMost people are surprised by how realistic the AI customers feel. Want me to point you to the demo page, or do you have specific questions first?";
+        return "I'd love to show you! You can see the platform in action, try Role Play with an AI customer, and get a sample Signal Intelligence™ report. Most people are surprised by how realistic the AI customers feel. Want me to point you to the demo page, or have specific questions first?";
 
       case 'target_audience':
-        return "Great question! ReflectivAI is designed for:\n\n Pharma Sales Reps - Especially those calling on specialists (HIV, Oncology, Cardiology, etc.)\n Sales Managers - Who want to coach their teams more effectively\n Training Teams - Looking for experiential learning vs. lectures\n New Hires - Who need to ramp up quickly on complex conversations\n\nIf you're in pharma sales and want to get better at reading customers, handling objections, and having more natural conversations—this is for you. Sound like a fit?";
+        return "Great question! We're designed for pharma sales reps (especially specialists), sales managers coaching their teams, training teams seeking experiential learning, and new hires ramping up quickly. If you're in pharma sales and want better conversations, this is for you. Sound like a fit?";
 
       case 'time_commitment':
-        return "Good question! Here's the time breakdown:\n\n Practice Sessions: 15-30 minutes per session\n Recommended Frequency: 3-4 times per week\n See Results: Most reps notice improvement after 3-5 sessions\n\nThink of it like going to the gym—short, focused sessions beat marathon cram sessions. Most reps fit it into their morning routine or use it before big calls.\n\nThe beauty? You practice when it fits YOUR schedule. No waiting for trainer availability. Want to know more about how it works?";
+        return "Good question! Practice sessions are 15-30 minutes, 3-4 times per week recommended. Most reps see improvement after 3-5 sessions. Think gym workouts—short, focused sessions work best. You practice on YOUR schedule. Want to know more about how it works?";
 
       case 'support':
-        return "We've got you covered! Here's how to get help:\n\n Email: Reach out to our team directly\n Schedule a Call: Talk to a product specialist\n In-App Help: Guidance built into the platform\n Onboarding: We help you get set up and running\n\nWhat kind of support are you looking for? I can point you in the right direction, or answer questions right here!";
+        return "We've got you covered! You can email our team, schedule a call with a product specialist, access in-app help, or get onboarding assistance. What kind of support are you looking for? I can point you in the right direction!";
 
       case 'getting_started':
-        return "Great! Here's how to get started:\n\n1. Schedule a Demo: See the platform in action with your use cases\n2. Try Role Play: Experience AI Coach feedback firsthand\n3. Pilot Program: Start with a small team to see results\n4. Scale: Roll out across your organization\n\nMost teams see measurable improvement within 2-3 weeks of practice.\n\nWant to schedule a demo or have questions about implementation?";
+        return "Great! Schedule a demo to see the platform in action, try Role Play to experience AI Coach feedback, start a pilot with a small team, then scale across your organization. Most teams see improvement within 2-3 weeks. Want to schedule a demo or have questions about implementation?";
 
       case 'general':
       default:
@@ -763,9 +763,9 @@ class AloraResponseEngine {
 
   private generalResponse(): string {
     const responses = [
-      "I'm all ears! 👂 Here's what I can help with:\n\n• What makes us unique - Why ReflectivAI is different from other training\n• The 8 skills - Conversational capabilities you can develop\n• How it works - AI Coach, Role Play, instant feedback\n• Real results - What teams are seeing\n\nWhat catches your interest?",
-      "Happy to help! I'm great at explaining:\n\n• Signal Intelligence™ - The framework behind everything\n• Why it's not creepy - Practice-only, never live call monitoring\n• Platform features - AI Coach, Role Play scenarios, skill tracking\n• Getting started - Pricing, demos, implementation\n\nWhat do you want to know?",
-      "Let's talk! I can break down:\n\n• What makes this different - Experiential learning vs. lectures\n• How practice works - Realistic AI customers that respond to you\n• Instant coaching - No waiting for manager feedback\n• Success stories - Results from real pharma sales teams\n\nWhere should we start?"
+      "I'm all ears! I can help with what makes us unique, the 8 skills you develop, how it works, or real results teams are seeing. What catches your interest?",
+      "Happy to help! I'm great at explaining Signal Intelligence™, why it's practice-only (never live monitoring), platform features, or getting started. What do you want to know?",
+      "Let's talk! I can break down what makes this different, how practice works with realistic AI customers, instant coaching, or success stories from pharma teams. Where should we start?"
     ];
     
     // Rotate through responses to avoid repetition
@@ -779,10 +779,11 @@ const responseEngine = new AloraResponseEngine();
 export function AloraAssistant() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
+    const farewell = Math.random() < 0.3 ? " Thanks for chatting!" : "";
     {
       id: '1',
       role: 'assistant',
-      content: "Hey! I'm Alora.  Think of me as your friendly guide to ReflectivAI. I can answer questions about Signal Intelligence™, how our AI Coach works, Role Play scenarios, pricing—pretty much anything. What are you curious about?",
+      content: "Hey! I'm Alora, your guide to ReflectivAI. I can answer questions about Signal Intelligence™, our AI Coach, Role Play scenarios, pricing—pretty much anything. What are you curious about?",
       timestamp: new Date(),
     },
   ]);
