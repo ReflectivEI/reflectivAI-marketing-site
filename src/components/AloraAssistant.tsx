@@ -568,19 +568,13 @@ class AloraResponseEngine {
     }
 
     // KNOWLEDGE SOURCE LOCK: Check if content exists in canonical KB
-    if (!this.hasCanonicalContent(intent) && intent !== 'general' && intent !== 'clarification_needed' && intent !== 'greeting' && intent !== 'thanks') {
+    if (!this.hasCanonicalContent(intent) && intent !== 'general' && intent !== 'clarification_needed' && intent !== 'greeting' && intent !== 'thanks' && intent !== 'about_alora' && intent !== 'enlighten_me' && intent !== 'favorite_feature') {
       return this.deferResponse();
     }
 
     switch (intent) {
       case 'clarification_needed':
         return "I'd be happy to help! Could you tell me a bit more about what you're interested in learning about ReflectivAI?";
-
-      case 'about_alora':
-        return "I'm Alora! 👋 Think of me as your personal guide to ReflectivAI. I'm here to answer questions, explain how things work, and help you figure out if our platform is right for your team.\n\nI know everything about Signal Intelligence™, our AI Coach, Role Play scenarios, pricing—you name it. And I promise to keep things conversational, not corporate-speak. 😊\n\nWhat would you like to know?";
-
-      case 'about_alora':
-        return "I'm Alora! 👋 Think of me as your personal guide to ReflectivAI. I'm here to answer questions, explain how things work, and help you figure out if our platform is right for your team.\n\nI know everything about Signal Intelligence™, our AI Coach, Role Play scenarios, pricing—you name it. And I promise to keep things conversational, not corporate-speak. 😊\n\nWhat would you like to know?"
 
       case 'about_alora':
         return "I'm Alora! 👋 Think of me as your personal guide to ReflectivAI. I'm here to answer questions, explain how things work, and help you figure out if our platform is right for your team.\n\nI know everything about Signal Intelligence™, our AI Coach, Role Play scenarios, pricing—you name it. And I promise to keep things conversational, not corporate-speak. 😊\n\nWhat would you like to know?";
