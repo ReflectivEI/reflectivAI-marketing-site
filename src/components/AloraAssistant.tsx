@@ -688,9 +688,9 @@ class AloraResponseEngine {
 
   private generalResponse(): string {
     const responses = [
-      "I'm all ears! 👂 I can help you understand:\n\n• The 8 conversational skills we help you build\n• How our AI Coach gives instant feedback\n• What Role Play practice actually looks like\n• Real results teams are seeing\n\nWhat's most interesting to you?",
-      "Happy to help! I know a lot about:\n\n• Signal Intelligence™ (the framework behind everything)\n• How the platform works for pharma sales teams\n• AI Coach and Role Play features\n• Pricing and getting your team started\n\nWhat do you want to explore?",
-      "Let's dive in! I can explain:\n\n• What makes our approach different (hint: it's not creepy surveillance)\n• How practice sessions actually work\n• Why our AI Coach is better than waiting for manager feedback\n• Results from real sales teams\n\nWhere should we start?"
+      "I'm all ears! 👂 Here's what I can help with:\n\n• **What makes us unique** - Why ReflectivAI is different from other training\n• **The 8 skills** - Conversational capabilities you can develop\n• **How it works** - AI Coach, Role Play, instant feedback\n• **Real results** - What teams are seeing\n\nWhat catches your interest?",
+      "Happy to help! I'm great at explaining:\n\n• **Signal Intelligence™** - The framework behind everything\n• **Why it's not creepy** - Practice-only, never live call monitoring\n• **Platform features** - AI Coach, Role Play scenarios, skill tracking\n• **Getting started** - Pricing, demos, implementation\n\nWhat do you want to know?",
+      "Let's talk! I can break down:\n\n• **What makes this different** - Experiential learning vs. lectures\n• **How practice works** - Realistic AI customers that respond to you\n• **Instant coaching** - No waiting for manager feedback\n• **Success stories** - Results from real pharma sales teams\n\nWhere should we start?"
     ];
     
     // Rotate through responses to avoid repetition
