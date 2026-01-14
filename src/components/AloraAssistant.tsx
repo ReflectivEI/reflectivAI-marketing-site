@@ -767,15 +767,16 @@ export function AloraAssistant() {
       {/* Floating Button */}
       <Button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg z-50 border-2"
+        className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg z-50"
         style={{ 
-          backgroundColor: '#1e3a8a', 
-          borderColor: '#14b8a6',
-          color: 'white'
+          backgroundColor: '#1e3a8a',
+          color: 'white',
+          border: '1.5px solid white',
+          boxShadow: '0 0 0 2px #14b8a6, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)'
         }}
         aria-label="Open Alora Assistant"
       >
-        <MessageCircle className="h-6 w-6" />
+        <MessageCircle className="h-7 w-7" />
       </Button>
 
       {/* Chat Window */}
