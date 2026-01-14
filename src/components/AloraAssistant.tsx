@@ -691,7 +691,7 @@ export function AloraAssistant() {
     {
       id: '1',
       role: 'assistant',
-      content: "Hi! I'm Alora, your ReflectivAI assistant. I can answer any questions about Signal Intelligence™, our platform, AI Coach, Role Play, and how we help sales professionals develop conversational skills. What would you like to know?",
+      content: "Hey! I'm Alora. 👋 Think of me as your friendly guide to ReflectivAI. I can answer questions about Signal Intelligence™, how our AI Coach works, Role Play scenarios, pricing—pretty much anything. What are you curious about?",
       timestamp: new Date(),
     },
   ]);
