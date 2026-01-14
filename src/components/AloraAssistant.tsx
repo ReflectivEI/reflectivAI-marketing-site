@@ -398,18 +398,23 @@ class AloraResponseEngine {
       return 'general';
     }
 
+    // Who are you / About Alora
+    if (lowerQuery.match(/who are you|what are you|tell me about yourself|who is alora|what is alora/)) {
+      return 'about_alora';
+    }
+
     // Greetings and casual openers
     if (lowerQuery.match(/^(hi|hello|hey|greetings|good morning|good afternoon|good evening|what's up|whats up|sup|yo|howdy)$/)) {
       return 'greeting';
     }
 
-    // Casual conversation starters
-    if (lowerQuery.match(/^(enlighten me|tell me|show me|teach me|educate me|inform me|fill me in)$/)) {
+    // Casual conversation starters - MORE FLEXIBLE
+    if (lowerQuery.match(/enlighten me|tell me about|show me|teach me|educate me|inform me|fill me in/)) {
       return 'enlighten_me';
     }
 
     // Opinion/preference questions about ReflectivAI
-    if (lowerQuery.match(/favorite feature|best feature|coolest feature|most popular|what do you like|what's good|whats good|recommend/)) {
+    if (lowerQuery.match(/favorite feature|best feature|coolest feature|most popular|what do you like|what's good|whats good|what do you recommend|your favorite/)) {
       return 'favorite_feature';
     }
 
