@@ -294,6 +294,29 @@ class AloraResponseEngine {
   private queryHistory: string[] = [];
 
   // RULE 1: AMBIGUITY DETECTION
+  private isInappropriateOrOffTopic(query: string): boolean {
+    const lowerQuery = query.toLowerCase();
+    
+    // Inappropriate content
+    const inappropriatePatterns = [
+      /\b(sex|dating|romance|love|marry|hot|attractive)\b/,
+      /\b(politics|political|election|vote|democrat|republican)\b/,
+      /\b(religion|religious|god|jesus|muslim|christian|atheist)\b/,
+      /\b(offensive|curse|profanity)\b/,
+    ];
+    
+    // Completely off-topic (not business/sales/training related)
+    const offTopicPatterns = [
+      /weather|sports|movie|music|recipe|cooking|travel|vacation/,
+      /celebrity|entertainment|gossip|news/,
+      /personal life|age|married|kids|family/,
+      /joke|funny|laugh|meme/,
+    ];
+    
+    return inappropriatePatterns.some(pattern => pattern.test(lowerQuery)) ||
+           offTopicPatterns.some(pattern => pattern.test(lowerQuery));
+  }
+
   private detectAmbiguousSignal(query: string): boolean {
     const lowerQuery = query.toLowerCase().trim();
     
@@ -388,6 +411,11 @@ class AloraResponseEngine {
     // CRITICAL: Check for ambiguous "signal" questions FIRST
     if (this.detectAmbiguousSignal(query)) {
       return 'ambiguous_signal';
+    }
+
+    // Inappropriate or off-topic questions - handle gracefully
+    if (this.isInappropriateOrOffTopic(query)) {
+      return 'inappropriate_redirect';
     }
 
     // Follow-up patterns - only trigger if query is VERY short and generic
@@ -588,6 +616,15 @@ class AloraResponseEngine {
 
       case 'about_alora':
         return "I'm Alora! 👋 Think of me as your personal guide to ReflectivAI. I'm here to answer questions, explain how things work, and help you figure out if our platform is right for your team.\n\nI know everything about Signal Intelligence™, our AI Coach, Role Play scenarios, pricing—you name it. And I promise to keep things conversational, not corporate-speak. 😊\n\nWhat would you like to know?";
+
+      case 'inappropriate_redirect':
+        const redirects = [
+          "Ha! I appreciate the creativity, but I'm here to talk about ReflectivAI. 😊 Let's get back to the good stuff—what would you like to know about our platform?",
+          "You know, that's not really my area of expertise! But I'm great at explaining how ReflectivAI helps sales teams level up their conversation skills. What can I tell you about that?",
+          "I see what you did there! 😄 But let's keep it professional. I'm here to help you understand Signal Intelligence™, AI coaching, and how we help pharma reps get better at conversations. What interests you?",
+          "Interesting question, but that's a bit outside my wheelhouse! I'm all about helping you understand ReflectivAI's training platform. Want to know what makes us different?",
+        ];
+        return redirects[Math.floor(Math.random() * redirects.length)];
 
       case 'what_makes_unique':
         return "Great question! Here's what makes ReflectivAI different:\n\n🎯 **Not creepy surveillance** - We only measure behaviors during practice sessions, never live calls. It's a training tool, not Big Brother.\n\n🧠 **Behavior-first, not psych tests** - We focus on what you say and do, not personality assessments or emotional detection. Observable skills you can actually improve.\n\n⚡ **Instant feedback** - No waiting for your manager to review recordings. Practice a conversation, get coaching immediately.\n\n🎮 **Realistic practice** - Our AI customers respond like real people. Handle an objection well? They open up. Miss a cue? They get guarded.\n\n📊 **8 trainable skills** - Signal Intelligence™ breaks down the art of conversation into specific, measurable capabilities you can level up.\n\nMost training is lectures and theory. We're experiential—like a flight simulator for sales calls. Want to dive deeper into any of these?";
