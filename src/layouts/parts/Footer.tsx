@@ -6,13 +6,12 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center">
               <img 
-                src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/83AD436E-122D-4EE6-BF94-AE7A018FBE00.png" 
+                src="https://img1.wsimg.com/isteam/ip/1de1dc96-7231-4608-aa4f-91d58be98037/C52B91E8-CCCB-4206-8153-DCBAAEF0B7C9.jpeg" 
                 alt="ReflectivAI Logo" 
-                className="h-10 w-auto"
+                className="h-[55px] w-auto"
               />
-              <span className="text-xl font-bold">ReflectivAI</span>
             </div>
             <p className="text-sm text-muted-foreground">
               Signal Intelligence™ for sales professionals in high-stakes conversations. Built on clarity and restraint, designed for teams where judgment matters.
