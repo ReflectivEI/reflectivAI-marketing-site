@@ -626,7 +626,8 @@ class AloraResponseEngine {
     }
 
     // KNOWLEDGE SOURCE LOCK: Check if content exists in canonical KB
-    if (!this.hasCanonicalContent(intent) && intent !== 'general' && intent !== 'clarification_needed' && intent !== 'greeting' && intent !== 'thanks' && intent !== 'about_alora' && intent !== 'enlighten_me' && intent !== 'favorite_feature' && intent !== 'what_makes_unique') {
+    const bypassIntents = ['general', 'clarification_needed', 'greeting', 'thanks', 'about_alora', 'enlighten_me', 'favorite_feature', 'what_makes_unique', 'inappropriate_redirect', 'demo_trial', 'target_audience', 'time_commitment', 'support'];
+    if (!this.hasCanonicalContent(intent) && !bypassIntents.includes(intent)) {
       return this.deferResponse();
     }
 
@@ -738,6 +739,18 @@ class AloraResponseEngine {
 
       case 'pricing':
         return "I'd be happy to connect you with our team to discuss pricing options tailored to your organization's needs.\n\nPricing typically depends on:\n• Number of users\n• Therapeutic areas needed\n• Custom scenario development\n• Team vs. enterprise deployment\n\nWould you like to schedule a demo to discuss your specific requirements? You can also visit our Pricing page for more details.";
+
+      case 'demo_trial':
+        return "I'd love to show you! Here's how you can experience ReflectivAI:\n\n🎮 **Interactive Demo**: See the platform in action with real scenarios\n🎯 **Try Role Play**: Have a conversation with an AI customer and get instant feedback\n📊 **See Your Scores**: Get a sample Signal Intelligence™ report\n\nMost people are surprised by how realistic the AI customers feel. Want me to point you to the demo page, or do you have specific questions first?";
+
+      case 'target_audience':
+        return "Great question! ReflectivAI is designed for:\n\n💊 **Pharma Sales Reps** - Especially those calling on specialists (HIV, Oncology, Cardiology, etc.)\n💼 **Sales Managers** - Who want to coach their teams more effectively\n🏛️ **Training Teams** - Looking for experiential learning vs. lectures\n🚀 **New Hires** - Who need to ramp up quickly on complex conversations\n\nIf you're in pharma sales and want to get better at reading customers, handling objections, and having more natural conversations—this is for you. Sound like a fit?";
+
+      case 'time_commitment':
+        return "Good question! Here's the time breakdown:\n\n⏱️ **Practice Sessions**: 15-30 minutes per session\n📅 **Recommended Frequency**: 3-4 times per week\n📊 **See Results**: Most reps notice improvement after 3-5 sessions\n\nThink of it like going to the gym—short, focused sessions beat marathon cram sessions. Most reps fit it into their morning routine or use it before big calls.\n\nThe beauty? You practice when it fits YOUR schedule. No waiting for trainer availability. Want to know more about how it works?";
+
+      case 'support':
+        return "We've got you covered! Here's how to get help:\n\n📧 **Email**: Reach out to our team directly\n📞 **Schedule a Call**: Talk to a product specialist\n💬 **In-App Help**: Guidance built into the platform\n🎯 **Onboarding**: We help you get set up and running\n\nWhat kind of support are you looking for? I can point you in the right direction, or answer questions right here!";
 
       case 'getting_started':
         return "Great! Here's how to get started:\n\n1. **Schedule a Demo**: See the platform in action with your use cases\n2. **Try Role Play**: Experience AI Coach feedback firsthand\n3. **Pilot Program**: Start with a small team to see results\n4. **Scale**: Roll out across your organization\n\nMost teams see measurable improvement within 2-3 weeks of practice.\n\nWant to schedule a demo or have questions about implementation?";
