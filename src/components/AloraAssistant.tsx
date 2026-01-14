@@ -767,10 +767,14 @@ export function AloraAssistant() {
       {/* Floating Button */}
       <Button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-primary hover:bg-primary/90 z-50"
+        className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-white hover:bg-gray-50 z-50 p-0 overflow-hidden border-2 border-primary"
         aria-label="Open Alora Assistant"
       >
-        <MessageCircle className="h-6 w-6" />
+        <img 
+          src="/assets/alora-icon.jpeg" 
+          alt="Alora AI Assistant" 
+          className="w-full h-full object-cover"
+        />
       </Button>
 
       {/* Chat Window */}
