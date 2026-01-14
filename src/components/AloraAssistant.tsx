@@ -574,9 +574,29 @@ class AloraResponseEngine {
     }
 
     // Pricing
-    if (lowerQuery.match(/pricing|price|cost|how much/)) {
+    if (lowerQuery.match(/pricing|price|cost|how much|afford|budget|expensive|cheap|payment|subscription|plans/)) {
       this.conversationContext = 'pricing';
       return 'pricing';
+    }
+
+    // Demo / Trial
+    if (lowerQuery.match(/demo|trial|try it|test it|see it|preview|sample|example/)) {
+      return 'demo_trial';
+    }
+
+    // Who is it for / Target audience
+    if (lowerQuery.match(/who is this for|who uses|target audience|right for me|good fit|suitable for|designed for/)) {
+      return 'target_audience';
+    }
+
+    // Time commitment / How long
+    if (lowerQuery.match(/how long|time|duration|minutes|hours|commitment|takes to/)) {
+      return 'time_commitment';
+    }
+
+    // Support / Help
+    if (lowerQuery.match(/support|help|assistance|contact|reach out|customer service|questions/)) {
+      return 'support';
     }
 
     // Getting started
