@@ -435,13 +435,18 @@ class AloraResponseEngine {
     }
 
     // Signal Intelligence overview (explicit)
-    if (lowerQuery.match(/what is signal intelligence|define signal intelligence|explain signal intelligence|si framework|what does signal intelligence|tell me about signal intelligence|signal intelligence™/)) {
+    if (lowerQuery.match(/what is signal intelligence|define signal intelligence|explain signal intelligence|si framework|what does signal intelligence|tell me about signal intelligence|signal intelligence™|about signal intelligence/)) {
       this.conversationContext = 'si_overview';
       return 'si_overview';
     }
 
+    // General "what is" or "tell me about" ReflectivAI
+    if (lowerQuery.match(/what is reflectiv|tell me about reflectiv|explain reflectiv|about reflectiv|what does reflectiv/)) {
+      return 'enlighten_me';
+    }
+
     // Three-layer system
-    if (lowerQuery.match(/three layer|3 layer|system model|framework structure|how does it work|how it works|how does the system work/)) {
+    if (lowerQuery.match(/three layer|3 layer|system model|framework structure|how does it work|how it works|how does the system work|how does this work/)) {
       this.conversationContext = 'three_layer_system';
       return 'three_layer_system';
     }
@@ -535,7 +540,7 @@ class AloraResponseEngine {
     }
 
     // Results & effectiveness
-    if (lowerQuery.match(/results|effectiveness|roi|statistics|success rate/)) {
+    if (lowerQuery.match(/results|effectiveness|roi|statistics|success rate|does it work|is it effective|proof|evidence/)) {
       this.conversationContext = 'results';
       return 'results';
     }
