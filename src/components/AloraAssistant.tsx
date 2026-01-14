@@ -779,7 +779,6 @@ const responseEngine = new AloraResponseEngine();
 export function AloraAssistant() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    const farewell = Math.random() < 0.3 ? " Thanks for chatting!" : "";
     {
       id: '1',
       role: 'assistant',
