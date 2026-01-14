@@ -408,8 +408,13 @@ class AloraResponseEngine {
       return 'greeting';
     }
 
+    // What makes it unique / different / special
+    if (lowerQuery.match(/what makes|why choose|what's different|whats different|what's special|whats special|what's unique|whats unique|why use|why should|what sets|how is it different|why this|differentiator/)) {
+      return 'what_makes_unique';
+    }
+
     // Casual conversation starters - MORE FLEXIBLE
-    if (lowerQuery.match(/enlighten me|tell me about|show me|teach me|educate me|inform me|fill me in/)) {
+    if (lowerQuery.match(/enlighten me|tell me about|show me|teach me|educate me|inform me|fill me in|give me the rundown|break it down/)) {
       return 'enlighten_me';
     }
 
