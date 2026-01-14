@@ -398,9 +398,19 @@ class AloraResponseEngine {
       return 'general';
     }
 
-    // Greetings
-    if (lowerQuery.match(/^(hi|hello|hey|greetings|good morning|good afternoon|good evening)$/)) {
+    // Greetings and casual openers
+    if (lowerQuery.match(/^(hi|hello|hey|greetings|good morning|good afternoon|good evening|what's up|whats up|sup|yo|howdy)$/)) {
       return 'greeting';
+    }
+
+    // Casual conversation starters
+    if (lowerQuery.match(/^(enlighten me|tell me|show me|teach me|educate me|inform me|fill me in)$/)) {
+      return 'enlighten_me';
+    }
+
+    // Opinion/preference questions about ReflectivAI
+    if (lowerQuery.match(/favorite feature|best feature|coolest feature|most popular|what do you like|what's good|whats good|recommend/)) {
+      return 'favorite_feature';
     }
 
     // Thanks
@@ -564,6 +574,12 @@ class AloraResponseEngine {
       case 'greeting':
         return "Hello! Great to connect with you. I'm here to answer any questions about ReflectivAI, Signal Intelligence™, or how our platform helps sales professionals develop conversational skills. What would you like to know?";
 
+      case 'enlighten_me':
+        return "I'd love to! Here's what makes ReflectivAI special:\n\n**Signal Intelligence™** is a framework for developing 8 core conversational skills—things like asking better questions, reading engagement cues, and handling objections with confidence.\n\n**AI Coach** gives you instant, personalized feedback on practice conversations.\n\n**Role Play** lets you practice with AI customers across 9+ pharma scenarios—HIV, Oncology, Cardiology, and more.\n\nWhat would you like to dive into first?";
+
+      case 'favorite_feature':
+        return "Great question! While I don't have personal preferences, I can tell you what users rave about most:\n\n🎯 **Role Play Practice** - Sales reps love the safe space to practice tough conversations without real-world stakes. It's like a flight simulator for sales calls.\n\n💡 **Instant AI Feedback** - No waiting for manager reviews. You get specific, actionable coaching right after each practice session.\n\n📊 **Skill Tracking** - Seeing your progress across the 8 Signal Intelligence™ capabilities is incredibly motivating.\n\nMost reps say the combination of realistic practice + immediate feedback is what makes it stick. Want to see how any of these work?";
+
       case 'thanks':
         return "You're very welcome! Is there anything else about ReflectivAI or Signal Intelligence™ you'd like to explore?";
 
@@ -656,9 +672,9 @@ class AloraResponseEngine {
 
   private generalResponse(): string {
     const responses = [
-      "That's an interesting question! While I may not have specific information about that, I'm here to help you learn about ReflectivAI and Signal Intelligence™. Would you like to know about our platform capabilities, how we help sales professionals, or see a demo?",
-      "I appreciate your question! My expertise is in ReflectivAI and Signal Intelligence™. I can tell you about:\n\n• The 8 conversational skills you can develop\n• How AI Coach provides instant feedback\n• Role Play practice scenarios\n• Results our customers are seeing\n\nWhat interests you most?",
-      "Great question! Let me help you explore ReflectivAI. I can explain:\n\n• What Signal Intelligence™ is and how it works\n• How our platform helps sales professionals\n• AI Coach and Role Play features\n• Pricing and getting started\n\nWhat would you like to learn about?"
+      "I'm here to help you learn about ReflectivAI and Signal Intelligence™! I can tell you about:\n\n• The 8 conversational skills you can develop\n• How AI Coach provides instant feedback\n• Role Play practice scenarios\n• Results our customers are seeing\n\nWhat interests you most?",
+      "Great! Let me help you explore ReflectivAI. I can explain:\n\n• What Signal Intelligence™ is and how it works\n• How our platform helps sales professionals\n• AI Coach and Role Play features\n• Pricing and getting started\n\nWhat would you like to learn about?",
+      "I'd be happy to help! Here's what I can share about ReflectivAI:\n\n• Our Signal Intelligence™ framework\n• How practice sessions work\n• What makes our AI Coach different\n• Real results from sales teams\n\nWhere would you like to start?"
     ];
     
     // Rotate through responses to avoid repetition
@@ -730,6 +746,13 @@ export function AloraAssistant() {
 
     setMessages((prev) => [...prev, assistantMessage]);
     setIsTyping(false);
+
+    // CRITICAL FIX: Return focus to input field after sending message
+    setTimeout(() => {
+      if (inputRef.current) {
+        inputRef.current.focus();
+      }
+    }, 100);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
