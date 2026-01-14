@@ -776,7 +776,11 @@ class AloraResponseEngine {
 
 const responseEngine = new AloraResponseEngine();
 
-// Alora Assistant Component - Updated Jan 14, 2026
+/**
+ * Alora AI Assistant Component
+ * Last Updated: January 14, 2026 - 02:41 UTC
+ * Provides conversational AI assistance for ReflectivAI platform
+ */
 export function AloraAssistant() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
