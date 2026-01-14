@@ -576,6 +576,15 @@ class AloraResponseEngine {
       case 'clarification_needed':
         return "I'd be happy to help! Could you tell me a bit more about what you're interested in learning about ReflectivAI?";
 
+      case 'about_alora':
+        return "I'm Alora! 👋 Think of me as your personal guide to ReflectivAI. I'm here to answer questions, explain how things work, and help you figure out if our platform is right for your team.\n\nI know everything about Signal Intelligence™, our AI Coach, Role Play scenarios, pricing—you name it. And I promise to keep things conversational, not corporate-speak. 😊\n\nWhat would you like to know?";
+
+      case 'about_alora':
+        return "I'm Alora! 👋 Think of me as your personal guide to ReflectivAI. I'm here to answer questions, explain how things work, and help you figure out if our platform is right for your team.\n\nI know everything about Signal Intelligence™, our AI Coach, Role Play scenarios, pricing—you name it. And I promise to keep things conversational, not corporate-speak. 😊\n\nWhat would you like to know?"
+
+      case 'about_alora':
+        return "I'm Alora! 👋 Think of me as your personal guide to ReflectivAI. I'm here to answer questions, explain how things work, and help you figure out if our platform is right for your team.\n\nI know everything about Signal Intelligence™, our AI Coach, Role Play scenarios, pricing—you name it. And I promise to keep things conversational, not corporate-speak. 😊\n\nWhat would you like to know?";
+
       case 'greeting':
         return "Hey there! 👋 I'm Alora. Think of me as your friendly guide to all things ReflectivAI. Whether you're curious about Signal Intelligence™, want to know how our AI Coach works, or just wondering if this could help your team—I've got you covered. What's on your mind?";
 
