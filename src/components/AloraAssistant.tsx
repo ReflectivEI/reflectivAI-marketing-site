@@ -573,7 +573,7 @@ class AloraResponseEngine {
     }
 
     // KNOWLEDGE SOURCE LOCK: Check if content exists in canonical KB
-    if (!this.hasCanonicalContent(intent) && intent !== 'general' && intent !== 'clarification_needed' && intent !== 'greeting' && intent !== 'thanks' && intent !== 'about_alora' && intent !== 'enlighten_me' && intent !== 'favorite_feature') {
+    if (!this.hasCanonicalContent(intent) && intent !== 'general' && intent !== 'clarification_needed' && intent !== 'greeting' && intent !== 'thanks' && intent !== 'about_alora' && intent !== 'enlighten_me' && intent !== 'favorite_feature' && intent !== 'what_makes_unique') {
       return this.deferResponse();
     }
 
@@ -583,6 +583,9 @@ class AloraResponseEngine {
 
       case 'about_alora':
         return "I'm Alora! 👋 Think of me as your personal guide to ReflectivAI. I'm here to answer questions, explain how things work, and help you figure out if our platform is right for your team.\n\nI know everything about Signal Intelligence™, our AI Coach, Role Play scenarios, pricing—you name it. And I promise to keep things conversational, not corporate-speak. 😊\n\nWhat would you like to know?";
+
+      case 'what_makes_unique':
+        return "Great question! Here's what makes ReflectivAI different:\n\n🎯 **Not creepy surveillance** - We only measure behaviors during practice sessions, never live calls. It's a training tool, not Big Brother.\n\n🧠 **Behavior-first, not psych tests** - We focus on what you say and do, not personality assessments or emotional detection. Observable skills you can actually improve.\n\n⚡ **Instant feedback** - No waiting for your manager to review recordings. Practice a conversation, get coaching immediately.\n\n🎮 **Realistic practice** - Our AI customers respond like real people. Handle an objection well? They open up. Miss a cue? They get guarded.\n\n📊 **8 trainable skills** - Signal Intelligence™ breaks down the art of conversation into specific, measurable capabilities you can level up.\n\nMost training is lectures and theory. We're experiential—like a flight simulator for sales calls. Want to dive deeper into any of these?";
 
       case 'greeting':
         return "Hey there! 👋 I'm Alora. Think of me as your friendly guide to all things ReflectivAI. Whether you're curious about Signal Intelligence™, want to know how our AI Coach works, or just wondering if this could help your team—I've got you covered. What's on your mind?";
