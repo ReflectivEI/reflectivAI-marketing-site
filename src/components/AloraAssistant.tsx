@@ -767,7 +767,12 @@ export function AloraAssistant() {
       {/* Floating Button */}
       <Button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-primary hover:bg-primary/90 z-50"
+        className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg z-50 border-2"
+        style={{ 
+          backgroundColor: '#1e3a8a', 
+          borderColor: '#14b8a6',
+          color: 'white'
+        }}
         aria-label="Open Alora Assistant"
       >
         <MessageCircle className="h-6 w-6" />
