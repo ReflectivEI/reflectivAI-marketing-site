@@ -471,7 +471,14 @@ class AloraResponseEngine {
       return 'prohibited_signal_question';
     }
 
-    // CRITICAL: Check for ambiguous "signal" questions
+    // CRITICAL: Check for SPECIFIC signal questions BEFORE ambiguous detector
+    // These are explicit questions about signals that should get direct answers
+    if (lowerQuery.match(/what do you mean by signal|what is a signal|what counts as a signal|give me an example of a signal|example of signal|signal example/)) {
+      this.conversationContext = 'conversational_signals';
+      return 'conversational_signals';
+    }
+
+    // CRITICAL: Check for ambiguous "signal" questions (only if not specific)
     if (this.detectAmbiguousSignal(query)) {
       return 'ambiguous_signal';
     }
@@ -536,8 +543,8 @@ class AloraResponseEngine {
       return 'enlighten_me';
     }
 
-    // Conversational signals - specific patterns
-    if (lowerQuery.match(/what do you mean by signal|what is a signal|what counts as a signal|give me an example of a signal|example of signal|signal example/)) {
+    // Conversational signals (general concept) - broader patterns
+    if (lowerQuery.match(/conversational signal|customer signal|engagement signal|what are signals|types of signals/) && !lowerQuery.match(/signal intelligence/)) {
       this.conversationContext = 'conversational_signals';
       return 'conversational_signals';
     }
