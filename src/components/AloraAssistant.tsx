@@ -51,28 +51,42 @@ Defines 8 core conversational skills that can be developed through practice:
 Layer 3: Behavioral Metrics (Visibility Layer)
 Observable behaviors that show how each capability appears during structured practice sessions (role play, simulations). These are never used for live monitoring or surveillance.`,
 
-    conversationalSignals: `A signal is an observable change or cue in the interaction that indicates what matters, what is shifting, or what requires a decision in the moment. Signals are the moments in an interaction that require judgment.
+    conversationalSignals: `A signal is an observable change or cue in an interaction that indicates what matters, what is shifting, or what requires a decision in the moment. Signals are the moments in an interaction that require judgment.
 
-A signal is:
-• Observable (Something said, done, or changed — not inferred intent or emotion)
-• Contextual (Its meaning depends on timing, situation, and what preceded it)
-• Action-relevant (It invites or requires a decision about how to respond)
-• Moment-specific (Signals emerge and fade within live interactions)
+Core Characteristics of a Signal:
+• Observable: Something said, done, or changed — not inferred intent, emotion, or personality
+• Contextual: Its meaning depends on timing, situation, and what preceded it
+• Action-relevant: It invites or requires a decision about how to respond
+• Moment-specific: Signals emerge and fade within live interactions
 
-What a Signal Is NOT:
+What a Signal Is NOT (Hard Boundary):
 • A personality trait
 • A sentiment score
-• An outcome (e.g., agreement, success)
+• An outcome (e.g., agreement, success, conversion)
 • A static data point
 • An assumption about intent or motivation
 
-Examples of conversational signals include:
-• Verbal cues: Tone, pacing, word choice, questions asked
-• Participation patterns: Speaking time, engagement level, responsiveness
-• Content signals: Topics raised, objections voiced, priorities mentioned
-• Engagement shifts: Changes in energy, focus, or openness
+Examples of Observable Signals:
+• A pause or hesitation
+• A change in tone or pace
+• A shift in the type or depth of questions
+• Silence following a key statement
+• Interruptions or disengagement cues
 
-These signals are what sales professionals learn to recognize and respond to through Signal Intelligence™ training.`
+Signal Intelligence™ Connection:
+Signal Intelligence is the discipline of noticing these signals, interpreting them thoughtfully, and choosing how to respond in a way that preserves credibility, trust, and access.
+
+Critical Reinforcement:
+AI can help detect patterns across interactions, but humans exercise judgment about what to do in the moment.`,
+
+    signalProhibitions: `PROHIBITED EXPLANATIONS - Alora must NEVER:
+• Explain how signals are detected technically
+• Describe thresholds, models, or scoring mechanisms
+• Compare signals across users or reps
+• Suggest signals predict outcomes
+• Imply signals are emotions, sentiment, or psychological states
+
+If asked about these topics, deflect politely and redirect to how signals support professional judgment in conversations.`
   },
 
   // Capabilities with Behavioral Metrics
