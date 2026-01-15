@@ -51,8 +51,22 @@ Defines 8 core conversational skills that can be developed through practice:
 Layer 3: Behavioral Metrics (Visibility Layer)
 Observable behaviors that show how each capability appears during structured practice sessions (role play, simulations). These are never used for live monitoring or surveillance.`,
 
-    conversationalSignals: `Conversational signals are observable cues in communication that indicate a customer's state of engagement, interest, concern, or readiness. These include:
+    conversationalSignals: `A signal is an observable change or cue in the interaction that indicates what matters, what is shifting, or what requires a decision in the moment. Signals are the moments in an interaction that require judgment.
 
+A signal is:
+• Observable (Something said, done, or changed — not inferred intent or emotion)
+• Contextual (Its meaning depends on timing, situation, and what preceded it)
+• Action-relevant (It invites or requires a decision about how to respond)
+• Moment-specific (Signals emerge and fade within live interactions)
+
+What a Signal Is NOT:
+• A personality trait
+• A sentiment score
+• An outcome (e.g., agreement, success)
+• A static data point
+• An assumption about intent or motivation
+
+Examples of conversational signals include:
 • Verbal cues: Tone, pacing, word choice, questions asked
 • Participation patterns: Speaking time, engagement level, responsiveness
 • Content signals: Topics raised, objections voiced, priorities mentioned
@@ -663,7 +677,7 @@ class AloraResponseEngine {
         return "You're so welcome! Anything else you'd like to know? Or if you're all set, have a great day!";
 
       case 'conversational_signals':
-        return "Good question! Conversational signals are observable cues like tone, pacing, word choice, participation patterns, and engagement shifts. Signal Intelligence™ helps sales professionals recognize and respond to these effectively. Want to learn more about the framework?";
+        return "Great question! A signal is an observable change or cue that indicates what matters, what's shifting, or what requires a decision in the moment. Signals are observable (not inferred), contextual, action-relevant, and moment-specific. They're NOT personality traits, sentiment scores, or assumptions about intent. Want to learn how Signal Intelligence™ helps you recognize and respond to these?";
 
       case 'si_overview':
         return "Happy to explain! Signal Intelligence™ is a behavior-based capability framework for professional development in high-stakes conversations. It's non-clinical, non-diagnostic, and focuses only on observable behaviors—never used for employment decisions or live monitoring. Want the deep dive on how it works, or curious about the 8 skills?";
