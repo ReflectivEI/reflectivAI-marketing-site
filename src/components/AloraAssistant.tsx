@@ -568,7 +568,7 @@ class AloraResponseEngine {
     }
 
     // Opinion/preference questions about ReflectivAI
-    if (lowerQuery.match(/favorite feature|best feature|coolest feature|most popular|what do you like|what's good|whats good|what do you recommend|your favorite/)) {
+    if (lowerQuery.match(/favorite feature|best feature|coolest feature|most popular|what do you like|why do you like|what's good|whats good|what do you recommend|your favorite|why choose|why use this/)) {
       return 'favorite_feature';
     }
 
