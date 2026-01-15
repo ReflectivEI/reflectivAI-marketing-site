@@ -737,6 +737,9 @@ class AloraResponseEngine {
       case 'conversational_signals':
         return "Great question! A signal is an observable change or cue that indicates what matters, what's shifting, or what requires a decision in the moment. Examples: a pause, tone change, silence after a key statement, or shift in question depth. Signals are NOT personality traits, sentiment scores, or outcomes. AI can help detect patterns across interactions, but humans exercise judgment about what to do in the moment. Want to learn how Signal Intelligence™ helps you recognize and respond to these?";
 
+      case 'conversational_signals_followup':
+        return "Perfect! Signal Intelligence™ is a behavior-based framework for developing 8 conversational skills. You practice recognizing and responding to signals in realistic pharma scenarios, get instant AI feedback, and build muscle memory. It's non-clinical, practice-only (never live monitoring), and focuses on observable behaviors. Want to explore the 8 skills or see how practice works?";
+
       case 'si_overview':
         return "Happy to explain! Signal Intelligence™ is a behavior-based capability framework for professional development in high-stakes conversations. It's non-clinical, non-diagnostic, and focuses only on observable behaviors—never used for employment decisions or live monitoring. Want the deep dive on how it works, or curious about the 8 skills?";
 
