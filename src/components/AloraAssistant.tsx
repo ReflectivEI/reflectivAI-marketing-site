@@ -320,6 +320,8 @@ class AloraResponseEngine {
   private ambiguousQuestionCount: number = 0;
   private lastAmbiguousQuery: string = '';
   private queryHistory: string[] = [];
+  private lastResponse: string = ''; // SAFEGUARD: Track last response for deduplication
+  private responseHistory: string[] = []; // SAFEGUARD: Track all responses for echo detection
 
   // RULE 1: AMBIGUITY DETECTION
   private isInappropriateOrOffTopic(query: string): boolean {
@@ -442,6 +444,34 @@ class AloraResponseEngine {
     return primaryIntents.includes(intent);
   }
 
+  // SAFEGUARD 1: ECHO DETECTION - Detect when user is repeating Alora's words
+  private isEchoingResponse(query: string): boolean {
+    const normalizedQuery = query.toLowerCase().trim();
+    
+    // Check if query contains substantial portions of recent responses
+    for (const response of this.responseHistory.slice(-3)) { // Check last 3 responses
+      const normalizedResponse = response.toLowerCase();
+      
+      // If query is a substring of a recent response (and longer than 20 chars)
+      if (normalizedQuery.length > 20 && normalizedResponse.includes(normalizedQuery)) {
+        console.log('[Alora] Echo detected: User is repeating response text');
+        return true;
+      }
+      
+      // If query contains a large chunk (>30 chars) from a recent response
+      const words = normalizedQuery.split(/\s+/);
+      if (words.length >= 4) {
+        const chunk = words.slice(0, 4).join(' ');
+        if (chunk.length > 15 && normalizedResponse.includes(chunk)) {
+          console.log('[Alora] Echo detected: User copied response chunk');
+          return true;
+        }
+      }
+    }
+    
+    return false;
+  }
+
   // REPEATED QUESTION TRACKING
   private isRepeatedQuestion(query: string): boolean {
     const normalizedQuery = query.toLowerCase().trim();
@@ -467,6 +497,11 @@ class AloraResponseEngine {
     // Handle empty or very short queries
     if (lowerQuery.length < 2) {
       return 'clarification_needed';
+    }
+
+    // SAFEGUARD: Check for echo (user repeating Alora's words) - HIGHEST PRIORITY
+    if (this.isEchoingResponse(query)) {
+      return 'echo_detected';
     }
 
     // CRITICAL: Check for repeated questions (anti-loop)
@@ -647,8 +682,8 @@ class AloraResponseEngine {
       return 'boundary_correction';
     }
 
-    // Use cases
-    if (lowerQuery.match(/use case|who is this for|sales rep|manager|enablement/)) {
+    // Use cases - SAFEGUARD: Require more context than just single words
+    if (lowerQuery.match(/use case|who is this for|who uses this|sales rep role|manager role|enablement leader|enablement team/)) {
       this.conversationContext = 'use_cases';
       return 'use_cases';
     }
@@ -712,6 +747,16 @@ class AloraResponseEngine {
       return this.clarifyingQuestionResponse();
     }
 
+    // SAFEGUARD: Handle echo detection
+    if (intent === 'echo_detected') {
+      const responses = [
+        "I see you've copied part of my response! 😊 What would you like to know more about from that information?",
+        "Looks like you pasted something I said! What specific part are you interested in exploring further?",
+        "I notice that's from my previous message. What aspect would you like me to clarify or expand on?"
+      ];
+      return responses[Math.floor(Math.random() * responses.length)];
+    }
+
     // CRITICAL: Handle repeated questions
     if (intent === 'repeated_question') {
       return "I notice you've asked this a few times. Let me try to help differently. Could you rephrase your question or let me know what specific aspect you'd like to understand better?";
@@ -721,7 +766,7 @@ class AloraResponseEngine {
     const bypassIntents = [
       'general', 'clarification_needed', 'greeting', 'thanks', 'about_alora', 
       'enlighten_me', 'favorite_feature', 'what_makes_unique', 'inappropriate_redirect',
-      'demo_trial', 'target_audience', 'time_commitment', 'support'
+      'demo_trial', 'target_audience', 'time_commitment', 'support', 'echo_detected'
     ];
     
     // ENTERPRISE GUARDRAIL: Never defer on _followup intents (handled by universal fallback in switch)
@@ -946,6 +991,29 @@ class AloraResponseEngine {
     }
   }
 
+  // SAFEGUARD 2: RESPONSE DEDUPLICATION - Public method that tracks responses
+  public getResponse(query: string): string {
+    const intent = this.detectIntent(query);
+    const response = this.generateResponse(intent, query);
+    
+    // SAFEGUARD: Check for duplicate response
+    if (response === this.lastResponse && intent !== 'echo_detected' && intent !== 'repeated_question') {
+      console.warn('[Alora] Duplicate response detected, adding variation');
+      return response + "\n\nIs there something specific you'd like to explore further?";
+    }
+    
+    // Track response for echo detection and deduplication
+    this.lastResponse = response;
+    this.responseHistory.push(response);
+    
+    // Keep only last 5 responses for echo detection
+    if (this.responseHistory.length > 5) {
+      this.responseHistory.shift();
+    }
+    
+    return response;
+  }
+
   private generalResponse(): string {
     const responses = [
       "I'm all ears! I can help with what makes us unique, the 8 skills you develop, how it works, or real results teams are seeing. What catches your interest?",
@@ -1014,9 +1082,8 @@ export function AloraAssistant() {
     // Simulate AI thinking time
     await new Promise((resolve) => setTimeout(resolve, 800));
 
-    // Generate response using intent detection with HARDENED GUARDS
-    const intent = responseEngine.detectIntent(queryToProcess);
-    const responseContent = responseEngine.generateResponse(intent, queryToProcess);
+    // Generate response using intent detection with HARDENED GUARDS + SAFEGUARDS
+    const responseContent = responseEngine.getResponse(queryToProcess);
 
     const assistantMessage: Message = {
       id: (Date.now() + 1).toString(),
