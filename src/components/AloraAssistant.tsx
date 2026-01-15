@@ -486,8 +486,16 @@ class AloraResponseEngine {
       return 'conversational_signals';
     }
 
+    // CRITICAL: If user previously got ambiguous clarification and responds with just "signal" or "signals",
+    // assume they mean conversational signals (not Signal Intelligence™)
+    if (this.conversationContext === 'ambiguous_signal' && lowerQuery.match(/^(signal|signals|understanding signal|understanding signals|about signal|about signals)$/)) {
+      this.conversationContext = 'conversational_signals';
+      return 'conversational_signals';
+    }
+
     // CRITICAL: Check for ambiguous "signal" questions (only if not specific)
     if (this.detectAmbiguousSignal(query)) {
+      this.conversationContext = 'ambiguous_signal'; // Set context for follow-up detection
       return 'ambiguous_signal';
     }
 
