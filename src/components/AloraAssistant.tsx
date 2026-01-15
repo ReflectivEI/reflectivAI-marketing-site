@@ -614,10 +614,22 @@ class AloraResponseEngine {
       return 'three_layer_system';
     }
 
-    // Capabilities
-    if (lowerQuery.match(/capabilities|8 capabilities|skills|what can i learn|conversational skills|what skills|list capabilities/)) {
+    // Capabilities - EXPANDED to catch more variations
+    if (lowerQuery.match(/capabilities|8 capabilities|eight capabilities|8 skills|eight skills|skills|what can i learn|conversational skills|what skills|list capabilities|the 8|the eight|tell me about the skills|show me the skills|what are the skills|core skills/)) {
       this.conversationContext = 'capabilities_overview';
       return 'capabilities_overview';
+    }
+    
+    // How practice works
+    if (lowerQuery.match(/how practice works|how does practice work|how it works|how does it work|practice process|practice flow|how do you practice|what's the practice|whats the practice|explain practice/)) {
+      this.conversationContext = 'role_play';
+      return 'role_play';
+    }
+    
+    // Real results / ROI / Success stories
+    if (lowerQuery.match(/real results|actual results|success stories|case studies|roi|return on investment|does it work|proof|evidence|metrics|outcomes|impact|show me results/)) {
+      this.conversationContext = 'roi_results';
+      return 'roi_results';
     }
 
     // Specific capability queries
