@@ -344,9 +344,38 @@ class AloraResponseEngine {
     return hasSignalMention && !hasExplicitSI && !!isAmbiguousPattern;
   }
 
+  // PROHIBITED SIGNAL EXPLANATIONS DETECTOR
+  private isProhibitedSignalQuestion(query: string): boolean {
+    const lowerQuery = query.toLowerCase().trim();
+    
+    // Prohibited topics: technical detection, scoring, thresholds, models, predictions
+    const prohibitedPatterns = [
+      /how (do you|does|is).*(detect|identify|recognize|find|spot).*(signal|pattern)/,
+      /what (algorithm|model|ai|system|technology).*(detect|identify|find|analyze).*(signal)/,
+      /(threshold|score|scoring|rating|metric).*(signal)/,
+      /how.*(signal).*(measured|scored|rated|calculated|computed)/,
+      /(compare|rank|benchmark).*(signal|rep|user|performance)/,
+      /(predict|forecast|anticipate).*(outcome|result|success|conversion).*(signal)/,
+      /signal.*(emotion|feeling|sentiment|mood|psychological|mental state)/,
+      /(technical|technical details|under the hood|behind the scenes).*(signal)/,
+    ];
+    
+    return prohibitedPatterns.some(pattern => pattern.test(lowerQuery));
+  }
+
   // RULE 2: CLARIFYING QUESTION RESPONSE
   private clarifyingQuestionResponse(): string {
     return "Do you mean a general conversational signal (like body language, tone cues, or customer engagement indicators), or Signal Intelligence™ as used in the ReflectivAI platform?";
+  }
+
+  // PROHIBITED SIGNAL QUESTION DEFLECTION
+  private prohibitedSignalDeflection(): string {
+    const deflections = [
+      "I focus on how signals support professional judgment in conversations, not the technical detection methods. What I can tell you is that Signal Intelligence™ helps sales professionals notice, interpret, and respond to conversational cues thoughtfully. Want to know more about how that works in practice?",
+      "That's outside my scope—I'm here to explain how Signal Intelligence™ helps professionals develop conversation skills, not the technical systems behind it. What I can share is how AI helps detect patterns while humans exercise judgment. Curious about the 8 skills you develop?",
+      "Great question, but I can't get into technical detection methods or scoring. What I can tell you is that signals are observable cues—like pauses, tone changes, or silence—that require judgment. AI detects patterns, but humans decide how to respond. Want to explore how that works in practice?",
+    ];
+    return deflections[Math.floor(Math.random() * deflections.length)];
   }
 
   // RULE 3: ANTI-LOOP GUARD WITH ESCALATION
@@ -384,7 +413,8 @@ class AloraResponseEngine {
       'capability_adaptive_response', 'capability_commitment_generation',
       'human_drivers', 'behavioral_metrics', 'ai_coach', 'role_practice',
       'ethics', 'boundary_correction', 'use_cases', 'platform_features',
-      'results', 'pricing', 'getting_started', 'conversational_signals'
+      'results', 'pricing', 'getting_started', 'conversational_signals',
+      'prohibited_signal_question'  // Compliance guardrail
     ];
     
     return validIntents.includes(intent);
@@ -422,7 +452,12 @@ class AloraResponseEngine {
       return 'repeated_question';
     }
 
-    // CRITICAL: Check for ambiguous "signal" questions FIRST
+    // CRITICAL: Check for prohibited signal questions FIRST (compliance)
+    if (this.isProhibitedSignalQuestion(query)) {
+      return 'prohibited_signal_question';
+    }
+
+    // CRITICAL: Check for ambiguous "signal" questions
     if (this.detectAmbiguousSignal(query)) {
       return 'ambiguous_signal';
     }
@@ -485,6 +520,12 @@ class AloraResponseEngine {
     // General "what is" or "tell me about" ReflectivAI
     if (lowerQuery.match(/what is reflectiv|tell me about reflectiv|explain reflectiv|about reflectiv|what does reflectiv/)) {
       return 'enlighten_me';
+    }
+
+    // Conversational signals - specific patterns
+    if (lowerQuery.match(/what do you mean by signal|what is a signal|what counts as a signal|give me an example of a signal|example of signal|signal example/)) {
+      this.conversationContext = 'conversational_signals';
+      return 'conversational_signals';
     }
 
     // Three-layer system
@@ -652,11 +693,14 @@ class AloraResponseEngine {
       case 'about_alora':
         return "I'm Alora, your guide to ReflectivAI! I'm here to answer questions about Signal Intelligence™, our AI Coach, Role Play scenarios, pricing—pretty much anything. What would you like to know?";
 
+      case 'prohibited_signal_question':
+        return this.prohibitedSignalDeflection();
+
       case 'inappropriate_redirect':
         const redirects = [
-          "Ha! I appreciate the creativity, but I'm here to talk about ReflectivAI. 😊 Let's get back to the good stuff—what would you like to know about our platform?",
+          "Ha! I appreciate the creativity, but I'm here to talk about ReflectivAI. Let's get back to the good stuff—what would you like to know about our platform?",
           "You know, that's not really my area of expertise! But I'm great at explaining how ReflectivAI helps sales teams level up their conversation skills. What can I tell you about that?",
-          "I see what you did there! 😄 But let's keep it professional. I'm here to help you understand Signal Intelligence™, AI coaching, and how we help pharma reps get better at conversations. What interests you?",
+          "I see what you did there! But let's keep it professional. I'm here to help you understand Signal Intelligence™, AI coaching, and how we help pharma reps get better at conversations. What interests you?",
           "Interesting question, but that's a bit outside my wheelhouse! I'm all about helping you understand ReflectivAI's training platform. Want to know what makes us different?",
         ];
         return redirects[Math.floor(Math.random() * redirects.length)];
@@ -677,7 +721,7 @@ class AloraResponseEngine {
         return "You're so welcome! Anything else you'd like to know? Or if you're all set, have a great day!";
 
       case 'conversational_signals':
-        return "Great question! A signal is an observable change or cue that indicates what matters, what's shifting, or what requires a decision in the moment. Signals are observable (not inferred), contextual, action-relevant, and moment-specific. They're NOT personality traits, sentiment scores, or assumptions about intent. Want to learn how Signal Intelligence™ helps you recognize and respond to these?";
+        return "Great question! A signal is an observable change or cue that indicates what matters, what's shifting, or what requires a decision in the moment. Examples: a pause, tone change, silence after a key statement, or shift in question depth. Signals are NOT personality traits, sentiment scores, or outcomes. AI can help detect patterns across interactions, but humans exercise judgment about what to do in the moment. Want to learn how Signal Intelligence™ helps you recognize and respond to these?";
 
       case 'si_overview':
         return "Happy to explain! Signal Intelligence™ is a behavior-based capability framework for professional development in high-stakes conversations. It's non-clinical, non-diagnostic, and focuses only on observable behaviors—never used for employment decisions or live monitoring. Want the deep dive on how it works, or curious about the 8 skills?";
