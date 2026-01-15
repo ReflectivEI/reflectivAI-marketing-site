@@ -539,10 +539,18 @@ class AloraResponseEngine {
       return 'inappropriate_redirect';
     }
 
-    // Follow-up patterns - only trigger if query is VERY short and generic
-    if (lowerQuery.match(/^(yes|yeah|sure|tell me more|more|go on|continue)$/)) {
+    // Follow-up patterns - catch responses to Alora's questions
+    if (lowerQuery.match(/^(yes|yeah|sure|tell me more|more|go on|continue|all of it|everything|the whole thing|all of them|both|either|any of them|sounds good|sounds interesting|that sounds|looks good|looks interesting)$/)) {
       if (this.conversationContext) {
         return this.conversationContext + '_followup';
+      }
+      return 'general';
+    }
+    
+    // Catch "what part" responses (user answering Alora's "What part sounds most interesting?")
+    if (lowerQuery.match(/the .* part|that part|this part|first part|second part|last part|all parts|every part/)) {
+      if (this.conversationContext === 'enlighten_me') {
+        return 'si_overview'; // Give them Signal Intelligence overview
       }
       return 'general';
     }
