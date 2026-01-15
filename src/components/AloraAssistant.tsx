@@ -554,6 +554,20 @@ class AloraResponseEngine {
       }
       return 'general';
     }
+    
+    // Catch responses to "What catches your interest?" / "What do you want to know?"
+    if (lowerQuery.match(/what makes|why choose|what's different|whats different|unique|special|different/)) {
+      return 'what_makes_unique';
+    }
+    if (lowerQuery.match(/how it works|how does it work|how practice works|practice/)) {
+      return 'role_play';
+    }
+    if (lowerQuery.match(/results|success|roi|impact|outcomes|proof|evidence/)) {
+      return 'roi_results';
+    }
+    if (lowerQuery.match(/get started|getting started|start|begin|sign up|try it/)) {
+      return 'demo_trial';
+    }
 
     // Who are you / About Alora
     if (lowerQuery.match(/who are you|what are you|tell me about yourself|who is alora|what is alora/)) {
