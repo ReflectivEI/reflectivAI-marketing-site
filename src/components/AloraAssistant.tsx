@@ -811,10 +811,10 @@ class AloraResponseEngine {
         return "Hey there! I'm Alora, your guide to ReflectivAI. I can help with Signal Intelligence™, our AI Coach, Role Play scenarios, pricing—anything you're curious about. What's on your mind?";
 
       case 'enlighten_me':
-        return "I like your style! ReflectivAI is a training gym for sales conversations. You practice with AI customers in realistic pharma scenarios, get instant feedback from our AI Coach, and build 8 core conversation skills. It's like a flight simulator for sales calls. What part sounds most interesting?";
+        return "I like your style! ReflectivAI is a training gym for sales conversations. You practice with AI customers in realistic pharma scenarios, get instant feedback from our AI Coach, and build 8 core conversation skills through Signal Intelligence™. It's like a flight simulator for sales calls—safe practice that builds real skills. Want to know more about the 8 skills, how practice works, or see real results?";
 
       case 'favorite_feature':
-        return "Users rave about three things: realistic Role Play practice in a safe space, instant AI feedback after each session, and tracking progress across 8 Signal Intelligence™ capabilities. The combo of practice plus immediate coaching is what makes it stick. Want to see how any of these work?";
+        return "Users rave about three things: realistic Role Play practice in a safe space, instant AI feedback after each session, and tracking progress across 8 Signal Intelligence™ capabilities. The combo of practice plus immediate coaching is what makes it stick. I can show you how Role Play works, explain the AI Coach feedback, or walk through the 8 skills you develop.";
 
       case 'thanks':
         return "You're so welcome! Anything else you'd like to know? Or if you're all set, have a great day!";
