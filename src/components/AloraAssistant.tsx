@@ -419,7 +419,8 @@ class AloraResponseEngine {
 
   // Check if content exists in canonical KB
   private hasCanonicalContent(intent: string): boolean {
-    const validIntents = [
+    // ENTERPRISE GUARDRAIL: All primary intents
+    const primaryIntents = [
       'si_overview', 'three_layer_system', 'capabilities_overview',
       'capability_signal_awareness', 'capability_signal_interpretation',
       'capability_value_connection', 'capability_customer_engagement',
@@ -428,10 +429,17 @@ class AloraResponseEngine {
       'human_drivers', 'behavioral_metrics', 'ai_coach', 'role_practice',
       'ethics', 'boundary_correction', 'use_cases', 'platform_features',
       'results', 'pricing', 'getting_started', 'conversational_signals',
-      'prohibited_signal_question'  // Compliance guardrail
+      'prohibited_signal_question', 'ambiguous_signal', 'repeated_question',
+      'demo_trial', 'target_audience', 'time_commitment', 'support'
     ];
     
-    return validIntents.includes(intent);
+    // ENTERPRISE GUARDRAIL: Auto-approve all _followup intents
+    // This prevents short-circuit failures when users say "yes" or "tell me more"
+    if (intent.endsWith('_followup')) {
+      return true;
+    }
+    
+    return primaryIntents.includes(intent);
   }
 
   // REPEATED QUESTION TRACKING
@@ -701,9 +709,18 @@ class AloraResponseEngine {
       return "I notice you've asked this a few times. Let me try to help differently. Could you rephrase your question or let me know what specific aspect you'd like to understand better?";
     }
 
-    // KNOWLEDGE SOURCE LOCK: Check if content exists in canonical KB
-    const bypassIntents = ['general', 'clarification_needed', 'greeting', 'thanks', 'about_alora', 'enlighten_me', 'favorite_feature', 'what_makes_unique', 'inappropriate_redirect', 'demo_trial', 'target_audience', 'time_commitment', 'support'];
-    if (!this.hasCanonicalContent(intent) && !bypassIntents.includes(intent)) {
+    // ENTERPRISE GUARDRAIL: Knowledge source lock with universal bypass for conversational intents
+    const bypassIntents = [
+      'general', 'clarification_needed', 'greeting', 'thanks', 'about_alora', 
+      'enlighten_me', 'favorite_feature', 'what_makes_unique', 'inappropriate_redirect',
+      'demo_trial', 'target_audience', 'time_commitment', 'support'
+    ];
+    
+    // ENTERPRISE GUARDRAIL: Never defer on _followup intents (handled by universal fallback in switch)
+    if (intent.endsWith('_followup')) {
+      // Let it pass through to switch statement - all follow-ups have handlers or universal fallback
+    } else if (!this.hasCanonicalContent(intent) && !bypassIntents.includes(intent)) {
+      console.warn(`[Alora] Deferring response for unrecognized intent: ${intent}`);
       return this.deferResponse();
     }
 
@@ -804,6 +821,74 @@ class AloraResponseEngine {
       case 'role_practice_followup':
         return "Choose a scenario, have a conversation with an AI customer, get instant feedback on your 8 Signal Intelligence™ capabilities, and see specific examples of what worked. The AI adapts to your responses. Most reps see improvement after 3-5 sessions. Want to know what the feedback looks like?";
 
+      // ENTERPRISE GUARDRAIL: Comprehensive follow-up handlers for ALL major topics
+      case 'three_layer_system_followup':
+        return "Happy to dive deeper! Layer 1 explains why behaviors change, Layer 2 is the 8 skills you develop, and Layer 3 is what we observe during practice. Most people want to know about the 8 skills first. Want to explore those?";
+
+      case 'human_drivers_followup':
+        return "The Human Decision Drivers help explain why conversation behaviors shift—things like confidence, motivation, perceived risk. But here's the key: we never measure these directly. They're explanatory context, not scores. We coach observable behaviors only. Want to know how this shows up in practice?";
+
+      case 'behavioral_metrics_followup':
+        return "Each of the 8 capabilities is measured through specific observable behaviors during practice sessions. For example, Signal Awareness looks at question quality, while Value Connection tracks how you frame benefits. You get a score and specific coaching on each. Want to explore a specific capability?";
+
+      case 'ethics_followup':
+        return "We're practice-only (never live monitoring), non-clinical (no psych assessments), and transparent about what we measure. Your data stays private, never shared without consent, and never used for employment decisions. Want to know more about our safeguards or compliance approach?";
+
+      case 'boundary_correction_followup':
+        return "Exactly—we focus only on observable conversation behaviors during practice. No emotion detection, no personality profiling, no intent prediction. Just coaching on what you say and how you respond. Want to see what that looks like in a practice session?";
+
+      case 'use_cases_followup':
+        return "Sales reps use it to build conversation skills in a safe space. Managers use it to coach their teams with data. Enablement leaders use it to scale experiential learning. Most teams start with a pilot group. Which role are you most interested in?";
+
+      case 'platform_features_followup':
+        return "The platform includes AI Coach feedback, 9+ pharma scenarios, skill tracking dashboard, coaching cards, and team analytics for managers. Everything is practice-based, never live monitoring. Want a walkthrough of any specific feature?";
+
+      case 'results_followup':
+        return "Teams see 75% higher skill retention, 3x faster ramp time, 89% report increased confidence, and 34% increase in close rates. The key is experiential learning—you build muscle memory through practice, not just knowledge through lectures. Want to hear how specific teams are using this?";
+
+      case 'pricing_followup':
+        return "Pricing depends on number of users, therapeutic areas needed, custom scenarios, and team vs. enterprise deployment. Most teams start with a pilot to see results before scaling. Want to schedule a demo to discuss your specific requirements?";
+
+      case 'getting_started_followup':
+        return "Most teams start with a demo to see the platform, then run a pilot with a small group. You'll see improvement within 2-3 weeks. After that, you can scale across your organization. Want to schedule a demo or have questions about implementation?";
+
+      case 'demo_trial_followup':
+        return "In the demo, you'll see the platform in action, try Role Play with an AI customer, and get a sample Signal Intelligence™ report. Most people are surprised by how realistic the AI customers feel. Want me to point you to the demo page?";
+
+      case 'target_audience_followup':
+        return "Perfect fit for pharma sales reps (especially specialists), sales managers coaching their teams, training teams seeking experiential learning, and new hires ramping up quickly. If you're in pharma sales and want better conversations, this is for you. What's your role?";
+
+      case 'time_commitment_followup':
+        return "Practice sessions are 15-30 minutes, 3-4 times per week recommended. Most reps see improvement after 3-5 sessions. You practice on YOUR schedule—no live sessions required. Think gym workouts: short, focused sessions work best. Want to know more about how practice works?";
+
+      case 'support_followup':
+        return "We offer email support, scheduled calls with product specialists, in-app help, and onboarding assistance. Most teams get onboarding support to ensure smooth rollout. What kind of support are you looking for?";
+
+      // Individual capability follow-ups
+      case 'capability_signal_awareness_followup':
+        return "Signal Awareness is about noticing customer cues and asking purposeful questions. In practice, you'll see feedback like 'You asked 8 open-ended questions. Consider probing deeper on constraints.' Want to try a practice scenario?";
+
+      case 'capability_signal_interpretation_followup':
+        return "Signal Interpretation is about listening deeply and adjusting as new information emerges. This is one of the most impactful skills for building trust. Want to see how this shows up in practice scenarios?";
+
+      case 'capability_value_connection_followup':
+        return "Value Connection is about linking discussion to what matters to the customer. Strong value framing translates priorities into outcome-based benefits. Want examples of strong vs. weak value framing?";
+
+      case 'capability_customer_engagement_followup':
+        return "Customer Engagement Monitoring is about tracking shifts in attention, interest, or openness. This is especially critical in virtual calls where you can't read body language. Want tips on improving this skill?";
+
+      case 'capability_objection_navigation_followup':
+        return "Objection Navigation is about acknowledging, exploring, and addressing concerns without defensiveness. The key is treating objections as information, not attacks. Want to practice with some common pharma objections?";
+
+      case 'capability_conversation_management_followup':
+        return "Conversation Management is about guiding discussions toward productive outcomes while remaining flexible. It's the balance between having a plan and being willing to deviate. Want to see what good looks like?";
+
+      case 'capability_adaptive_response_followup':
+        return "Adaptive Response is about recognizing when an approach isn't working and adjusting mid-conversation. This is what separates good reps from great ones. Want to know how to build this skill?";
+
+      case 'capability_commitment_generation_followup':
+        return "Commitment Generation is about co-creating clear next steps that the customer owns and is motivated to complete. It's not about 'closing'—it's about co-creating a path forward. Want examples of strong commitment language?";
+
       case 'ethics':
         return `${SIGNAL_INTELLIGENCE_KB.ethics.boundaries}\n\nWant to know more about our safeguards or compliance approach?`;
 
@@ -838,7 +923,17 @@ class AloraResponseEngine {
         return "Great! Schedule a demo to see the platform in action, try Role Play to experience AI Coach feedback, start a pilot with a small team, then scale across your organization. Most teams see improvement within 2-3 weeks. Want to schedule a demo or have questions about implementation?";
 
       case 'general':
+        return this.generalResponse();
+
       default:
+        // ENTERPRISE GUARDRAIL: Universal fallback for any unhandled intent
+        // This prevents "That isn't something I can define" errors
+        if (intent.endsWith('_followup')) {
+          // Generic follow-up response when specific handler is missing
+          console.warn(`[Alora] Missing follow-up handler for intent: ${intent}`);
+          return "Great question! I'd be happy to dive deeper. Could you let me know which aspect you'd like to explore—how it works in practice, the 8 skills you develop, or something else?";
+        }
+        console.warn(`[Alora] Unhandled intent: ${intent}`);
         return this.generalResponse();
     }
   }
