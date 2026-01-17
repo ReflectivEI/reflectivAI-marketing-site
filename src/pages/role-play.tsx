@@ -64,7 +64,7 @@ export default function RolePlayPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <div className="text-center space-y-4">
               <div className="text-5xl font-bold text-primary">75%</div>
               <p className="text-muted-foreground">Higher skill retention with experiential learning</p>
@@ -76,6 +76,10 @@ export default function RolePlayPage() {
             <div className="text-center space-y-4">
               <div className="text-5xl font-bold text-primary">89%</div>
               <p className="text-muted-foreground">Of reps report increased confidence after practice</p>
+            </div>
+            <div className="text-center space-y-4">
+              <div className="text-5xl font-bold text-primary">15-30</div>
+              <p className="text-muted-foreground">Minutes per practice session</p>
             </div>
           </div>
 
@@ -93,7 +97,7 @@ export default function RolePlayPage() {
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-bold">Simulation Capabilities</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Realistic scenarios powered by AI that adapt to your responses
+              9+ realistic pharma scenarios across HIV, Oncology, Cardiology, and more—powered by AI that adapts to your responses
             </p>
           </div>
 

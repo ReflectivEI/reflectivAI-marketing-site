@@ -419,7 +419,7 @@ export default function HomePage() {
                 <span className="text-2xl">🎭</span>
               </div>
               <h3 className="text-2xl font-bold">Role Play</h3>
-              <p className="text-muted-foreground">Practice scenarios with AI-powered feedback</p>
+              <p className="text-muted-foreground">9+ pharma scenarios with AI-powered feedback</p>
             </div>
             <div className="bg-card rounded-xl p-8 space-y-4 border border-border">
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
