@@ -423,7 +423,7 @@ class AloraResponseEngine {
   private hasCanonicalContent(intent: string): boolean {
     // ENTERPRISE GUARDRAIL: All primary intents
     const primaryIntents = [
-      'si_overview', 'three_layer_system', 'capabilities_overview',
+      'si_overview', 'three_layer_system', 'capabilities_overview', 'list_all_8',
       'capability_signal_awareness', 'capability_signal_interpretation',
       'capability_value_connection', 'capability_customer_engagement',
       'capability_objection_navigation', 'capability_conversation_management',
@@ -628,6 +628,12 @@ class AloraResponseEngine {
       return 'three_layer_system';
     }
 
+    // List all 8 - EXPLICIT request to see the full list
+    if (lowerQuery.match(/list all 8|list all eight|list them all|show me all 8|show me all eight|show all 8|show all eight|all 8 of them|all eight of them|give me all 8|give me all eight|what are all 8|what are all eight|list all|show them all|tell me all 8|tell me all eight/)) {
+      this.conversationContext = 'list_all_8';
+      return 'list_all_8';
+    }
+    
     // Capabilities - EXPANDED to catch more variations
     if (lowerQuery.match(/capabilities|8 capabilities|eight capabilities|8 skills|eight skills|skills|what can i learn|conversational skills|what skills|list capabilities|the 8|the eight|tell me about the skills|show me the skills|what are the skills|core skills/)) {
       this.conversationContext = 'capabilities_overview';
@@ -863,6 +869,23 @@ class AloraResponseEngine {
       case 'capabilities_overview':
         return "Great question! The 8 capabilities are: Signal Awareness, Signal Interpretation, Value Connection, Customer Engagement Monitoring, Objection Navigation, Conversation Management, Adaptive Response, and Commitment Generation. Each is trainable through practice. Which one would you like to explore?";
 
+      case 'list_all_8':
+        return `Here are all 8 Signal Intelligence™ capabilities with their behavioral metrics:
+
+1. **Signal Awareness** → Measured by Question Quality (asking purposeful, customer-centric questions)
+2. **Signal Interpretation** → Measured by Listening & Responsiveness (accurately hearing and responding to input)
+3. **Value Connection** → Measured by Value Framing (connecting to outcomes that matter)
+4. **Customer Engagement Monitoring** → Measured by Engagement Cues (noticing shifts in momentum)
+5. **Objection Navigation** → Measured by Objection Handling (responding constructively to resistance)
+6. **Conversation Management** → Measured by Conversation Control (guiding with clarity and purpose)
+7. **Adaptive Response** → Measured by Adaptability (adjusting approach in the moment)
+8. **Commitment Generation** → Measured by Commitment Gaining (securing clear next actions)
+
+Each is developed through practice in realistic scenarios. Want to dive deeper into any specific capability?`;
+
+      case 'list_all_8_followup':
+        return "Each capability is measured through specific behavioral patterns during practice. For example, Signal Awareness tracks question quality, while Objection Navigation tracks how you handle concerns. You can see exactly where you're strong and where to improve. Want to explore a specific capability?";
+
       case 'capabilities_overview_followup':
         return "Each capability is measured through specific behavioral patterns during practice. For example, Signal Awareness tracks question quality, while Objection Navigation tracks how you handle concerns. You can see exactly where you're strong and where to improve. Want to explore a specific capability?";
 
@@ -894,7 +917,18 @@ class AloraResponseEngine {
         return "Great question! The Human Decision Drivers Framework explains why conversational behaviors change—things like confidence, motivation, and perceived risk. Key point: we never measure these directly. They're explanatory context, not scores. We coach observable behaviors, not internal states. Want to understand how this connects to practice?";
 
       case 'behavioral_metrics':
-        return "Great question! Signal Intelligence™ is comprised of 8 core behavioral metrics measuring observable conversation behaviors during practice sessions only—never live calls. We focus on what you say and how you respond, not emotions or personality. Would you like me to list all 8, explain how they're measured, or focus on one?";
+        return `Great question! Signal Intelligence™ measures 8 core behavioral metrics during practice sessions only—never live calls:
+
+1. **Question Quality** (Signal Awareness)
+2. **Listening & Responsiveness** (Signal Interpretation)
+3. **Value Framing** (Value Connection)
+4. **Engagement Cues** (Customer Engagement Monitoring)
+5. **Objection Handling** (Objection Navigation)
+6. **Conversation Control** (Conversation Management)
+7. **Adaptability** (Adaptive Response)
+8. **Commitment Gaining** (Commitment Generation)
+
+We focus on what you say and how you respond, not emotions or personality. Want to dive deeper into any specific metric?`;
 
       case 'ai_coach':
         return "Our AI Coach provides instant, personalized feedback after each practice session. You practice a conversation and immediately get specific coaching on what worked and what to improve. It's like a golf swing analyzer for sales calls. Want to see what the feedback looks like?";
